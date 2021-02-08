@@ -1,0 +1,77 @@
+{
+  "name": "cosmo",
+  "version": "1.2.0",
+  "engines": {
+    "node": "8.9.4",
+    "npm": "5.8.0"
+  },
+  "scripts": {
+    "prestart": "npm run del",
+    "start": "run-p mkdir cp:dev server build:*:dev open",
+    "del": "rimraf ./dist",
+    "cp:dev": "cpx './src/images/**/*.{jpg,png,gif,svg,mp4,ico}' './dist/assets/images/' --watch",
+    "cp:prod": "cpx './src/images/**/*.{jpg,png,gif,svg,mp4,ico}' './dist/assets/images/'",
+    "mkdir": "mkdirp ./dist/assets/styles/",
+    "server": "node ./server/index.js",
+    "open": "opn http://localhost:3000",
+    "preview": "run-s del mkdir cp:prod build:*:prod",
+    "precommit": "lint-staged",
+    "commitmsg": "cz-customizable-ghooks",
+    "build:js:dev": "webpack --mode development --module-bind js=babel-loader --watch --entry ./src/scripts/index.js --output ./dist/assets/scripts/app.js",
+    "build:js:prod": "webpack --mode production --module-bind js=babel-loader --entry ./src/scripts/index.js --output ./dist/assets/scripts/app.js",
+    "build:css:dev": "stylus --include-css ./src/styles/index.styl --out ./dist/assets/styles/app.css --use autoprefixer-stylus --watch",
+    "build:css:prod": "stylus --include-css ./src/styles/index.styl --out ./dist/assets/styles/app.css --use autoprefixer-stylus --compress",
+    "build:html:prod": "pug --obj ./src/data/sample.json ./src/html --basedir ./src/html/ --pretty --out ./dist/",
+    "sync": "rsync -auvz --delete --ignore-times --checksum --exclude='*.php' --exclude='.*' ./dist/ ./htdocs/",
+    "publish": "run-s del mkdir cp:prod build:*:prod sync"
+  },
+  "lint-staged": {
+    "./src/scripts/**/*.js": [
+      "eslint",
+      "prettier --write",
+      "git add"
+    ],
+    "./src/styles/**/*.styl": [
+      "stylus-supremacy format glob --replace --options ./supremacy.json",
+      "git add"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://i-studio.commits.jp/ist-tech/maskVideo.git"
+  },
+  "author": "takuya.kikuchi",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "7.0.0-beta.40",
+    "@babel/preset-env": "7.0.0-beta.40",
+    "autoprefixer-stylus": "0.14.0",
+    "babel-eslint": "8.2.2",
+    "babel-loader": "8.0.0-beta.0",
+    "cpx": "1.5.0",
+    "eslint": "4.19.0",
+    "express": "4.16.2",
+    "gsap": "3.6.0",
+    "husky": "0.14.3",
+    "jquery": "3.5.1",
+    "json5": "1.0.1",
+    "lint-staged": "7.1.2",
+    "mkdirp": "0.5.1",
+    "npm-run-all": "4.1.2",
+    "opn-cli": "3.1.0",
+    "prettier": "1.14.0",
+    "pug": "2.0.0-rc.4",
+    "pug-cli": "https://github.com/pugjs/pug-cli.git",
+    "rimraf": "2.6.2",
+    "slick-carousel": "1.8.1",
+    "stylus": "0.54.5",
+    "stylus-supremacy": "2.9.1",
+    "webpack": "4.0.0",
+    "webpack-cli": "2.0.8"
+  },
+  "dependencies": {
+    "babel-polyfill": "6.26.0",
+    "normalize.css": "8.0.0",
+    "whatwg-fetch": "2.0.3"
+  }
+}

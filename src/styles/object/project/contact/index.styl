@@ -1,0 +1,490 @@
+a
+  color inherit
+  transition all .5s ease
+  &:hover
+    opacity 0.7
+.p-contact
+  color #2c4a70
+  +pc()
+    margin-top 75px
+  +sp()
+    margin spvw(80) spvw(50) 0 spvw(50)
+  img
+    width 100%
+    height auto
+  *
+    box-sizing border-box
+
+  &__inner
+    margin 0 auto
+    max-width 880px
+
+  &__header
+    &__primary
+      &__tag
+        font-weight bold
+        color #60b5e1
+        +pc()
+          font-size 16px
+        +sp()
+          font-size spvw(32)
+      &__title
+        font-weight bold
+        +pc()
+          font-size 44px 
+          margin-top 30px
+        +sp()
+          font-size spvw(60)
+          margin-top spvw(30)
+      &__text
+        line-height 1.6
+        +pc()
+          font-size 16px
+          margin-top 60px
+        +sp()
+          font-size spvw(28)
+          margin-top spvw(100)
+
+  &__line__contact
+    background-color #fff
+    +pc()
+      display flex
+      width 100%
+      margin-top 35px
+    +sp()
+      width 100vw
+      margin-left spvw(-50)
+      margin-top spvw(80)
+      padding spvw(90)
+    &__desc
+      +pc()
+        padding 50px
+        width 68%
+    &__title
+      font-weight bold
+      +pc()
+        font-size 16px
+      +sp()
+        font-size spvw(32)
+      &__name
+        color #00c300
+        display inline-block
+        +pc()
+          font-size 26px
+          padding-right  10px
+        +sp()
+          font-size spvw(52)
+          padding-right spvw(10)
+        
+    &__text
+      +pc()
+        font-size 14px
+        line-height 1.6
+        margin-top 20px
+      +sp()
+        font-size spvw(28)
+        line-height 1.6
+        margin-top spvw(50)
+    &__button
+      +pc()
+        margin-top 25px
+        width 180px
+      +sp()
+        margin-top spvw(40)
+        width spvw(360)
+      a
+        display block
+    &__reader
+      display flex
+      align-items center
+      justify-content center
+      background-color #e9eef2
+      +pc()
+        width 32%
+      +sp()
+        width spvw(350)
+        height spvw(350)
+        margin spvw(60) auto 0
+      &__img
+        +pc()
+          width 125px
+        +sp()
+          width spvw(250)
+
+  &__choicetype
+    +pc()
+      margin-top 80px
+    +sp()
+      margin-top spvw(150)
+
+    &__title
+      font-weight bold
+      text-align center
+      +pc()
+        font-size 16px
+      +sp()
+        font-size spvw(28)
+
+    &__buttons
+      +pc()
+        margin-top 50px
+      +sp()
+        margin-top spvw(60)
+      &__list
+        +pc()
+          display flex
+        &__item
+          +pc()
+            display flex
+            width calc(100% / 3)
+          +pc()
+            width 100%
+          a
+            display flex
+            width 100%
+          &__check
+            background-color #d5e2ea
+            transition all .5s ease
+            position relative
+            +pc()
+              width 24%
+            +sp()
+              width 17.5%
+            &:after
+              content ''
+              display block
+              position absolute
+              top 50%
+              left 50%
+              width 30px
+              height 24px
+              transform translate(-50%, -50%)
+              background-image url("/assets/images/contact/pc/choicetype_check.png")
+              background-size contain
+              background-repeat no-repeat
+          &__text
+            display flex
+            align-items center
+            justify-content center
+            transition all .5s ease
+            background-color #e9eef2
+            color #aab0b8
+            font-weight bold
+            +pc()
+              width 76%
+              font-size 14px
+              padding 25px 0
+            +sp()
+              font-size spvw(26)
+              width 82.5%
+              padding spvw(34) 0
+          &.is-active
+            .p-contact__choicetype__buttons__list__item__check
+              background-color #fad06c
+              &:after
+                background-image url("/assets/images/contact/pc/choicetype_check_active.png")
+            .p-contact__choicetype__buttons__list__item__text
+              background-color #0053a9
+              color #fff
+
+
+  &__form
+    +pc()
+      margin-top 40px
+    +sp()
+      margin-top spvw(60)
+    &__caution
+      color #ff8880
+      display flex
+      justify-content flex-end
+      +pc()
+        font-size 12px
+      +sp()
+        font-size spvw(24)
+      &__text
+        position relative
+        display inline-block
+        &:after
+          content "★"
+          display block
+          color #ff8880
+          position absolute
+          top 0
+          +pc()
+            font-size 10px
+            left -12px
+          +sp()
+            font-size spvw(10)
+            left spvw(-20)
+
+    &__list
+      +pc()
+        margin-top 10px
+      +sp()
+        margin-top spvw(20)
+      &__item
+        & + &
+          +pc()
+            margin-top 15px
+          +sp()
+            margin-top spvw(30)
+
+    &__label
+      position relative
+      display inline-block
+      +pc()
+        font-size 14px
+      +sp()
+        font-size spvw(32)
+      &.is-required
+        &:after
+          content "★"
+          display block
+          color #ff8880
+          position absolute
+          top 0
+          +pc()
+            font-size 10px
+            right -12px
+          +sp()
+            font-size spvw(10)
+            right spvw(-20)
+
+    &__input
+      &__text
+        width 100%
+        border none
+        border solid 2px #fff
+        transition all .5s ease
+        +pc()
+          padding 15px 25px
+          font-size 16px
+          border-radius 10px
+          margin-top 10px
+        +sp()
+          padding spvw(30)
+          font-size spvw(32)
+          border-radius spvw(20)
+          margin-top spvw(20)
+        &::placeholder
+          color #aab0b8
+        &::-ms-input-placeholder
+          color #aab0b8
+        &:focus
+          border solid 2px #fad06c
+          z-index 10
+          outline 0
+          box-shadow: 0 0 5px 0 #d2d2d2
+
+      &__textarea
+        resize none
+        border none
+        border solid 2px #fff
+        transition all .5s ease
+        line-height 1.6
+        +pc()
+          width 100%
+          height 150px
+          padding 30px 25px
+          font-size 16px
+          border-radius 10px
+          margin-top 10px
+        +sp()
+          width 100%
+          height spvw(300)
+          padding spvw(30)
+          font-size spvw(32)
+          border-radius spvw(20)
+          margin-top spvw(20)
+        &::placeholder
+          color #aab0b8
+        &::-ms-input-placeholder
+          color #aab0b8
+        &:focus
+          border solid 2px #fad06c
+          z-index 2
+          outline 0
+          box-shadow: 0 0 5px 0 #d2d2d2
+
+
+    &__application
+      display block
+    &__document
+      display none
+    &__inquary
+      display none
+
+    &__agree
+      +pc()
+        margin-top 60px
+      +sp()
+        margin-top spvw(110)
+      &__link
+        text-align center
+        &__text
+          position relative
+          display inline-block
+          +pc()
+            font-size 12px
+          +sp()
+            font-size spvw(24)
+          a
+            display block
+          &:after
+            content ""
+            display block
+            position absolute
+            top 50%
+            transform translateY(-50%)
+            background-image url("/assets/images/contact/pc/target_blank.png")
+            background-size contain
+            background-repeat no-repeat
+            +pc()
+              left -22px
+              width 12px
+              height 12px
+            +sp()
+              left spvw(-40)
+              width spvw(24)
+              height spvw(24)
+
+
+      &__check
+        text-align center
+        +pc()
+          margin-top 20px
+          font-size 16px
+        +sp()
+          margin-top spvw(40)
+          font-size spvw(32)
+        label
+          position relative
+          cursor pointer
+          transition all .5s ease
+          +pc()
+            padding-left 45px
+          +sp()
+            padding-left spvw(90)
+
+          &:hover
+            opacity 0.7
+
+          input[type="checkbox"]
+            -webkit-appearance none
+            -moz-appearance none
+            &:before
+              content ""
+              position absolute
+              top 50%
+              transform translateY(-50%)
+              z-index 1
+              background-image url("/assets/images/contact/pc/form_check_off.png")
+              background-size contain
+              background-repeat no-repeat
+              cursor pointer
+              +pc()
+                left 6px
+                width 18px
+                height 14px
+              +sp()
+                left spvw(12)
+                width spvw(36)
+                height spvw(28)
+            &:after
+              content ""
+              position absolute
+              top 50%
+              left 0
+              transform translateY(-50%)
+              background-color #e9eef2
+              cursor pointer
+              +pc()
+                width 30px
+                height 30px
+              +sp()
+                width spvw(60)
+                height spvw(60)
+            &:checked
+              &:before
+                background-image url("/assets/images/contact/pc/form_check_on.png")
+              &:after
+                background-color #fad06c
+
+  &__breadcrumb
+    +pc()
+      width  1110px
+      margin 120px auto 30px
+    +sp()
+      margin spvw(210) spvw(50) spvw(50)
+    &__list
+      display flex
+      &__item
+        position relative
+        +pc()
+          margin-left 15px
+          font-size 12px
+        +sp()
+          margin-left spvw(25)
+          font-size spvw(22)
+        &:before
+          content "-"
+          display block
+          position absolute
+          +pc()
+            left -9px
+          +sp()
+            left spvw(-13)
+        &:first-child
+          margin-left 0
+          &:before
+            display none
+
+  &__button
+    +pc()
+      margin-top 40px
+    +sp()
+      margin-top spvw(60)
+    a
+      display flex
+      justify-content center
+      align-items center
+      color #fff
+      background linear-gradient(90deg,#0053a9 0%,#0053a9 80%,#fad06c 80%,#fad06c 100%)
+      margin 0 auto
+      position relative
+      transition all .5s ease
+      +pc()
+        font-size 14px
+        width 340px
+        padding 25px 70px 25px 25px
+        border-radius 40px
+      +sp()
+        font-size spvw(26)
+        width spvw(530)
+        padding spvw(40) spvw(120) spvw(40) spvw(40)
+        border-radius spvw(100)
+      &::after
+        content ""
+        display block
+        position absolute
+        top 50%
+        transform translateY(-50%)
+        transition all .5s ease
+        background-image url("/assets/images/contact/pc/arrow.png")
+        background-size contain
+        background-repeat no-repeat
+        +pc()
+          right 31px
+          width 12px
+          height 12px
+        +sp()
+          right spvw(44)
+          width spvw(24)
+          height spvw(24)
+      &:hover
+        &:after
+          +pc()
+            right 21px
+          +sp()
+            right spvw(12)
+

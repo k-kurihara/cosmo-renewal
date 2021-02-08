@@ -1,0 +1,45 @@
+// percentage
+pcper(n, w = $base-width-pc)
+  percentage((n / w))
+
+spper(n, w = $base-width-sp)
+  percentage((n / w))
+
+// viewport width
+pcvw(n, w = $base-width-pc)
+  ((n / w) * 100)vw
+
+spvw(n, w = $base-width-sp)
+  ((n / w) * 100)vw
+
+// viewport width
+vh(n, h)
+  ((n / h) * 100)vh
+
+pc()
+  @media $pc
+    {block}
+
+sp()
+  @media $sp
+    {block}
+
+port()
+  @media screen and (orientation: portrait)
+    {block}
+
+land()
+  @media screen and (orientation: landscape)
+    {block}
+
+// clearfix
+cf()
+  &:after
+    display block
+    clear both
+    content ''
+
+// no font element
+nofont()
+  font-size 0
+  line-height 0

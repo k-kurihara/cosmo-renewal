@@ -1,0 +1,25 @@
+extend _template
+
+block vars
+  - title = '気づき、じっくり考え、人に伝える｜コスモジュク'
+  - description = 'コスモジュクは横浜市（港南、上永谷、日限山、丸山台、舞岡）エリアの学習塾です。中学受験・中高一貫校受検・高校受験・大学受験すべてに対応しています。集団・個別指導どちらも備え、個人に合わせた指導をご提供いたします。'
+  - keywords = '塾,個別指導,集団授業,受験,コスモジュク,コスモ,上永谷,港南,日限山,丸山台,舞岡'
+  - img = 'http://localhost:3000/assets/images/share/ogp.jpg'
+  - url = 'http://localhost:3000'
+
+block main
+  include /component/_header.pug
+  include /component/_mainvisual.pug
+
+  section
+    include /component/top/_topAbout.pug
+  section
+    include /component/top/_topCourse.pug
+  section
+    include /component/top/_topNews.pug
+  section
+    include /component/top/_topActivity.pug
+  section
+    include /component/top/_topMap.pug
+
+  include /component/_footer.pug

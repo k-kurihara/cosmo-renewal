@@ -1,0 +1,32 @@
+block vars
+
+html
+  head
+    title= title
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0")
+    meta(name="title" content=title)
+    meta(name="description" content=description)
+    meta(name="keywords" content=keywords)
+    meta(property="og:url" content=url)
+    meta(property="og:type" content="website")
+    meta(property="og:title" content=title)
+    meta(property="og:description" content=description)
+    meta(property="og:image" content=img)
+    meta(property="og:site_name" content=title)
+    meta(name="twitter:card" content="summary_large_image")
+    meta(name='twitter:title', content=title)
+    meta(name='twitter:description' content=description)
+    meta(name='twitter:image', content=img)
+    link(rel="shortcut icon", href="/assets/images/favicon.ico")
+    link(rel="icon", sizes="96x96", href="/assets/images/favicon.png")
+    link(rel="apple-touch-icon", sizes="180x180", href="/assets/images/touch-icon.png")
+    link(rel='stylesheet' href='/assets/styles/app.css')
+
+  body
+    main
+      block main
+
+    block end_of_body
+      script(src="/assets/scripts/app.js")

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #394b6e;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="ico-arrow-mini.svg" class="cls-1" d="M993.512,9403.8l-8.334-8.34a1.667,1.667,0,0,0-2.356,2.36l5.487,5.49H975.666a1.67,1.67,0,0,0,0,3.34h12.643l-5.487,5.49a1.668,1.668,0,0,0,2.357,2.36l8.333-8.34A1.671,1.671,0,0,0,993.512,9403.8Z" transform="translate(-974 -9395)"/>
+</svg>

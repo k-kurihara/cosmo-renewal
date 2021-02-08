@@ -1,0 +1,371 @@
+.p-flow
+  +pc()
+    padding-top pcvw(368)
+  +sp()
+    padding-top spvw(210)
+    overflow hidden
+  &__enrollment
+    +pc()
+      margin-top pcvw(276)
+    +sp()
+      margin-top spvw(128)
+    &__inner
+      width 100%
+      +pc()
+        margin pcvw(105) auto 0
+      +sp()
+        margin spvw(66) auto 0
+    &__texts
+      box-sizing border-box
+      +pc()
+        width 100%
+        margin pcvw(55) auto 0
+        padding 0 pcvw(80)
+      +sp()
+        width spvw(670)
+        margin-right spvw(-30)
+      &__list
+        width 100%
+        +pc()
+          display flex
+          justify-content space-between
+        +sp()
+          padding-left spvw(110)
+          box-sizing border-box
+          background-image url('/assets/images/flow/img-number-sp.png')
+          background-repeat no-repeat
+          background-size spvw(91)
+          background-position top left
+      &__item
+        +pc()
+          width pcvw(324)
+        +sp()
+          width 100%
+          padding-top spvw(20)
+          padding-right spvw(240)
+          box-sizing border-box
+          background-position center right
+          background-repeat no-repeat
+        &.is-1
+          +sp()
+            background-image url('/assets/images/flow/img-flow001-sp.png')
+            background-size spvw(224)
+        &.is-2
+          +sp()
+            background-image url('/assets/images/flow/img-flow002-sp.png')
+            background-size spvw(225)
+        &.is-3
+          +sp()
+            background-image url('/assets/images/flow/img-flow003-sp.png')
+            background-size spvw(225)
+        &.is-4
+          +sp()
+            background-image url('/assets/images/flow/img-flow004-sp.png')
+            background-size spvw(224)
+        &.is-5
+          +sp()
+            background-image url('/assets/images/flow/img-flow005-sp.png')
+            background-size spvw(228)
+      &__item + &__item
+        +sp()
+          margin-top spvw(64)
+      &__item__image
+        width 100%
+        img
+          width 100%
+      &__item__heading
+        letter-spacing 0.02em
+        font-weight bold
+        color #2c4a70
+        +pc()
+          text-align center
+          font-size pcvw(32)
+        +sp()
+          text-align left
+          font-size spvw(36)
+          line-height spvw(57.6)
+      &__item__text
+        letter-spacing 0.02em
+        color #2c4a70
+        +pc()
+          margin-top pcvw(28)
+          font-size pcvw(28)
+          line-height pcvw(44.8)
+        +sp()
+          font-size spvw(28)
+          line-height spvw(44.8)
+  &__checkpoint
+    position relative
+    z-index 2
+    box-sizing border-box
+    background #fff
+    +pc()
+      margin pcvw(105) auto 0
+      width 100%
+      padding pcvw(128) pcvw(220)
+    +sp()
+      width spvw(710)
+      margin-top spvw(120)
+      margin-right spvw(-30)
+      margin-left spvw(-30)
+      padding spvw(88) spvw(30) spvw(110)
+      box-sizing border-box
+    &::before
+      content ""
+      display block
+      position absolute
+      left 50%
+      transform translateX(-50%)
+      width 0
+      height 0
+      border-style solid
+      border-color: transparent transparent #fff transparent;
+      +pc()
+        top pcvw(-44.5)
+        border-width 0 pcvw(22.5) pcvw(45) pcvw(22.5)
+      +sp()
+        top spvw(-44.5)
+        border-width 0 spvw(22.5) spvw(45) spvw(22.5)
+    &__heading
+      font-weight bold
+      letter-spacing 0.02em
+      text-align center
+      color #2c4a70
+      +pc()
+        font-size pcvw(56)
+      +sp()
+        font-size spvw(46)
+    &__list
+      width 100%
+      +pc()
+        margin pcvw(126) auto 0
+        display flex
+        justify-content space-between
+      +sp()
+        width 100%
+        margin spvw(94) auto 0
+    &__item
+      +pc()
+        width pcvw(520)
+      +sp()
+        width 100%
+    &__item + &__item
+      +sp()
+        margin-top spvw(72)
+    &__item__heading
+      font-weight bold
+      letter-spacing 0.02em
+      color #2c4a70
+      text-align center
+      +pc()
+        margin-top pcvw(70)
+        font-size pcvw(32)
+      +sp()
+        margin-top spvw(48)
+        font-size spvw(36)
+    &__item__text
+      letter-spacing 0.02em
+      color #2c4a70
+      +pc()
+        margin-top pcvw(30)
+        font-size pcvw(28)
+        line-height pcvw(51.2)
+      +sp()
+        margin-top spvw(36)
+        font-size spvw(28)
+        line-height spvw(51.2)
+    &__application
+      display block
+      text-align center
+      margin pcvw(100) auto 0
+  &__parallax
+    width 100%
+    +pc()
+      margin-top pcvw(-104)
+      height pcvw(840)
+      background url('/assets/images/flow/img-background001-pc.jpg') no-repeat center
+      background-size 100% auto
+    +sp()
+      margin-top spvw(-60)
+      height spvw(420)
+      background url('/assets/images/flow/img-background001-sp.jpg') no-repeat center
+      background-size 100% auto
+  &__question
+    +pc()
+      margin-top pcvw(188)
+    +sp()
+      margin-top spvw(138)
+    &__inner
+      +pc()
+        width 100%
+        margin-top pcvw(86)
+      +sp()
+        width spvw(730)
+        margin-top spvw(54)
+        margin-left spvw(-40)
+        margin-right spvw(-40)
+    &__box
+      width 100%
+      box-sizing border-box
+      background #e9eef2
+      +pc()
+        padding pcvw(80)
+        border-radius pcvw(30)
+      +sp()
+        padding spvw(56) spvw(20)
+        border-radius spvw(20)
+    &__box + &__box
+      +pc()
+        margin-top pcvw(60)
+      +sp()
+        margin-top spvw(30)
+    &__title
+      width 100%
+      font-weight bold
+      color #0054a5
+      +pc()
+        padding 0 pcvw(46)
+        font-size pcvw(48)
+        line-height pcvw(96)
+      +sp()
+        padding 0 spvw(26)
+        font-size spvw(36)
+        line-height spvw(57.6)
+    &__list
+      width 100%
+      +pc()
+        margin-top pcvw(58)
+      +sp()
+        margin-top spvw(52)
+    &__item
+      width 100%
+      background #fff
+      transition border-radius 0.2s ease-out
+      +pc()
+        border-radius pcvw(75)
+      +sp()
+        border-radius spvw(80)
+      &.open
+        border-radius pcvw(0)
+        transition border-radius 0.2s ease-out
+    &__item + &__item
+      +pc()
+        margin-top pcvw(4)
+      +sp()
+        margin-top spvw(4)
+    &__quetion,
+    &__answer
+      width 100%
+      box-sizing border-box
+      +pc()
+        padding 0 pcvw(45)
+      +sp()
+        padding 0 spvw(35)
+    &__quetion__inner,
+    &__answer__inner
+      position relative
+      box-sizing border-box
+      +pc()
+        padding pcvw(45) 0
+      +sp()
+        padding spvw(35) 0
+    &__quetion__content,
+    &__answer__content
+      width 100%
+      display flex
+      align-items center
+      position relative
+      box-sizing border-box
+      +pc()
+        min-height pcvw(70)
+        padding-left pcvw(94)
+        padding-right pcvw(140)
+      +sp()
+        min-height spvw(50)
+        padding-left spvw(67)
+        padding-right spvw(40)
+    &__quetion
+      cursor pointer
+      &__accordion
+        display inline-block
+        position absolute
+        top 50%
+        right 0
+        transform translate(0, -50%)
+        +pc()
+          width pcvw(48)
+          height pcvw(48)
+        +sp()
+          width spvw(24)
+          height spvw(24)
+        &::before,
+        &::after
+          display block
+          content ""
+          width 100%
+          background #ffc400
+          position absolute
+          top 50%
+          left 50%
+          +pc()
+            height pcvw(8)
+            border-radius pcvw(4)
+          +sp()
+            height spvw(4)
+            border-radius spvw(2)
+        &::before
+          transform translate(-50%, -50%)
+        &::after
+          transform translate(-50%, -50%) rotate(90deg)
+          transition transform 0.2s ease-out
+        &.open
+          &::after
+            transform translate(-50%, -50%) rotate(0deg)
+            transition transform 0.2s ease-out
+      &__text
+        display inline-block
+        font-weight bold
+        color #2c4a70
+        vertical-align middle
+        +pc()
+          font-size pcvw(36)
+          line-height pcvw(51.2)
+        +sp()
+          font-size spvw(28)
+          line-height spvw(44.8)
+    &__answer
+      height 0px
+      overflow hidden
+      &__inner
+        border-top solid 2px #f6f2ee
+      &__text
+        display inline-block
+        color #2c4a70
+        +pc()
+          font-size pcvw(32)
+          line-height pcvw(51.2)
+        +sp()
+          font-size spvw(28)
+          line-height spvw(44.8)
+        a
+          color #60b5e1
+          border-bottom 1px solid #60b5e1
+
+    &__icon
+      position absolute
+      display inline-block
+      vertical-align middle
+      +pc()
+        width pcvw(70)
+        height pcvw(70)
+        top 0
+        left 0
+      +sp()
+        width spvw(50)
+        height spvw(50)
+        top 50%
+        left 0
+        transform translateY(-50%)
+      .p-flow__question__answer &
+        +sp()
+          top spvw(20)

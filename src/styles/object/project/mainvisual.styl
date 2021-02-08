@@ -1,0 +1,182 @@
+.c-mainvisual
+  width 100%
+  // TODO
+  padding-bottom 150px
+
+  &__content
+    width 100%
+    text-align right
+    position relative
+
+  &__movie
+    display inline-block
+    position relative
+    overflow hidden
+    z-index 2
+    +pc()
+      width 2131px
+      height 1192px
+      border-radius 100px 0 0 100px
+    +sp()
+      width spvw(660)
+      height spvw(1072)
+      border-radius spvw(100) 0 0 spvw(100)
+    video
+      position absolute
+      height 100%
+      +pc()
+        top 0
+        left 0
+        width 100%
+        transform scale(1.1)
+      +sp()
+        top 50%
+        left 50%
+        transform translate(-50%, -50%) scale(1.15)
+
+
+  &__heading
+    position absolute
+    z-index 3
+    text-align left
+    +pc()
+      top 610px
+      right 1535px
+    +sp()
+      top spvw(834)
+      right spvw(168)
+
+    &__copy
+      +pc()
+        width 972px
+      +sp()
+        width spvw(535)
+
+    &__lead
+      line-height 2
+      font-weight bold
+      color #2c4a70
+      +pc()
+        font-size pcvw(32)
+      +sp()
+        font-size spvw(32)
+
+    &__copy + &__lead
+      +pc()
+        margin-top pcvw(176)
+      +sp()
+        margin-top spvw(73)
+
+  &__slide
+    z-index 4
+    +pc()
+      position absolute
+      top pcvw(1014)
+      right pcvw(160)
+      width pcvw(668)
+    +sp()
+      width spvw(650)
+      margin spvw(498) auto spvw(100)
+
+    &__list
+      width 100%
+      margin 0 !important
+
+    &__item
+      width 100%
+      a
+        outline none
+
+  /*
+  * slick slide style
+  */
+  .slick-slide
+    +sp()
+      height auto
+
+  /*
+  * slick arrow style
+  */
+  .slick-arrow
+    border-radius 50%
+    background #0053a9
+    position absolute
+    +pc()
+      width pcvw(40)
+      height pcvw(40)
+    +sp()
+      width spvw(48)
+      height spvw(48)
+    &.slick-prev
+      +pc()
+        top pcvw(357)
+        right pcvw(54)
+        left auto
+      +sp()
+        top spvw(351)
+        right spvw(85)
+        left auto
+      &::after
+        transform translate(-50%, -50%) scale(-1, 1)
+    &.slick-next
+      +pc()
+        top pcvw(357)
+        right pcvw(0)
+        left auto
+      +sp()
+        top spvw(351)
+        right spvw(21)
+        left auto
+    &:hover, &:focus
+      background #0053a9
+    &::before
+      content none
+    &::after
+      position absolute
+      top 50%
+      left 50%
+      transform translate(-50%, -50%)
+      display block
+      content ""
+      background-size 100%
+      background-repeat no-repeat
+      background-image url('/assets/images/top/slide/ico-slidearrow.svg')
+      +pc()
+        width pcvw(20)
+        height pcvw(20)
+      +sp()
+        width spvw(24)
+        height spvw(24)
+
+  /*
+  * slick dots style
+  */
+  .small-window-dots
+    display flex
+    justify-content space-between
+    +pc()
+      width pcvw(80)
+      margin pcvw(41) 0 0
+    +sp()
+      width spvw(96)
+      margin spvw(46) 0 0
+    li
+      display inline-block
+      border-radius 50%
+      overflow hidden
+      background #d5e2ea
+      +pc()
+        width pcvw(16)
+        height pcvw(16)
+      +sp()
+        width spvw(19)
+        height spvw(19)
+      &.slick-active
+        background #0053a9
+    button
+      appearance none
+      border none
+      padding 0
+      font-size 0
+
+

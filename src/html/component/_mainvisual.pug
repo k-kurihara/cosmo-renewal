@@ -1,0 +1,36 @@
+.c-section
+  .c-section__inner
+    .c-mainvisual
+      .c-mainvisual__content
+        .c-mainvisual__movie
+          video.u-is-pc(src="/assets/images/top/mainvisual/movie-pc.mp4" muted autoplay loop playsinline)
+          video.u-is-sp(src="/assets/images/top/mainvisual/movie-sp.mp4" muted autoplay loop playsinline)
+        .c-mainvisual__heading
+          .c-mainvisual__heading__copy
+            img(src="/assets/images/top/mainvisual/txt-main.svg", alt="")
+          .c-mainvisual__heading__lead
+            |今日の「出来た」が未来を作る。テスト
+            br
+            |何年経っても価値の続く教育を。
+            br
+            |日限山・丸山台・野庭・南舞岡で
+            br.u-is-sp
+            |塾をお探しならコスモジュク
+        .c-mainvisual__slide
+          ul.c-mainvisual__slide__list(
+            data-module="slick"
+            data-options={
+              "dots": true,
+              "dotsClass": 'small-window-dots'
+            }
+          )
+            li.c-mainvisual__slide__item
+              a(href="javascript:void(0)")
+                img(src="/assets/images/top/slide/img-slide001.jpg", alt="")
+            li.c-mainvisual__slide__item
+              a(href="javascript:void(0)")
+                img(src="/assets/images/top/slide/img-slide001.jpg", alt="")
+            li.c-mainvisual__slide__item
+              a(href="javascript:void(0)")
+                img(src="/assets/images/top/slide/img-slide001.jpg", alt="")
+

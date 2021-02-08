@@ -1,0 +1,182 @@
+.c-footer
+  width 100%
+  background #fff
+  +pc()
+    margin-top pcvw(60)
+    padding-bottom pcvw(80)
+  +sp()
+    padding-top spvw(100)
+    padding-bottom spvw(60)
+  &__inner
+    +pc()
+      position relative
+      width pcvw(2200)
+      margin 0 auto
+      padding pcvw(168) pcvw(80) pcvw(180) 0
+      box-sizing border-box
+      display flex
+      justify-content space-between
+    +sp()
+      padding-left spvw(70)
+      padding-right spvw(70)
+      box-sizing border-box
+      width 100%
+      margin 0 auto
+  &__logo
+    +pc()
+      margin-top pcvw(164)
+      width pcvw(422)
+    +sp()
+      width spvw(252)
+  &__links
+    +pc()
+      display flex
+    +sp()
+      margin-top spvw(60)
+    &__content
+      +pc()
+        width pcvw(464)
+        display flex
+        flex-direction column
+      p
+        +pc()
+          font-size pcvw(24)
+          line-height pcvw(96)
+          letter-spacing 0.04em
+          font-weight bold
+          color #394b6e
+          border-bottom 2px solid #394b6e
+        +sp()
+          font-size spvw(24)
+          line-height spvw(96)
+          letter-spacing 0.04em
+          font-weight bold
+          color #394b6e
+          border-bottom 2px solid #394b6e
+      &.is-exception
+        +pc()
+          width pcvw(226)
+        +sp()
+          margin-top spvw(92)
+    &__content + &__content
+      +pc()
+        margin-left pcvw(132)
+      +sp()
+        margin-top spvw(82)
+    &__list
+      +pc()
+        width 100%
+        margin-top pcvw(38)
+      +sp()
+        width 100%
+        margin-top spvw(42)
+    &__item
+      +pc()
+        width 100%
+      +sp()
+        width 100%
+    &__item__text
+      +pc()
+        font-size pcvw(24)
+        line-height pcvw(60)
+        letter-spacing 0.04em
+        color #394b6e
+        padding-left pcvw(36)
+        box-sizing border-box
+        position relative
+      +sp()
+        font-size spvw(24)
+        line-height spvw(60)
+        letter-spacing 0.04em
+        color #394b6e
+        padding-left spvw(38)
+        box-sizing border-box
+        position relative
+      &::before
+        content ""
+        display inline-block
+        position absolute
+        top 50%
+        transform translateY(-50%)
+        background-image url('/assets/images/common/ico-arrow-mini.svg')
+        background-size 100%
+        +pc()
+          width pcvw(20)
+          height pcvw(20)
+          left 0
+        +sp()
+          width spvw(20)
+          height spvw(20)
+          left spvw(4)
+    &__exception
+      +pc()
+        font-size pcvw(24)
+        line-height pcvw(60)
+        letter-spacing 0.04em
+        color #394b6e
+        font-weight bold
+        padding-left pcvw(36)
+        box-sizing border-box
+        position relative
+      +sp()
+        display block
+        width 100%
+        font-size spvw(24)
+        line-height spvw(60)
+        letter-spacing 0.04em
+        color #394b6e
+        font-weight bold
+        padding-left spvw(38)
+        box-sizing border-box
+        position relative
+        &::before
+          content ""
+          display inline-block
+          position absolute
+          top 50%
+          transform translateY(-50%)
+          background-image url('/assets/images/common/ico-arrow-mini.svg')
+          background-size 100%
+          +pc()
+            width pcvw(20)
+            height pcvw(20)
+            left 0
+          +sp()
+            width spvw(20)
+            height spvw(20)
+            left spvw(4)
+    &__exception + &__exception
+      +pc()
+        margin-top pcvw(34)
+  &__copyright
+    +pc()
+      position absolute
+      right 0
+      bottom 0
+      font-size pcvw(20)
+      color #394b6e
+      line-height 1
+      letter-spacing 0.04em
+    +sp()
+      margin-top spvw(160)
+      font-size spvw(20)
+      color #394b6e
+      line-height 1
+      letter-spacing 0.04em
+  &__sns
+    +pc()
+      margin-top pcvw(126)
+    &__list
+      +pc()
+        display flex
+        align-items center
+        justify-content space-between
+        width pcvw(218)
+    &__item
+      +pc()
+        width pcvw(46)
+        height pcvw(46)
+      a
+        +pc()
+          display block
+          width 100%

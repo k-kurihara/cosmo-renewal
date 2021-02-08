@@ -1,0 +1,47 @@
+extend ../../_template
+
+block vars
+  - title = '[記事名]｜コスモNEWS｜コスモジュク'
+  - description = ''
+  - keywords = ''
+  - img = 'http://localhost:3000/assets/images/share/ogp.jpg'
+  - url = 'http://localhost:3000'
+
+block main
+  include ../../component/_header.pug
+
+  .p-topics
+    include ../../component/topics/detail/_keyvisual.pug
+    include ../../component/topics/detail/_headerPrimary.pug
+    
+    .p-topics__contents
+      section
+        include ../../component/topics/detail/_headerSecondary.pug
+        include ../../component/topics/detail/_text.pug
+
+      section
+        include ../../component/topics/detail/_info.pug
+
+      section
+        include ../../component/topics/detail/_headerTertiary.pug
+        include ../../component/topics/detail/_columnDouble.pug
+
+      section
+        include ../../component/topics/detail/_headerQuaternary.pug
+        include ../../component/topics/detail/_text.pug
+        include ../../component/topics/detail/_columnDoubleImg.pug
+        include ../../component/topics/detail/_columnDoubleText.pug
+
+      section
+        include ../../component/topics/detail/_movie.pug
+  
+      section
+        include ../../component/topics/detail/_sns.pug
+
+    section
+      include ../../component/topics/detail/_latestArticle.pug
+
+    section
+      include ../../component/topics/detail/_breadcrumb.pug
+
+  include ../../component/_footer.pug

@@ -1,0 +1,468 @@
+.p-topics
+  color #2c4a70
+  a
+    color inherit
+    transition all .5s ease
+    &:hover
+      opacity 0.7
+  img
+    width 100%
+    height auto
+  *
+    box-sizing border-box
+  &__section
+    margin-top 20px
+    +pc()
+      margin-top 100px
+    +sp()
+      margin-top 20px
+
+  &__keyvisual
+    text-align center
+    position relative
+    z-index 1
+    img
+      width 100%
+      height auto
+
+  &__contents
+    +pc()
+      width 880px
+      margin 0 auto
+      padding-top 100px
+    +sp()
+      padding-top spvw(80)
+      margin 0 spvw(40)
+     
+    > section:first-child >*:first-child
+      margin-top 0
+
+  &__header
+    &__primary
+      position relative
+      z-index 2
+      background-color #60b5e1
+      +pc()
+        padding 60px 50px 60px 225px
+        width 90vw
+        margin-top -124px
+      +sp()
+        padding spvw(45) spvw(45)
+      &__label
+        display inline-block
+        font-weight bold
+        background-color #d5e2ea
+        +pc()
+          font-size 12px
+          padding 8px 10px
+          border-radius 20px
+        +sp()
+          font-size spvw(22)
+          padding spvw(10) spvw(30)
+          border-radius spvw(40)
+
+
+      &__title
+        color #fff
+        font-weight bold
+        +pc()
+          font-size 36px
+          margin-top 20px
+        +sp()
+          font-size spvw(44)
+          margin-top spvw(28)
+
+      &__date
+        color #fff
+        +pc()
+          font-size 16px
+          margin-top 20px
+        +sp()
+          font-size spvw(11)
+          margin-top spvw(46)
+
+    &__secondary
+      position relative
+      font-weight bold
+      +pc()
+        font-size 36px
+        margin-top 100px
+        padding-bottom 30px
+        margin-bottom 30px
+        line-height 1.3
+      +sp()
+        font-size spvw(44)
+        line-height 1.6
+        margin-top spvw(40)
+        margin-bottom spvw(60)
+        padding-bottom spvw(60)
+
+      &::after
+        position absolute
+        content ""
+        display block
+        background-color #fad06c
+        +pc()
+          bottom 0
+          left 0
+          height 5px
+          width 60px
+        +sp()
+          bottom 0
+          left 0
+          right 0
+          height spvw(10)
+          width spvw(120)
+          margin auto
+
+
+    &__tertiary
+      font-weight bold
+      +pc()
+        font-size 30px
+        margin-top 100px
+        line-height 1.3
+      +sp()
+        font-size spvw(44)
+        margin-top spvw(150)
+        line-height 1.3
+
+    &__quaternary
+      font-weight bold
+      +pc()
+        font-size 24px
+        margin-top 90px
+      +sp()
+        font-size spvw(36)
+        margin-top spvw(120)
+    
+
+  &__text
+    +pc()
+      margin-top 30px
+      font-size 18px
+      line-height 1.6
+    +sp()
+      font-size spvw(28)
+      margin-top spvw(60)
+      line-height 1.6
+
+
+  &__info
+    background-color #f6f2ee
+    +pc()
+      width 100%
+      padding 50px 50px
+      margin-top 40px
+    +sp()
+      width 100%
+      padding spvw(50) spvw(50)
+      margin-top spvw(75)
+
+    &__title
+      font-weight bold
+      +pc()
+        font-size 20px
+        line-height 2
+        margin-top -10px
+        margin-bottom -10px
+      +sp()
+        font-size spvw(36)
+        line-height 1.6
+        margin-top spvw(20)
+        margin-bottom spvw(20)
+
+    &__detail
+      +pc()
+        margin-top 20px
+
+      &__text
+        line-height 1.4
+        +pc()
+          font-size 12px
+          margin-top 12px
+        +sp()
+          font-size spvw(24)
+          margin-top spvw(30)
+        &--em
+          color #ff8880
+          line-height 1.4
+          +pc()
+            font-size 12px
+            margin-top 12px
+          +sp()
+            font-size spvw(24)
+            margin-top spvw(30)
+
+
+  &__column__double
+    +pc()
+      display flex
+      justify-content space-between
+      width 100%
+      margin-top 35px
+    +sp()
+      margin-top spvw(60)
+    
+    &__item
+      line-height 1.6
+      +pc()
+        width 50%
+        font-size 18px
+      +sp()
+        font-size spvw(28)
+
+      &--img
+        +pc()
+          width 45%
+        +sp()
+          margin-top spvw(60)
+
+  &__column__double--img
+    +pc()
+      display flex
+      justify-content space-between
+      width 100%
+      margin-top 35px
+    +sp()
+      margin-top spvw(60)
+    & > .p-topics__column__double__item
+      +pc()
+        width 48%
+      +sp()
+        margin-top spvw(20)
+
+  &__column__double--text
+    +pc()
+      display flex
+      justify-content space-between
+      width 100%
+      margin-top 35px
+    +sp()
+      margin-top spvw(60)
+    
+    & > .p-topics__column__double__item
+      +pc()
+        width 48%
+        font-size 18px
+        line-height 1.6
+      +sp()
+        margin-top spvw(20)
+
+  &__movie
+    +pc()
+      margin-top 50px
+    +sp()
+      margin-top spvw(60)
+
+  &__sns
+    display flex
+    +pc()
+      margin-top 60px
+      justify-content flex-end
+    +sp()
+      margin-top spvw(100)
+      justify-content center
+    &__twitter
+      a
+        display block
+        +pc()
+          width 25px
+        +sp()
+          width spvw(48)
+    &__facebook
+      +pc()
+        margin-left 20px
+      +sp()
+        margin-left spvw(40)
+      a
+        display block
+        +pc()
+          width 20px
+        +sp()
+          width spvw(40)
+
+
+  &__latest__article
+    +pc()
+      margin 130px auto 0
+      width 1100px
+    +sp()
+      margin-top spvw(260)
+    &__title
+      text-align center
+      font-weight bold
+      +pc()
+        font-size 24px
+      +sp()
+        font-size spvw(36)
+
+    &__list
+      +pc()
+        display flex
+        justify-content space-between
+        margin-top 50px
+      +sp()
+        margin spvw(60) spvw(50) 0
+      &__item
+        background-color #fff
+        +pc()
+          width 31.5%
+          box-shadow 0px 0px 10px #d2d2d2
+        +sp()
+          box-shadow 0px 0px spvw(20) #d2d2d2
+        a
+          display block
+        &__img
+          +pc()
+            width 100%
+            height 205px
+          +pc()
+            width 100%
+            height spvw(380)
+        & + &
+          +sp()
+            margin-top spvw(36)
+
+      &__desc
+        +pc()
+          padding 15px 25px
+        +sp()
+          padding spvw(40)
+        &__label
+          color #fff
+          background-color #60b5e1
+          font-weight bold
+          display inline-block
+          +pc()
+            font-size 12px
+            padding 7px 10px
+            border-radius 20px
+          +sp()
+            font-size spvw(22)
+            padding spvw(14) spvw(26)
+            border-radius spvw(50)
+
+        &__title
+          font-weight bold
+          +pc()
+            font-size 16px
+            margin-top 12px
+          +sp()
+            font-size spvw(32)
+            margin-top spvw(30)
+        &__text
+          +pc()
+            font-size 14px
+            margin-top 20px
+            line-height 1.6
+          +sp()
+            font-size spvw(28)
+            margin-top spvw(35)
+            line-height 1.6
+        &__date
+          color #aab0b8
+          +pc()
+            font-size 12px
+            margin-top 18px
+          +sp()
+            font-size spvw(22)
+            margin-top spvw(35)
+
+    &__back
+      font-weight bold
+      +pc()
+          text-align center
+        margin-top 50px
+        font-size 16px
+      +sp()
+        display flex
+        justify-content center
+        margin-top spvw(100)
+        font-size spvw(32)
+      a
+        display inline-block
+        position relative
+        +pc()
+          padding-left 27px
+        +sp()
+          padding-left spvw(60)
+        &:hover
+          .p-topics__latest__article__back__arrow
+            &::before
+              transform translate(-60%, -50%)
+            &::after
+              transform translate(-70%, -50%) rotate(-135deg)
+
+
+      &__arrow
+        background-color #0053a9
+        display block
+        position absolute
+        top 50%
+        transform translateY(-50%)
+        +pc()
+          width 20px
+          height 20px
+          border-radius 10px
+          left -10px
+        +sp()
+          width spvw(40)
+          height spvw(40)
+          border-radius spvw(40)
+          left 0
+        &::before
+          content ""
+          display block
+          position absolute
+          left 50%
+          top 50%
+          width 10px
+          height 2px
+          background #fff
+          transform translate(-50%, -50%)
+          transition all .5s ease
+        &::after
+          content ""
+          display block
+          position absolute
+          left 45%
+          top 50%
+          width 5px
+          height 5px
+          border-top 2px solid #fff
+          border-right 2px solid #fff
+          transform translate(-50%, -50%) rotate(-135deg)
+          transition all .5s ease
+
+
+  &__breadcrumb
+    +pc()
+      width  1110px
+      margin 120px auto 30px
+    +sp()
+      margin spvw(210) spvw(50) spvw(50)
+    &__list
+      display flex
+      &__item
+        position relative
+        +pc()
+          margin-left 15px
+          font-size 12px
+        +sp()
+          margin-left spvw(25)
+          font-size spvw(22)
+        &:before
+          content "-"
+          display block
+          position absolute
+          +pc()
+            left -9px
+          +sp()
+            left spvw(-13)
+        &:first-child
+          margin-left 0
+          &:before
+            display none
+
+

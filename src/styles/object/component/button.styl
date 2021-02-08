@@ -1,0 +1,87 @@
+.c-button
+  display inline-flex
+  font-weight bold
+  color #fff
+  overflow hidden
+  position relative
+  background #fad06c
+  transition color 0.2s ease-out
+  z-index 2
+  +pc()
+    font-size pcvw(28)
+    border-radius pcvw(70)
+    &.c-button-small
+      font-size pcvw(26)
+      border-radius pcvw(50)
+  +sp()
+    font-size spvw(26)
+    border-radius spvw(55)
+    &.c-button-small
+      font-size spvw(26)
+      border-radius spvw(50)
+  &:hover
+    color #0053a9
+    transition color 0.2s ease-out
+  &__text
+    display inline-block
+    box-sizing border-box
+    position relative
+    +pc()
+      padding pcvw(56) pcvw(112)
+      .c-button-small &
+        padding pcvw(38) pcvw(82)
+    +sp()
+      padding spvw(43) spvw(66)
+      .c-button-small &
+        padding spvw(38) spvw(110)
+    &::after
+      content ""
+      display block
+      position absolute
+      top 0
+      right 0
+      width 100%
+      height 100%
+      background #0053a9
+      transform scaleX(1)
+      transform-origin left
+      transition transform 0.2s ease-out
+    .c-button:hover &::after
+      +pc()
+        transform scaleX(0)
+        transition transform 0.2s ease-out
+    p
+      position relative
+      z-index 3
+  &__arrow
+    display inline-block
+    box-sizing border-box
+    background #fad06c
+    position relative
+    z-index 3
+    transform translate3d(0,0,0)
+    transition transform 0.2s ease-out
+    visibility visible
+    +pc()
+      padding pcvw(56) pcvw(58)
+      .c-button-small &
+          padding pcvw(38)
+    +sp()
+      padding spvw(43)
+      .c-button-small &
+          padding spvw(38)
+    &::after
+      content ""
+      display block
+      background url('/assets/images/common/ico-arrow.svg') no-repeat
+      background-size 100%
+      +pc()
+        width pcvw(24)
+        height pcvw(24)
+      +sp()
+        width spvw(24)
+        height spvw(24)
+    .c-button:hover &
+      +pc()
+        transform translate3d(10%,0,0)
+        transition transform 0.2s ease-out

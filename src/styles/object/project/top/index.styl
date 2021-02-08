@@ -1,0 +1,35 @@
+.p-top
+  &__about
+    +pc()
+      margin-top 150px
+    &__contents
+      +pc()
+        display flex
+        width 1100px
+      &__item
+        // TODO　いい感じのネーミングにする
+        &--title
+          +pc()
+            width 47%
+        &--desc
+          +pc()
+            width 53%
+
+    &__title
+      font-weight bold
+      +pc()
+        font-size 44px
+        line-height 1.6
+    &__link
+      +pc()
+        margin-top 50px
+
+    &__desc
+      font-weight bold
+      +pc()
+        font-size 19px
+        line-height 2.35
+
+    &__img
+      +pc()
+        margin-top 100px
