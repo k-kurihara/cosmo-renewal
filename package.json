@@ -15,7 +15,6 @@
     "server": "node ./server/index.js",
     "open": "opn http://localhost:3000",
     "preview": "run-s del mkdir cp:prod build:*:prod",
-    "precommit": "lint-staged",
     "commitmsg": "cz-customizable-ghooks",
     "build:js:dev": "webpack --mode development --module-bind js=babel-loader --watch --entry ./src/scripts/index.js --output ./dist/assets/scripts/app.js",
     "build:js:prod": "webpack --mode production --module-bind js=babel-loader --entry ./src/scripts/index.js --output ./dist/assets/scripts/app.js",
@@ -24,17 +23,6 @@
     "build:html:prod": "pug --obj ./src/data/sample.json ./src/html --basedir ./src/html/ --pretty --out ./dist/",
     "sync": "rsync -auvz --delete --ignore-times --checksum --exclude='*.php' --exclude='.*' ./dist/ ./htdocs/",
     "publish": "run-s del mkdir cp:prod build:*:prod sync"
-  },
-  "lint-staged": {
-    "./src/scripts/**/*.js": [
-      "eslint",
-      "prettier --write",
-      "git add"
-    ],
-    "./src/styles/**/*.styl": [
-      "stylus-supremacy format glob --replace --options ./supremacy.json",
-      "git add"
-    ]
   },
   "repository": {
     "type": "git",
@@ -52,10 +40,8 @@
     "eslint": "4.19.0",
     "express": "4.16.2",
     "gsap": "3.6.0",
-    "husky": "0.14.3",
     "jquery": "3.5.1",
     "json5": "1.0.1",
-    "lint-staged": "7.1.2",
     "mkdirp": "0.5.1",
     "npm-run-all": "4.1.2",
     "opn-cli": "3.1.0",
