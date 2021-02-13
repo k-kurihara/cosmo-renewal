@@ -16,11 +16,8 @@ const Message = props => {
           key={item.id}
           className={`p-chatbot__question ${item.isSelected ? 'p-chatbot__question--selected' : ''}`}
           onClick={() => {
-            if (!isActive) {
-              return
-            }
-
             handleClickQuestion({
+              isActive,
               messageId: id,
               questionId: item.id,
             })

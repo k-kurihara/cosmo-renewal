@@ -2,10 +2,12 @@ import { h } from 'preact'
 import Header from './Header'
 import Timeline from './Timeline'
 
-const Chat = () => {
+const Chat = props => {
+  const { handleToggle } = props
+
   return (
     <div className="p-chatbot__chat">
-      <Header />
+      <Header handleToggle={handleToggle} />
       <Timeline />
     </div>
   )

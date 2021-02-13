@@ -8,37 +8,34 @@ import Communication from './Communication'
 const Timeline = () => {
   const [timeline, setTimeline] = useState([])
 
-  const handleClickQuestion = useCallback(({ messageId, questionId }) => {
-    const answer = ownerMessages.find(message => message.questionId === questionId)
+  const handleClickQuestion = useCallback(({ isActive, messageId, questionId }) => {
+    if (!isActive) {
+      return
+    }
 
+    const answer = ownerMessages.find(message => message.questionId === questionId)
     if (!answer) {
       return
     }
 
     setTimeline(prev => {
-      // console.log('1', prev)
-      // console.log('messageId', messageId)
-      // console.log('questionId', questionId)
-      const hoge = prev.map(
-        a =>
-          a.id === messageId
-            ? Object.assign({}, a, {
+      const changedTimeline = prev.map(
+        prevTarget =>
+          prevTarget.id === messageId
+            ? {
+                ...prevTarget,
                 isActive: false,
-                message: a.message.map(
-                  b =>
-                    b.id === questionId
-                      ? Object.assign({}, b, {
-                          isSelected: true,
-                        })
-                      : Object.assign({}, b, {
-                          isSelected: false,
-                        }),
+                message: prevTarget.message.map(
+                  prevMessage =>
+                    prevMessage.id === questionId
+                      ? { ...prevMessage, isSelected: true }
+                      : { ...prevMessage, isSelected: false },
                 ),
-              })
-            : a,
+              }
+            : prevTarget,
       )
 
-      const newTimeline = [...hoge, answer]
+      const newTimeline = [...changedTimeline, answer]
       return newTimeline
     })
   })

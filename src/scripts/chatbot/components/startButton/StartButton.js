@@ -1,7 +1,9 @@
 import { h } from 'preact'
 
-const StartButton = () => {
-  return <div className="p-chatbot__startButton">Hello</div>
+const StartButton = props => {
+  const { handleToggle } = props
+
+  return <div className="p-chatbot__startButton" onClick={handleToggle} />
 }
 
 export default StartButton
