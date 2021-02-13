@@ -1,24 +1,26 @@
-import { h, Fragment } from 'preact'
+import { h } from 'preact'
 import { useState } from 'preact/hooks'
+import useScroll from './hooks/useScroll'
 import { Chat } from './components/chat'
 import { StartButton } from './components/startButton'
 
 const App = () => {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isChatOpen, setIsChatOpen] = useState(false)
+  const { isScrolled } = useScroll()
 
   const handleToggle = () => {
-    setIsOpen(prev => !prev)
+    setIsChatOpen(prev => !prev)
   }
 
-  if (!isOpen) {
-    return <StartButton handleToggle={handleToggle} />
+  if (isChatOpen) {
+    return <Chat handleToggle={handleToggle} />
   }
 
-  return (
-    <Fragment>
-      <Chat handleToggle={handleToggle} />
-    </Fragment>
-  )
+  if (!isScrolled) {
+    return null
+  }
+
+  return <StartButton handleToggle={handleToggle} />
 }
 
 export default App
