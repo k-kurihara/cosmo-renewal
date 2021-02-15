@@ -35,6 +35,5 @@ export const createUserMessage = () => {
   return {
     isOwner: false,
     message: defaultQuestions,
-    isActive: true,
   }
 }

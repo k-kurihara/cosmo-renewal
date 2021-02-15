@@ -50,7 +50,6 @@ const Timeline = () => {
           id={item.id}
           isOwner={item.isOwner}
           message={item.message}
-          isActive={item.isActive}
           handleClickQuestion={handleClickQuestion}
         />
       ))}

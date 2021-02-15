@@ -1,5 +1,5 @@
-import { h } from 'preact'
-import { useState } from 'preact/hooks'
+import { h, Fragment } from 'preact'
+import { useState, useMemo } from 'preact/hooks'
 import useScroll from './hooks/useScroll'
 import { Chat } from './components/chat'
 import { StartButton } from './components/startButton'
@@ -12,15 +12,22 @@ const App = () => {
     setIsChatOpen(prev => !prev)
   }
 
-  if (isChatOpen) {
-    return <Chat handleToggle={handleToggle} />
-  }
+  const createStartButtonClass = useMemo(
+    () => {
+      if (!isChatOpen && isScrolled) {
+        return 'is-show'
+      }
+      return ''
+    },
+    [isChatOpen, isScrolled],
+  )
 
-  if (!isScrolled) {
-    return null
-  }
-
-  return <StartButton handleToggle={handleToggle} />
+  return (
+    <Fragment>
+      <StartButton className={createStartButtonClass} handleToggle={handleToggle} />
+      <Chat className={isChatOpen ? 'is-show' : ''} handleToggle={handleToggle} />
+    </Fragment>
+  )
 }
 
 export default App

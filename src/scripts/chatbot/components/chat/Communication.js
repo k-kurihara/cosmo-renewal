@@ -3,7 +3,7 @@ import Avatar from './Avatar'
 import Message from './Message'
 
 const Communication = props => {
-  const { id, isOwner, message, isActive, handleClickQuestion } = props
+  const { id, isOwner, message, handleClickQuestion } = props
 
   if (isOwner) {
     return (
@@ -16,13 +16,7 @@ const Communication = props => {
 
   return (
     <div className="p-chatbot__communication">
-      <Message
-        id={id}
-        isOwner={isOwner}
-        message={message}
-        isActive={isActive}
-        handleClickQuestion={handleClickQuestion}
-      />
+      <Message id={id} isOwner={isOwner} message={message} handleClickQuestion={handleClickQuestion} />
       <Avatar isOwner={isOwner} />
     </div>
   )
