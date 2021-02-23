@@ -1,7 +1,10 @@
 .c-mainvisual
   width 100%
   // TODO
-  padding-bottom 150px
+  +pc()
+    padding-bottom pcvw(300)
+  // +sp()
+  //   padding-bottom pcvw(150)
 
   &__content
     width 100%
@@ -76,7 +79,7 @@
       width pcvw(668)
     +sp()
       width spvw(650)
-      margin spvw(498) auto spvw(100)
+      margin spvw(498) auto 0
 
     &__list
       width 100%

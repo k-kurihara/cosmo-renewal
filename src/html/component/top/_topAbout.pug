@@ -5,7 +5,7 @@
         |コスモジュクへ
         br
         |ようこそ
-      .p-top__about__link
+      .p-top__about__link.u-is-pc
         a.c-button(href="/contact/")
           .c-button__text
             p コスモジュクについて
@@ -15,7 +15,9 @@
       p.p-top__about__desc
         |試験や受験を経て、社会に出た時に
         br
-        |さらに価値が高まる能力を学ぶ場所を提供する、
+        |さらに価値が高まる能力を
+        br.u-is-sp
+        |学ぶ場所を提供する、
         br
         |そんな塾でありたい。
         br
@@ -24,5 +26,11 @@
         |こんな疑問をお持ちの方は
         br
         |ぜひ一緒に学ぶ楽しさを感じてみませんか？
+    .p-top__about__link.u-is-sp
+      a.c-button(href="/contact/")
+        .c-button__text
+          p コスモジュクについて
+        .c-button__arrow
   .p-top__about__img
-    img(src="/assets/images/topics/detail/keyvisual.png", alt="")
+    img.u-is-pc(src="/assets/images/top/pc/about_img.png", alt="")
+    img.u-is-sp(src="/assets/images/top/pc/about_img.png", alt="")

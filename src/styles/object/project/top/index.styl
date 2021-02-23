@@ -2,39 +2,437 @@
   color #2c4a70
   *
     box-sizing border-box
+  &__header
+    &__title
+      font-weight bold
+      position relative
+      +pc()
+        display flex
+        justify-content center
+        font-size pcvw(78)
+        padding-bottom pcvw(80)
+      +sp()
+        display flex
+        justify-content center
+        font-size spvw(64)
+        padding-bottom spvw(50)
+      &:after
+        content ""
+        display block
+        position absolute
+        bottom 0
+        left auto
+        right auto
+        background-color #fad06c
+        +pc()
+          width pcvw(120)
+          height pcvw(10)
+        +sp()
+          width spvw(120)
+          height spvw(10)
+    &__text
+      +pc()
+        font-size pcvw(28)
+        margin-top pcvw(60)
+        text-align center
+        line-height 1.8
+      +sp()
+        font-size spvw(28)
+        text-align center
+        line-height 1.8
+        padding 0 spvw(50)
+        margin spvw(60) auto 0
+
+
   &__about
     +pc()
-      margin-top 150px
+      margin-top pcvw(300)
+    +sp()
+      margin-top spvw(250)
     &__contents
       +pc()
         display flex
-        width 1100px
+        width pcvw(2200)
+        margin 0 auto
+      +sp()
+        padding 0 spvw(50)
         margin 0 auto
     &__item
-      // TODO　いい感じのネーミングにする
       &--title
         +pc()
           width 47%
-          padding-left 150px
+          padding-left pcvw(300)
       &--desc
         +pc()
           width 53%
+        +sp()
+          margin-top spvw(75)
 
     &__title
       font-weight bold
       +pc()
-        font-size 44px
+        font-size pcvw(88)
         line-height 1.6
+      +sp()
+        font-size spvw(72)
+        line-height 1.4
     &__link
       +pc()
-        margin-top 50px
+        margin-top pcvw(100)
+      +sp()
+        margin-top spvw(100)
+        text-align center
 
     &__desc
       font-weight bold
       +pc()
-        font-size 19px
+        font-size pcvw(38)
         line-height 2.35
+      +sp()
+        font-size spvw(32)
+        line-height 2.375
 
     &__img
+      text-align center
       +pc()
-        margin-top 100px
+        margin pcvw(140) auto 0
+        width pcvw(2200)
+      +sp()
+        padding 0 spvw(50)
+        margin spvw(90) auto 0
+
+
+  &__course
+    +pc()
+      width pcvw(2200)
+      margin pcvw(300) auto 0
+    +sp()
+      margin-top spvw(100)
+    &__introduction
+      +pc()
+        margin-top pcvw(100)
+      &__list
+        +pc()
+          display flex
+          flex-wrap wrap
+          border solid pcvw(10) #d5e2ea
+        +sp()
+          margin-top spvw(100)
+          border solid spvw(10) #d5e2ea
+        &__item
+          position relative
+          +pc()
+            width calc(100% / 3)
+            padding pcvw(200) pcvw(70) pcvw(100)
+            border-right solid pcvw(10) #d5e2ea
+            margin-top -2px // vwでずれるborderの調整
+          +sp()
+            padding spvw(45) spvw(45) spvw(80)
+            border-top solid spvw(10) #d5e2ea
+            border-left solid spvw(10) #d5e2ea
+            border-right solid spvw(10) #d5e2ea
+            display flex
+            flex-wrap wrap
+            width 100%
+          &:nth-child(1)
+            +pc()
+              width 50%
+              padding-left pcvw(270)
+              padding-right pcvw(140)
+              padding-top pcvw(100)
+              border-bottom solid pcvw(10) #d5e2ea
+            .p-top__course__introduction__list__image
+              +pc()
+                margin-left pcvw(100)
+                width pcvw(492)
+          &:nth-child(2)
+            +pc()
+              width 50%
+              padding-left pcvw(270)
+              padding-right pcvw(140)
+              padding-top pcvw(100)
+              border-bottom solid pcvw(10) #d5e2ea
+              border-right none
+            .p-top__course__introduction__list__image
+              +pc()
+                margin-left pcvw(100)
+                width pcvw(472)
+          &:nth-child(3)
+            .p-top__course__introduction__list__image
+              +pc()
+                width pcvw(439)
+                margin-left auto
+          &:nth-child(4)
+            .p-top__course__introduction__list__image
+              +pc()
+                width pcvw(400)
+                margin-left auto
+          &:nth-child(5)
+            +pc()
+              border-right none
+            +sp()
+              border-bottom solid spvw(10) #d5e2ea
+            .p-top__course__introduction__list__image
+              +pc()
+                width pcvw(441)
+                margin-left auto
+        &__title
+          +pc()
+            position absolute
+            font-weight bold
+            font-size pcvw(56)
+            -ms-writing-mode tb-rl
+            writing-mode vertical-rl
+            top pcvw(80)
+            left pcvw(70)
+          +sp()
+            font-weight bold
+            font-size spvw(56)
+            -ms-writing-mode tb-rl
+            writing-mode vertical-rl
+            width calc(80 / 700 * 100%)
+        &__image
+          +pc()
+            height pcvw(327)
+            text-align center
+          +sp()
+            width calc(620 / 700 * 100%)
+            display flex
+            align-items flex-end
+            padding-left spvw(90)
+            padding-right spvw(30)
+            min-height: spvw(400)
+        &__text
+          +pc()
+            font-size pcvw(28)
+            line-height 1.7
+            margin-top pcvw(70)
+          +sp()
+            font-size spvw(28)
+            line-height 1.7
+            margin-top spvw(80)
+
+    &__link
+      text-align center
+      +pc()
+        margin-top pcvw(125)
+      +sp()
+        margin-top spvw(80)
+
+  &__news
+    +pc()
+      width pcvw(2200)
+      margin pcvw(300) auto 0
+    +sp()
+      margin-top spvw(370)
+    &__link
+      font-weight bold
+      +pc()
+          text-align center
+          margin-top pcvw(80)
+          font-size pcvw(32)
+      +sp()
+        display flex
+        justify-content center
+        margin-top spvw(100)
+        font-size spvw(32)
+      a
+        display inline-block
+        position relative
+        +pc()
+          padding-left 27px
+        +sp()
+          padding-left spvw(60)
+        &:hover
+          .p-topics__article__back__arrow
+            &::before
+              transform translate(-60%, -50%)
+            &::after
+              transform translate(-70%, -50%) rotate(-135deg)
+
+
+      &__arrow
+        background-color #0053a9
+        display block
+        position absolute
+        top 50%
+        transform translateY(-50%)
+        +pc()
+          width 20px
+          height 20px
+          border-radius 10px
+          left -10px
+        +sp()
+          width spvw(40)
+          height spvw(40)
+          border-radius spvw(40)
+          left 0
+        &::before
+          content ""
+          display block
+          position absolute
+          left 50%
+          top 50%
+          width 10px
+          height 2px
+          background #fff
+          transform translate(-50%, -50%)
+          transition all .5s ease
+        &::after
+          content ""
+          display block
+          position absolute
+          left 55%
+          top 50%
+          width 5px
+          height 5px
+          border-top 2px solid #fff
+          border-right 2px solid #fff
+          transform translate(-50%, -50%) rotate(45deg)
+          transition all .5s ease
+
+  &__activity
+    +pc()
+      margin-top pcvw(400)
+    +sp()
+      margin-top spvw(280)
+    &__contents
+      +pc()
+        width pcvw(2466)
+        display flex
+    &__lead
+      +pc()
+        width calc(1646 / 2466 * 100%)
+        background-image url('/assets/images/top/pc/activity_lead_bg.png')
+        background-size cover
+        background-position left top
+        background-repeat no-repeat
+        padding pcvw(300) pcvw(266) pcvw(260)
+      +sp()
+        background-image url('/assets/images/top/pc/activity_lead_bg.png')
+        background-size cover
+        background-position center
+        background-repeat no-repeat
+        padding spvw(190) spvw(86) spvw(170) spvw(100)
+      &__title
+        color #fff
+        font-weight bold
+        +pc()
+          font-size pcvw(78)
+        +sp()
+          font-size spvw(64)
+      &__text
+        color #fff
+        +pc()
+          margin-top pcvw(80)
+          font-size pcvw(30)
+          line-height 1.7
+        +sp()
+          margin-top spvw(60)
+          font-size spvw(28)
+          line-height 1.829
+      &__link
+        +pc()
+          margin-top pcvw(80)
+        +sp()
+          margin-top spvw(65)
+    &__body
+      +pc()
+        width calc(820 / 2466 * 100%)
+
+  &__access
+    +pc()
+      position relative
+      right 0
+      width pcvw(2466)
+      margin-top pcvw(200)
+      margin-left auto
+    +sp()
+      margin-top spvw(130)
+    &__contents
+      +pc()
+        display flex
+    &__lead
+      background-color #fff
+      +pc()
+        width calc(820 /2466 * 100%)
+        padding pcvw(250) pcvw(120)
+      +sp()
+        padding spvw(140) spvw(50)
+      &__title
+        font-weight bold
+        +pc()
+          font-size pcvw(78)
+        +sp()
+          font-size spvw(64)
+      &__name
+        font-weight bold
+        +pc()
+          font-size pcvw(36)
+          margin-top pcvw(90)
+        +sp()
+          font-size spvw(36)
+          margin-top spvw(60)
+      &__address
+        +pc()
+          font-size pcvw(28)
+          margin-top pcvw(40)
+        +sp()
+          font-size spvw(28)
+          margin-top spvw(40)
+      &__business
+        +pc()
+          margin-top pcvw(60)
+        +sp()
+          margin-top spvw(50)
+        &__item
+          & + &
+            +pc()
+              margin-top pcvw(20)
+            +sp()
+              margin-top spvw(15)
+        &__label
+          display inline-block
+          color #fff
+          +pc()
+            font-size pcvw(28)
+            background-color #60b5e1
+            padding pcvw(8) pcvw(40)
+            border-radius pcvw(40)
+          +sp()
+            font-size spvw(28)
+            background-color #60b5e1
+            padding spvw(8) spvw(40)
+            border-radius spvw(40)
+        &__time
+          +pc()
+            font-size pcvw(28)
+            margin-left pcvw(20)
+          +sp()
+            font-size spvw(28)
+            margin-left spvw(30)
+      &__caption
+        +pc()
+          font-size pcvw(24)
+          margin-top pcvw(40)
+        +sp()
+          font-size spvw(22)
+          margin-top spvw(50)
+
+      &__map
+        +pc()
+          width calc(1646 /2466 * 100%)
+
+  &__cv
+    +pc()
+      background-color #d5e2ea
+      padding pcvw(200) 0
+      margin-top pcvw(460)
+      margin-bottom pcvw(-60)
+    +sp()
+      background-color #d5e2ea
+      padding spvw(240) 0
+      margin-top spvw(240)
+    &__link
+      text-align center
+
