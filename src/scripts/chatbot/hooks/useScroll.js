@@ -12,7 +12,9 @@ const useScroll = () => {
   }
 
   useEffect(() => {
-    document.addEventListener('scroll', onScroll)
+    setTimeout(() => {
+      document.addEventListener('scroll', onScroll)
+    }, 1000)
 
     return () => {
       document.removeEventListener('scroll', onScroll)

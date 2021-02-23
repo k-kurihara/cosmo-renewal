@@ -8,37 +8,30 @@ import Communication from './Communication'
 const Timeline = () => {
   const [timeline, setTimeline] = useState([])
 
-  const handleClickQuestion = useCallback(({ isActive, messageId, questionId }) => {
-    if (!isActive) {
-      return
-    }
+  const handleClickQuestion = useCallback(
+    ({ messageId, questionId }) => {
+      const answer = ownerMessages.find(message => message.questionId === questionId)
+      if (!answer) {
+        return
+      }
 
-    const answer = ownerMessages.find(message => message.questionId === questionId)
-    if (!answer) {
-      return
-    }
+      const userMessage = timeline.find(target => target.id === messageId)
+      if (!userMessage) {
+        return
+      }
 
-    setTimeline(prev => {
-      const changedTimeline = prev.map(
-        prevTarget =>
-          prevTarget.id === messageId
-            ? {
-                ...prevTarget,
-                isActive: false,
-                message: prevTarget.message.map(
-                  prevMessage =>
-                    prevMessage.id === questionId
-                      ? { ...prevMessage, isSelected: true }
-                      : { ...prevMessage, isSelected: false },
-                ),
-              }
-            : prevTarget,
+      const updatedUserMessage = userMessage.message.map(
+        prevMessage =>
+          prevMessage.id === questionId ? { ...prevMessage, isSelected: true } : { ...prevMessage, isSelected: false },
       )
+      const newUserMessage = { ...userMessage, message: updatedUserMessage }
 
-      const newTimeline = [...changedTimeline, answer]
-      return newTimeline
-    })
-  })
+      const newTimeline = [timeline[0], newUserMessage, answer]
+
+      setTimeline(newTimeline)
+    },
+    [timeline],
+  )
 
   useEffect(() => {
     const timeline = [ownerMessages[0], createUserMessage()].map(message => ({
@@ -57,7 +50,6 @@ const Timeline = () => {
           id={item.id}
           isOwner={item.isOwner}
           message={item.message}
-          isActive={item.isActive}
           handleClickQuestion={handleClickQuestion}
         />
       ))}

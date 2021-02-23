@@ -1,7 +1,7 @@
 import { h } from 'preact'
 
 const Message = props => {
-  const { id, isOwner, message, isActive, handleClickQuestion } = props
+  const { id, isOwner, message, handleClickQuestion } = props
 
   if (isOwner) {
     return (
@@ -17,7 +17,6 @@ const Message = props => {
           className={`p-chatbot__question ${item.isSelected ? 'p-chatbot__question--selected' : ''}`}
           onClick={() => {
             handleClickQuestion({
-              isActive,
               messageId: id,
               questionId: item.id,
             })
