@@ -1,0 +1,98 @@
+.p-course__menu
+  .p-course__menu__title オリジナルコース
+  .p-course__menu__contents.is_original
+    .p-course__menu__contents__unit
+      .p-course__menu__target
+        .p-course__menu__label 対象
+        .p-course__menu__text 中学1~3年生
+      .p-course__menu__summary
+        .p-course__menu__label 対象
+        .p-course__menu__text 中学1~3年生
+      .p-course__menu__description
+        .p-course__menu__label 対象
+        .p-course__menu__text 中学1~3年生
+
+    .p-course__menu__contents__unit
+      .p-course__menu__label 料金表
+      .p-course__menu__pricelist
+        -
+          var pricelistHeading = [
+            { text: 'loop heading 1' },
+            { text: 'loop heading 2' },
+            { text: 'loop heading 3' },
+            { text: 'loop heading 4' },
+            { text: 'loop heading 5' },
+          ]
+        ul.p-course__menu__pricelist__heading
+          each item in pricelistHeading
+            li.p-course__menu__pricelist__heading__item #{item.text}
+        -
+          var pricelistBody = [
+            {
+              childItems: [
+                { text: 'loop body 1 1' },
+                { text: 'loop body 1 2' },
+                { text: 'loop body 1 3' },
+                { text: 'loop body 1 4' },
+                { text: 'loop body 1 5' },
+              ],
+            },
+            {
+              childItems: [
+                { text: 'loop body 2 1' },
+                { text: 'loop body 2 2' },
+                { text: 'loop body 2 3' },
+                { text: 'loop body 2 4' },
+                { text: 'loop body 2 5' },
+              ]
+            }
+          ]
+        each item in pricelistBody
+          ul.p-course__menu__pricelist__body
+            if item.childItems
+              each childItem in item.childItems
+                .p-course__menu__pricelist__body__item #{childItem.text}
+
+  .p-course__menu__timetable
+    .p-course__menu__timetable__button
+
+    .p-course__menu__timetable__area
+      .p-course__menu__timetable__list
+        -
+          var timetableHeading = [
+            { text: 'loop timetable heading 1' },
+            { text: 'loop timetable heading 2' },
+            { text: 'loop timetable heading 3' },
+            { text: 'loop timetable heading 4' },
+            { text: 'loop timetable heading 5' },
+          ]
+        ul.p-course__menu__timetable__list__heading
+          each item in timetableHeading
+            li.p-course__menu__timetable__list__heading__item #{item.text}
+
+        -
+          var timetableBody = [
+            {
+              childItems: [
+                { text: 'loop timetable body 1 1' },
+                { text: 'loop timetable body 1 2' },
+                { text: 'loop timetable body 1 3' },
+                { text: 'loop timetable body 1 4' },
+                { text: 'loop timetable body 1 5' },
+              ],
+            },
+            {
+              childItems: [
+                { text: 'loop timetable body 2 1' },
+                { text: 'loop timetable body 2 2' },
+                { text: 'loop timetable body 2 3' },
+                { text: 'loop timetable body 2 4' },
+                { text: 'loop timetable body 2 5' },
+              ]
+            }
+          ]
+        each item in timetableBody
+          ul.p-course__menu__timetable__list__body
+            if item.childItems
+              each childItem in item.childItems
+                .p-course__menu__timetable__list__body__item #{childItem.text}

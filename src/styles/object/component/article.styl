@@ -16,6 +16,7 @@
     +pc()
       display flex
       justify-content space-between
+      flex-wrap wrap
       margin-top 50px
     +sp()
       margin spvw(60) spvw(50) 0
@@ -26,6 +27,8 @@
         box-shadow 0px 0px 10px #d2d2d2
       +sp()
         box-shadow 0px 0px spvw(20) #d2d2d2
+      &:nth-child(n+4)
+        margin-top pcvw(60)
       a
         display block
       &__img

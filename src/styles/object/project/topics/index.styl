@@ -1,0 +1,138 @@
+.p-topics
+  +pc()
+    padding-top pcvw(368)
+  +sp()
+    padding-top spvw(210)
+    overflow hidden
+  &__heading
+    +pc()
+      margin-top pcvw(60)
+      display flex
+      justify-content space-between
+      align-items center
+    +sp()
+      margin-top spve(30)
+    &__sort
+      +sp()
+        display flex
+        justify-content space-between
+        margin-top spvw(80)
+      &__item
+        background-color #d5e2ea
+        cursor pointer
+        +pc()
+          display inline-block
+          font-size pcvw(28)
+          border-radius pcvw(40)
+          padding pcvw(20) pcvw(30)
+        +sp()
+          display inline-block
+          font-size spvw(22)
+          padding spvw(15) spvw(35)
+          border-radius spvw(40)
+        &.is-active
+          background-color #60b5e1
+          color #fff
+        & + &
+          +pc()
+            margin-left pcvw(15)
+
+  &__article
+    +pc()
+      width pcvw(2200)
+      margin 0 auto
+  
+  &__pager
+    +pc()
+      margin-top pcvw(150)
+      display flex
+      align-items center
+      justify-content center
+    +sp()
+      margin-top spvw(100)
+      display flex
+      align-items center
+      justify-content center
+    &__before, &__next
+      display inline-block
+      box-sizing border-box
+      background #0054a5
+      position relative
+      z-index 3
+      transform translate3d(0,0,0)
+      transition opacity 0.25s ease-out
+      visibility visible
+      +pc()
+        padding pcvw(30)
+        border-radius pcvw(60)
+      +sp()
+        padding spvw(30)
+        border-radius spvw(60)
+      &::after
+        content ""
+        display block
+        background url('/assets/images/common/ico-arrow_white.svg') no-repeat
+        background-size 100%
+        transition transform 0.25s ease-out
+        +pc()
+          width pcvw(24)
+          height pcvw(24)
+        +sp()
+          width spvw(24)
+          height spvw(24)
+      &:hover
+        opacity 0.5
+        &::after
+          +pc()
+            transform translate3d(20%,0,0)
+    &__before
+      transform rotate(180deg)
+    &__next:hover::after
+      transform translate3d(20%,0,0)
+    &__pageNum
+      display flex
+      align-items center
+      +pc()
+        margin 0 pcvw(55)
+      +sp()
+        margin 0 spvw(55)
+    &__current
+      display inline-block
+      position relative
+      +pc()
+        font-size pcvw(32)
+      input[type="text"]
+        border none
+        border-radius 0
+        outline none
+        background-color #fff
+        box-sizing content-box
+        color #2c4a70
+        width 1.2em
+        text-align center
+        font-weight bold
+        +pc()
+          padding pcvw(20)
+          border-radius pcvw(10)
+          border solid pcvw(4) #f6f2ee
+        +sp()
+          padding spvw(20)
+          border-radius spvw(10)
+          border solid spvw(4) #f6f2ee
+    &__max
+      display inline-block
+      font-weight bold
+      +pc()
+        font-size pcvw(32)
+        margin-left pcvw(30)
+      +sp()
+        font-size spvw(32)
+        margin-left spvw(30)
+      &:before
+        content "/"
+        display inline-block
+        +pc()
+          margin-right pcvw(30)
+        +sp()
+          margin-right spvw(30)
+
