@@ -6,6 +6,7 @@ const pug = require('pug')
 const JSON5 = require('json5')
 
 const data = JSON5.parse(fs.readFileSync('./src/data/sample.json'), 'utf8')
+const teacher = JSON5.parse(fs.readFileSync('./src/data/teacher.json'), 'utf8')
 const app = express()
 const isExist = path => {
   try {
@@ -35,7 +36,8 @@ app.get('*', (req, res, next) => {
   const htmlBuffer = pug.renderFile(path.join(`./src/html`, srcPath), {
     basedir: `./src/html`,
     pretty: true,
-    ...data
+    ...data,
+    ...teacher
   })
 
   res.send(htmlBuffer.toString())
