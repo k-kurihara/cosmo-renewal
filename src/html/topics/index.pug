@@ -1,0 +1,117 @@
+extend ../_template
+
+block vars
+  - title = '[記事名]｜コスモNEWS｜コスモジュク'
+  - description = ''
+  - keywords = ''
+  - img = 'http://localhost:3000/assets/images/share/ogp.jpg'
+  - url = 'http://localhost:3000'
+  - pageTitleEN = 'NEWS'
+  - pageTitleJP = 'コスモニュース'
+  - currentPage = 'コース紹介 & 料金案内'
+
+block main
+  include ../component/_header.pug
+  .p-topics
+    include ../component/topics/_topicsHeading.pug
+
+    section
+      .p-topics__article
+        -
+          var topicList = [
+            {
+              link: '#',
+              image: '1',
+              label: 'お知らせ',
+              title: '新型コロナウイルスへの対応について',
+              text: '新型コロナウイルスにおける、緊急事態宣言が解除されましたが、東京都では連日100人超えの感染が確認されております。',
+              date: 'yyyy.mm.dd'
+            },
+            {
+              link: '#',
+              image: '2',
+              label: '塾長日記',
+              title: '間違い探し問題',
+              text: '皆様のお手元には届いておりますでしょうか？今回は、間違い探しの正解発表です！と言いたいのですが、まだ届い',
+              date: 'yyyy.mm.dd'
+            },
+            {
+              link: '#',
+              image: '3',
+              label: 'その他',
+              title: '【2020年 夏期講習】申込受付中！！',
+              text: '皆様のお手元には届いておりますでしょうか？今回は、間違い探しの正解発表です！と言いたいのですが、まだ届い',
+              date: 'yyyy.mm.dd'
+            },
+            {
+              link: '#',
+              image: '1',
+              label: 'お知らせ',
+              title: '新型コロナウイルスへの対応について',
+              text: '新型コロナウイルスにおける、緊急事態宣言が解除されましたが、東京都では連日100人超えの感染が確認されております。',
+              date: 'yyyy.mm.dd'
+            },
+            {
+              link: '#',
+              image: '2',
+              label: '塾長日記',
+              title: '間違い探し問題',
+              text: '皆様のお手元には届いておりますでしょうか？今回は、間違い探しの正解発表です！と言いたいのですが、まだ届い',
+              date: 'yyyy.mm.dd'
+            },
+            {
+              link: '#',
+              image: '3',
+              label: 'その他',
+              title: '【2020年 夏期講習】申込受付中！！',
+              text: '皆様のお手元には届いておりますでしょうか？今回は、間違い探しの正解発表です！と言いたいのですが、まだ届い',
+              date: 'yyyy.mm.dd'
+            },          {
+              link: '#',
+              image: '1',
+              label: 'お知らせ',
+              title: '新型コロナウイルスへの対応について',
+              text: '新型コロナウイルスにおける、緊急事態宣言が解除されましたが、東京都では連日100人超えの感染が確認されております。',
+              date: 'yyyy.mm.dd'
+            },
+            {
+              link: '#',
+              image: '2',
+              label: '塾長日記',
+              title: '間違い探し問題',
+              text: '皆様のお手元には届いておりますでしょうか？今回は、間違い探しの正解発表です！と言いたいのですが、まだ届い',
+              date: 'yyyy.mm.dd'
+            },
+            {
+              link: '#',
+              image: '3',
+              label: 'その他',
+              title: '【2020年 夏期講習】申込受付中！！',
+              text: '皆様のお手元には届いておりますでしょうか？今回は、間違い探しの正解発表です！と言いたいのですが、まだ届い',
+              date: 'yyyy.mm.dd'
+            },        ]
+        ul.c-article__list
+          each item, index in topicList
+            li.c-article__list__item
+              a(href=`${item.link}`)
+                .c-article__list__img
+                  img(src=`/assets/images/topics/detail/article_${item.image}.png`, alt="")
+                .c-article__list__desc
+                  .c-article__list__desc__label #{item.label}
+                  .c-article__list__desc__title #{item.title}
+                  .c-article__list__desc__text #{item.text}
+                  .c-article__list__desc__date #{item.date}
+
+
+      .p-topics__pager
+        .p-topics__pager__before
+        .p-topics__pager__pageNum
+          .p-topics__pager__current
+            input(type="text" value="1")
+          .p-topics__pager__max 5
+        .p-topics__pager__next
+
+    section
+      include ../component/_breadcrumb.pug
+
+  include ../component/_footer.pug

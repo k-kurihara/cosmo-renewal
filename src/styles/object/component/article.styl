@@ -1,0 +1,90 @@
+.c-article
+  +pc()
+    margin 130px auto 0
+    width 1100px
+  +sp()
+    margin-top spvw(260)
+  &__title
+    text-align center
+    font-weight bold
+    +pc()
+      font-size 24px
+    +sp()
+      font-size spvw(36)
+
+  &__list
+    +pc()
+      display flex
+      justify-content space-between
+      flex-wrap wrap
+      margin-top 50px
+    +sp()
+      margin spvw(60) spvw(50) 0
+    &__item
+      background-color #fff
+      +pc()
+        width 31.5%
+        box-shadow 0px 0px 10px #d2d2d2
+      +sp()
+        box-shadow 0px 0px spvw(20) #d2d2d2
+      &:nth-child(n+4)
+        margin-top pcvw(60)
+      a
+        display block
+      &__img
+        +pc()
+          width 100%
+          height 205px
+        +pc()
+          width 100%
+          height spvw(380)
+      & + &
+        +sp()
+          margin-top spvw(36)
+
+    &__desc
+      +pc()
+        padding 15px 25px
+      +sp()
+        padding spvw(40)
+      &__label
+        color #fff
+        background-color #60b5e1
+        font-weight bold
+        display inline-block
+        +pc()
+          font-size 12px
+          padding 7px 10px
+          border-radius 20px
+        +sp()
+          font-size spvw(22)
+          padding spvw(14) spvw(26)
+          border-radius spvw(50)
+
+      &__title
+        font-weight bold
+        +pc()
+          font-size 16px
+          margin-top 12px
+        +sp()
+          font-size spvw(32)
+          margin-top spvw(30)
+      &__text
+        +pc()
+          font-size 14px
+          margin-top 20px
+          line-height 1.6
+        +sp()
+          font-size spvw(28)
+          margin-top spvw(35)
+          line-height 1.6
+      &__date
+        color #aab0b8
+        +pc()
+          font-size 12px
+          margin-top 18px
+        +sp()
+          font-size spvw(22)
+          margin-top spvw(35)
+
+

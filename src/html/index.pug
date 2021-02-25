@@ -11,15 +11,20 @@ block main
   include /component/_header.pug
   include /component/_mainvisual.pug
 
-  section
-    include /component/top/_topAbout.pug
-  section
-    include /component/top/_topCourse.pug
-  section
-    include /component/top/_topNews.pug
-  section
-    include /component/top/_topActivity.pug
-  section
-    include /component/top/_topMap.pug
+  .p-top
+    section
+      include /component/top/_topAbout.pug
+    section
+      include /component/top/_topCourse.pug
+    section
+      include /component/top/_topNews.pug
+    section
+      include /component/top/_topActivity.pug
+    section
+      include /component/top/_topAccess.pug
+    section
+      include /component/top/_topCv.pug
+    div
+      include /component/chatbot/_chatbot.pug
 
   include /component/_footer.pug
