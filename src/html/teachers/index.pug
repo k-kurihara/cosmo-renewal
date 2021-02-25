@@ -1,0 +1,230 @@
+extend ../_template
+
+block vars
+  - title = '講師 & 教室紹介｜コスモジュク'
+  - description = 'コスモジュクでは入塾までに体験授業や振り返り面談など、安心して入っていただくための制度がございます。体験時にチェックしてほしいポイントやよくあるご質問をご覧ください。'
+  - keywords = '塾,個別指導,集団授業,受験,コスモジュク,コスモ,上永谷,港南,日限山,丸山台,舞岡'
+  - img = 'http://localhost:3000/assets/images/share/ogp.jpg'
+  - url = 'http://localhost:3000'
+  - pageTitleEN = 'LECTURER & CLASSROOM'
+  - pageTitleJP = '講師 & 教室紹介'
+
+block main
+  include ../component/_header.pug
+  .p-teachers
+    include ../component/_heading.pug
+
+    .p-teachers__teachers
+      .c-section__inner
+        .c-section__contents
+          .c-section__heading(
+            data-module="scrollAnimation"
+            data-options={
+              root: null,
+              rootMargin: '0% 0%',
+              threshold: [0],
+              animation: 'fadeUp'
+            }
+          )
+            p 講師
+          ul.p-teachers__teachers__list
+            each item, index in teacher
+              li.p-teachers__teachers__item(
+                class=`is-${item.num}`
+                data-module="scrollAnimation"
+                data-options={
+                  root: null,
+                  rootMargin: '-40% 0%',
+                  threshold: [0],
+                  animation: 'fadeUp'
+                }
+              )
+                  .p-teachers__teachers__item__picture
+                    img(
+                      src=`/assets/images/teachers/pic_teacher${item.num}.jpg`
+                      alt=`${item.name.replace('<span>', '').replace('</span>', '')}`
+                    )
+                  .p-teachers__teachers__item__introduction
+                    .p-teachers__teachers__item__name
+                      |!{item.name}
+                    .p-teachers__teachers__item__text
+                      .p-teachers__teachers__item__columun
+                        if item.gakureki !== false
+                          .p-teachers__teachers__item__background
+                            p.p-teachers__teachers__item__heading
+                              |学歴・指導歴
+                            if item.gakureki !== ""
+                              p.p-teachers__teachers__item__background__text
+                                |!{item.gakureki}
+                            ul.p-teachers__teachers__item__background__list
+                              each gakureki in item.gakurekiList
+                                li.p-teachers__teachers__item__background__item
+                                  |!{gakureki}
+                        if item.tokui !== false
+                          .p-teachers__teachers__item__favorite
+                            p.p-teachers__teachers__item__heading
+                              |得意科目
+                            p.p-teachers__teachers__item__favorite__text
+                              |!{item.tokui}
+                      .p-teachers__teachers__item__columun(
+                        class={'is-large': item.num === '001' || item.num === '002'}
+                      )
+                        .p-teachers__teachers__item__message.u-is-pc
+                          p.p-teachers__teachers__item__heading
+                            |メッセージ
+                          .p-teachers__teachers__item__message__inner
+                            |!{item.message}
+                        .p-teachers__teachers__item__message.u-is-sp(data-module="accordion")
+                          p.p-teachers__teachers__item__message__heading(data-module-accordion-roll="trigger")
+                            span.p-teachers__teachers__item__message__heading__icon(data-module-accordion-roll="icon")
+                          .p-teachers__teachers__item__message__wrapper(data-module-accordion-roll="target")
+                            p.p-teachers__teachers__item__message__inner(data-module-accordion-roll="content")
+                              |!{item.message}
+
+    .p-teachers__classroom
+      .c-section__inner
+        .c-section__contents
+          .c-section__heading(
+            data-module="scrollAnimation"
+            data-options={
+              root: null,
+              rootMargin: '0% 0%',
+              threshold: [0],
+              animation: 'fadeUp'
+            }
+          )
+            p 教室紹介
+              span （日限丸山台スクール）
+          .p-teachers__classroom__floor
+            .p-teachers__classroom__floor__content.is-floor1f(
+              data-module="scrollAnimation"
+              data-options={
+                root: null,
+                rootMargin: '-25% 0%',
+                threshold: [0],
+                animation: 'fadeUp'
+              }
+            )
+              .p-teachers__classroom__floor__content__heading
+                |１階
+              .p-teachers__classroom__floor__content__image
+                img(src="/assets/images/teachers/img_floor001.png", alt="1階")
+                .p-teachers__classroom__floor__content__balloon
+                  .p-teachers__classroom__floor__content__balloon__pin
+                    img(src="/assets/images/teachers/img_pin001.png", alt="")
+                  p 見たい場所をタップ！
+                - for (var i = 1; i < 7; i++)
+                  a.p-teachers__classroom__floor__content__button.is-floor1(
+                    href="javascript:void(0)"
+                    class=`is-00${i}`
+                    data-module-slick-trigger=`${i}`
+                    data-module-slick-target-name="floor1"
+                  )
+                    img(src=`/assets/images/teachers/img_1f_point00${i}.svg`, alt="")
+              .p-teachers__classroom__floor__content__slide(
+                data-module="slick"
+                data-module-slick-name="floor1"
+                data-options={ "dots": true, "dotsClass": 'floor-slide-dots' }
+              )
+                -
+                  var floor1 = [
+                    '入口',
+                    '入口',
+                    '入口',
+                    '入口',
+                    '入口',
+                    '入口',
+                  ]
+                each item,index in floor1
+                  .p-teachers__classroom__floor__content__slide__item
+                    .p-teachers__classroom__floor__content__slide__item__heading
+                      p #{item}
+                    .p-teachers__classroom__floor__content__slide__item__picture
+                      img(src=`/assets/images/teachers/pic_1f_floor00${index+1}.jpg`, alt=`${item}`)
+            .p-teachers__classroom__floor__content.is-floor2f(
+              data-module="scrollAnimation"
+              data-options={
+                root: null,
+                rootMargin: '-25% 0%',
+                threshold: [0],
+                animation: 'fadeUp'
+              }
+            )
+              .p-teachers__classroom__floor__content__heading
+                |２階
+              .p-teachers__classroom__floor__content__image
+                img(src="/assets/images/teachers/img_floor002.png", alt="2階")
+                .p-teachers__classroom__floor__content__balloon
+                  .p-teachers__classroom__floor__content__balloon__pin
+                    img(src="/assets/images/teachers/img_pin001.png", alt="")
+                  p 見たい場所をタップ！
+                - for (var i = 1; i < 5; i++)
+                  a.p-teachers__classroom__floor__content__button.is-floor2(
+                    href="javascript:void(0)"
+                    class=`is-00${i}`
+                    data-module-slick-trigger=`${i}`
+                    data-module-slick-target-name="floor2"
+                  )
+                    img(src=`/assets/images/teachers/img_2f_point00${i}.svg`, alt="")
+              .p-teachers__classroom__floor__content__slide(
+                data-module="slick"
+                data-module-slick-name="floor2"
+                data-options={ "dots": true, "dotsClass": 'floor-slide-dots' }
+              )
+                -
+                  var floor1 = [
+                    'エントランス',
+                    'エントランス',
+                    'エントランス',
+                    'エントランス',
+                  ]
+                each item,index in floor1
+                  .p-teachers__classroom__floor__content__slide__item
+                    .p-teachers__classroom__floor__content__slide__item__heading
+                      p #{item}
+                    .p-teachers__classroom__floor__content__slide__item__picture
+                      img(src=`/assets/images/teachers/pic_2f_floor00${index+1}.jpg`, alt=`${item}`)
+
+    .p-teachers__access
+      .c-section__inner
+        .c-section__contents
+          .p-teachers__access__contents
+            .p-teachers__access__contents__text(
+              data-module="scrollAnimation"
+              data-options={
+                root: null,
+                rootMargin: '-25% 0%',
+                threshold: [0],
+                animation: 'fadeUp'
+              }
+            )
+              .p-teachers__access__contents__text__heading
+                p アクセス
+              .p-teachers__access__contents__text__school
+                p 日限丸山台スクール
+              .p-teachers__access__contents__text__address
+                p 横浜市港南区丸山台4-9-12 吉川ビル104
+              ul.p-teachers__access__contents__text__business
+                li.p-teachers__access__contents__text__business__item
+                  p
+                    span
+                      |平日
+                    |13：30～22：00
+                li.p-teachers__access__contents__text__business__item
+                  p
+                    span
+                      |土曜
+                    |13：30～18：00
+              .p-teachers__access__contents__text__note
+                p ※日曜、祝日は休塾日
+            .p-teachers__access__contents__map(
+              data-module="scrollAnimation"
+              data-options={
+                root: null,
+                rootMargin: '-25% 0%',
+                threshold: [0],
+                animation: 'fadeUp'
+              }
+            )
+              iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26014.30479555428!2d139.55647369923452!3d35.41050258651411!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f1.1!3m3!1m2!1s0x60185b0f1de942ed%3A0x3a8da88d9718f461!2z44Kz44K544Oi44K444Ol44Kv!5e0!3m2!1sja!2sjp!4v1614094321236!5m2!1sja!2sjp" width="100%" height="auto" style="border:0;" allowfullscreen="" loading="lazy")
+  include ../component/_footer.pug

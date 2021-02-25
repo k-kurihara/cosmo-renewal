@@ -1,0 +1,734 @@
+.p-teachers
+  +pc()
+    padding-top pcvw(368)
+  +sp()
+    padding-top spvw(210)
+    overflow hidden
+
+  &__teachers
+    +pc()
+      margin-top pcvw(266)
+    +sp()
+      margin-top spvw(116)
+    &__list
+      +pc()
+        margin-top pcvw(100)
+        display flex
+        flex-wrap wrap
+      +sp()
+        margin-top spvw(96)
+    &__item
+      &.is-001,
+      &.is-002
+        +pc()
+          width 100%
+          display flex
+          justify-content space-between
+        +sp()
+          width 100%
+          margin auto
+      +sp()
+        width spvw(490)
+        margin auto
+      &__introduction
+        +sp()
+          margin-top spvw(60)
+      &__name
+        .is-001 &,
+        .is-002 &
+          +pc()
+            font-size pcvw(50)
+            letter-spacing 0.02em
+            font-weight bold
+            color #2c4a70
+            margin-top 0
+        +pc()
+          font-size pcvw(38)
+          letter-spacing 0.02em
+          font-weight bold
+          color #2c4a70
+          margin-top pcvw(56)
+        +sp()
+          font-size spvw(36)
+          letter-spacing 0.02em
+          font-weight bold
+          color #2c4a70
+          text-align center
+        span
+          +pc()
+            font-size pcvw(20)
+          +sp()
+            font-size spvw(24)
+
+      &__columun
+        +pc()
+          width pcvw(600)
+        &.is-large
+          +pc()
+            width pcvw(730)
+      &__columun + &__columun
+        .is-001 &,
+        .is-002 &
+          +pc()
+            margin-left pcvw(86)
+            margin-top 0
+          +sp()
+            margin-top spvw(76)
+        +pc()
+          margin-top pcvw(26)
+        +sp()
+          margin-top spvw(50)
+      &__picture
+        +pc()
+          width pcvw(600)
+        +sp()
+          width spvw(490)
+          margin auto
+        .is-001 &,
+        .is-002 &
+          +pc()
+            width pcvw(700)
+      &__text
+        .is-001 &,
+        .is-002 &
+          +pc()
+            display flex
+            margin-top pcvw(68)
+        +pc()
+          width 100%
+          margin-top pcvw(38)
+        +sp()
+          width 100%
+          margin-top spvw(52)
+      &__heading
+        text-align center
+        display inline-block
+        color #2c4a70
+        letter-spacing 0.02em
+        font-weight bold
+        background #d5e2ea
+        .is-001 &,
+        .is-002 &
+          +pc()
+            margin-bottom pcvw(28)
+        +pc()
+          font-size pcvw(24)
+          line-height pcvw(44.8)
+          min-width pcvw(192)
+          border-radius pcvw(26)
+          margin-bottom pcvw(22)
+        +sp()
+          font-size spvw(24)
+          line-height spvw(44.8)
+          min-width spvw(192)
+          border-radius spvw(26)
+      &__background
+        &__text
+          color #2c4a70
+          letter-spacing 0.02em
+          +pc()
+            font-size pcvw(28)
+            line-height pcvw(44.8)
+          +sp()
+            font-size spvw(28)
+            line-height spvw(44.8)
+            margin-top spvw(30)
+        &__list
+          +sp()
+            margin-top spvw(30)
+        &__item
+          color #2c4a70
+          letter-spacing 0.02em
+          +pc()
+            font-size pcvw(28)
+            line-height pcvw(44.8)
+          +sp()
+            font-size spvw(28)
+            line-height spvw(44.8)
+          &::before
+            content "●"
+            display inline-block
+            color #d5e2ea
+            letter-spacing 0.02em
+            +pc()
+              font-size pcvw(18)
+              line-height pcvw(44.8)
+              margin-right pcvw(8)
+            +sp()
+              font-size spvw(18)
+              line-height spvw(44.8)
+              margin-right spvw(6)
+        &__item + &__item
+          +sp()
+            margin-top spvw(6)
+        &__text + &__list
+          +pc()
+            margin-top pcvw(45)
+          +sp()
+            margin-top spvw(50)
+      &__favorite
+        +sp()
+          margin-top spvw(58)
+        &__text
+          color #2c4a70
+          letter-spacing 0.02em
+          +pc()
+            font-size pcvw(28)
+            line-height pcvw(44.8)
+          +sp()
+            font-size spvw(28)
+            line-height spvw(44.8)
+            margin-top spvw(30)
+      &__background + &__favorite
+        +pc()
+          margin-top pcvw(60)
+      &__message
+        &__heading
+          +sp()
+            position relative
+            width 100%
+            height spvw(100)
+            margin auto
+            display flex
+            align-items center
+            background #0054a5
+            border-radius spvw(50)
+            overflow hidden
+            padding 0 spvw(72)
+            box-sizing border-box
+            transition border-radius 0.2s ease-out, background 0.2s ease-out
+          .open &
+            background #fff
+            border-radius 0
+            transition border-radius 0.2s ease-out, background 0.2s ease-out
+          &::before
+            content "メッセージをみる"
+            font-size spvw(26)
+            color #fff
+            font-weight bold
+          .open &::before
+            content "メッセージをとじる"
+            font-size spvw(26)
+            color #0054a5
+            font-weight bold
+          &__icon
+            +sp()
+              position absolute
+              display block
+              top 50%
+              right spvw(40)
+              transform translateY(-50%)
+              width spvw(23)
+              height spvw(23)
+            &::before,
+            &::after
+              +sp()
+                position absolute
+                content ""
+                display block
+                width 100%
+                height spvw(4)
+                background #fad06c
+                border-radius spvw(2)
+            &::before
+              +sp()
+                top 50%
+                left 50%
+                transform translate(-50%, -50%) rotate(0deg)
+            &::after
+              +sp()
+                top 50%
+                left 50%
+                transform translate(-50%, -50%) rotate(90deg)
+                transition transform 0.2s ease-out
+            .open &::after
+              +sp()
+                transform translate(-50%, -50%) rotate(0deg)
+                transition transform 0.2s ease-out
+        &__wrapper
+          +sp()
+            width 100%
+            margin auto
+            height 0px
+            overflow hidden
+        &__inner
+          +pc()
+            font-size pcvw(28)
+            color #2c4a70
+            line-height pcvw(44.8)
+            letter-spacing 0.02em
+          +sp()
+            padding-top spvw(50)
+            font-size spvw(26)
+            color #2c4a70
+            line-height spvw(44.8)
+            letter-spacing 0.02em
+
+    &__item.is-001 + &__item.is-002
+      +pc()
+        margin-top pcvw(176)
+        margin-left 0
+
+    &__item + &__item
+      +pc()
+        margin-left pcvw(200)
+      +sp()
+        margin-top spvw(180)
+      &.is-002
+        +pc()
+          margin-bottom pcvw(190)
+      &.is-003,
+      &.is-004,
+      &.is-005
+        +pc()
+          margin-bottom pcvw(142)
+      &.is-003,
+      &.is-006
+        +pc()
+          margin-left 0
+
+  &__classroom
+    +pc()
+      margin-top pcvw(280)
+    +sp()
+      margin-top spvw(300)
+    &__floor
+      +pc()
+        margin-top pcvw(192)
+      +sp()
+        margin-top spvw(178)
+        margin-left spvw(-50)
+        margin-right spvw(-50)
+      &__content
+        width 100%
+        background #f6f2ee
+        box-sizing border-box
+        position relative
+        +pc()
+          padding pcvw(168) pcvw(48) pcvw(48) pcvw(50)
+          border-top 8px solid #2c4a70
+          display flex
+          align-items center
+          justify-content space-between
+        +sp()
+          padding spvw(170) spvw(50) spvw(80) spvw(50)
+          border-top 4px solid #2c4a70
+      &__content + &__content
+        +pc()
+          margin-top pcvw(160)
+        +sp()
+          margin-top spvw(140)
+      &__content__heading
+        position absolute
+        display flex
+        align-items center
+        justify-content center
+        background #2c4a70
+        color #fff
+        font-weight bold
+        letter-spacing 0.02em
+        +pc()
+          top pcvw(-88)
+          left pcvw(0)
+          transform translateY(-8px)
+          width pcvw(220)
+          height pcvw(88)
+          font-size pcvw(36)
+          line-height pcvw(44.8)
+          border-radius pcvw(10) pcvw(10) 0 0
+        +sp()
+          top spvw(-80)
+          left spvw(20)
+          transform translateY(-4px)
+          width spvw(220)
+          height spvw(80)
+          font-size spvw(36)
+          line-height spvw(44.8)
+          border-radius spvw(10) spvw(10) 0 0
+      &__content__image
+        +pc()
+          width pcvw(1004)
+          position relative
+        +sp()
+          width 100%
+          position relative
+      &__content__slide
+        box-sizing border-box
+        background #fff
+        position relative
+        +pc()
+          width pcvw(1004)
+          height pcvw(950)
+          padding pcvw(90) pcvw(40) pcvw(165)
+          margin-bottom 0 !important
+        +sp()
+          width 100%
+          height spvw(605)
+          margin-top spvw(20)
+          padding spvw(60) spvw(32) spvw(105)
+          margin-bottom 0 !important
+        &__item__heading
+          letter-spacing 0.02em
+          color #2c4a70
+          font-weight bold
+          +pc()
+            font-size pcvw(36)
+            line-height pcvw(44.8)
+          +sp()
+            font-size spvw(22)
+            line-height spvw(44.8)
+        &__item__picture
+          overflow hidden
+          font-size 0
+          +pc()
+            margin-top pcvw(40)
+          +sp()
+            margin-top spvw(22)
+        .slick-arrow
+          background #0054a5
+          border-radius 50%
+          background-image url('/assets/images/teachers/ico-slidearrow.svg')
+          background-repeat no-repeat
+          background-position center
+          +pc()
+            width pcvw(90)
+            height pcvw(90)
+            background-size pcvw(24)
+          +sp()
+            width spvw(58)
+            height spvw(58)
+            background-size spvw(16)
+          &::before
+            content none
+          &:hover,
+          &:focus
+            background #0054a5
+            background-image url('/assets/images/teachers/ico-slidearrow.svg')
+            background-repeat no-repeat
+            background-position center
+            +pc()
+              background-size pcvw(24)
+            +sp()
+              background-size spvw(16)
+          &.slick-prev
+            top auto
+            left auto
+            transform scale(-1, 1) translate(0, 0)
+            +pc()
+              bottom pcvw(54)
+              right pcvw(161)
+            +sp()
+              bottom spvw(34)
+              right spvw(106)
+          &.slick-next
+            top auto
+            transform translate(0, 0)
+            +pc()
+              bottom pcvw(54)
+              right pcvw(40)
+            +sp()
+              bottom spvw(34)
+              right spvw(29)
+        .floor-slide-dots
+          position absolute
+          display flex
+          justify-content space-between
+          +pc()
+            left pcvw(40)
+            bottom pcvw(91)
+            .is-floor1f &
+              width pcvw(168)
+            .is-floor2f &
+              width pcvw(108)
+          +sp()
+            left spvw(38)
+            bottom spvw(58)
+            .is-floor1f &
+              width spvw(108)
+            .is-floor2f &
+              width spvw(70)
+          li
+            background #d5e2ea
+            border-radius 50%
+            +pc()
+              width pcvw(16)
+              height pcvw(16)
+            +sp()
+              width spvw(12)
+              height spvw(12)
+            &.slick-active
+              background #0054a5
+          button
+            border none
+            background transparent
+            padding 0
+            font-size 0
+      &__content__balloon
+        pointer-events none
+        position absolute
+        left 50%
+        transform translateX(-50%)
+        background #fff
+        display flex
+        align-items center
+        justify-content center
+        animation bounce 1s linear infinite
+        +pc()
+          top pcvw(-126)
+          width pcvw(600)
+          height pcvw(86)
+          border-radius pcvw(50)
+        +sp()
+          top spvw(-128)
+          width spvw(600)
+          height spvw(86)
+          border-radius spvw(50)
+        &::after
+          content ""
+          display block
+          position absolute
+          left 50%
+          transform translateX(-50%)
+          width 0
+          height 0
+          border-style solid
+          border-color #fff transparent transparent transparent
+          +pc()
+            bottom pcvw(-25)
+            border-width pcvw(25) pcvw(15) 0 pcvw(15)
+          +sp()
+            bottom spvw(-25)
+            border-width spvw(25) spvw(15) 0 spvw(15)
+        &__pin
+          display inline-block
+          vertical-align middle
+          transform translateY(5%)
+          +pc()
+            width pcvw(34)
+          +sp()
+            width spvw(34)
+        p
+          display inline-block
+          vertical-align middle
+          letter-spacing 0.02em
+          color #0054a5
+          font-weight bold
+          +pc()
+            font-size pcvw(32)
+            line-height pcvw(44.8)
+            margin-left pcvw(16)
+          +sp()
+            font-size spvw(32)
+            line-height spvw(44.8)
+            margin-left spvw(16)
+      &__content__button
+        position absolute
+        +pc()
+          width pcvw(120)
+        +sp()
+          width spvw(76)
+        &:hover
+          opacity 1
+        &.is-floor1.is-001
+          +pc()
+            width pcvw(140)
+            top pcvw(824)
+            left pcvw(432)
+          +sp()
+            width spvw(89)
+            top spvw(529)
+            left spvw(281)
+        &.is-floor1.is-002
+          +pc()
+            top pcvw(854)
+            left pcvw(708)
+          +sp()
+            top spvw(549)
+            left spvw(458)
+        &.is-floor1.is-003
+          +pc()
+            top pcvw(252)
+            left pcvw(718)
+          +sp()
+            top spvw(165)
+            left spvw(463)
+        &.is-floor1.is-004
+          +pc()
+            top pcvw(502)
+            left pcvw(244)
+          +sp()
+            top spvw(324)
+            left spvw(161)
+        &.is-floor1.is-005
+          +pc()
+            top pcvw(111)
+            left pcvw(210)
+          +sp()
+            top spvw(75)
+            left spvw(140)
+        &.is-floor1.is-006
+          +pc()
+            top pcvw(776)
+            left pcvw(271)
+          +sp()
+            top spvw(499)
+            left spvw(179)
+        &.is-floor2.is-001
+          +pc()
+            width pcvw(140)
+            top pcvw(784)
+            left pcvw(473)
+          +sp()
+            width spvw(89)
+            top spvw(507)
+            left spvw(306)
+        &.is-floor2.is-002
+          +pc()
+            top pcvw(843)
+            left pcvw(221)
+          +sp()
+            top spvw(545)
+            left spvw(143)
+        &.is-floor2.is-003
+          +pc()
+            top pcvw(57)
+            left pcvw(232)
+          +sp()
+            top spvw(37)
+            left spvw(150)
+        &.is-floor2.is-004
+          +pc()
+            top pcvw(357)
+            left pcvw(490)
+          +sp()
+            top spvw(231)
+            left spvw(317)
+  &__access
+    &__contents
+      +pc()
+        padding-top pcvw(204)
+        margin-top pcvw(210)
+        border-top 2px solid #d5e2ea
+        padding-bottom pcvw(306)
+        display flex
+        justify-content space-between
+      +sp()
+        padding-top spvw(118)
+        margin-top spvw(120)
+        border-top 2px solid #d5e2ea
+        padding-bottom spvw(200)
+      &__text
+        +pc()
+          width pcvw(600)
+          padding-top pcvw(248)
+        +sp()
+          width 100%
+        &__heading
+          letter-spacing 0.02em
+          font-weight bold
+          color #2c4a70
+          +pc()
+            font-size pcvw(78)
+          +sp()
+            font-size spvw(64)
+        &__school
+          letter-spacing 0.04em
+          font-weight bold
+          color #2c4a70
+          +pc()
+            font-size pcvw(36)
+            margin-top pcvw(90)
+          +sp()
+            font-size spvw(36)
+            margin-top spvw(60)
+        &__address
+          letter-spacing 0.04em
+          color #2c4a70
+          +pc()
+            font-size pcvw(28)
+            margin-top pcvw(40)
+          +sp()
+            font-size spvw(28)
+            margin-top spvw(40)
+        &__business
+          +pc()
+            margin-top pcvw(64)
+          +sp()
+            margin-top spvw(60)
+          &__item
+            p
+              letter-spacing 0.02em
+              line-height 1
+              color #2c4a70
+              vertical-align middle
+              +pc()
+                font-size pcvw(28)
+              +sp()
+                font-size spvw(28)
+            span
+              letter-spacing 0.04em
+              font-weight bold
+              color #fff
+              display inline-flex
+              align-items center
+              justify-content center
+              background #60b5e1
+              +pc()
+                width pcvw(128)
+                height pcvw(44)
+                font-size pcvw(28)
+                border-radius pcvw(22)
+                margin-right pcvw(30)
+              +sp()
+                width spvw(128)
+                height spvw(44)
+                font-size spvw(28)
+                border-radius spvw(22)
+                margin-right spvw(30)
+          &__item + &__item
+            +pc()
+              margin-top pcvw(20)
+            +sp()
+              margin-top spvw(20)
+        &__note
+          letter-spacing 0.02em
+          color #2c4a70
+          +pc()
+            margin-top pcvw(46)
+            font-size pcvw(24)
+          +sp()
+            margin-top spvw(46)
+            font-size spvw(22)
+      &__map
+        +pc()
+          width pcvw(1512)
+          height 0
+          padding-top pcvw(916)
+          overflow hidden
+          position relative
+        +sp()
+          overflow hidden
+          position relative
+          height 0
+          padding-top spvw(456)
+          margin-top spvw(60)
+          margin-left spvw(-50)
+          margin-right spvw(-50)
+        iframe
+          position absolute
+          top 0
+          left 0
+          width 100%
+          height 100%
+          background #fff
+
+
+
+
+@keyframes bounce
+  0%
+    transform translateX(-50%) translateY(0%)
+  50%
+    transform translateX(-50%) translateY(10%)
+  100%
+    transform translateX(-50%) translateY(0%)

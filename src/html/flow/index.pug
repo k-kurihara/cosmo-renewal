@@ -17,9 +17,25 @@ block main
     .p-flow__enrollment.c-section
       .c-section__inner
         .c-section__contents
-          .c-section__heading
+          .c-section__heading(
+            data-module="scrollAnimation"
+            data-options={
+              root: null,
+              rootMargin: '0% 0%',
+              threshold: [0],
+              animation: 'fadeUp'
+            }
+          )
             p 入塾までの流れ
-          .p-flow__enrollment__inner
+          .p-flow__enrollment__inner(
+            data-module="scrollAnimation"
+            data-options={
+              root: null,
+              rootMargin: '-40% 0%',
+              threshold: [0],
+              animation: 'fadeUp'
+            }
+          )
             .p-flow__enrollment__images
               img.u-is-pc(src="/assets/images/flow/img-flow-pc.png", alt="")
             .p-flow__enrollment__texts
@@ -51,7 +67,15 @@ block main
                   li.p-flow__enrollment__texts__item(class=`is-${index+1}`)
                     p.p-flow__enrollment__texts__item__heading #{item.heading}
                     p.p-flow__enrollment__texts__item__text #{item.text}
-          .p-flow__checkpoint
+          .p-flow__checkpoint(
+            data-module="scrollAnimation"
+            data-options={
+              root: null,
+              rootMargin: '-40% 0%',
+              threshold: [0],
+              animation: 'fadeUp'
+            }
+          )
             .p-flow__checkpoint__inner
               .p-flow__checkpoint__heading
                 p 体験時のチェックポイント
@@ -93,12 +117,28 @@ block main
     .p-flow__question.c-section
       .c-section__inner
         .c-section__contents
-          .c-section__heading
+          .c-section__heading(
+            data-module="scrollAnimation"
+            data-options={
+              root: null,
+              rootMargin: '0% 0%',
+              threshold: [0],
+              animation: 'fadeUp'
+            }
+          )
             p よくあるご質問
           .p-flow__question__inner
 
             //- コスモジュクについて
-            .p-flow__question__box
+            .p-flow__question__box(
+              data-module="scrollAnimation"
+              data-options={
+                root: null,
+                rootMargin: '-15% 0%',
+                threshold: [0],
+                animation: 'fadeUp'
+              }
+            )
               .p-flow__question__title
                 p コスモジュクについて
               -
@@ -126,7 +166,15 @@ block main
                           p.p-flow__question__answer__text !{item.answer}
 
             //- 授業について・コスモの指導について
-            .p-flow__question__box
+            .p-flow__question__box(
+              data-module="scrollAnimation"
+              data-options={
+                root: null,
+                rootMargin: '-15% 0%',
+                threshold: [0],
+                animation: 'fadeUp'
+              }
+            )
               .p-flow__question__title
                 p 授業について・コスモの指導について
               -
@@ -162,7 +210,15 @@ block main
                           p.p-flow__question__answer__text !{item.answer}
 
             //- 授業料・ご入会について
-            .p-flow__question__box
+            .p-flow__question__box(
+              data-module="scrollAnimation"
+              data-options={
+                root: null,
+                rootMargin: '-15% 0%',
+                threshold: [0],
+                animation: 'fadeUp'
+              }
+            )
               .p-flow__question__title
                 p 授業料・ご入会について
               -
@@ -211,7 +267,15 @@ block main
 
 
             //- 受講科目について
-            .p-flow__question__box
+            .p-flow__question__box(
+              data-module="scrollAnimation"
+              data-options={
+                root: null,
+                rootMargin: '-15% 0%',
+                threshold: [0],
+                animation: 'fadeUp'
+              }
+            )
               .p-flow__question__title
                 p 受講科目について
               -
@@ -247,7 +311,15 @@ block main
                           p.p-flow__question__answer__text !{item.answer}
 
             //- 通塾について
-            .p-flow__question__box
+            .p-flow__question__box(
+              data-module="scrollAnimation"
+              data-options={
+                root: null,
+                rootMargin: '-15% 0%',
+                threshold: [0],
+                animation: 'fadeUp'
+              }
+            )
               .p-flow__question__title
                 p 通塾について
               -
