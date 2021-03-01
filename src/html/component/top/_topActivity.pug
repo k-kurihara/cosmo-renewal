@@ -1,9 +1,22 @@
-.p-top__activity
+.p-top__activity(
+  data-module="scrollAnimation"
+  data-options={
+    root: null,
+    rootMargin: '-25% 0%',
+    threshold: [0],
+    animation: 'fadeUp'
+  }
+)
   .p-top__activity__contents
-    .p-top__activity__lead
-      .p-top__activity__lead__title コスモジュクの活動
+    .p-top__activity__lead(data-activity="target")
+      .p-top__activity__lead__title
+        |コスモジュクの
+        br.u-is-sp
+        |活動
       .p-top__activity__lead__text
-        |授業風景やイベント時の様子をFacebookに上げています。
+        |授業風景やイベント時の様子をFacebookに
+        br.u-is-sp
+        |上げています。
         br
         |塾内のイメージや、お子様の日頃のご様子をぜひご覧ください！
       .p-top__activity__lead__link
@@ -11,8 +24,9 @@
           .c-button__text
             p 公式facebookはこちら
           .c-button__arrow
-    .p-top__activity__body
-      <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2F4919cosmojuku&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false&appId" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+    .p-top__activity__body(data-module="FbActivity")
 
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v10.0" nonce="cRV3lJ5n"></script>
 
 

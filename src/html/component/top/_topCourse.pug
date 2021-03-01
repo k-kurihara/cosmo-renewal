@@ -1,4 +1,12 @@
-.p-top__course
+.p-top__course(
+  data-module="scrollAnimation"
+  data-options={
+    root: null,
+    rootMargin: '-25% 0%',
+    threshold: [0],
+    animation: 'fadeUp'
+  }
+)
   .p-top__header__title コース・料金
   .p-top__header__text
     |コスモジュクでは生徒ひとりひとりに適した学習指導ができるよう、3つのコースをご用意しております。

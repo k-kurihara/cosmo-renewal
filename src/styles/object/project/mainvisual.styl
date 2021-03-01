@@ -1,10 +1,10 @@
 .c-mainvisual
   width 100%
-  // TODO
   +pc()
+    margin-top pcvw(210)
     padding-bottom pcvw(300)
-  // +sp()
-  //   padding-bottom pcvw(150)
+  +sp()
+    margin-top spvw(140)
 
   &__content
     width 100%
@@ -19,7 +19,7 @@
     +pc()
       width pcvw(2131)
       height pcvw(1192)
-      border-radius 100px 0 0 100px
+      border-radius pcvw(100) 0 0 pcvw(100)
     +sp()
       width spvw(660)
       height spvw(1072)
@@ -56,7 +56,7 @@
         width spvw(535)
 
     &__lead
-      line-height 2
+      line-height 2.375
       font-weight bold
       color #2c4a70
       +pc()
@@ -66,7 +66,7 @@
 
     &__copy + &__lead
       +pc()
-        margin-top pcvw(176)
+        margin-top pcvw(145)
       +sp()
         margin-top spvw(73)
 
@@ -112,7 +112,7 @@
       height spvw(48)
     &.slick-prev
       +pc()
-        top pcvw(357)
+        top pcvw(380)
         right pcvw(54)
         left auto
       +sp()
@@ -123,7 +123,7 @@
         transform translate(-50%, -50%) scale(-1, 1)
     &.slick-next
       +pc()
-        top pcvw(357)
+        top pcvw(380)
         right pcvw(0)
         left auto
       +sp()
