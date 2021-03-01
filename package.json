@@ -20,7 +20,7 @@
     "build:js:prod": "webpack --mode production --module-bind js=babel-loader --entry ./src/scripts/index.js --output ./dist/assets/scripts/app.js",
     "build:css:dev": "stylus --include-css ./src/styles/index.styl --out ./dist/assets/styles/app.css --use autoprefixer-stylus --watch",
     "build:css:prod": "stylus --include-css ./src/styles/index.styl --out ./dist/assets/styles/app.css --use autoprefixer-stylus --compress",
-    "build:html:prod": "pug --obj ./src/data/sample.json ./src/html --basedir ./src/html/ --pretty --out ./dist/",
+    "build:html:prod": "pug --obj ./src/data/teacher.json ./src/html --basedir ./src/html/ --pretty --out ./dist/",
     "sync": "rsync -auvz --delete --ignore-times --checksum --exclude='*.php' --exclude='.*' ./dist/ ./htdocs/",
     "publish": "run-s del mkdir cp:prod build:*:prod sync"
   },

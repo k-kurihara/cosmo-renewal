@@ -1,0 +1,648 @@
+$text-color = #0a4872
+
+.p-about
+  +pc()
+    padding-top pcvw(368)
+    padding-bottom pcvw(280)
+  +sp()
+    padding-top spvw(210)
+    padding-bottom spvw(200)
+    overflow hidden
+
+  &__heading
+    &__text
+      +pc()
+        position relative
+        font-size pcvw(68)
+        line-height pcvw(96)
+        letter-spacing 0.02em
+        font-weight bold
+        color #2c4a70
+        text-align center
+        padding-bottom pcvw(68)
+      +sp()
+        position relative
+        font-size spvw(56)
+        line-height spvw(89.6)
+        letter-spacing 0.02em
+        font-weight bold
+        color #2c4a70
+        text-align center
+        padding-bottom spvw(43)
+        .is-small &
+          font-size spvw(46)
+      &::after
+        +pc()
+          position absolute
+          bottom 0
+          left 50%
+          transform translateX(-50%)
+          content ""
+          display block
+          width pcvw(144)
+          height pcvw(12)
+          background #fad06c
+        +sp()
+          position absolute
+          bottom 0
+          left 50%
+          transform translateX(-50%)
+          content ""
+          display block
+          width spvw(118)
+          height spvw(10)
+          background #fad06c
+    &__lead
+      +pc()
+        margin-top pcvw(66)
+        font-size pcvw(30)
+        line-height pcvw(51.2)
+        letter-spacing 0.02em
+        color #2c4a70
+        text-align center
+      +sp()
+        margin-top spvw(58)
+        font-size spvw(28)
+        line-height spvw(44.8)
+        letter-spacing 0.02em
+        color #2c4a70
+        text-align left
+  &__about
+    +pc()
+      margin-top pcvw(170)
+    +sp()
+      margin-top spvw(112)
+    &__inner
+      +pc()
+        position relative
+    &__image
+      +pc()
+        position absolute
+        top pcvw(334)
+        left pcvw(1300)
+        width pcvw(726)
+      +sp()
+        width spvw(581)
+        margin spvw(92) auto 0
+    &__text
+      &__head
+        +pc()
+          font-size pcvw(44)
+          line-height pcvw(100)
+          letter-spacing 0.04em
+          font-weight bold
+          color $text-color
+        +sp()
+          font-size spvw(44)
+          line-height spvw(70.4)
+          letter-spacing 0.04em
+          font-weight bold
+          color $text-color
+      &__lead
+        +pc()
+          font-size pcvw(32)
+          line-height pcvw(63.6)
+          letter-spacing 0.02em
+          font-weight bold
+          color $text-color
+        +sp()
+          font-size spvw(32)
+          line-height spvw(63.6)
+          letter-spacing 0.04em
+          font-weight bold
+          color $text-color
+      &__head + &__lead
+        +pc()
+          margin-top pcvw(70)
+        +sp()
+          margin-top spvw(70)
+    &__text + &__text
+      +pc()
+        margin-top pcvw(80)
+      +sp()
+        margin-top spvw(80)
+
+  &__point
+    +pc()
+      margin-top pcvw(178)
+      background #efefef
+    +sp()
+      margin-top spvw(122)
+      background #efefef
+    &::before,
+    &::after
+      content ""
+      display block
+      width 100%
+    &::before
+      background-repeat no-repeat
+      background-size 100%
+      background-position bottom center
+      +pc()
+        height pcvw(138)
+        background-color #f9f8f7
+        background-image url('/assets/images/about/img_line001-pc.png')
+      +sp()
+        height spvw(73)
+        background-color #f9f8f7
+        background-image url('/assets/images/about/img_line001-sp.png')
+    &::after
+      background-repeat no-repeat
+      background-size 100%
+      background-position top center
+      +pc()
+        height pcvw(137)
+        background-color #f9f8f7
+        background-image url('/assets/images/about/img_line004-pc.png')
+      +sp()
+        height spvw(74)
+        background-color #f9f8f7
+        background-image url('/assets/images/about/img_line004-sp.png')
+    &__line
+      +pc()
+        width 100%
+        height pcvw(107)
+        background-repeat no-repeat
+        background-size 100%
+        background-position center center
+        &.is-001
+          background-image url('/assets/images/about/img_line002-pc.png')
+        &.is-002
+          background-image url('/assets/images/about/img_line003-pc.png')
+      +sp()
+        width 100%
+        height spvw(53)
+        background-repeat no-repeat
+        background-size 100%
+        background-position center center
+        &.is-001
+          background-image url('/assets/images/about/img_line002-sp.png')
+        &.is-002
+          background-image url('/assets/images/about/img_line003-sp.png')
+    &__inner
+      +pc()
+        &.is-001
+          padding-top pcvw(123)
+          padding-bottom pcvw(104)
+        &.is-002
+          padding-top pcvw(89)
+          padding-bottom pcvw(112)
+        &.is-003
+          padding-top pcvw(113)
+          padding-bottom pcvw(70)
+      +sp()
+        &.is-001
+          padding-top spvw(89)
+          padding-bottom spvw(50)
+        &.is-002
+          padding-top spvw(85)
+          padding-bottom spvw(52)
+        &.is-003
+          padding-top spvw(74)
+          padding-bottom spvw(51)
+    &__contents
+      +pc()
+        width 100%
+        position relative
+        cf()
+      +sp()
+        width 100%
+    &__contents__text
+      +pc()
+        width pcvw(976)
+      .is-point1 &
+        +pc()
+          float left
+      .is-point2 &
+        +pc()
+          float right
+      .is-point3 &
+        +pc()
+          float left
+    &__contents__text__heading
+      +pc()
+        height pcvw(86)
+      +sp()
+        height spvw(86)
+      &__title
+        +pc()
+          height 100%
+          font-size pcvw(36)
+          line-height pcvw(67.2)
+          letter-spacing 0.04em
+          font-weight bold
+          color #fff
+          padding 0 pcvw(30)
+          background #2c4a70
+          box-sizing border-box
+          vertical-align middle
+          display inline-flex
+          align-items center
+          justify-content center
+        +sp()
+          height 100%
+          font-size spvw(32)
+          line-height spvw(67.2)
+          letter-spacing 0.04em
+          font-weight bold
+          color #fff
+          padding 0 spvw(30)
+          background #2c4a70
+          box-sizing border-boxz
+          vertical-align middle
+          display inline-flex
+          align-items center
+          justify-content center
+      &__point
+        +pc()
+          height 100%
+          font-size pcvw(24)
+          line-height pcvw(67.2)
+          letter-spacing 0.04em
+          font-weight bold
+          color $text-color
+          padding 0 pcvw(32)
+          background #fad06c
+          box-sizing border-box
+          vertical-align middle
+          display inline-flex
+          align-items center
+          justify-content center
+        +sp()
+          height 100%
+          font-size spvw(24)
+          line-height spvw(67.2)
+          letter-spacing 0.04em
+          font-weight bold
+          color $text-color
+          padding 0 spvw(36)
+          background #fad06c
+          box-sizing border-box
+          vertical-align middle
+          display inline-flex
+          align-items center
+          justify-content center
+    &__contents__text__title
+      +pc()
+        margin-top pcvw(40)
+        font-size pcvw(72)
+        line-height pcvw(96)
+        letter-spacing 0.02em
+        font-weight bold
+        color $text-color
+      +sp()
+        margin-top spvw(40)
+        font-size spvw(56)
+        line-height spvw(96)
+        letter-spacing 0.02em
+        font-weight bold
+        color $text-color
+    &__contents__text__main
+      +pc()
+        margin-top pcvw(52)
+        font-size pcvw(28)
+        line-height pcvw(51.2)
+        letter-spacing 0.02em
+        color $text-color
+      +sp()
+        margin-top spvw(42)
+        font-size spvw(28)
+        line-height spvw(51.2)
+        letter-spacing 0.02em
+        color $text-color
+    &__contents__image
+      +pc()
+        position absolute
+      +sp()
+        margin auto
+      .is-point1 &
+        +pc()
+          width pcvw(484)
+          top pcvw(67)
+          right pcvw(66)
+        +sp()
+          width spvw(358)
+          margin-top spvw(50)
+      .is-point2 &
+        +pc()
+          width pcvw(586)
+          top pcvw(141)
+          left pcvw(44)
+        +sp()
+          width spvw(470)
+          margin-top spvw(50)
+      .is-point3 &
+        +pc()
+          width pcvw(649)
+          top pcvw(131)
+          right pcvw(-25)
+        +sp()
+          width spvw(543)
+          margin-top spvw(80)
+
+  &__features
+    +pc()
+      margin-top pcvw(212)
+    +sp()
+      margin-top spvw(248)
+    &__movie
+      +pc()
+        width 100%
+        margin-top pcvw(82)
+      +sp()
+        width 100%
+        margin-top spvw(76)
+    &__movie__play
+      +pc()
+        position absolute
+        display block
+        top 50%
+        left 50%
+        transform translate(-50%, -50%)
+        z-index 2
+        width pcvw(270)
+        height pcvw(270)
+        opacity 1
+        img
+          transform scale(1.0)
+          transition transform 0.2s ease-out
+      +sp()
+        position absolute
+        display block
+        top 50%
+        left 50%
+        transform translate(-50%, -50%)
+        z-index 2
+        width spvw(100)
+        height spvw(100)
+        opacity 1
+      &:hover
+        opacity 1
+        img
+          +pc()
+            transform scale(1.1)
+            transition transform 0.2s ease-out
+    &__movie__inner
+      +pc()
+        width 100%
+        height pcvw(990)
+        position relative
+        border-radius pcvw(100)
+        overflow hidden
+      +sp()
+        width 100%
+        height spvw(366)
+        position relative
+        border-radius spvw(30)
+        overflow hidden
+      video
+        position absolute
+        top 0
+        left 0
+        width 100%
+        height 100%
+        transform scale(1.1)
+    &__text
+      +pc()
+        margin-top pcvw(68)
+      +sp()
+        margin-top spvw(50)
+      &__main
+        &__heading
+          p
+            +pc()
+              font-size pcvw(56)
+              line-height 1
+              letter-spacing 0.02em
+              color #0053a9
+              font-weight bold
+            +sp()
+              font-size spvw(44)
+              line-height 1
+              letter-spacing 0.02em
+              color #0053a9
+              font-weight bold
+              text-align center
+          span
+            +pc()
+              display block
+              margin-top pcvw(28)
+              font-size pcvw(32)
+              line-height 1
+              letter-spacing 0.02em
+              color #60b5e1
+              font-family Montserrat, sans-serif
+            +sp()
+              display block
+              margin-top spvw(20)
+              font-size spvw(28)
+              line-height 1
+              letter-spacing 0.02em
+              color #60b5e1
+              font-family Montserrat, sans-serif
+              text-align center
+        &__text
+          +pc()
+            margin-top pcvw(58)
+            display flex
+          +sp()
+            margin-top spvw(30)
+          &__left,
+          &__right
+            +pc()
+              width pcvw(784)
+              font-size pcvw(28)
+              line-height pcvw(51.2)
+              letter-spacing 0.02em
+              color #2c4a70
+            +sp()
+              font-size spvw(28)
+              line-height spvw(51.2)
+              letter-spacing 0.02em
+              color #2c4a70
+          &__right
+            +pc()
+              margin-left pcvw(95)
+              border-left pcvw(2) solid #2c4a70
+              padding-left pcvw(95)
+      &__sub
+        +pc()
+          margin-top pcvw(130)
+        +sp()
+          margin-top spvw(102)
+        &__list
+          +pc()
+            display flex
+            justify-content space-between
+          +sp()
+            width 100%
+        &__item
+          +pc()
+            width pcvw(520)
+          +sp()
+            width 100%
+          &__heading
+            +pc()
+              font-size pcvw(36)
+              line-height pcvw(96)
+              letter-spacing 0.02em
+              color #0053a9
+              font-weight bold
+              text-align center
+            +sp()
+              font-size spvw(44)
+              line-height spvw(96)
+              letter-spacing 0.02em
+              color #0053a9
+              font-weight bold
+              text-align center
+          &__text
+            +pc()
+              font-size pcvw(28)
+              line-height pcvw(51.2)
+              letter-spacing 0.02em
+              color #2c4a70
+            +sp()
+              font-size spvw(28)
+              line-height spvw(51.2)
+              letter-spacing 0.02em
+              color #2c4a70
+        &__item + &__item
+          +sp()
+            margin-top spvw(102)
+  &__reassurance
+    +pc()
+      margin-top pcvw(220)
+    +sp()
+      margin-top spvw(116)
+    &__inner
+      +pc()
+        background #fff
+        padding pcvw(160) pcvw(220) pcvw(210)
+        box-sizing border-box
+      +sp()
+        background #fff
+        margin 0 spvw(-50)
+        padding spvw(132) spvw(50) spvw(140)
+        box-sizing border-box
+    &__content
+      +pc()
+        margin-top pcvw(156)
+      +sp()
+        margin-top spvw(138)
+    &__content__list
+      width 100%
+    &__content__item
+      +pc()
+        width 100%
+        display flex
+        justify-content space-between
+      +sp()
+        width 100%
+    &__content__item + &__content__item
+      +pc()
+        border-top 1px solid #f6f2ee
+      +sp()
+        margin-top spvw(68)
+        border-top 1px solid #f6f2ee
+        padding-top spvw(60)
+    &__content__image
+      +pc()
+        display flex
+        align-items center
+        justify-content center
+      &__inner
+        +pc()
+          width pcvw(340)
+          display flex
+          align-items center
+          justify-content center
+          img
+            width pcvw(240)
+            .is-001 &
+              width pcvw(160)
+    &__content__text
+      +pc()
+        width pcvw(1358)
+        padding pcvw(75) 0
+        box-sizing border-box
+      +sp()
+        width 100%
+    &__content__heading
+      p
+        +pc()
+          font-size pcvw(36)
+          line-height pcvw(57.6)
+          letter-spacing 0.02em
+          color #0053a9
+          font-weight bold
+        +sp()
+          position relative
+          font-size spvw(36)
+          line-height spvw(57.6)
+          letter-spacing 0.02em
+          color #0053a9
+          font-weight bold
+          height spvw(112)
+          padding-left spvw(190)
+          box-sizing border-box
+          display flex
+          align-items center
+          &::before
+            position absolute
+            top 0
+            left 0
+            content ""
+            display block
+            width spvw(170)
+            height 100%
+            margin-right spvw(20)
+            .is-001 &
+              background-image url('/assets/images/about/ico_point001-sp.png')
+              background-repeat no-repeat
+              background-size spvw(168)
+              background-position center
+            .is-002 &
+              background-image url('/assets/images/about/ico_point002-sp.png')
+              background-repeat no-repeat
+              background-size spvw(98)
+              background-position center
+            .is-003 &
+              background-image url('/assets/images/about/ico_point003-sp.png')
+              background-repeat no-repeat
+              background-size spvw(90)
+              background-position center
+            .is-004 &
+              background-image url('/assets/images/about/ico_point004-sp.png')
+              background-repeat no-repeat
+              background-size spvw(108)
+              background-position center
+      span
+        +pc()
+          display block
+          font-size pcvw(32)
+          line-height pcvw(57.6)
+          letter-spacing 0.02em
+          color #00a1e9
+          font-weight bold
+        +sp()
+          display block
+          font-size spvw(28)
+          line-height spvw(44.8)
+          letter-spacing 0.02em
+          color #00a1e9
+          font-weight bold
+          margin-top spvw(62)
+    &__content__main
+      +pc()
+        margin-top pcvw(30)
+        font-size pcvw(28)
+        line-height pcvw(51.2)
+        letter-spacing 0.02em
+        color #2c4a70
+      +sp()
+        margin-top spvw(40)
+        font-size spvw(28)
+        line-height spvw(51.2)
+        letter-spacing 0.02em
+        color #2c4a70

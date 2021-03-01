@@ -24,6 +24,7 @@ export default class scrollAnimation {
         if (entry.isIntersecting) {
           this.startAnimation(entry.target)
           object.unobserve(entry.target)
+          this.elem.classList.add('is-show')
         }
       })
     }

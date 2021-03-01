@@ -1,0 +1,42 @@
+.p-contact-confirmation__content
+  -
+    var confirmationLiist = [
+      {
+        lead: 'おなまえ',
+        text: 'コスモ太郎'
+      },
+      {
+        lead: '体験ご希望日時',
+        text: '2021/10/10 15:00、2021/10/11 17:00'
+      },
+      {
+        lead: '郵便番号',
+        text: '123-4567'
+      },
+      {
+        lead: 'ご住所',
+        text: '神奈川県横浜市港南区丸山台四丁目9番12号 吉川ビル104'
+      },
+      {
+        lead: '電話番号',
+        text: '123-456-7890'
+      },
+      {
+        lead: 'メールアドレス',
+        text: 'cosmojuku@com'
+      },
+      {
+        lead: 'メールアドレス（確認用）',
+        text: 'cosmojuku@com'
+      },
+      {
+        lead: 'お問い合わせ内容',
+        text: 'お問い合わせ内容が入ります。お問い合わせ内容が入ります。お問い合わせ内容が入ります。お問い合わせ内容が入ります。お問い合わせ内容が入ります。お問い合わせ内容が入ります。お問い合わせ内容が入ります。お問い合わせ内容が入ります。'
+      },
+    ]
+  ul.p-contact-confirmation__content__list
+    each item in confirmationLiist
+      li.p-contact-confirmation__content__list__item
+        dl
+          dt.p-contact-confirmation__content__list__lead #{item.lead}
+          dd.p-contact-confirmation__content__list__text #{item.text}

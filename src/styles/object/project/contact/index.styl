@@ -1,9 +1,9 @@
-a
-  color inherit
-  transition all .5s ease
-  &:hover
-    opacity 0.7
 .p-contact
+  a
+    // color inherit
+    transition all .5s ease
+    &:hover
+      opacity 0.7
   color #2c4a70
   +pc()
     margin-top 75px
@@ -488,3 +488,169 @@ a
           +sp()
             right spvw(12)
 
+
+
+
+// confirmation
+.p-contact-confirmation
+    color #2c4a70
+    +pc()
+      margin-top pcvw(400)
+    +sp()
+      margin spvw(210) spvw(50) 0 spvw(50)
+    &__inner
+      margin 0 auto
+      max-width 880px
+    &__header__primary
+      &__title
+        font-weight bold
+        +pc()
+          font-size pcvw(72) 
+        +sp()
+          font-size spvw(60)
+    &__contact__type
+      background-color #f6f2ee
+      +pc()
+        margin-top pcvw(100)
+        padding pcvw(40)
+      +sp()
+        margin-top spvw(80)
+        padding spvw(40) spvw(30)
+      &__label
+        display inline-block
+        color #fff
+        background-color #2c4a70
+        font-weight bold
+        +pc()
+          font-size pcvw(24)
+          padding pcvw(15) pcvw(30)
+          border-radius pcvw(30)
+        +sp()
+          font-size spvw(24)
+          padding spvw(15) spvw(30)
+          border-radius spvw(30)
+      &__text
+        display inline-block
+        +pc()
+          margin-left pcvw(30)
+          font-size pcvw(32)
+        +sp()
+          margin-left spvw(30)
+          font-size spvw(28)
+    &__content
+      +pc()
+        margin-top pcvw(30)
+      +sp()
+        margin-top spvw(40)
+      &__list
+        &__item
+          +pc()
+            padding pcvw(40) pcvw(10)
+          +sp()
+            padding spvw(30) spvw(10)
+          & + &
+            border-top 1px solid #d5e2ea
+        &__lead
+          color #aab0b8
+          +pc()
+            font-size pcvw(28)
+          +sp()
+            font-size spvw(28)
+        &__text
+          +pc()
+            font-size pcvw(32)
+            margin-top pcvw(20)
+            line-height 1.6
+          +sp()
+            font-size spvw(32)
+            margin-top spvw(20)
+            line-height 1.6
+    &__button
+      display inline-block
+      color #0053a9
+      background-color #fff
+      box-sizing border-box
+      font-weight bold
+      position relative
+      overflow hidden
+      z-index 2
+      transition color 0.2s ease-out
+      +pc()
+        font-size pcvw(28)
+        padding pcvw(56) pcvw(112)
+        border-radius pcvw(70)
+        width pcvw(680)
+      +sp()
+        font-size spvw(26)
+        padding spvw(43) spvw(66)
+        border-radius spvw(55)
+        width spvw(530)
+      &:hover
+        color #fff
+        z-index 3
+      &::before
+        content ""
+        display block
+        position absolute
+        top 0
+        left 0
+        width calc(100% - 4px)
+        height calc(100% - 4px)
+        z-index -1
+        border solid 2px #0053a9
+        +pc()
+          border-radius pcvw(70)
+        +sp()
+          border-radius spvw(55)
+      &::after
+        content ""
+        display block
+        position absolute
+        top 0
+        right -100%
+        width 100%
+        height 100%
+        z-index -1
+        transition right 0.2s ease-out
+        background-color #0053a9
+      &:hover::after
+        right 0
+      &__item
+        & + &
+          +pc()
+            margin-top pcvw(40)
+          +sp()
+            margin-top spvw(30)
+        .c-button__text
+          +pc()
+            width pcvw(540)
+          +sp()
+            width spvw(420)
+      &__area
+        text-align center
+        +pc()
+          margin-top pcvw(130)
+        +sp()
+          margin-top spvw(80)
+
+
+// contact-finish
+.p-contact-finish
+  color #2c4a70
+  +pc()
+    margin-top pcvw(530)
+  +sp()
+    margin-top spvw(350)
+  &__text
+    text-align center
+    line-height 1.6
+    +pc()
+      font-size pcvw(32)
+    +sp()
+      font-size spvw(28)
+  &__button
+    text-align center
+    +pc()
+      margin-top pcvw(170)
+    +sp()
+      margin-top spvw(90)

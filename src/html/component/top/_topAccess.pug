@@ -1,4 +1,12 @@
-.p-top__access
+.p-top__access(
+  data-module="scrollAnimation"
+  data-options={
+    root: null,
+    rootMargin: '-25% 0%',
+    threshold: [0],
+    animation: 'fadeUp'
+  }
+)
   .p-top__access__contents
     .p-top__access__lead
       .p-top__access__lead__title アクセス
@@ -13,8 +21,9 @@
           span.p-top__access__lead__business__time 13：30～18：00
       .p-top__access__lead__caption ※日曜、祝日は休塾日
 
-    .p-top__access__map.u-is-pc
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3252.3260010077197!2d139.56070251519384!3d35.39716915310578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60185adbf04613c7%3A0xdce3c536334f1f9f!2z44CSMjMzLTAwMTMg56We5aWI5bed55yM5qiq5rWc5biC5riv5Y2X5Yy65Li45bGx5Y-w77yU5LiB55uu77yZ4oiS77yR77ySIOWQieW3neODk-ODqw!5e0!3m2!1sja!2sjp!4v1614060693957!5m2!1sja!2sjp" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    .p-top__access__map
+      iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26014.30479555428!2d139.55647369923452!3d35.41050258651411!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f1.1!3m3!1m2!1s0x60185b0f1de942ed%3A0x3a8da88d9718f461!2z44Kz44K544Oi44K444Ol44Kv!5e0!3m2!1sja!2sjp!4v1614094321236!5m2!1sja!2sjp" width="100%" height="auto" style="border:0;" allowfullscreen="" loading="lazy")
+
 
 
 

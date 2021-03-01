@@ -1,4 +1,12 @@
-.p-top__about
+.p-top__about(
+  data-module="scrollAnimation"
+  data-options={
+    root: null,
+    rootMargin: '-25% 0%',
+    threshold: [0],
+    animation: 'fadeUp'
+  }
+)
   .p-top__about__contents
     .p-top__about__item--title
       h2.p-top__about__title
@@ -33,4 +41,4 @@
         .c-button__arrow
   .p-top__about__img
     img.u-is-pc(src="/assets/images/top/pc/about_img.png", alt="")
-    img.u-is-sp(src="/assets/images/top/pc/about_img.png", alt="")
+    img.u-is-sp(src="/assets/images/top/sp/about_img.png", alt="")

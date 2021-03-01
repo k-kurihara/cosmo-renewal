@@ -1,0 +1,27 @@
+extend ../_template
+
+block vars
+  - title = '企業情報｜コスモジュク'
+  - description = '株式会社コスモオリジナルに関する企業情報です。'
+  - keywords = '塾,個別指導,集団授業,受験,コスモジュク,コスモ,上永谷,港南,日限山,丸山台,舞岡'
+  - img = 'http://localhost:3000/assets/images/share/ogp.jpg'
+  - url = 'http://localhost:3000'
+  - pageTitleEN = 'COMPANY'
+  - pageTitleJP = '企業情報'
+  - currentPage = '企業情報'
+
+block main
+  include ../component/_header.pug
+  .p-company
+    include ../component/_heading.pug
+    section.c-section
+      .c-section__inner
+        .c-section__contents
+
+          include ../component/company/_information.pug
+
+          include ../component/company/_handlingPersonal.pug
+
+    include ../component/_breadcrumb.pug
+
+  include ../component/_footer.pug

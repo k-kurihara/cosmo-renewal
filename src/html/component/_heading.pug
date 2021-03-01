@@ -1,8 +1,8 @@
 .c-section
   .c-section__inner
-    .c-section__contents
+    .c-section__contents(class={ 'is-narrow' : pageTitleEN === 'ABOUT' })
       h1.p-heading
         p.p-heading__en
-          |#{pageTitleEN}
+          |!{pageTitleEN}
         p.p-heading__jp
-          |#{pageTitleJP}
+          |!{pageTitleJP}

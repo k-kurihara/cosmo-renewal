@@ -1,0 +1,166 @@
+.p-company
+  color #2c4a70
+  +pc()
+    margin-top pcvw(360)
+  +sp()
+    margin-top spvw(210)
+  &__information
+    +pc()
+      margin-top pcvw(70)
+    +sp()
+      margin spvw(110) spvw(-30) 0
+    &__table
+      &__line
+        display flex
+        width 100%
+        +pc()
+          padding pcvw(30) 0
+        +sp()
+          padding spvw(12) 0
+        &:nth-child(odd)
+          background-color #fff
+        &:nth-child(even)
+          background-color #f2f6f9
+      &__lead
+        display flex
+        align-items center
+        justify-content center
+        +pc()
+          font-size pcvw(28)
+          width pcvw(315)
+          padding pcvw(10) 0
+          line-height 1.6
+        +sp()
+          font-size spvw(28)
+          width spvw(200)
+          padding spvw(25) 0
+          line-height 1.6
+      &__desc
+        flex 1
+        +pc()
+          font-size pcvw(32)
+          border-left 1px solid #aab0b8
+          padding pcvw(10) pcvw(60)
+          line-height 1.6
+        +sp()
+          font-size spvw(28)
+          border-left 1px solid #d5e2ea
+          padding spvw(25) spvw(30)
+          line-height 1.6
+      &__officer
+        +pc()
+          display flex
+        & + &
+          +sp()
+            margin-top spvw(20)
+            line-height 1.4
+        &__position__JP
+          +pc()
+            width pcvw(190) 
+          +sp()
+            display inline-block
+            margin-right spvw(30)
+        &__position__EN
+          +pc()
+            width pcvw(100) 
+          +sp()
+            display inline-block
+            margin-right spvw(30)
+        &__position__name
+          +pc()
+            width auto
+          +sp()
+            display inline
+      &__office
+        & + &
+          +pc()
+            margin-top pcvw(70)
+          +sp()
+            margin-top spvw(50)
+        &__title
+          font-weight bold
+          +pc()
+            font-size pcvw(32)
+          +sp()
+            font-size spvw(32)
+        &__label
+          color #fff
+          display inline-block
+          background-color #2c4a70
+          line-height 1
+          font-weight bold
+          +pc()
+            font-size pcvw(26)
+            margin-top pcvw(20)
+            padding pcvw(12) pcvw(20) pcvw(15)
+            border-radius pcvw(40)
+          +sp()
+            font-size spvw(26)
+            margin-top spvw(30)
+            padding spvw(12) spvw(25) spvw(15)
+            border-radius spvw(50)
+        &__address
+          +pc()
+            font-size pcvw(26)
+            margin-top pcvw(15)
+          +sp()
+            font-size spvw(28)
+            margin-top spvw(25)
+        &__tel
+          +sp()
+            margin-top spvw(20)
+
+  &__handling__personal
+    +pc()
+      margin-top pcvw(250)
+    +sp()
+      margin-top spvw(200)
+    &__title
+      font-weight bold
+      +pc()
+        font-size pcvw(48)
+      +sp()
+        font-size spvw(44)
+    &__desc
+      +pc()
+        margin-top pcvw(90)
+      +sp()
+        margin-top spvw(50)
+    &__text
+      line-height 1.6
+      +pc()
+        font-size pcvw(28)
+      +sp()
+        font-size spvw(28)
+    &__list
+      +pc()
+        margin-top pcvw(110)
+        font-size pcvw(28)
+      +sp()
+        margin-top spvw(90)
+        font-size spvw(28)
+      &__item
+        display flex
+        & + &
+          +pc()
+            margin-top pcvw(40)
+          +sp()
+            margin-top spvw(50)
+        &__number
+          +pc()
+            width pcvw(60)
+          +sp()
+            width spvw(50)
+        &__text
+          line-height 1.6
+          flex 1
+    &__signature
+      line-height 1.6
+      +pc()
+        margin-top pcvw(120)
+        font-size pcvw(28)
+      +sp()
+        margin-top spvw(90)
+        font-size spvw(28)
+
+

@@ -1,0 +1,34 @@
+extend ../_template
+
+block vars
+  - title = '[記事名]｜コスモNEWS｜コスモジュク'
+  - description = ''
+  - keywords = ''
+  - img = 'http://localhost:3000/assets/images/share/ogp.jpg'
+  - url = 'http://localhost:3000'
+
+block main
+  include ../component/_header.pug
+
+  .p-contact-finish
+
+    .p-contact-finish__text
+      |お問い合わせいただき、
+      br.u-is-sp
+      |ありがとうございました。
+      br
+      |内容確認後、
+      br.u-is-sp
+      |担当者より改めてご連絡いたします。
+
+    .p-contact-finish__button
+      a.c-button(href="#")
+        .c-button__text
+          p トップページに戻る
+        .c-button__arrow
+
+
+  include ../component/contact/_breadcrumb.pug
+
+
+  include ../component/_footer.pug
