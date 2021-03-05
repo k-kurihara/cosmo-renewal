@@ -118,6 +118,22 @@
         padding-left pcvw(36)
         box-sizing border-box
         position relative
+        &::before
+          content ""
+          display inline-block
+          position absolute
+          top 50%
+          transform translateY(-50%)
+          background-image url('/assets/images/common/ico-arrow-mini.svg')
+          background-size 100%
+          +pc()
+            width pcvw(20)
+            height pcvw(20)
+            left 0
+          +sp()
+            width spvw(20)
+            height spvw(20)
+            left spvw(4)
       +sp()
         display block
         width 100%

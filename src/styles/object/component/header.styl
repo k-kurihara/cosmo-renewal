@@ -82,6 +82,21 @@
           color #0054a5
           padding spvw(40)
           box-sizing border-box
+      &.active
+        &::after
+          +pc()
+            position absolute
+            left 0
+            bottom pcvw(-24)
+            content ""
+            display block
+            width 100%
+            height 3px
+            background #0053a9
+            transform-origin right
+            transform scale(1, 1)
+            backface-visibility hidden
+            transition none
       &::after
         +pc()
           position absolute

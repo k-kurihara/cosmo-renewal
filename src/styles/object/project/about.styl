@@ -423,24 +423,6 @@ $text-color = #0a4872
               color #0053a9
               font-weight bold
               text-align center
-          span
-            +pc()
-              display block
-              margin-top pcvw(28)
-              font-size pcvw(32)
-              line-height 1
-              letter-spacing 0.02em
-              color #60b5e1
-              font-family Montserrat, sans-serif
-            +sp()
-              display block
-              margin-top spvw(20)
-              font-size spvw(28)
-              line-height 1
-              letter-spacing 0.02em
-              color #60b5e1
-              font-family Montserrat, sans-serif
-              text-align center
         &__text
           +pc()
             margin-top pcvw(58)
@@ -636,13 +618,40 @@ $text-color = #0a4872
     &__content__main
       +pc()
         margin-top pcvw(30)
-        font-size pcvw(28)
-        line-height pcvw(51.2)
-        letter-spacing 0.02em
-        color #2c4a70
       +sp()
         margin-top spvw(40)
-        font-size spvw(28)
-        line-height spvw(51.2)
-        letter-spacing 0.02em
-        color #2c4a70
+      &__text
+        +pc()
+          margin-top pcvw(20)
+          font-size pcvw(28)
+          line-height pcvw(51.2)
+          letter-spacing 0.02em
+          color #2c4a70
+        +sp()
+          margin-top spvw(24)
+          font-size spvw(28)
+          line-height spvw(51.2)
+          letter-spacing 0.02em
+          color #2c4a70
+      &__head
+        +pc()
+          display block
+          font-size pcvw(32)
+          line-height 1
+          letter-spacing 0.02em
+          color #60b5e1
+          font-weight bold
+          font-family Montserrat, sans-serif
+        +sp()
+          display block
+          font-size spvw(32)
+          line-height 1
+          letter-spacing 0.02em
+          color #60b5e1
+          font-weight bold
+          font-family Montserrat, sans-serif
+    &__content__main + &__content__main
+      +pc()
+        margin-top pcvw(42)
+      +sp()
+        margin-top spvw(50)

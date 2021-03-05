@@ -203,7 +203,7 @@ block main
               .p-about__features__movie__inner(data-module="playMovie")
                 a.p-about__features__movie__play(href="javascript:void(0)" data-module-playmovie-roll="trigger")
                   img(src="/assets/images/about/img_play001.png", alt="再生ボタン")
-                video(src="/assets/images/about/movie.mp4" data-module-playmovie-roll="target")
+                video(src="/assets/images/about/movie.mp4" playsinline data-module-playmovie-roll="target")
             .p-about__features__text
               .p-about__features__text__main(
                 data-module="scrollAnimation"
@@ -292,26 +292,49 @@ block main
                   {
                     num: '001',
                     title: 'LINEの積極活用。\n学習塾がより身近な存在に',
-                    lead: '入退室をLINEで通知　＆　24時間受付可能なLINE相談',
-                    text: '生徒が塾に来たタイミング、塾から出たタイミングでそれぞれ保護者の方のLINEに通知連絡を行なうサービスです。「塾についたという連絡がない」「いつ帰ってくるのだろう」というようなご心配も、このサービスがあれば不要です！\n他の塾では、連絡ツールとして電話を使っているところが一般的ですが、コスモジュクではLINEをメインに保護者のみなさまとの連絡を行っています。塾内でのご様子や学習状況の共有に加え、進路相談、授業コマ数の追加など全ての窓口を一本化することで気軽で円滑なコミュニケーションが可能になりました。'
+                    text: [
+                      {
+                        head: '入退室をLINEで通知',
+                        text: '生徒が塾に来たタイミング、塾から出たタイミングでそれぞれ保護者の方のLINEに通知連絡を行なうサービスです。「塾についたという連絡がない」「いつ帰ってくるのだろう」というようなご心配も、このサービスがあれば不要です！'
+                      },
+                      {
+                        head: '24時間受付可能なLINE相談',
+                        text: '他の塾では、連絡ツールとして電話を使っているところが一般的ですが、コスモジュクではLINEをメインに保護者のみなさまとの連絡を行っています。塾内でのご様子や学習状況の共有に加え、進路相談、授業コマ数の追加など全ての窓口を一本化することで気軽で円滑なコミュニケーションが可能になりました。'
+                      }
+                    ]
                   },
                   {
                     num: '002',
                     title: '通いやすい立地',
                     lead: false,
-                    text: '日限山、丸山台、野庭、南舞岡、下永谷エリアのちょうど中間地点に位置するコスモジュクは、駅前に出るよりも通いやすく、教室付近は夜間も明るく安全なのでお子さまも安心です。また、教室の前には駐輪スペースを確保しており、塾の近辺は駐車可能な場所もございますので、自家用車での送迎もしやすい環境となっております。'
+                    text: [
+                      {
+                        head: false,
+                        text: '日限山、丸山台、野庭、南舞岡、下永谷エリアのちょうど中間地点に位置するコスモジュクは、駅前に出るよりも通いやすく、教室付近は夜間も明るく安全なのでお子さまも安心です。また、教室の前には駐輪スペースを確保しており、塾の近辺は駐車可能な場所もございますので、自家用車での送迎もしやすい環境となっております。'
+                      }
+                    ]
                   },
                   {
                     num: '003',
                     title: '講師間での密な情報共有',
                     lead: false,
-                    text: '授業の質を向上するためには、講師間でのコミュニケーションを活性化することが必要不可欠だとコスモジュクでは考えています。そのため講師研修をはじめ、講師同士での模擬授業や授業評価などを積極的に開催。また、生徒の日頃の様子や学習状況などは必ず全員で共有するように徹底しています。'
+                    text: [
+                      {
+                        head: false,
+                        text: '授業の質を向上するためには、講師間でのコミュニケーションを活性化することが必要不可欠だとコスモジュクでは考えています。そのため講師研修をはじめ、講師同士での模擬授業や授業評価などを積極的に開催。また、生徒の日頃の様子や学習状況などは必ず全員で共有するように徹底しています。'
+                      }
+                    ]
                   },
                   {
                     num: '004',
                     title: 'ポイント付与制度',
                     lead: false,
-                    text: 'コスモジュクにはコスモポイント（通称コポカ）と呼ばれるポイントがあり、宿題の提出や自習の時間に応じてポイントを付与していくシステムです。さらには学校の定期テストで高得点を取ったり、授業中の良い発言がボーナスポイントになることも。たまったポイントは勉強道具などに交換でき、生徒のやる気をアップさせています。'
+                    text: [
+                      {
+                        head: false,
+                        text: 'コスモジュクにはコスモポイント（通称コポカ）と呼ばれるポイントがあり、宿題の提出や自習の時間に応じてポイントを付与していくシステムです。さらには学校の定期テストで高得点を取ったり、授業中の良い発言がボーナスポイントになることも。たまったポイントは勉強道具などに交換でき、生徒のやる気をアップさせています。'
+                      }
+                    ]
                   },
                 ]
               ul.p-about__reassurance__content__list
@@ -339,8 +362,9 @@ block main
                     )
                       .p-about__reassurance__content__heading
                         p !{item.title.replace(/[\n\r]/g,"<br class='u-is-sp'>")}
-                        if (item.lead)
-                          span #{item.lead}
-                      .p-about__reassurance__content__main
-                        p !{item.text.replace(/[\n\r]/g,"<br>")}
+                      each text,index in item.text
+                        .p-about__reassurance__content__main
+                          if (text.head)
+                            p.p-about__reassurance__content__main__head #{text.head}
+                          p.p-about__reassurance__content__main__text !{text.text.replace(/[\n\r]/g,"<br>")}
   include ../component/_footer.pug
