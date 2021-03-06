@@ -14,7 +14,6 @@ export default class currentActive {
     this.settingActiveClass(page)
   }
   settingActiveClass(page) {
-    console.log(page)
     this.elem.classList.remove('active')
 
     if (page.indexOf('about') !== -1 && this.opts.name === 'about') {

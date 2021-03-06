@@ -203,7 +203,7 @@ block main
               .p-about__features__movie__inner(data-module="playMovie")
                 a.p-about__features__movie__play(href="javascript:void(0)" data-module-playmovie-roll="trigger")
                   img(src="/assets/images/about/img_play001.png", alt="再生ボタン")
-                video(src="/assets/images/about/movie.mp4" playsinline data-module-playmovie-roll="target")
+                video(src="/assets/images/about/movie.mp4" poster="/assets/images/about/pic_movie-thumb.png" preload="auto" muted playsinline data-module-playmovie-roll="target")
             .p-about__features__text
               .p-about__features__text__main(
                 data-module="scrollAnimation"
@@ -291,7 +291,7 @@ block main
                 var reassurance = [
                   {
                     num: '001',
-                    title: 'LINEの積極活用。\n学習塾がより身近な存在に',
+                    title: 'LINEの積極活用。',
                     text: [
                       {
                         head: '入退室をLINEで通知',

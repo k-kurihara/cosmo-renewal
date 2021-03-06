@@ -109,38 +109,46 @@ block main
                 |１階
               .p-teachers__classroom__floor__content__image
                 img(src="/assets/images/teachers/img_floor001.png", alt="1階")
-                .p-teachers__classroom__floor__content__balloon
+                .p-teachers__classroom__floor__content__balloon.u-is-pc
                   .p-teachers__classroom__floor__content__balloon__pin
-                    img(src="/assets/images/teachers/img_pin001.png", alt="")
+                    img(src="/assets/images/teachers/img_pin001.png", alt="ピン")
                   p 見たい場所をタップ！
                 - for (var i = 1; i < 7; i++)
-                  a.p-teachers__classroom__floor__content__button.is-floor1(
-                    href="javascript:void(0)"
-                    class=`is-00${i}`
-                    data-module-slick-trigger=`${i}`
-                    data-module-slick-target-name="floor1"
-                  )
-                    img(src=`/assets/images/teachers/img_1f_point00${i}.svg`, alt="")
+                  if (i === 1)
+                    a.p-teachers__classroom__floor__content__button.is-floor1.active(
+                      href="javascript:void(0)"
+                      class=`is-00${i}`
+                      data-module-slick-trigger=`${i}`
+                      data-module-slick-target-name="floor1"
+                    )
+                  else
+                    a.p-teachers__classroom__floor__content__button.is-floor1(
+                      href="javascript:void(0)"
+                      class=`is-00${i}`
+                      data-module-slick-trigger=`${i}`
+                      data-module-slick-target-name="floor1"
+                    )
               .p-teachers__classroom__floor__content__slide(
                 data-module="slick"
                 data-module-slick-name="floor1"
-                data-options={ "dots": true, "dotsClass": 'floor-slide-dots' }
+                data-options={ "hasTrigger": true, "dots": true, "dotsClass": 'floor-slide-dots' }
               )
                 -
                   var floor1 = [
                     '入口',
-                    '入口',
-                    '入口',
-                    '入口',
-                    '入口',
-                    '入口',
+                    '打合せスペース',
+                    '個別席B',
+                    '個別席A',
+                    '自習席',
+                    '教室長席',
                   ]
                 each item,index in floor1
                   .p-teachers__classroom__floor__content__slide__item
                     .p-teachers__classroom__floor__content__slide__item__heading
                       p #{item}
                     .p-teachers__classroom__floor__content__slide__item__picture
-                      img(src=`/assets/images/teachers/pic_1f_floor00${index+1}.jpg`, alt=`${item}`)
+                      p.p-teachers__classroom__floor__content__slide__item__picture__inner
+                        img(src=`/assets/images/teachers/pic_1f_floor00${index+1}.jpg`, alt=`${item}`)
             .p-teachers__classroom__floor__content.is-floor2f(
               data-module="scrollAnimation"
               data-options={
@@ -154,36 +162,44 @@ block main
                 |２階
               .p-teachers__classroom__floor__content__image
                 img(src="/assets/images/teachers/img_floor002.png", alt="2階")
-                .p-teachers__classroom__floor__content__balloon
+                .p-teachers__classroom__floor__content__balloon.u-is-pc
                   .p-teachers__classroom__floor__content__balloon__pin
-                    img(src="/assets/images/teachers/img_pin001.png", alt="")
+                    img(src="/assets/images/teachers/img_pin001.png", alt="ピン")
                   p 見たい場所をタップ！
                 - for (var i = 1; i < 5; i++)
-                  a.p-teachers__classroom__floor__content__button.is-floor2(
-                    href="javascript:void(0)"
-                    class=`is-00${i}`
-                    data-module-slick-trigger=`${i}`
-                    data-module-slick-target-name="floor2"
-                  )
-                    img(src=`/assets/images/teachers/img_2f_point00${i}.svg`, alt="")
+                  if (i === 1)
+                    a.p-teachers__classroom__floor__content__button.is-floor2.active(
+                      href="javascript:void(0)"
+                      class=`is-00${i}`
+                      data-module-slick-trigger=`${i}`
+                      data-module-slick-target-name="floor2"
+                    )
+                  else
+                    a.p-teachers__classroom__floor__content__button.is-floor2(
+                      href="javascript:void(0)"
+                      class=`is-00${i}`
+                      data-module-slick-trigger=`${i}`
+                      data-module-slick-target-name="floor2"
+                    )
               .p-teachers__classroom__floor__content__slide(
                 data-module="slick"
                 data-module-slick-name="floor2"
-                data-options={ "dots": true, "dotsClass": 'floor-slide-dots' }
+                data-options={ "hasTrigger": true, "dots": true, "dotsClass": 'floor-slide-dots' }
               )
                 -
-                  var floor1 = [
-                    'エントランス',
-                    'エントランス',
-                    'エントランス',
-                    'エントランス',
+                  var floor2 = [
+                    '入口',
+                    '打合せスペース',
+                    '集団席A',
+                    '集団席B',
                   ]
-                each item,index in floor1
+                each item,index in floor2
                   .p-teachers__classroom__floor__content__slide__item
                     .p-teachers__classroom__floor__content__slide__item__heading
                       p #{item}
                     .p-teachers__classroom__floor__content__slide__item__picture
-                      img(src=`/assets/images/teachers/pic_2f_floor00${index+1}.jpg`, alt=`${item}`)
+                      p.p-teachers__classroom__floor__content__slide__item__picture__inner
+                        img(src=`/assets/images/teachers/pic_2f_floor00${index+1}.jpg`, alt=`${item}`)
 
     .p-teachers__access
       .c-section__inner
@@ -204,6 +220,11 @@ block main
                 p 日限丸山台スクール
               .p-teachers__access__contents__text__address
                 p 横浜市港南区丸山台4-9-12 吉川ビル104
+              .p-teachers__access__contents__text__tel
+                p
+                  span
+                    img(src="/assets/images/common/ico-phone.svg", alt="電話番号")
+                  |045-298-5026
               ul.p-teachers__access__contents__text__business
                 li.p-teachers__access__contents__text__business__item
                   p
@@ -243,6 +264,11 @@ block main
                 p 別所弘明寺スクール
               .p-teachers__access__contents__text__address
                 p 横浜市南区別所3-3-20
+              .p-teachers__access__contents__text__tel
+                p
+                  span
+                    img(src="/assets/images/common/ico-phone.svg", alt="電話番号")
+                  |045-299-0603
               ul.p-teachers__access__contents__text__business
                 li.p-teachers__access__contents__text__business__item
                   p

@@ -13,7 +13,46 @@ block main
   include ../component/_header.pug
   .p-flow
     include ../component/_heading.pug
-
+    -
+      var flow = [
+        {
+          heading: '問い合わせ',
+          text: 'お問い合わせフォーム、またはお電話、公式LINEからお気軽にご連絡ください。'
+        },
+        {
+          heading: '面接／説明',
+          text: '塾へお越しいただき、お子さまを交えた面談と簡単な塾のご説明をいたします。'
+        },
+        {
+          heading: '体験授業',
+          text: 'お話だけではわからないことも。そのため無料の体験授業を実施しています。'
+        },
+        {
+          heading: '振り返り面談',
+          text: 'お子さまの現状の学力と、これからの授業の取り組み方についてお伝えします。'
+        },
+        {
+          heading: '入塾',
+          text: '入塾にあたり、必要な書類の記入、教材の配布をし、いよいよ本授業のはじまりです。'
+        },
+      ]
+      var checkpoint = [
+        {
+          num: '001',
+          heading: '学習プラン',
+          text: '伸びしろを見つけ出し、無理なく着実に続けられる学習プランをお伝えします。体験授業後に感想を聞いてみてください。'
+        },
+        {
+          num: '002',
+          heading: '授業中の雰囲気',
+          text: '褒めて伸ばすのがコスモジュクの得意とするところ。授業中の雰囲気がどうだったか、ぜひお子さまに聞いてみてください。'
+        },
+        {
+          num: '003',
+          heading: '講師との相性',
+          text: 'バラエティに富んだ講師の多さもコスモジュクの強みのひとつ。お子さまが講師に何を感じたのか聞いてみてください。'
+        },
+      ]
     .p-flow__enrollment.c-section
       .c-section__inner
         .c-section__contents
@@ -27,44 +66,46 @@ block main
             }
           )
             p 入塾までの流れ
-          .p-flow__enrollment__inner(
+          .p-flow__enrollment__inner.u-is-pc(
+            data-module="flowAnimation"
+            data-options={
+              root: null,
+              rootMargin: '-10% 0%',
+              threshold: [0],
+              delay: 0.25,
+            }
+          )
+            .p-flow__enrollment__images(data-module-flow-animation-roll="0")
+              img(src="/assets/images/flow/img-number-pc.png", alt="")
+            .p-flow__enrollment__texts
+              ul.p-flow__enrollment__texts__list
+                each item, index in flow
+                  li.p-flow__enrollment__texts__item(class=`is-${index+1}` data-module-flow-animation-roll=`${index+1}`)
+                    .p-flow__enrollment__texts__item__image
+                      img(src=`/assets/images/flow/img-flow00${index+1}-pc.png`, alt=`${item.heading}`)
+                    p.p-flow__enrollment__texts__item__heading #{item.heading}
+                    p.p-flow__enrollment__texts__item__text #{item.text}
+          .p-flow__enrollment__inner.u-is-sp(
             data-module="scrollAnimation"
             data-options={
               root: null,
-              rootMargin: '-40% 0%',
+              rootMargin: '0% 0%',
               threshold: [0],
               animation: 'fadeUp'
             }
           )
-            .p-flow__enrollment__images
-              img.u-is-pc(src="/assets/images/flow/img-flow-pc.png", alt="")
-            .p-flow__enrollment__texts
-              -
-                var flow = [
-                  {
-                    heading: '問い合わせ',
-                    text: 'お問い合わせフォーム、またはお電話、公式LINEからお気軽にご連絡ください。'
-                  },
-                  {
-                    heading: '面接／説明',
-                    text: '塾へお越しいただき、お子さまを交えた面談と簡単な塾のご説明をいたします。'
-                  },
-                  {
-                    heading: '体験授業',
-                    text: 'お話だけではわからないことも。そのため無料の体験授業を実施しています。'
-                  },
-                  {
-                    heading: '振り返り面談',
-                    text: 'お子さまの現状の学力と、これからの授業の取り組み方についてお伝えします。'
-                  },
-                  {
-                    heading: '入塾',
-                    text: '入塾にあたり、必要な書類の記入、教材の配布をし、いよいよ本授業のはじまりです。'
-                  },
-                ]
-              ul.p-flow__enrollment__texts__list
+            .p-flow__enrollment__texts.u-is-sp
+              ul.p-flow__enrollment__texts__list(
+                data-module="flowAnimation"
+                data-options={
+                  root: null,
+                  rootMargin: '-10% 0%',
+                  threshold: [0],
+                  delay: 0.25,
+                }
+              )
                 each item, index in flow
-                  li.p-flow__enrollment__texts__item(class=`is-${index+1}`)
+                  li.p-flow__enrollment__texts__item(class=`is-${index+1}` data-module-flow-animation-roll=`${index+1}`)
                     p.p-flow__enrollment__texts__item__heading #{item.heading}
                     p.p-flow__enrollment__texts__item__text #{item.text}
           .p-flow__checkpoint(
@@ -76,30 +117,20 @@ block main
               animation: 'fadeUp'
             }
           )
-            .p-flow__checkpoint__inner
+            .p-flow__checkpoint__inner(
+              data-module="flowAnimation"
+              data-options={
+                root: null,
+                rootMargin: '-10% 0%',
+                threshold: [0],
+                delay: 0.5,
+              }
+            )
               .p-flow__checkpoint__heading
                 p 体験時のチェックポイント
-              -
-                var checkpoint = [
-                  {
-                    num: '001',
-                    heading: '学習プラン',
-                    text: '伸びしろを見つけ出し、無理なく着実に続けられる学習プランをお伝えします。体験授業後に感想を聞いてみてください。'
-                  },
-                  {
-                    num: '002',
-                    heading: '授業中の雰囲気',
-                    text: '褒めて伸ばすのがコスモジュクの得意とするところ。授業中の雰囲気がどうだったか、ぜひお子さまに聞いてみてください。'
-                  },
-                  {
-                    num: '003',
-                    heading: '講師との相性',
-                    text: 'バラエティに富んだ講師の多さもコスモジュクの強みのひとつ。お子さまが講師に何を感じたのか聞いてみてください。'
-                  },
-                ]
               ul.p-flow__checkpoint__list
-                each item in checkpoint
-                  li.p-flow__checkpoint__item
+                each item,index in checkpoint
+                  li.p-flow__checkpoint__item(data-module-flow-animation-roll=`${index+1}`)
                     .p-flow__checkpoint__item__image
                       img.u-is-pc(src=`/assets/images/flow/img_checkpoint${item.num}-pc.png`, alt="")
                       img.u-is-sp(src=`/assets/images/flow/img_checkpoint${item.num}-sp.png`, alt="")
@@ -107,13 +138,20 @@ block main
                       p #{item.heading}
                     .p-flow__checkpoint__item__text
                       p #{item.text}
-              .p-flow__checkpoint__application
+              .p-flow__checkpoint__application(data-module-flow-animation-roll=`4`)
                 a.c-button(href="#")
                   .c-button__text
                     p 体験授業の申込はこちら
                   .c-button__arrow
-    .p-flow__parallax.c-section.u-is-pc(data-module="parallax" data-options={ "coefficient": 1.15 })
-    .p-flow__parallax.c-section.u-is-sp(data-module="parallax" data-options={ "coefficient": 0.35 })
+    .p-flow__parallax.c-section(
+      data-module="parallax"
+      data-options={
+        root: null,
+        threshold: [0],
+        delay: 0.5,
+        coefficient: 25
+      }
+    )
     .p-flow__question.c-section
       .c-section__inner
         .c-section__contents
@@ -155,14 +193,14 @@ block main
                       .p-flow__question__quetion__inner
                         .p-flow__question__quetion__content
                           p.p-flow__question__icon
-                            img(src="/assets/images/flow/icn-Q.png", alt="")
+                            img(src="/assets/images/flow/icn-Q.png", alt="question")
                           p.p-flow__question__quetion__text #{item.question}
                           p.p-flow__question__quetion__accordion(data-module-accordion-roll="icon")
                     .p-flow__question__answer(data-module-accordion-roll="target")
                       .p-flow__question__answer__inner(data-module-accordion-roll="content")
                         .p-flow__question__answer__content
                           p.p-flow__question__icon
-                            img(src="/assets/images/flow/icn-A.png", alt="")
+                            img(src="/assets/images/flow/icn-A.png", alt="answer")
                           p.p-flow__question__answer__text !{item.answer}
 
             //- 授業について・コスモの指導について
@@ -199,14 +237,14 @@ block main
                       .p-flow__question__quetion__inner
                         .p-flow__question__quetion__content
                           p.p-flow__question__icon
-                            img(src="/assets/images/flow/icn-Q.png", alt="")
+                            img(src="/assets/images/flow/icn-Q.png", alt="question")
                           p.p-flow__question__quetion__text #{item.question}
                           p.p-flow__question__quetion__accordion(data-module-accordion-roll="icon")
                     .p-flow__question__answer(data-module-accordion-roll="target")
                       .p-flow__question__answer__inner(data-module-accordion-roll="content")
                         .p-flow__question__answer__content
                           p.p-flow__question__icon
-                            img(src="/assets/images/flow/icn-A.png", alt="")
+                            img(src="/assets/images/flow/icn-A.png", alt="answer")
                           p.p-flow__question__answer__text !{item.answer}
 
             //- 授業料・ご入会について
@@ -255,14 +293,14 @@ block main
                       .p-flow__question__quetion__inner
                         .p-flow__question__quetion__content
                           p.p-flow__question__icon
-                            img(src="/assets/images/flow/icn-Q.png", alt="")
+                            img(src="/assets/images/flow/icn-Q.png", alt="question")
                           p.p-flow__question__quetion__text #{item.question}
                           p.p-flow__question__quetion__accordion(data-module-accordion-roll="icon")
                     .p-flow__question__answer(data-module-accordion-roll="target")
                       .p-flow__question__answer__inner(data-module-accordion-roll="content")
                         .p-flow__question__answer__content
                           p.p-flow__question__icon
-                            img(src="/assets/images/flow/icn-A.png", alt="")
+                            img(src="/assets/images/flow/icn-A.png", alt="answer")
                           p.p-flow__question__answer__text !{item.answer}
 
 
@@ -300,14 +338,14 @@ block main
                       .p-flow__question__quetion__inner
                         .p-flow__question__quetion__content
                           p.p-flow__question__icon
-                            img(src="/assets/images/flow/icn-Q.png", alt="")
+                            img(src="/assets/images/flow/icn-Q.png", alt="question")
                           p.p-flow__question__quetion__text #{item.question}
                           p.p-flow__question__quetion__accordion(data-module-accordion-roll="icon")
                     .p-flow__question__answer(data-module-accordion-roll="target")
                       .p-flow__question__answer__inner(data-module-accordion-roll="content")
                         .p-flow__question__answer__content
                           p.p-flow__question__icon
-                            img(src="/assets/images/flow/icn-A.png", alt="")
+                            img(src="/assets/images/flow/icn-A.png", alt="answer")
                           p.p-flow__question__answer__text !{item.answer}
 
             //- 通塾について
@@ -348,13 +386,13 @@ block main
                       .p-flow__question__quetion__inner
                         .p-flow__question__quetion__content
                           p.p-flow__question__icon
-                            img(src="/assets/images/flow/icn-Q.png", alt="")
+                            img(src="/assets/images/flow/icn-Q.png", alt="question")
                           p.p-flow__question__quetion__text #{item.question}
                           p.p-flow__question__quetion__accordion(data-module-accordion-roll="icon")
                     .p-flow__question__answer(data-module-accordion-roll="target")
                       .p-flow__question__answer__inner(data-module-accordion-roll="content")
                         .p-flow__question__answer__content
                           p.p-flow__question__icon
-                            img(src="/assets/images/flow/icn-A.png", alt="")
+                            img(src="/assets/images/flow/icn-A.png", alt="answer")
                           p.p-flow__question__answer__text !{item.answer}
   include ../component/_footer.pug
