@@ -12,19 +12,22 @@ block vars
 
 block main
   include ../component/_header.pug
-  .p-course 
+  .p-course
     include ../component/_heading.pug
 
-    section
-      include ../component/course/_courseOriginal.pug
-    section
-      include ../component/course/_courseTutorial.pug
-    section
-      include ../component/course/_courseSouthJuniorHighSchool.pug
-    section
-      include ../component/course/_courseUniversityEntranceExam.pug
-    section
-      include ../component/course/_courseOnline.pug
+    section.c-section
+      .c-section__inner
+        .c-section__contents
+          include ../component/course/_courseOriginal.pug
+
+          section
+            include ../component/course/_courseTutorial.pug
+          section
+            include ../component/course/_courseSouthJuniorHighSchool.pug
+          section
+            include ../component/course/_courseUniversityEntranceExam.pug
+          section
+            include ../component/course/_courseOnline.pug
 
     section
       include ../component/_breadcrumb.pug
