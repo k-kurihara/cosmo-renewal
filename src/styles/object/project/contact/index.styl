@@ -6,18 +6,23 @@
       opacity 0.7
   color #2c4a70
   +pc()
-    margin-top 75px
+    margin-top pcvw(360)
   +sp()
-    margin spvw(80) spvw(50) 0 spvw(50)
+    margin spvw(210) spvw(50) 0
   img
     width 100%
     height auto
   *
     box-sizing border-box
 
+  .c-section__contents
+    +sp()
+      padding 0
+
   &__inner
-    margin 0 auto
-    max-width 880px
+    +pc()
+      margin 0 auto
+      width pcvw(1760)
 
   &__header
     &__primary
@@ -25,22 +30,22 @@
         font-weight bold
         color #60b5e1
         +pc()
-          font-size 16px
+          font-size pcvw(32)
         +sp()
           font-size spvw(32)
       &__title
         font-weight bold
         +pc()
-          font-size 44px 
-          margin-top 30px
+          font-size pcvw(88) 
+          margin-top pcvw(60)
         +sp()
           font-size spvw(60)
           margin-top spvw(30)
       &__text
         line-height 1.6
         +pc()
-          font-size 16px
-          margin-top 60px
+          font-size pcvw(32)
+          margin-top pcvw(100)
         +sp()
           font-size spvw(28)
           margin-top spvw(100)
@@ -50,7 +55,7 @@
     +pc()
       display flex
       width 100%
-      margin-top 35px
+      margin-top pcvw(70)
     +sp()
       width 100vw
       margin-left spvw(-50)
@@ -58,37 +63,37 @@
       padding spvw(90)
     &__desc
       +pc()
-        padding 50px
+        padding pcvw(100)
         width 68%
     &__title
       font-weight bold
       +pc()
-        font-size 16px
+        font-size pcvw(32)
       +sp()
         font-size spvw(32)
       &__name
         color #00c300
         display inline-block
         +pc()
-          font-size 26px
-          padding-right  10px
+          font-size pcvw(52)
+          padding-right  pcvw(20)
         +sp()
           font-size spvw(52)
           padding-right spvw(10)
         
     &__text
       +pc()
-        font-size 14px
+        font-size pcvw(28)
         line-height 1.6
-        margin-top 20px
+        margin-top pcvw(40)
       +sp()
         font-size spvw(28)
         line-height 1.6
         margin-top spvw(50)
     &__button
       +pc()
-        margin-top 25px
-        width 180px
+        margin-top pcvw(50)
+        width pcvw(360)
       +sp()
         margin-top spvw(40)
         width spvw(360)
@@ -107,13 +112,13 @@
         margin spvw(60) auto 0
       &__img
         +pc()
-          width 125px
+          width pcvw(250)
         +sp()
           width spvw(250)
 
   &__choicetype
     +pc()
-      margin-top 80px
+      margin-top pcvw(160)
     +sp()
       margin-top spvw(150)
 
@@ -121,13 +126,13 @@
       font-weight bold
       text-align center
       +pc()
-        font-size 16px
+        font-size pcvw(32)
       +sp()
         font-size spvw(28)
 
     &__buttons
       +pc()
-        margin-top 50px
+        margin-top pcvw(100)
       +sp()
         margin-top spvw(60)
       &__list
@@ -137,11 +142,12 @@
           +pc()
             display flex
             width calc(100% / 3)
-          +pc()
-            width 100%
-          a
+          +sp()
             display flex
             width 100%
+          // a
+          //   display flex
+          //   width 100%
           &__check
             background-color #d5e2ea
             transition all .5s ease
@@ -156,12 +162,17 @@
               position absolute
               top 50%
               left 50%
-              width 30px
-              height 24px
               transform translate(-50%, -50%)
               background-image url("/assets/images/contact/pc/choicetype_check.png")
               background-size contain
               background-repeat no-repeat
+              +pc()
+                width pcvw(50)
+                height pcvw(42)
+              +sp()
+                width spvw(30)
+                height spvw(24)
+
           &__text
             display flex
             align-items center
@@ -172,8 +183,8 @@
             font-weight bold
             +pc()
               width 76%
-              font-size 14px
-              padding 25px 0
+              font-size pcvw(28)
+              padding pcvw(50) 0
             +sp()
               font-size spvw(26)
               width 82.5%
@@ -190,15 +201,19 @@
 
   &__form
     +pc()
-      margin-top 40px
+      margin-top pcvw(80)
     +sp()
       margin-top spvw(60)
+    &__area
+      display none
+      &.is-active
+        display block
     &__caution
       color #ff8880
       display flex
       justify-content flex-end
       +pc()
-        font-size 12px
+        font-size pcvw(24)
       +sp()
         font-size spvw(24)
       &__text
@@ -211,21 +226,42 @@
           position absolute
           top 0
           +pc()
-            font-size 10px
-            left -12px
+            font-size pcvw(20)
+            left pcvw(-24)
           +sp()
             font-size spvw(10)
             left spvw(-20)
 
+    &__error
+      color #ff8880
+      transition all .2s ease-out
+      height 0
+      +pc()
+        font-size pcvw(24)
+        margin-bottom 0
+      +sp()
+        font-size spvw(24)
+        margin-bottom 0
+      &.is-show
+        +pc()
+          font-size pcvw(24)
+          margin-bottom pcvw(20)
+          height pcvw(24)
+        +sp()
+          font-size spvw(24)
+          margin-bottom spvw(20)
+          height spvw(24)
+
+
     &__list
       +pc()
-        margin-top 10px
+        margin-top pcvw(20)
       +sp()
         margin-top spvw(20)
       &__item
         & + &
           +pc()
-            margin-top 15px
+            margin-top pcvw(30)
           +sp()
             margin-top spvw(30)
 
@@ -233,7 +269,7 @@
       position relative
       display inline-block
       +pc()
-        font-size 14px
+        font-size pcvw(28)
       +sp()
         font-size spvw(32)
       &.is-required
@@ -244,12 +280,11 @@
           position absolute
           top 0
           +pc()
-            font-size 10px
-            right -12px
+            font-size pcvw(20)
+            right pcvw(-24)
           +sp()
             font-size spvw(10)
             right spvw(-20)
-
     &__input
       &__text
         width 100%
@@ -257,10 +292,10 @@
         border solid 2px #fff
         transition all .5s ease
         +pc()
-          padding 15px 25px
-          font-size 16px
-          border-radius 10px
-          margin-top 10px
+          padding pcvw(30) pcvw(50)
+          font-size pcvw(32)
+          border-radius pcvw(20)
+          margin-top pcvw(20)
         +sp()
           padding spvw(30)
           font-size spvw(32)
@@ -275,7 +310,13 @@
           z-index 10
           outline 0
           box-shadow: 0 0 5px 0 #d2d2d2
-
+      
+        &.is-small
+          +pc()
+            width pcvw(450)
+          +sp()
+            width spvw(450)
+      
       &__textarea
         resize none
         border none
@@ -284,11 +325,11 @@
         line-height 1.6
         +pc()
           width 100%
-          height 150px
-          padding 30px 25px
-          font-size 16px
-          border-radius 10px
-          margin-top 10px
+          height pcvw(300)
+          padding pcvw(60) pcvw(50)
+          font-size pcvw(32)
+          border-radius pcvw(20)
+          margin-top pcvw(20)
         +sp()
           width 100%
           height spvw(300)
@@ -316,16 +357,17 @@
 
     &__agree
       +pc()
-        margin-top 60px
+        margin-top pcvw(120)
       +sp()
         margin-top spvw(110)
       &__link
         text-align center
         &__text
+          color #2c4a70
           position relative
           display inline-block
           +pc()
-            font-size 12px
+            font-size pcvw(24)
           +sp()
             font-size spvw(24)
           a
@@ -340,9 +382,9 @@
             background-size contain
             background-repeat no-repeat
             +pc()
-              left -22px
-              width 12px
-              height 12px
+              left pcvw(-44)
+              width pcvw(24)
+              height pcvw(24)
             +sp()
               left spvw(-40)
               width spvw(24)
@@ -352,8 +394,8 @@
       &__check
         text-align center
         +pc()
-          margin-top 20px
-          font-size 16px
+          margin-top pcvw(40)
+          font-size pcvw(32)
         +sp()
           margin-top spvw(40)
           font-size spvw(32)
@@ -362,7 +404,7 @@
           cursor pointer
           transition all .5s ease
           +pc()
-            padding-left 45px
+            padding-left pcvw(90)
           +sp()
             padding-left spvw(90)
 
@@ -383,9 +425,9 @@
               background-repeat no-repeat
               cursor pointer
               +pc()
-                left 6px
-                width 18px
-                height 14px
+                left pcvw(12)
+                width pcvw(36)
+                height pcvw(28)
               +sp()
                 left spvw(12)
                 width spvw(36)
@@ -399,8 +441,8 @@
               background-color #e9eef2
               cursor pointer
               +pc()
-                width 30px
-                height 30px
+                width pcvw(60)
+                height pcvw(60)
               +sp()
                 width spvw(60)
                 height spvw(60)
@@ -410,83 +452,96 @@
               &:after
                 background-color #fad06c
 
-  &__breadcrumb
-    +pc()
-      width  1110px
-      margin 120px auto 30px
-    +sp()
-      margin spvw(210) spvw(50) spvw(50)
-    &__list
-      display flex
-      &__item
-        position relative
-        +pc()
-          margin-left 15px
-          font-size 12px
-        +sp()
-          margin-left spvw(25)
-          font-size spvw(22)
-        &:before
-          content "-"
-          display block
-          position absolute
-          +pc()
-            left -9px
-          +sp()
-            left spvw(-13)
-        &:first-child
-          margin-left 0
-          &:before
-            display none
+  // &__breadcrumb
+  //   +pc()
+  //     width  1110px
+  //     margin 120px auto 30px
+  //   +sp()
+  //     margin spvw(210) spvw(50) spvw(50)
+  //   &__list
+  //     display flex
+  //     &__item
+  //       position relative
+  //       +pc()
+  //         margin-left 15px
+  //         font-size 12px
+  //       +sp()
+  //         margin-left spvw(25)
+  //         font-size spvw(22)
+  //       &:before
+  //         content "-"
+  //         display block
+  //         position absolute
+  //         +pc()
+  //           left -9px
+  //         +sp()
+  //           left spvw(-13)
+  //       &:first-child
+  //         margin-left 0
+  //         &:before
+  //           display none
 
-  &__button
+
+  &__button__area
+    text-align center
     +pc()
-      margin-top 40px
+      margin-top pcvw(80)
     +sp()
       margin-top spvw(60)
     a
-      display flex
-      justify-content center
-      align-items center
-      color #fff
-      background linear-gradient(90deg,#0053a9 0%,#0053a9 80%,#fad06c 80%,#fad06c 100%)
-      margin 0 auto
-      position relative
-      transition all .5s ease
-      +pc()
-        font-size 14px
-        width 340px
-        padding 25px 70px 25px 25px
-        border-radius 40px
-      +sp()
-        font-size spvw(26)
-        width spvw(530)
-        padding spvw(40) spvw(120) spvw(40) spvw(40)
-        border-radius spvw(100)
-      &::after
-        content ""
-        display block
-        position absolute
-        top 50%
-        transform translateY(-50%)
-        transition all .5s ease
-        background-image url("/assets/images/contact/pc/arrow.png")
-        background-size contain
-        background-repeat no-repeat
-        +pc()
-          right 31px
-          width 12px
-          height 12px
-        +sp()
-          right spvw(44)
-          width spvw(24)
-          height spvw(24)
-      &:hover
-        &:after
-          +pc()
-            right 21px
-          +sp()
-            right spvw(12)
+      pointer-events none
+      opacity .5
+    &.is-enabled a
+      pointer-events auto
+      opacity 1
+
+    // +pc()
+    //   margin-top 40px
+    // +sp()
+    //   margin-top spvw(60)
+    // a
+    //   display flex
+    //   justify-content center
+    //   align-items center
+    //   color #fff
+    //   background linear-gradient(90deg,#0053a9 0%,#0053a9 80%,#fad06c 80%,#fad06c 100%)
+    //   margin 0 auto
+    //   position relative
+    //   transition all .5s ease
+    //   +pc()
+    //     font-size pcvw(28)
+    //     width pcvw(680)
+    //     padding pcvw(50) 70px 25px 25px
+    //     border-radius 40px
+    //   +sp()
+    //     font-size spvw(26)
+    //     width spvw(530)
+    //     padding spvw(40) spvw(120) spvw(40) spvw(40)
+    //     border-radius spvw(100)
+    //   &::after
+    //     content ""
+    //     display block
+    //     position absolute
+    //     top 50%
+    //     transform translateY(-50%)
+    //     transition all .5s ease
+    //     background-image url("/assets/images/contact/pc/arrow.png")
+    //     background-size contain
+    //     background-repeat no-repeat
+    //     +pc()
+    //       right 31px
+    //       width 12px
+    //       height 12px
+    //     +sp()
+    //       right spvw(44)
+    //       width spvw(24)
+    //       height spvw(24)
+    //   &:hover
+    //     &:after
+    //       +pc()
+    //         right 21px
+    //       +sp()
+    //         right spvw(12)
 
 
 
