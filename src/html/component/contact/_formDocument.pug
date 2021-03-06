@@ -1,1 +1,39 @@
-.p-contact__form__document 資料請求
+.p-contact__form__area(data-contact-tab="target" data-contact-tab-target="2")
+  .p-contact__form__caution
+    .p-contact__form__caution__text 入力必須
+  ul.p-contact__form__list
+    li.p-contact__form__list__item
+      .p-contact__form__label.is-required おなまえ
+      .p-contact__form__input
+        input.p-contact__form__input__text(type="text" placeholder="例：コスモ太")
+
+    li.p-contact__form__list__item
+      .p-contact__form__label.is-required 郵便番号
+      .p-contact__form__input
+        input.p-contact__form__input__text.is-small(type="text" placeholder="例：123-4567")
+
+    li.p-contact__form__list__item
+      .p-contact__form__label.is-required ご住所
+      .p-contact__form__input
+        input.p-contact__form__input__text(type="text" placeholder="例：神奈川県横浜市港南区丸山台四丁目9番12号 吉川ビル104")
+
+    li.p-contact__form__list__item
+      .p-contact__form__label.is-required 電話番号
+      .p-contact__form__input
+        input.p-contact__form__input__text.is-small(type="text" placeholder="例：123-456-7890")
+
+    li.p-contact__form__list__item
+      .p-contact__form__label.is-required メールアドレス
+      .p-contact__form__input
+        input.p-contact__form__input__text(type="text" placeholder="例：cosmojuku@com")
+
+    li.p-contact__form__list__item
+      .p-contact__form__label.is-required メールアドレス（確認用）
+      .p-contact__form__input
+        input.p-contact__form__input__text(type="text" placeholder="例：cosmojuku@com")
+
+    li.p-contact__form__list__item
+      .p-contact__form__label お問い合わせ内容
+      .p-contact__form__input
+        textarea.p-contact__form__input__textarea(placeholder="お問い合わせ内容をご記入ください。")
+

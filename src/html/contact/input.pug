@@ -1,11 +1,14 @@
 extend ../_template
 
 block vars
-  - title = '[記事名]｜コスモNEWS｜コスモジュク'
-  - description = ''
+  - title = 'お問い合わせ｜コスモジュク'
+  - description = 'コスモジュクに関するご相談、教室見学や体験申込、資料のご請求など、何でもお気軽にお問い合わせください。LINEでカンタン問合せも受付中。'
   - keywords = ''
   - img = 'http://localhost:3000/assets/images/share/ogp.jpg'
   - url = 'http://localhost:3000'
+  - pageTitleEN = 'CONTACT'
+  - pageTitleJP = 'お問い合わせ'
+  - currentPage = '企業情報'
 
 block main
   include ../component/_header.pug
@@ -13,24 +16,25 @@ block main
   .p-contact
     .p-contact__inner
       section
-        include ../component/contact/_headerPrimary.pug
+        include ../component/_heading.pug
+        //- include ../component/contact/_headerPrimary.pug
         include ../component/contact/_headerPrimaryText.pug
 
       section
         include ../component/contact/_lineContact.pug
 
-      section
+      section(data-module="contactTab")
         include ../component/contact/_choiceType.pug
 
-        include ../component/contact/_formApplication.pug
-        include ../component/contact/_formDocument.pug
-        include ../component/contact/_formInquary.pug
+        .p-contact__form
+          include ../component/contact/_formApplication.pug
+          include ../component/contact/_formDocument.pug
+          include ../component/contact/_formInquary.pug
 
-        include ../component/contact/_formAgree.pug
-        include ../component/contact/_button.pug
+    include ../component/_breadcrumb.pug
 
-  section
-    include ../component/contact/_breadcrumb.pug
+  //- section
+  //-   include ../component/contact/_breadcrumb.pug
 
 
   include ../component/_footer.pug

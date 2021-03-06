@@ -2,7 +2,7 @@ import $ from 'jquery'
 import 'slick-carousel'
 
 export default class FbActivity {
-  constructor(elem, opts) {
+  constructor(elem) {
     this.elem = $(elem)
     this.target = document.querySelectorAll('[data-activity="target"]')
     this.init()
