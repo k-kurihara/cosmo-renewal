@@ -5,6 +5,7 @@ export default class slick {
   constructor(elem, opts) {
     this.elem = $(elem)
     this.opts = opts
+    this.hasTrigger = opts.hasTrigger
     this.trigger = document.querySelectorAll('[data-module-slick-trigger]')
     this.triggerArr = Array.prototype.slice.call(this.trigger)
     this.init()
@@ -13,6 +14,9 @@ export default class slick {
     this.elem.slick({
       dots: this.opts.dots,
       dotsClass: this.opts.dotsClass
+    })
+    this.elem.on('afterChange', (event, slick) => {
+      this.targetActive(event, slick)
     })
     this.bindEvetns()
   }
@@ -29,6 +33,20 @@ export default class slick {
   }
   goToSlick(targetName, num) {
     const target = document.querySelector(`[data-module-slick-name="${targetName}"]`)
-    $(target).slick('slickGoTo', num, false);
+    $(target).slick('slickGoTo', num, false)
+  }
+  targetActive(event, slick) {
+    if(this.hasTrigger) {
+      const name = this.elem.attr('data-module-slick-name')
+      const triggerList = document.querySelectorAll(`[data-module-slick-target-name='${name}']`)
+      const trigger = Array.prototype.slice.call(triggerList)
+      trigger.forEach(element => {
+        const triggerNum = Number(element.getAttribute('data-module-slick-trigger'))
+        element.classList.remove('active')
+        if(triggerNum === slick.currentSlide + 1) {
+          element.classList.add('active')
+        }
+      })
+    }
   }
 }

@@ -395,6 +395,7 @@ $text-color = #0a4872
         position relative
         border-radius spvw(30)
         overflow hidden
+        z-index 1
       video
         position absolute
         top 0
@@ -421,6 +422,23 @@ $text-color = #0a4872
               line-height 1
               letter-spacing 0.02em
               color #0053a9
+              font-weight bold
+              text-align center
+          span
+            display block
+            +pc()
+              margin-top pcvw(24)
+              font-size pcvw(32)
+              line-height 1
+              letter-spacing 0.02em
+              color #60b5e1
+              font-weight bold
+            +sp()
+              margin-top spvw(30)
+              font-size spvw(28)
+              line-height 1
+              letter-spacing 0.02em
+              color #60b5e1
               font-weight bold
               text-align center
         &__text

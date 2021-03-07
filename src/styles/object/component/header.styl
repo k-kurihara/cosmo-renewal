@@ -123,6 +123,9 @@
           background-image url('/assets/images/common/ico-arrow.svg')
           background-repeat no-repeat
           background-size 100%
+      &.is-about::after
+        +sp()
+          display none
       &.has-second
         +sp()
           padding spvw(60) spvw(40) spvw(40)
@@ -148,8 +151,19 @@
       +sp()
         border-bottom 1px solid #d5e2ea
     &__page
-      display inline-block
-      cursor pointer
+      +pc()
+        display inline-block
+        cursor pointer
+      +sp()
+        width 100%
+      .is-about &
+        +sp()
+          padding spvw(40)
+          display block
+          font-size spvw(28)
+          font-weight bold
+          color #0054a5
+          box-sizing border-box
     &__contacus
       +pc()
         margin-left pcvw(84)
@@ -198,9 +212,14 @@
         box-sizing border-box
         overflow hidden
       +sp()
+        width 100%
+        display inline-block
         padding spvw(20) 0
         box-sizing border-box
         position relative
+      a
+        +sp()
+          padding 0 spvw(40) 0 0
       &::after
         +sp()
           position absolute

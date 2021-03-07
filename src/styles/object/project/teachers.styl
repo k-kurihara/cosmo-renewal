@@ -311,7 +311,7 @@
           align-items center
           justify-content space-between
         +sp()
-          padding spvw(170) spvw(50) spvw(80) spvw(50)
+          padding spvw(50) spvw(50) spvw(80) spvw(50)
           border-top 4px solid #2c4a70
       &__content + &__content
         +pc()
@@ -350,7 +350,8 @@
           width pcvw(1004)
           position relative
         +sp()
-          width 100%
+          width spvw(480)
+          margin auto
           position relative
       &__content__slide
         box-sizing border-box
@@ -384,6 +385,22 @@
             margin-top pcvw(40)
           +sp()
             margin-top spvw(22)
+          &__inner
+            position relative
+            font-size 0
+            overflow hidden
+            +pc()
+              width 100%
+              height pcvw(604)
+            +sp()
+              width 100%
+              height spvw(374)
+            img
+              position absolute
+              top 50%
+              left 50%
+              transform translate(-50%, -50%)
+              width 100%
         .slick-arrow
           background #0054a5
           border-radius 50%
@@ -523,89 +540,128 @@
             margin-left spvw(16)
       &__content__button
         position absolute
+        background-repeat no-repeat
+        background-size 100%
+        background-position center
+        display block
         +pc()
           width pcvw(120)
+          height pcvw(120)
+          transform scale(1.0)
+          transition transform 0.2s ease-out
+          &:hover
+            transform scale(1.2)
+            transition transform 0.2s ease-out
         +sp()
           width spvw(76)
+          height spvw(76)
         &:hover
           opacity 1
         &.is-floor1.is-001
+          background-image url('/assets/images/teachers/img_1f_point001.svg')
+          &.active
+            background-image url('/assets/images/teachers/img_1f_point001-on.svg')
           +pc()
-            width pcvw(140)
             top pcvw(824)
-            left pcvw(432)
+            left pcvw(442)
           +sp()
-            width spvw(89)
-            top spvw(529)
-            left spvw(281)
+            top spvw(388)
+            left spvw(205)
         &.is-floor1.is-002
+          background-image url('/assets/images/teachers/img_1f_point002.svg')
+          &.active
+            background-image url('/assets/images/teachers/img_1f_point002-on.svg')
           +pc()
             top pcvw(854)
             left pcvw(708)
           +sp()
-            top spvw(549)
-            left spvw(458)
+            top spvw(392)
+            left spvw(336)
         &.is-floor1.is-003
+          background-image url('/assets/images/teachers/img_1f_point003.svg')
+          &.active
+            background-image url('/assets/images/teachers/img_1f_point003-on.svg')
           +pc()
             top pcvw(252)
             left pcvw(718)
           +sp()
-            top spvw(165)
-            left spvw(463)
+            top spvw(120)
+            left spvw(340)
         &.is-floor1.is-004
+          background-image url('/assets/images/teachers/img_1f_point004.svg')
+          &.active
+            background-image url('/assets/images/teachers/img_1f_point004-on.svg')
           +pc()
             top pcvw(502)
             left pcvw(244)
           +sp()
-            top spvw(324)
-            left spvw(161)
+            top spvw(236)
+            left spvw(116)
         &.is-floor1.is-005
+          background-image url('/assets/images/teachers/img_1f_point005.svg')
+          &.active
+            background-image url('/assets/images/teachers/img_1f_point005-on.svg')
           +pc()
             top pcvw(111)
             left pcvw(210)
           +sp()
-            top spvw(75)
-            left spvw(140)
+            top spvw(55)
+            left spvw(100)
         &.is-floor1.is-006
+          background-image url('/assets/images/teachers/img_1f_point006.svg')
+          &.active
+            background-image url('/assets/images/teachers/img_1f_point006-on.svg')
           +pc()
             top pcvw(776)
             left pcvw(271)
           +sp()
-            top spvw(499)
-            left spvw(179)
+            top spvw(344)
+            left spvw(116)
         &.is-floor2.is-001
+          background-image url('/assets/images/teachers/img_2f_point001.svg')
+          &.active
+            background-image url('/assets/images/teachers/img_2f_point001-on.svg')
           +pc()
-            width pcvw(140)
-            top pcvw(784)
+            top pcvw(796)
             left pcvw(473)
           +sp()
-            width spvw(89)
-            top spvw(507)
-            left spvw(306)
+            top spvw(370)
+            left spvw(220)
         &.is-floor2.is-002
+          background-image url('/assets/images/teachers/img_2f_point002.svg')
+          &.active
+            background-image url('/assets/images/teachers/img_2f_point002-on.svg')
           +pc()
             top pcvw(843)
             left pcvw(221)
           +sp()
-            top spvw(545)
-            left spvw(143)
+            top spvw(382)
+            left spvw(104)
         &.is-floor2.is-003
+          background-image url('/assets/images/teachers/img_2f_point003.svg')
+          &.active
+            background-image url('/assets/images/teachers/img_2f_point003-on.svg')
           +pc()
             top pcvw(57)
             left pcvw(232)
           +sp()
-            top spvw(37)
-            left spvw(150)
+            top spvw(22)
+            left spvw(110)
         &.is-floor2.is-004
+          background-image url('/assets/images/teachers/img_2f_point004.svg')
+          &.active
+            background-image url('/assets/images/teachers/img_2f_point004-on.svg')
           +pc()
             top pcvw(357)
             left pcvw(490)
           +sp()
-            top spvw(231)
-            left spvw(317)
+            top spvw(170)
+            left spvw(234)
   &__access
     +pc()
       padding-bottom pcvw(306)
+    +sp()
+      padding-bottom spvw(200)
     &__contents
       +pc()
         padding-top pcvw(204)
@@ -617,7 +673,6 @@
         padding-top spvw(118)
         margin-top spvw(120)
         border-top 2px solid #d5e2ea
-        padding-bottom spvw(200)
       &__text
         +pc()
           width pcvw(600)
@@ -651,6 +706,26 @@
           +sp()
             font-size spvw(28)
             margin-top spvw(40)
+        &__tel
+          letter-spacing 0.04em
+          color #2c4a70
+          +pc()
+            font-size pcvw(28)
+            margin-top pcvw(20)
+          +sp()
+            font-size spvw(28)
+            margin-top spvw(20)
+          span
+            +pc()
+              display inline-block
+              vertical-align middle
+              width pcvw(30)
+              margin-right pcvw(18)
+            +sp()
+              display inline-block
+              vertical-align top
+              width spvw(30)
+              margin-right spvw(18)
         &__business
           +pc()
             margin-top pcvw(64)
