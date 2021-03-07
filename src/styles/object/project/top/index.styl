@@ -466,6 +466,9 @@
         //   +sp()
         //     margin-top 0
         //     margin-left spvw(30)
+        a
+          +pc()
+            hover_opacity()
       &__desc
         +sp()
           padding spvw(35) spvw(30)
@@ -717,8 +720,7 @@
     +sp()
       padding spvw(240) 0
       margin-top spvw(240)
-    &:after
-      content: ""
+    &__tori
       display block
       position absolute
       background-size cover
