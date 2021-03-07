@@ -41,7 +41,9 @@ block main
         .c-section__contents
             include ../component/course/_courseSupplement.pug
 
-    section
-      include ../component/_breadcrumb.pug
+    section.c-section
+      .c-section__inner
+        .c-section__contents
+          include ../component/_breadcrumb.pug
 
   include ../component/_footer.pug

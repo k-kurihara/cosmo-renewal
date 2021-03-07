@@ -1,16 +1,16 @@
   .c-breadcrumb
     +pc()
-      width  1110px
-      margin 120px auto 30px
+      width  100%
+      margin pcvw(240) auto pcvw(60)
     +sp()
-      margin spvw(210) spvw(50) spvw(50)
+      margin spvw(210) 0 spvw(50)
     &__list
       display flex
       &__item
         position relative
         +pc()
-          margin-left 15px
-          font-size 12px
+          margin-left pcvw(30)
+          font-size pcvw(24)
         +sp()
           margin-left spvw(25)
           font-size spvw(22)
@@ -19,7 +19,7 @@
           display block
           position absolute
           +pc()
-            left -9px
+            left pcvw(-18)
           +sp()
             left spvw(-13)
         &:first-child
