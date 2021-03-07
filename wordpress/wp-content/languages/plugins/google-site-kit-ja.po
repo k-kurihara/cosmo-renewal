@@ -1,0 +1,1134 @@
+# Translation of Plugins - Site Kit by Google - Stable (latest release) in Japanese
+# This file is distributed under the same license as the Plugins - Site Kit by Google - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-11-18 21:21:08+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: GlotPress/3.0.0-alpha.2\n"
+"Language: ja_JP\n"
+"Project-Id-Version: Plugins - Site Kit by Google - Stable (latest release)\n"
+
+#: includes/Core/Util/User_Input_Settings.php:150
+msgid "User input settings request failed."
+msgstr "ユーザー入力設定リクエストが失敗しました。"
+
+#: includes/Core/REST_API/REST_Routes.php:417
+msgid "Missing settings data."
+msgstr "設定データがありません。"
+
+#: includes/Core/Authentication/Authentication.php:1213
+msgid "You have insufficient permissions to manage Site Kit permissions."
+msgstr "Site Kit の権限を管理する権限がありません。"
+
+#: includes/Core/Admin/Screens.php:399
+msgid "User Input"
+msgstr "ユーザー入力"
+
+#: includes/Core/Authentication/Authentication.php:1176
+#: includes/Core/Authentication/Authentication.php:1217
+msgid "Site Kit is not configured to use the authentication proxy."
+msgstr "Site Kit は認証プロキシを使用するように設定されていません。"
+
+#: includes/Core/Authentication/Authentication.php:1172
+msgid "You have insufficient permissions to connect Site Kit."
+msgstr "Site Kit に接続する権限がありません。"
+
+#: includes/Core/Authentication/Authentication.php:883
+msgid "Reconnect"
+msgstr "再接続"
+
+#: includes/Core/Authentication/Authentication.php:881
+msgid "Looks like the URL of your site has changed. In order to continue using Site Kit, you’ll need to reconnect, so that your plugin settings are updated with the new URL."
+msgstr "サイトの URL が変更されたようです。 Site Kit を引き続き使用するには、プラグイン設定が新しい URL で更新されるように、再接続する必要があります。"
+
+#: includes/Core/Util/Debug_Data.php:279
+msgid "Connected user count"
+msgstr "接続ユーザー数"
+
+#: includes/Core/Modules/Modules.php:975
+msgid "Owner login."
+msgstr "所有者ログイン。"
+
+#: includes/Core/Modules/Modules.php:970
+msgid "Owner ID."
+msgstr "所有者 ID。"
+
+#. translators: 1: Title prefix. 2: Title.
+#: includes/Core/Util/Entity_Factory.php:482
+msgctxt "archive title"
+msgid "%1$s %2$s"
+msgstr "%1$s %2$s"
+
+#: includes/Core/Util/Entity_Factory.php:392
+msgctxt "daily archives date format"
+msgid "F j, Y"
+msgstr "Y年n月j日"
+
+#: includes/Core/Util/Entity_Factory.php:391
+msgctxt "date archive title prefix"
+msgid "Day:"
+msgstr "日:"
+
+#: includes/Core/Util/Entity_Factory.php:385
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr "Y年n月"
+
+#: includes/Core/Util/Entity_Factory.php:384
+msgctxt "date archive title prefix"
+msgid "Month:"
+msgstr "月:"
+
+#: includes/Core/Util/Entity_Factory.php:379
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr "Y年"
+
+#: includes/Core/Util/Entity_Factory.php:378
+msgctxt "date archive title prefix"
+msgid "Year:"
+msgstr "年:"
+
+#: includes/Core/Util/Entity_Factory.php:350
+msgctxt "post type archive title prefix"
+msgid "Archives:"
+msgstr "アーカイブ:"
+
+#: includes/Core/Util/Entity_Factory.php:326
+msgctxt "author archive title prefix"
+msgid "Author:"
+msgstr "投稿者:"
+
+#. translators: %s: Taxonomy singular name.
+#: includes/Core/Util/Entity_Factory.php:299
+msgctxt "taxonomy term archive title prefix"
+msgid "%s:"
+msgstr "%s:"
+
+#: includes/Core/Util/Entity_Factory.php:290
+msgctxt "post format archive title"
+msgid "Chats"
+msgstr "チャット"
+
+#: includes/Core/Util/Entity_Factory.php:287
+msgctxt "post format archive title"
+msgid "Audio"
+msgstr "音声"
+
+#: includes/Core/Util/Entity_Factory.php:284
+msgctxt "post format archive title"
+msgid "Statuses"
+msgstr "ステータス"
+
+#: includes/Core/Util/Entity_Factory.php:281
+msgctxt "post format archive title"
+msgid "Links"
+msgstr "リンク"
+
+#: includes/Core/Util/Entity_Factory.php:278
+msgctxt "post format archive title"
+msgid "Quotes"
+msgstr "引用"
+
+#: includes/Core/Util/Entity_Factory.php:275
+msgctxt "post format archive title"
+msgid "Videos"
+msgstr "動画"
+
+#: includes/Core/Util/Entity_Factory.php:272
+msgctxt "post format archive title"
+msgid "Images"
+msgstr "画像"
+
+#: includes/Core/Util/Entity_Factory.php:269
+msgctxt "post format archive title"
+msgid "Galleries"
+msgstr "ギャラリー"
+
+#: includes/Core/Util/Entity_Factory.php:266
+msgctxt "post format archive title"
+msgid "Asides"
+msgstr "アサイド"
+
+#: includes/Core/Util/Entity_Factory.php:260
+msgctxt "tag archive title prefix"
+msgid "Tag:"
+msgstr "タグ:"
+
+#: includes/Core/Util/Entity_Factory.php:256
+msgctxt "category archive title prefix"
+msgid "Category:"
+msgstr "カテゴリー:"
+
+#. translators: %s: URL to re-authenticate
+#. translators: %s: setup screen URL
+#. translators: %s: Reconnect URL
+#: includes/Core/Authentication/Authentication.php:970
+#: includes/Core/Authentication/Authentication.php:977
+#: dist/assets/js/googlesitekit-dashboard-details.785a25853cf587765cc9.js:22
+#: dist/assets/js/googlesitekit-modules-tagmanager.6a7e6fe54956f68d1d64.js:25
+#: dist/assets/js/googlesitekit-adminbar.04efe794d00d78ac3c27.js:71
+#: dist/assets/js/googlesitekit-modules-pagespeed-insights.080d11415e35366e459e.js:18
+#: dist/assets/js/googlesitekit-modules-analytics.2fba567ee1d0accf85a8.js:44
+#: dist/assets/js/googlesitekit-module.f7cdfbe6bffb0bc5993c.js:22
+#: dist/assets/js/googlesitekit-wp-dashboard.2d2f3252994f069b0866.js:71
+#: dist/assets/js/googlesitekit-settings.afe61c6df156daabf025.js:22
+#: dist/assets/js/googlesitekit-modules-optimize.3fefe04a54da6c1473c5.js:20
+#: dist/assets/js/googlesitekit-modules-search-console.c11b1a4aca75028e417e.js:24
+#: dist/assets/js/googlesitekit-user-input.1a89a75780bf7f154b1a.js:22
+#: dist/assets/js/googlesitekit-dashboard.c4477b83645e8e977455.js:22
+#: dist/assets/js/googlesitekit-modules-adsense.9c9ac827114682b53664.js:58
+msgid "To fix this, <a href=\"%s\">redo the plugin setup</a>."
+msgstr "修正するには、<a href=\"%s\">プラグインを再度セットアップします</a>。"
+
+#: includes/Core/Authentication/Clients/OAuth_Client.php:1032
+msgid "Looks like the verification token for your site is missing."
+msgstr "サイトの確認トークンがないようです。"
+
+#: includes/Core/Authentication/Clients/OAuth_Client.php:1030
+msgid "Looks like there is no Search Console property for your site."
+msgstr "サイトの Search Console プロパティがないようです。"
+
+#: includes/Core/Authentication/Clients/OAuth_Client.php:1028
+msgid "Looks like your site is not allowed access to Google account data and can’t display stats in the dashboard."
+msgstr "サイトに Google アカウントのデータにアクセスする権限がないため、ダッシュボードに統計データを表示できないようです。"
+
+#: includes/Modules/Analytics.php:255
+#: dist/assets/js/googlesitekit-dashboard-splash.ef799570042683d71918.js:1
+#: dist/assets/js/googlesitekit-dashboard-details.785a25853cf587765cc9.js:28
+#: dist/assets/js/googlesitekit-adminbar.04efe794d00d78ac3c27.js:1
+#: dist/assets/js/googlesitekit-module.f7cdfbe6bffb0bc5993c.js:28
+#: dist/assets/js/googlesitekit-wp-dashboard.2d2f3252994f069b0866.js:1
+#: dist/assets/js/googlesitekit-activation.616704100f9016aeebb3.js:1
+#: dist/assets/js/googlesitekit-settings.afe61c6df156daabf025.js:28
+#: dist/assets/js/googlesitekit-user-input.1a89a75780bf7f154b1a.js:28
+#: dist/assets/js/googlesitekit-dashboard.c4477b83645e8e977455.js:28
+#: dist/assets/js/googlesitekit-modules-adsense.9c9ac827114682b53664.js:1
+msgid "Top acquisition channels"
+msgstr "ユーザー獲得数上位チャネル"
+
+#: includes/Core/Util/Entity_Factory.php:237
+msgid "Home"
+msgstr "ホーム"
+
+#: includes/Modules/Analytics.php:846
+msgid "Analytics view ID not set."
+msgstr "アナリティクスビュー ID が未設定です。"
+
+#: includes/Modules/Analytics.php:333
+msgid "Analytics view ID"
+msgstr "アナリティクスビュー ID"
+
+#: includes/Core/Modules/Module.php:486
+msgid "Invalid datapoint request."
+msgstr "不正なデータポイントリクエストです。"
+
+#: includes/Modules/Tag_Manager.php:461
+msgid "Additional permissions are required to create a new Tag Manager container on your behalf."
+msgstr "代理で新しいタグマネージャーコンテナを作成するには、権限を追加する必要があります。"
+
+#: includes/Modules/Analytics.php:771
+msgid "Analytics provisioning requires connecting via the Site Kit Service."
+msgstr "アナリティクスのプロビジョニングには、Site Kit サービスを介した接続が必要です。"
+
+#: includes/Modules/Analytics.php:642
+msgid "You’ll need to grant Site Kit permission to create a new Analytics view on your behalf."
+msgstr "Site Kit に代理で新しいアナリティクスビューを作成するには、権限を付与する必要があります。"
+
+#: includes/Modules/Analytics.php:647
+msgid "You’ll need to grant Site Kit permission to create a new Analytics property on your behalf."
+msgstr "Site Kit に代理で新しいアナリティクスプロパティを作成するには、権限を付与する必要があります。"
+
+#: includes/Modules/Analytics.php:637
+msgid "You’ll need to grant Site Kit permission to create a new Analytics account on your behalf."
+msgstr "Site Kit に代理で新しいアナリティクスアカウントを作成するには、権限を付与する必要があります。"
+
+#: includes/Core/Authentication/Authentication.php:597
+#: includes/Core/Authentication/Authentication.php:614
+#: includes/Core/Authentication/Authentication.php:637
+msgid "You don't have permissions to authenticate with Site Kit."
+msgstr "Site Kit を認証する権限がありません。"
+
+#: includes/Modules/Site_Verification.php:402
+#: includes/Core/Authentication/Authentication.php:1038
+msgid "You don't have permissions to set up Site Kit."
+msgstr "Site Kit をセットアップする権限がありません。"
+
+#: includes/Core/Authentication/Clients/OAuth_Client.php:1014
+msgid "The Site Kit setup was interrupted because you did not grant the necessary permissions."
+msgstr "Site Kit のセットアップは、必要な権限を付与されていなかったため中断されました。"
+
+#: includes/Core/Modules/Modules.php:859
+msgid "Updating settings failed."
+msgstr "設定の更新に失敗しました。"
+
+#: includes/Core/Modules/Modules.php:747
+msgid "Settings to set."
+msgstr "セットする設定。"
+
+#: includes/Core/Modules/Modules.php:720 includes/Core/Modules/Modules.php:846
+msgid "Module does not support settings."
+msgstr "モジュールは設定をサポートしていません。"
+
+#: includes/Core/Util/Requires_Javascript_Trait.php:36
+msgid "The Site Kit by Google plugin requires JavaScript to be enabled in your browser."
+msgstr "Site Kit by Google プラグインを使用するには、ブラウザーで JavaScript を有効化する必要があります。"
+
+#: includes/Core/Util/Debug_Data.php:323
+msgid "Required scopes"
+msgstr "要求される範囲"
+
+#. translators: used between list items, there is a space after the comma.
+#: includes/Core/Util/Debug_Data.php:298
+#: dist/assets/js/googlesitekit-dashboard-splash.ef799570042683d71918.js:37
+#: dist/assets/js/googlesitekit-dashboard-details.785a25853cf587765cc9.js:24
+#: dist/assets/js/googlesitekit-adminbar.04efe794d00d78ac3c27.js:73
+#: dist/assets/js/googlesitekit-modules-pagespeed-insights.080d11415e35366e459e.js:20
+#: dist/assets/js/googlesitekit-modules.69a2bdd30cf7d03b2746.js:7
+#: dist/assets/js/googlesitekit-module.f7cdfbe6bffb0bc5993c.js:24
+#: dist/assets/js/googlesitekit-wp-dashboard.2d2f3252994f069b0866.js:73
+#: dist/assets/js/googlesitekit-activation.616704100f9016aeebb3.js:21
+#: dist/assets/js/googlesitekit-settings.afe61c6df156daabf025.js:24
+#: dist/assets/js/googlesitekit-settings.afe61c6df156daabf025.js:80
+#: dist/assets/js/googlesitekit-user-input.1a89a75780bf7f154b1a.js:24
+#: dist/assets/js/googlesitekit-dashboard.c4477b83645e8e977455.js:24
+#: dist/assets/js/googlesitekit-modules-adsense.9c9ac827114682b53664.js:60
+msgid ", "
+msgstr "、"
+
+#: includes/Core/Util/Debug_Data.php:295
+msgid "Active Modules"
+msgstr "有効なモジュール"
+
+#: includes/Core/Util/Debug_Data.php:257
+msgid "Not authenticated"
+msgstr "未認証"
+
+#: includes/Core/Util/Debug_Data.php:256
+msgid "Authenticated"
+msgstr "認証済み"
+
+#: includes/Core/Util/Debug_Data.php:254
+msgid "User Status"
+msgstr "ユーザーの状態"
+
+#: includes/Core/Util/Debug_Data.php:237
+#: dist/assets/js/googlesitekit-modules-adsense.9c9ac827114682b53664.js:46
+msgid "Site Status"
+msgstr "サイトの状態"
+
+#: includes/Core/Util/Debug_Data.php:225
+msgid "Not connected"
+msgstr "未接続"
+
+#: includes/Core/Util/Debug_Data.php:224
+msgid "Connected through OAuth client credentials"
+msgstr "OAuth クライアントログイン情報で接続済み"
+
+#: includes/Core/Util/Debug_Data.php:223
+msgid "Connected through site credentials"
+msgstr "サイトのログイン情報を通じて連携済み"
+
+#: includes/Core/Util/Debug_Data.php:206
+msgid "AMP Mode"
+msgstr "AMP モード"
+
+#: includes/Core/Util/Debug_Data.php:202
+msgid "Secondary"
+msgstr "サブ"
+
+#: includes/Core/Util/Debug_Data.php:201
+msgid "Primary"
+msgstr "メイン"
+
+#: includes/Core/Util/Debug_Data.php:176
+msgid "None"
+msgstr "なし"
+
+#: includes/Core/Util/Debug_Data.php:165
+msgid "Reference Site URL"
+msgstr "参照サイトの URL"
+
+#: includes/Core/Util/Debug_Data.php:161
+msgid "WordPress Version"
+msgstr "WordPress バージョン"
+
+#: includes/Core/Util/Debug_Data.php:157
+msgid "PHP Version"
+msgstr "PHP バージョン"
+
+#: includes/Core/Util/Debug_Data.php:153
+msgid "Version"
+msgstr "バージョン"
+
+#: includes/Modules/AdSense.php:338
+msgid "AdSense snippet placed"
+msgstr "AdSense スニペットが配置されました"
+
+#: includes/Modules/AdSense.php:334
+msgid "AdSense account status"
+msgstr "AdSense アカウントのステータス"
+
+#: includes/Modules/AdSense.php:329
+msgid "AdSense client ID"
+msgstr "AdSense クライアント ID"
+
+#: includes/Modules/AdSense.php:324
+msgid "AdSense account ID"
+msgstr "AdSense アカウント ID"
+
+#: includes/Modules/Tag_Manager.php:301
+msgid "Tag Manager snippet placed"
+msgstr "タグマネージャースニペットを配置"
+
+#: includes/Modules/Tag_Manager.php:296
+msgid "Tag Manager AMP container ID"
+msgstr "タグマネージャー AMP コンテナ ID"
+
+#: includes/Modules/Tag_Manager.php:291
+msgid "Tag Manager container ID"
+msgstr "タグマネージャーコンテナ ID"
+
+#: includes/Modules/Tag_Manager.php:286
+msgid "Tag Manager account ID"
+msgstr "タグマネージャーアカウントID"
+
+#: includes/Modules/Analytics.php:1600
+msgid "Google Analytics user opt-out added via Site Kit by Google"
+msgstr "Site Kit by Google による Google アナリティクスのユーザーオプトアウト"
+
+#: includes/Modules/Analytics.php:338
+msgid "Analytics snippet placed"
+msgstr "配置されたアナリティクススニペット"
+
+#: includes/Modules/Analytics.php:328
+msgid "Analytics property ID"
+msgstr "アナリティクスプロパティ ID"
+
+#: includes/Modules/Analytics.php:323
+msgid "Analytics account ID"
+msgstr "アナリティクスアカウント ID"
+
+#: includes/Modules/Search_Console.php:160
+msgid "Search Console property"
+msgstr "Search Console のプロパティ"
+
+#: includes/Modules/Optimize.php:170
+msgid "Optimize ID"
+msgstr "オプティマイズ ID"
+
+#: includes/Modules/Tag_Manager.php:831
+msgid "No account found for given container"
+msgstr "指定されたコンテナのアカウントが見つかりません"
+
+#: includes/Core/Authentication/Clients/OAuth_Client.php:1034
+msgid "Unable to authenticate Site Kit, as no client credentials exist."
+msgstr "クライアント認証情報がないため Site Kit を認証できませんでした。"
+
+#: includes/Core/REST_API/REST_Routes.php:334
+msgid "List of request objects."
+msgstr "要求オブジェクトの一覧。"
+
+#: includes/Core/Admin/Dashboard.php:115
+msgid "Site Kit Summary"
+msgstr "Site Kit サマリー"
+
+#: includes/Core/Notifications/Notification.php:71
+#: dist/assets/js/googlesitekit-dashboard-details.785a25853cf587765cc9.js:28
+#: dist/assets/js/googlesitekit-adminbar.04efe794d00d78ac3c27.js:1
+#: dist/assets/js/googlesitekit-module.f7cdfbe6bffb0bc5993c.js:28
+#: dist/assets/js/googlesitekit-wp-dashboard.2d2f3252994f069b0866.js:1
+#: dist/assets/js/googlesitekit-settings.afe61c6df156daabf025.js:28
+#: dist/assets/js/googlesitekit-user-input.1a89a75780bf7f154b1a.js:28
+#: dist/assets/js/googlesitekit-dashboard.c4477b83645e8e977455.js:28
+#: dist/assets/js/googlesitekit-modules-adsense.9c9ac827114682b53664.js:1
+msgid "Dismiss"
+msgstr "非表示"
+
+#: includes/Core/Util/User_Input_Settings.php:203
+#: includes/Core/Util/User_Input_Settings.php:253
+#: dist/assets/js/googlesitekit-settings.afe61c6df156daabf025.js:86
+msgid "Not Connected"
+msgstr "未接続"
+
+#. translators: %s: module name.
+#. translators: %s: invalid account status identifier
+#: includes/Modules/AdSense.php:913
+#: dist/assets/js/googlesitekit-dashboard-splash.ef799570042683d71918.js:31
+#: dist/assets/js/googlesitekit-dashboard-details.785a25853cf587765cc9.js:44
+#: dist/assets/js/googlesitekit-dashboard-details.785a25853cf587765cc9.js:46
+#: dist/assets/js/googlesitekit-dashboard-details.785a25853cf587765cc9.js:48
+#: dist/assets/js/googlesitekit-adminbar.04efe794d00d78ac3c27.js:17
+#: dist/assets/js/googlesitekit-adminbar.04efe794d00d78ac3c27.js:19
+#: dist/assets/js/googlesitekit-adminbar.04efe794d00d78ac3c27.js:21
+#: dist/assets/js/googlesitekit-module.f7cdfbe6bffb0bc5993c.js:44
+#: dist/assets/js/googlesitekit-module.f7cdfbe6bffb0bc5993c.js:46
+#: dist/assets/js/googlesitekit-module.f7cdfbe6bffb0bc5993c.js:48
+#: dist/assets/js/googlesitekit-wp-dashboard.2d2f3252994f069b0866.js:17
+#: dist/assets/js/googlesitekit-wp-dashboard.2d2f3252994f069b0866.js:19
+#: dist/assets/js/googlesitekit-wp-dashboard.2d2f3252994f069b0866.js:21
+#: dist/assets/js/googlesitekit-settings.afe61c6df156daabf025.js:44
+#: dist/assets/js/googlesitekit-settings.afe61c6df156daabf025.js:46
+#: dist/assets/js/googlesitekit-settings.afe61c6df156daabf025.js:48
+#: dist/assets/js/googlesitekit-user-input.1a89a75780bf7f154b1a.js:44
+#: dist/assets/js/googlesitekit-user-input.1a89a75780bf7f154b1a.js:46
+#: dist/assets/js/googlesitekit-user-input.1a89a75780bf7f154b1a.js:48
+#: dist/assets/js/googlesitekit-dashboard.c4477b83645e8e977455.js:44
+#: dist/assets/js/googlesitekit-dashboard.c4477b83645e8e977455.js:46
+#: dist/assets/js/googlesitekit-dashboard.c4477b83645e8e977455.js:48
+#: dist/assets/js/googlesitekit-modules-adsense.9c9ac827114682b53664.js:9
+#: dist/assets/js/googlesitekit-modules-adsense.9c9ac827114682b53664.js:11
+#: dist/assets/js/googlesitekit-modules-adsense.9c9ac827114682b53664.js:13
+#: dist/assets/js/googlesitekit-modules-adsense.9c9ac827114682b53664.js:42
+#: dist/assets/js/googlesitekit-modules-adsense.9c9ac827114682b53664.js:46
+msgctxt "Service name"
+msgid "AdSense"
+msgstr "AdSense"
+
+#. translators: %s: link with translated service name
+#: includes/Modules/PageSpeed_Insights.php:165
+#: dist/assets/js/googlesitekit-modules-pagespeed-insights.080d11415e35366e459e.js:10
+msgctxt "Service name"
+msgid "PageSpeed Insights"
+msgstr "PageSpeed Insights"
+
+#: includes/Modules/Tag_Manager.php:856
+#: dist/assets/js/googlesitekit-modules-tagmanager.6a7e6fe54956f68d1d64.js:19
+msgctxt "Service name"
+msgid "Tag Manager"
+msgstr "タグマネージャー"
+
+#: includes/Modules/Search_Console.php:535
+msgid "https://search.google.com/search-console/about"
+msgstr "https://search.google.com/search-console/about"
+
+#. translators: %s: module name.
+#: includes/Modules/Search_Console.php:530
+#: dist/assets/js/googlesitekit-dashboard-splash.ef799570042683d71918.js:29
+#: dist/assets/js/googlesitekit-dashboard-splash.ef799570042683d71918.js:31
+#: dist/assets/js/googlesitekit-dashboard-details.785a25853cf587765cc9.js:64
+#: dist/assets/js/googlesitekit-dashboard-details.785a25853cf587765cc9.js:66
+#: dist/assets/js/googlesitekit-dashboard-details.785a25853cf587765cc9.js:70
+#: dist/assets/js/googlesitekit-dashboard-details.785a25853cf587765cc9.js:75
+#: dist/assets/js/googlesitekit-dashboard-details.785a25853cf587765cc9.js:77
+#: dist/assets/js/googlesitekit-adminbar.04efe794d00d78ac3c27.js:41
+#: dist/assets/js/googlesitekit-adminbar.04efe794d00d78ac3c27.js:43
+#: dist/assets/js/googlesitekit-adminbar.04efe794d00d78ac3c27.js:47
+#: dist/assets/js/googlesitekit-adminbar.04efe794d00d78ac3c27.js:52
+#: dist/assets/js/googlesitekit-adminbar.04efe794d00d78ac3c27.js:54
+#: dist/assets/js/googlesitekit-module.f7cdfbe6bffb0bc5993c.js:64
+#: dist/assets/js/googlesitekit-module.f7cdfbe6bffb0bc5993c.js:66
+#: dist/assets/js/googlesitekit-module.f7cdfbe6bffb0bc5993c.js:70
+#: dist/assets/js/googlesitekit-module.f7cdfbe6bffb0bc5993c.js:75
+#: dist/assets/js/googlesitekit-module.f7cdfbe6bffb0bc5993c.js:77
+#: dist/assets/js/googlesitekit-wp-dashboard.2d2f3252994f069b0866.js:41
+#: dist/assets/js/googlesitekit-wp-dashboard.2d2f3252994f069b0866.js:43
+#: dist/assets/js/googlesitekit-wp-dashboard.2d2f3252994f069b0866.js:47
+#: dist/assets/js/googlesitekit-wp-dashboard.2d2f3252994f069b0866.js:52
+#: dist/assets/js/googlesitekit-wp-dashboard.2d2f3252994f069b0866.js:54
+#: dist/assets/js/googlesitekit-settings.afe61c6df156daabf025.js:64
+#: dist/assets/js/googlesitekit-settings.afe61c6df156daabf025.js:66
+#: dist/assets/js/googlesitekit-settings.afe61c6df156daabf025.js:70
+#: dist/assets/js/googlesitekit-settings.afe61c6df156daabf025.js:75
+#: dist/assets/js/googlesitekit-settings.afe61c6df156daabf025.js:77
+#: dist/assets/js/googlesitekit-modules-search-console.c11b1a4aca75028e417e.js:16
+#: dist/assets/js/googlesitekit-user-input.1a89a75780bf7f154b1a.js:64
+#: dist/assets/js/googlesitekit-user-input.1a89a75780bf7f154b1a.js:66
+#: dist/assets/js/googlesitekit-user-input.1a89a75780bf7f154b1a.js:70
+#: dist/assets/js/googlesitekit-user-input.1a89a75780bf7f154b1a.js:75
+#: dist/assets/js/googlesitekit-user-input.1a89a75780bf7f154b1a.js:77
+#: dist/assets/js/googlesitekit-dashboard.c4477b83645e8e977455.js:64
+#: dist/assets/js/googlesitekit-dashboard.c4477b83645e8e977455.js:66
+#: dist/assets/js/googlesitekit-dashboard.c4477b83645e8e977455.js:70
+#: dist/assets/js/googlesitekit-dashboard.c4477b83645e8e977455.js:75
+#: dist/assets/js/googlesitekit-dashboard.c4477b83645e8e977455.js:77
+msgctxt "Service name"
+msgid "Search Console"
+msgstr "Search Console"
+
+#. translators: %s: source link
+#. translators: %s: module name.
+#: includes/Modules/Analytics.php:1410
+#: dist/assets/js/googlesitekit-dashboard-splash.ef799570042683d71918.js:31
+#: dist/assets/js/googlesitekit-dashboard-details.785a25853cf587765cc9.js:30
+#: dist/assets/js/googlesitekit-dashboard-details.785a25853cf587765cc9.js:50
+#: dist/assets/js/googlesitekit-dashboard-details.785a25853cf587765cc9.js:52
+#: dist/assets/js/googlesitekit-dashboard-details.785a25853cf587765cc9.js:56
+#: dist/assets/js/googlesitekit-dashboard-details.785a25853cf587765cc9.js:60
+#: dist/assets/js/googlesitekit-dashboard-details.785a25853cf587765cc9.js:64
+#: dist/assets/js/googlesitekit-adminbar.04efe794d00d78ac3c27.js:3
+#: dist/assets/js/googlesitekit-adminbar.04efe794d00d78ac3c27.js:23
+#: dist/assets/js/googlesitekit-adminbar.04efe794d00d78ac3c27.js:25
+#: dist/assets/js/googlesitekit-adminbar.04efe794d00d78ac3c27.js:29
+#: dist/assets/js/googlesitekit-adminbar.04efe794d00d78ac3c27.js:33
+#: dist/assets/js/googlesitekit-adminbar.04efe794d00d78ac3c27.js:37
+#: dist/assets/js/googlesitekit-adminbar.04efe794d00d78ac3c27.js:41
+#: dist/assets/js/googlesitekit-modules-analytics.2fba567ee1d0accf85a8.js:17
+#: dist/assets/js/googlesitekit-modules-analytics.2fba567ee1d0accf85a8.js:36
+#: dist/assets/js/googlesitekit-module.f7cdfbe6bffb0bc5993c.js:30
+#: dist/assets/js/googlesitekit-module.f7cdfbe6bffb0bc5993c.js:50
+#: dist/assets/js/googlesitekit-module.f7cdfbe6bffb0bc5993c.js:52
+#: dist/assets/js/googlesitekit-module.f7cdfbe6bffb0bc5993c.js:56
+#: dist/assets/js/googlesitekit-module.f7cdfbe6bffb0bc5993c.js:60
+#: dist/assets/js/googlesitekit-module.f7cdfbe6bffb0bc5993c.js:64
+#: dist/assets/js/googlesitekit-wp-dashboard.2d2f3252994f069b0866.js:3
+#: dist/assets/js/googlesitekit-wp-dashboard.2d2f3252994f069b0866.js:23
+#: dist/assets/js/googlesitekit-wp-dashboard.2d2f3252994f069b0866.js:25
+#: dist/assets/js/googlesitekit-wp-dashboard.2d2f3252994f069b0866.js:29
+#: dist/assets/js/googlesitekit-wp-dashboard.2d2f3252994f069b0866.js:33
+#: dist/assets/js/googlesitekit-wp-dashboard.2d2f3252994f069b0866.js:37
+#: dist/assets/js/googlesitekit-wp-dashboard.2d2f3252994f069b0866.js:41
+#: dist/assets/js/googlesitekit-settings.afe61c6df156daabf025.js:30
+#: dist/assets/js/googlesitekit-settings.afe61c6df156daabf025.js:50
+#: dist/assets/js/googlesitekit-settings.afe61c6df156daabf025.js:52
+#: dist/assets/js/googlesitekit-settings.afe61c6df156daabf025.js:56
+#: dist/assets/js/googlesitekit-settings.afe61c6df156daabf025.js:60
+#: dist/assets/js/googlesitekit-settings.afe61c6df156daabf025.js:64
+#: dist/assets/js/googlesitekit-user-input.1a89a75780bf7f154b1a.js:30
+#: dist/assets/js/googlesitekit-user-input.1a89a75780bf7f154b1a.js:50
+#: dist/assets/js/googlesitekit-user-input.1a89a75780bf7f154b1a.js:52
+#: dist/assets/js/googlesitekit-user-input.1a89a75780bf7f154b1a.js:56
+#: dist/assets/js/googlesitekit-user-input.1a89a75780bf7f154b1a.js:60
+#: dist/assets/js/googlesitekit-user-input.1a89a75780bf7f154b1a.js:64
+#: dist/assets/js/googlesitekit-dashboard.c4477b83645e8e977455.js:30
+#: dist/assets/js/googlesitekit-dashboard.c4477b83645e8e977455.js:50
+#: dist/assets/js/googlesitekit-dashboard.c4477b83645e8e977455.js:52
+#: dist/assets/js/googlesitekit-dashboard.c4477b83645e8e977455.js:56
+#: dist/assets/js/googlesitekit-dashboard.c4477b83645e8e977455.js:60
+#: dist/assets/js/googlesitekit-dashboard.c4477b83645e8e977455.js:64
+#: dist/assets/js/googlesitekit-modules-adsense.9c9ac827114682b53664.js:46
+msgctxt "Service name"
+msgid "Analytics"
+msgstr "アナリティクス"
+
+#. translators: %s: Analytics connect URL in Site Kit
+#: includes/Modules/Optimize.php:278
+#: dist/assets/js/googlesitekit-modules-optimize.3fefe04a54da6c1473c5.js:14
+msgctxt "Service name"
+msgid "Optimize"
+msgstr "オプティマイズ"
+
+#: includes/Core/Authentication/Authentication.php:914
+msgid "Click here"
+msgstr "ここをクリック"
+
+#: includes/Core/Authentication/Authentication.php:910
+msgid "You need to reauthenticate your Google account."
+msgstr "Google アカウントを再認証する必要があります。"
+
+#. translators: %s: error code from API
+#: includes/Core/Authentication/Clients/OAuth_Client.php:1043
+msgid "Unknown Error (code: %s)."
+msgstr "不明なエラー (コード: %s)"
+
+#: includes/Core/Authentication/Clients/OAuth_Client.php:1040
+msgid "Unable to receive access token because of an unsupported grant type."
+msgstr "許可タイプがサポートされていないため、アクセストークンを受信できません。"
+
+#: includes/Core/Authentication/Clients/OAuth_Client.php:1038
+msgid "Unable to receive access token because of an unauthorized client."
+msgstr "不正なクライアントにより、アクセストークンを受信できません。"
+
+#: includes/Core/Authentication/Clients/OAuth_Client.php:1024
+msgid "Unable to receive access token because of an invalid authorization code or refresh token."
+msgstr "無効な認証コードまたはリフレッシュトークンのため、アクセストークンを受信できません。"
+
+#: includes/Core/Authentication/Clients/OAuth_Client.php:1020
+msgid "Unable to receive access token because of an invalid client."
+msgstr "クライアントが無効なため、アクセストークンを受信できません。"
+
+#: includes/Core/Authentication/Clients/OAuth_Client.php:1026
+msgid "Unable to receive access token because of an invalid OAuth request."
+msgstr "OAuth リクエストが無効なため、アクセストークンを受信できません。"
+
+#: includes/Core/Authentication/Clients/OAuth_Client.php:1016
+msgid "Unable to receive access token because of an unknown error."
+msgstr "予期せぬエラーにより、アクセストークンを受信できません。"
+
+#: includes/Core/Authentication/Clients/OAuth_Client.php:1022
+msgid "Unable to receive access token because of an empty authorization code."
+msgstr "認証コードが空白のため、アクセストークンを受信できません。"
+
+#: includes/Core/Authentication/Clients/OAuth_Client.php:1018
+msgid "Internal error that the Google login redirect failed."
+msgstr "Google ログインリダイレクトに失敗し、内部エラーが発生しました。"
+
+#: includes/Core/Authentication/Clients/OAuth_Client.php:1036
+msgid "Unable to refresh access token, as no refresh token exists."
+msgstr "リフレッシュトークンが存在しないため、アクセストークンを更新できません。"
+
+#: includes/Core/Util/Activation_Flag.php:180
+msgid "Hello world!"
+msgstr "Hello world!"
+
+#: includes/Modules/Analytics.php:339 includes/Modules/Tag_Manager.php:302
+#: includes/Modules/AdSense.php:339 includes/Core/Util/Debug_Data.php:207
+msgid "No"
+msgstr "いいえ"
+
+#: includes/Modules/Analytics.php:339 includes/Modules/Tag_Manager.php:302
+#: includes/Modules/AdSense.php:339
+msgid "Yes"
+msgstr "はい"
+
+#: includes/Core/Modules/Modules.php:959
+msgid "List of slugs of other modules depending on the module."
+msgstr "モジュールに依存する他のモジュールのスラッグのリスト。"
+
+#: includes/Core/Modules/Modules.php:951
+msgid "List of slugs of other modules that the module depends on."
+msgstr "モジュールが依存する他のモジュールのスラッグのリスト。"
+
+#: includes/Core/Modules/Modules.php:946
+msgid "Whether the module setup has been completed."
+msgstr "モジュールのセットアップが完了したかどうか。"
+
+#: includes/Core/Modules/Modules.php:942
+msgid "Whether the module is active."
+msgstr "モジュールが有効かどうか。"
+
+#: includes/Core/Modules/Modules.php:937
+msgid "Whether the module is internal, thus without any UI."
+msgstr "モジュールが内部にあるかどうか、つまり UI がないかどうか。"
+
+#: includes/Core/Modules/Modules.php:931
+msgid "The module homepage."
+msgstr "モジュールのホームページ。"
+
+#: includes/Core/Modules/Modules.php:926
+msgid "Description of the module."
+msgstr "モジュールの説明。"
+
+#: includes/Core/Modules/Modules.php:921
+msgid "Name of the module."
+msgstr "モジュール名。"
+
+#: includes/Core/REST_API/REST_Routes.php:391
+msgid "Text content to search for."
+msgstr "検索するテキストコンテンツ。"
+
+#: includes/Core/Authentication/Authentication.php:610
+#: includes/Core/Authentication/Authentication.php:633
+#: includes/Core/Authentication/Authentication.php:1018
+#: includes/Core/Authentication/Authentication.php:1209
+msgid "Invalid nonce."
+msgstr "無効な nonce。"
+
+#: includes/Core/REST_API/REST_Routes.php:289
+msgid "Missing request data."
+msgstr "リクエストデータがありません。"
+
+#: includes/Core/Modules/Modules.php:822
+msgid "Module data point to address."
+msgstr "アドレスへのモジュールデータポイント。"
+
+#: includes/Core/Modules/Modules.php:805
+msgid "Data to set."
+msgstr "設定するデータ。"
+
+#: includes/Core/Modules/Modules.php:659 includes/Core/Modules/Modules.php:700
+#: includes/Core/Modules/Modules.php:759 includes/Core/Modules/Modules.php:817
+#: includes/Core/Modules/Modules.php:916
+msgid "Identifier for the module."
+msgstr "モジュールの識別子。"
+
+#: includes/Core/Modules/Modules.php:622
+msgid "An internal error occurred while trying to deactivate the module."
+msgstr "モジュールの無効化中に内部エラーが発生しました。"
+
+#. translators: %s: module name
+#: includes/Core/Modules/Modules.php:617
+msgid "Module cannot be deactivated because deactivation of dependant %s failed."
+msgstr "依存 %s の無効化に失敗したため、モジュールを無効化できません。"
+
+#: includes/Core/Modules/Modules.php:608
+msgid "An internal error occurred while trying to activate the module."
+msgstr "モジュールの有効化中に内部エラーが発生しました。"
+
+#. translators: %s: module name
+#: includes/Core/Modules/Modules.php:604
+msgid "Module cannot be activated because of inactive dependency %s."
+msgstr "依存関係にある %s が無効化されているため、モジュールを有効化できません。"
+
+#: includes/Core/Modules/Modules.php:678 includes/Core/Modules/Modules.php:716
+#: includes/Core/Modules/Modules.php:733 includes/Core/Modules/Modules.php:775
+#: includes/Core/Modules/Modules.php:792
+msgid "Invalid module slug."
+msgstr "不正なモジュールスラッグ。"
+
+#. translators: %s: module name
+#: includes/Core/Modules/Module.php:809
+msgid "Activate %s"
+msgstr "%s を有効化する"
+
+#: includes/Core/Modules/Module.php:794
+msgid "https://about.google/intl/en/"
+msgstr "https://about.google/intl/en/"
+
+#: includes/Core/Modules/Module.php:793
+msgid "https://www.google.com"
+msgstr "https://www.google.com"
+
+#. translators: %s: service identifier
+#: includes/Core/Modules/Module.php:717
+msgid "Google service identified by %s does not exist."
+msgstr " %s で識別される Google サービスは存在しません。"
+
+#: includes/Core/Modules/Module.php:705 includes/Core/Modules/Module.php:709
+msgid "Google services not set up correctly."
+msgstr "Google サービスが正しく設定されていません。"
+
+#: includes/Core/Modules/Module.php:681
+msgid "Google client not set up correctly."
+msgstr "Google クライアントが正しく設定されていません。"
+
+#. translators: %s: module slug
+#: includes/Core/Modules/Modules.php:328 includes/Core/Modules/Modules.php:349
+#: includes/Core/Modules/Modules.php:370
+msgid "Invalid module slug %s."
+msgstr "無効なモジュールスラッグ %s。"
+
+#: includes/Core/Admin/Screen.php:128
+#: dist/assets/js/googlesitekit-dashboard-splash.ef799570042683d71918.js:5
+#: dist/assets/js/googlesitekit-dashboard-details.785a25853cf587765cc9.js:8
+#: dist/assets/js/googlesitekit-dashboard-details.785a25853cf587765cc9.js:77
+#: dist/assets/js/googlesitekit-adminbar.04efe794d00d78ac3c27.js:54
+#: dist/assets/js/googlesitekit-module.f7cdfbe6bffb0bc5993c.js:8
+#: dist/assets/js/googlesitekit-module.f7cdfbe6bffb0bc5993c.js:77
+#: dist/assets/js/googlesitekit-wp-dashboard.2d2f3252994f069b0866.js:54
+#: dist/assets/js/googlesitekit-activation.616704100f9016aeebb3.js:1
+#: dist/assets/js/googlesitekit-settings.afe61c6df156daabf025.js:8
+#: dist/assets/js/googlesitekit-settings.afe61c6df156daabf025.js:77
+#: dist/assets/js/googlesitekit-user-input.1a89a75780bf7f154b1a.js:8
+#: dist/assets/js/googlesitekit-user-input.1a89a75780bf7f154b1a.js:77
+#: dist/assets/js/googlesitekit-dashboard.c4477b83645e8e977455.js:8
+#: dist/assets/js/googlesitekit-dashboard.c4477b83645e8e977455.js:77
+#: dist/assets/js/googlesitekit-modules-adsense.9c9ac827114682b53664.js:25
+msgid "Site Kit"
+msgstr "Site Kit"
+
+#: includes/Core/Admin/Screens.php:324
+#: dist/assets/js/googlesitekit-settings.afe61c6df156daabf025.js:80
+msgid "Settings"
+msgstr "設定"
+
+#: includes/Core/Admin/Screens.php:281 includes/Core/Admin/Screens.php:344
+msgid "Dashboard"
+msgstr "ダッシュボード"
+
+#: includes/Plugin.php:84
+msgid "Meanwhile, we recommend deactivating it in the network and re-activating it for an individual site."
+msgstr "その間、ネットワークでは無効化し、個々のサイトに対して再有効化することをお勧めします。"
+
+#: includes/Plugin.php:76
+msgid "The Site Kit by Google plugin is <strong>not yet compatible</strong> for use in a WordPress multisite network, but we&#8217;re actively working on that."
+msgstr "Site Kit by Google プラグインは、WordPress マルチサイトネットワークで使用するための<strong>互換性がまだありません</strong>が、積極的に取り組んでいます。"
+
+#: includes/Modules/Analytics.php:1415
+msgid "https://marketingplatform.google.com/about/analytics/"
+msgstr "https://marketingplatform.google.com/about/analytics/"
+
+#: includes/Modules/Analytics.php:1414
+msgid "https://analytics.google.com/analytics/web"
+msgstr "https://analytics.google.com/analytics/web"
+
+#: includes/Modules/Analytics.php:1412
+#: dist/assets/js/googlesitekit-dashboard-splash.ef799570042683d71918.js:31
+msgid "Get to know your customers."
+msgstr "お客様についての理解を深めましょう。"
+
+#: includes/Modules/Analytics.php:1411
+msgid "Get a deeper understanding of your customers. Google Analytics gives you the free tools you need to analyze data for your business in one place."
+msgstr "お客様をよりよく理解する:  Google Analytics を使えば、ビジネスに必要なデータ分析に必要なツールを一箇所で無料で利用することができます。"
+
+#. translators: %1$s: selected stat label, %2$s: numeric value of selected
+#. stat, %3$s: up or down arrow , %4$s: different change in percentage, %%:
+#. percent symbol
+#: includes/Modules/Analytics.php:810
+#: dist/assets/js/googlesitekit-dashboard-splash.ef799570042683d71918.js:5
+#: dist/assets/js/googlesitekit-dashboard-details.785a25853cf587765cc9.js:8
+#: dist/assets/js/googlesitekit-modules-tagmanager.6a7e6fe54956f68d1d64.js:9
+#: dist/assets/js/googlesitekit-adminbar.04efe794d00d78ac3c27.js:41
+#: dist/assets/js/googlesitekit-modules-analytics.2fba567ee1d0accf85a8.js:15
+#: dist/assets/js/googlesitekit-module.f7cdfbe6bffb0bc5993c.js:8
+#: dist/assets/js/googlesitekit-wp-dashboard.2d2f3252994f069b0866.js:41
+#: dist/assets/js/googlesitekit-settings.afe61c6df156daabf025.js:8
+#: dist/assets/js/googlesitekit-user-input.1a89a75780bf7f154b1a.js:8
+#: dist/assets/js/googlesitekit-dashboard.c4477b83645e8e977455.js:8
+#: dist/assets/js/googlesitekit-modules-adsense.9c9ac827114682b53664.js:25
+msgid "Analytics module needs to be configured."
+msgstr "分析モジュールを構成する必要があります。"
+
+#: includes/Modules/Analytics.php:823
+msgid "Analytics internal web property ID not set."
+msgstr "アナリティクスの内部 Web プロパティ ID が未設定です。"
+
+#: includes/Modules/Analytics.php:899
+msgid "Analytics property ID not set."
+msgstr "アナリティクスプロパティ ID が設定されていません。"
+
+#: includes/Modules/Analytics.php:683
+msgid "Analytics account ID not set."
+msgstr "Analyticsアカウント ID が設定されていません。"
+
+#: includes/Modules/Analytics.php:254
+#: dist/assets/js/googlesitekit-dashboard-splash.ef799570042683d71918.js:1
+#: dist/assets/js/googlesitekit-dashboard-details.785a25853cf587765cc9.js:28
+#: dist/assets/js/googlesitekit-adminbar.04efe794d00d78ac3c27.js:1
+#: dist/assets/js/googlesitekit-module.f7cdfbe6bffb0bc5993c.js:28
+#: dist/assets/js/googlesitekit-wp-dashboard.2d2f3252994f069b0866.js:1
+#: dist/assets/js/googlesitekit-activation.616704100f9016aeebb3.js:1
+#: dist/assets/js/googlesitekit-settings.afe61c6df156daabf025.js:28
+#: dist/assets/js/googlesitekit-user-input.1a89a75780bf7f154b1a.js:28
+#: dist/assets/js/googlesitekit-dashboard.c4477b83645e8e977455.js:28
+#: dist/assets/js/googlesitekit-modules-adsense.9c9ac827114682b53664.js:1
+msgid "Top pages"
+msgstr "トップページ"
+
+#: includes/Modules/Analytics.php:253
+#: dist/assets/js/googlesitekit-dashboard-splash.ef799570042683d71918.js:1
+#: dist/assets/js/googlesitekit-dashboard-details.785a25853cf587765cc9.js:28
+#: dist/assets/js/googlesitekit-adminbar.04efe794d00d78ac3c27.js:1
+#: dist/assets/js/googlesitekit-module.f7cdfbe6bffb0bc5993c.js:28
+#: dist/assets/js/googlesitekit-wp-dashboard.2d2f3252994f069b0866.js:1
+#: dist/assets/js/googlesitekit-activation.616704100f9016aeebb3.js:1
+#: dist/assets/js/googlesitekit-settings.afe61c6df156daabf025.js:28
+#: dist/assets/js/googlesitekit-user-input.1a89a75780bf7f154b1a.js:28
+#: dist/assets/js/googlesitekit-dashboard.c4477b83645e8e977455.js:28
+#: dist/assets/js/googlesitekit-modules-adsense.9c9ac827114682b53664.js:1
+msgid "Audience overview"
+msgstr "オーディエンスの概要"
+
+#: includes/Modules/Site_Verification.php:352
+msgid "https://developers.google.com/site-verification/"
+msgstr "https://developers.google.com/site-verification/"
+
+#: includes/Modules/Site_Verification.php:351
+msgid "https://www.google.com/webmasters/verification/home"
+msgstr "https://www.google.com/webmasters/verification/home"
+
+#: includes/Modules/Site_Verification.php:349
+msgid "Verify ownership with Google Site Verification."
+msgstr "Google Site Verification でサイト所有権を確認する。"
+
+#: includes/Modules/Site_Verification.php:348
+msgid "Google Site Verification allows you to manage ownership of your site."
+msgstr "Google Site Verification では、サイトの所有権を管理できます。"
+
+#: includes/Modules/Site_Verification.php:171
+msgid "Unknown user."
+msgstr "不明なユーザー。"
+
+#: includes/Modules/Optimize.php:283
+msgid "https://marketingplatform.google.com/about/optimize/"
+msgstr "https://marketingplatform.google.com/about/optimize/"
+
+#: includes/Modules/Optimize.php:282
+msgid "https://optimize.google.com/optimize/home/"
+msgstr "https://optimize.google.com/optimize/home/"
+
+#: includes/Modules/Optimize.php:280
+msgid "Increase your CTR."
+msgstr "クリック率を高めます。"
+
+#: includes/Modules/Optimize.php:279
+msgid "Create free A/B tests that help you drive metric-based design solutions to your site."
+msgstr "指標ベースの設計ソリューションをサイトに適用するための A/B テストを無料で作成できます。"
+
+#: includes/Modules/Optimize.php:229
+msgid "AMP experiment JSON not set."
+msgstr "AMP experiment JSON が設定されていません。"
+
+#: includes/Modules/Optimize.php:249
+msgid "Optimize ID not set."
+msgstr "オプティマイズ ID が設定されていません。"
+
+#: includes/Modules/Optimize.php:82
+msgid "Probability and confidence calculations"
+msgstr "割合と信頼度の計算"
+
+#: includes/Modules/Optimize.php:81
+msgid "Improvement tracking"
+msgstr "トラッキングの改善"
+
+#: includes/Modules/Optimize.php:80
+msgid "A/B or multivariate testing"
+msgstr "A/B テストまたは多変量テスト"
+
+#: includes/Modules/AdSense.php:918
+msgid "https://www.google.com/intl/en_us/adsense/start/"
+msgstr "https://www.google.co.jp/adsense/start/"
+
+#: includes/Modules/AdSense.php:915
+msgid "Monetize Your Site."
+msgstr "サイトを収益化しませんか。"
+
+#: includes/Modules/AdSense.php:914
+msgid "Earn money by placing ads on your website. It’s free and easy."
+msgstr "サイトに広告を表示することで収入が得られます。 無料で簡単に設定できます。"
+
+#: includes/Modules/AdSense.php:831
+msgid "Invalid date range."
+msgstr "日付の範囲指定が無効です。"
+
+#: includes/Modules/AdSense.php:607
+msgid "Go to AdSense"
+msgstr "AdSenseへ"
+
+#: includes/Modules/AdSense.php:450
+msgid "AdSense account status not set."
+msgstr "AdSense アカウントステータスがセットされていません。"
+
+#: includes/Modules/AdSense.php:492
+msgid "AdSense client ID not set."
+msgstr "AdSense クライアント ID が設定されていません。"
+
+#: includes/Modules/AdSense.php:433
+msgid "AdSense account ID not set."
+msgstr "AdSense アカウント ID が設定されていません。"
+
+#: includes/Modules/AdSense.php:209
+msgid "Intelligent, automatic ad placement"
+msgstr "インテリジェントな自動広告配置"
+
+#: includes/Modules/AdSense.php:208
+msgid "Monetize your website"
+msgstr "サイトの収益化"
+
+#: includes/Modules/Tag_Manager.php:862
+msgid "Marketing Platform"
+msgstr "マーケティングプラットフォーム"
+
+#: includes/Modules/Tag_Manager.php:861
+msgid "https://marketingplatform.google.com/about/tag-manager/"
+msgstr "https://marketingplatform.google.com/about/tag-manager/"
+
+#: includes/Modules/Tag_Manager.php:860
+msgid "https://tagmanager.google.com/"
+msgstr "https://tagmanager.google.com/"
+
+#: includes/Modules/Tag_Manager.php:858
+msgid "Tag management made simple."
+msgstr "タグ管理が簡単になりました。"
+
+#: includes/Modules/Tag_Manager.php:857
+msgid "Tag Manager creates an easy to manage way to create tags on your site without updating code."
+msgstr "タグマネージャーは、コードを更新せずに簡単にタグを管理できます。"
+
+#: includes/Modules/Tag_Manager.php:547
+msgid "Tag Manager container ID not set."
+msgstr "タグマネージャコンテナ ID が設定されていません。"
+
+#: includes/Modules/Tag_Manager.php:485
+msgid "Tag Manager account ID not set."
+msgstr "タグマネージャアカウント ID が設定されていません。"
+
+#: includes/Modules/Tag_Manager.php:217
+msgid "Create tags without updating code"
+msgstr "コードを更新せずにタグを作成"
+
+#: includes/Modules/PageSpeed_Insights.php:204
+msgid "Website performance reports for mobile and desktop"
+msgstr "モバイルとデスクトップのサイトパフォーマンスレポート"
+
+#: includes/Modules/PageSpeed_Insights.php:170
+msgid "https://developers.google.com/speed/docs/insights/v5/about"
+msgstr "https://developers.google.com/speed/docs/insights/v5/about"
+
+#: includes/Modules/PageSpeed_Insights.php:169
+msgid "https://developers.google.com/speed/pagespeed/insights/"
+msgstr "https://developers.google.com/speed/pagespeed/insights/"
+
+#: includes/Modules/PageSpeed_Insights.php:167
+msgid "Learn more about your website’s performance."
+msgstr "サイトのパフォーマンスについてさらに詳しく。"
+
+#: includes/Modules/PageSpeed_Insights.php:166
+#: dist/assets/js/googlesitekit-modules-pagespeed-insights.080d11415e35366e459e.js:3
+msgid "Google PageSpeed Insights gives you metrics about performance, accessibility, SEO and PWA."
+msgstr "Google PageSpeed Insights は、パフォーマンス、アクセシビリティ、SEO、PWAに関する指標を提供します。"
+
+#. translators: 1: Invalid parameter name, 2: list of valid values
+#: includes/Modules/PageSpeed_Insights.php:99
+#: includes/Modules/Tag_Manager.php:534 includes/Modules/Tag_Manager.php:567
+#: includes/Modules/Tag_Manager.php:604
+msgid "Request parameter %1$s is not one of %2$s"
+msgstr "リクエストパラメータ %1$s は %2$s の1つではありません"
+
+#: includes/Modules/Search_Console.php:534
+msgid "https://search.google.com/search-console"
+msgstr "https://search.google.com/search-console"
+
+#: includes/Modules/Search_Console.php:532
+msgid "Connect your site to Google Search Console."
+msgstr "サイトを Google Search Console に連携しましょう。"
+
+#: includes/Modules/Search_Console.php:531
+msgid "Google Search Console and helps you understand how Google views your site and optimize its performance in search results."
+msgstr "Google Search Console は、Google がサイトをどのように閲覧し、検索結果でのパフォーマンスを最適化するかを理解するのに役立ちます。"
+
+#: includes/Core/REST_API/Exception/Invalid_Datapoint_Exception.php:38
+msgid "Invalid datapoint."
+msgstr "無効なデータポイント。"
+
+#: includes/Modules/Search_Console.php:259
+msgid "Error adding the site to Search Console."
+msgstr "サイトを Search Console を追加する際にエラーが発生しました。"
+
+#. translators: %s: Missing parameter name
+#: includes/Modules/Site_Verification.php:164 includes/Modules/Optimize.php:237
+#: includes/Modules/Optimize.php:257 includes/Modules/Search_Console.php:231
+#: includes/Modules/PageSpeed_Insights.php:85
+#: includes/Modules/Analytics.php:690 includes/Modules/Analytics.php:755
+#: includes/Modules/Analytics.php:759 includes/Modules/Analytics.php:763
+#: includes/Modules/Analytics.php:767 includes/Modules/Analytics.php:830
+#: includes/Modules/Analytics.php:853 includes/Modules/Analytics.php:869
+#: includes/Modules/Analytics.php:877 includes/Modules/Analytics.php:888
+#: includes/Modules/Analytics.php:906 includes/Modules/Analytics.php:922
+#: includes/Modules/Analytics.php:1058 includes/Modules/Analytics.php:1066
+#: includes/Modules/Analytics.php:1082 includes/Modules/Analytics.php:1096
+#: includes/Modules/Analytics.php:1123 includes/Modules/Tag_Manager.php:492
+#: includes/Modules/Tag_Manager.php:557 includes/Modules/Tag_Manager.php:584
+#: includes/Modules/Tag_Manager.php:592 includes/Modules/Tag_Manager.php:635
+#: includes/Modules/Tag_Manager.php:643 includes/Modules/Tag_Manager.php:660
+#: includes/Modules/AdSense.php:440 includes/Modules/AdSense.php:457
+#: includes/Modules/AdSense.php:483 includes/Modules/AdSense.php:499
+#: includes/Modules/AdSense.php:510 includes/Modules/AdSense.php:618
+#: includes/Modules/AdSense.php:643 includes/Modules/AdSense.php:662
+#: includes/Modules/AdSense.php:670 includes/Modules/AdSense.php:688
+#: includes/Core/Notifications/Notifications.php:283
+msgid "Request parameter is empty: %s."
+msgstr "リクエストパラメータが空です: %s。"
+
+#: google-site-kit.php:47
+msgid "Error Activating"
+msgstr "有効化中のエラー"
+
+#. translators: %s: version number
+#: google-site-kit.php:46
+msgid "Site Kit requires PHP version %s"
+msgstr "Site Kit には PHP %s以降が必要です。"
+
+#. Author URI of the plugin
+msgid "https://opensource.google.com"
+msgstr "https://opensource.google.com"
+
+#. Author of the plugin
+msgid "Google"
+msgstr "Google"
+
+#. Description of the plugin
+msgid "Site Kit is a one-stop solution for WordPress users to use everything Google has to offer to make them successful on the web."
+msgstr "Site Kit ひとつで、Googleが提供するWeb上で成功するためのあらゆるツールを WordPress ユーザーが利用できるようになります。"
+
+#. Plugin URI of the plugin
+msgid "https://sitekit.withgoogle.com"
+msgstr "https://sitekit.withgoogle.com"
+
+#. Plugin Name of the plugin
+#: includes/Core/Admin/Screen.php:86 includes/Core/Util/Debug_Data.php:106
+msgid "Site Kit by Google"
+msgstr "Site Kit by Google"
