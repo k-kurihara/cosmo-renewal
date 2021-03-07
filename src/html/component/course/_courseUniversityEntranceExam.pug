@@ -1,1 +1,194 @@
-div _courseUniversityEntranceExam
+.p-course__menu
+  .p-course__menu__title 大学受験コース
+  .p-course__menu__contents.is-original
+    .p-course__menu__contents__desc
+      .p-course__menu__item
+        .p-course__menu__label 対象
+        .p-course__menu__text 高校1〜3年生
+      .p-course__menu__item
+        .p-course__menu__label 科目と授業時間
+        .p-course__menu__text
+          |英語・数学 
+          br.u-is-sp
+          |／ 1コマ60分(個別指導) ＋ 30分(映像授業)
+      .p-course__menu__item
+        .p-course__menu__label コース概要
+        .p-course__menu__text
+          |映像授業と個別指導を組み合わせたハイブリットなコースです。
+          br
+          |事前に映像授業で単元の内容を確認をしてもらいます。
+          br
+          |その後の個別授業では、映像授業で得た知識を使うための問題演習を講師と一緒になって進めていきます。
+          br
+          |映像授業だけでは、不安な内容も講師に確認をすることができるので、効率よく授業を進めることが可能です。
+          br
+          |また、映像は何度でも視聴することが可能です。					
+
+    .p-course__menu__pricelist__wrap(data-module="CourseTimetableMore")
+      .p-course__menu__button.u-is-sp(data-course-timetable-more-roll="trigger")
+        .p-course__menu__button__link(data-course-timetable-more-roll="icon") 料金表をみる
+
+      .p-course__menu__pricelist__area(data-course-timetable-more-roll="target")
+        .p-course__menu__contents__table(data-course-timetable-more-roll="content")
+          .p-course__menu__label 料金表
+          .p-course__menu__pricelist__scroll
+            table.p-course__menu__pricelist
+              tbody
+                -
+                  var pricelistHeading = [
+                    { text: '' },
+                    { text: '内容' },
+                    { text: '口座コマ数' },
+                    { text: '受講料' },
+                    { text: '追加1コマ' },
+                  ]
+                tr.p-course__menu__pricelist__heading
+                  each item in pricelistHeading
+                    th
+                      .p-course__menu__pricelist__heading__item #{item.text}
+                -
+                  var pricelistBody = [
+                    {
+                      childItems: [
+                        { text: '高1〜3' },
+                        { text: '個別指導 +<br>映像授業' },
+                        { text: '12コマ' },
+                        { text: '66,000' },
+                        { text: '3,575' },
+                      ],
+                    },
+                    {
+                      childItems: [
+                        { text: '高1〜3' },
+                        { text: '映像授業のみ' },
+                        { text: '12コマ' },
+                        { text: '26,400' },
+                        { text: '-' },
+                      ],
+                    },
+                  ]
+                each item in pricelistBody
+                  tr.p-course__menu__pricelist__body
+                    if item.childItems
+                      each childItem in item.childItems
+                        td
+                          .p-course__menu__pricelist__body__item !{childItem.text}
+
+  .p-course__menu__timetable(data-module="CourseTimetableMore")
+    .p-course__menu__button(data-course-timetable-more-roll="trigger")
+      .p-course__menu__button__link(data-course-timetable-more-roll="icon") 時間割をみる
+
+    .p-course__menu__timetable__area(data-course-timetable-more-roll="target")
+      table.p-course__menu__timetable__list(data-course-timetable-more-roll="content")
+        tbody
+
+          -
+            var timetableHeading = [
+              { text: '' },
+              { text: '月' },
+              { text: '火' },
+              { text: '水' },
+              { text: '木' },
+              { text: '金' },
+              { text: '土' },
+              { text: '日' },
+            ]
+          tr.p-course__menu__timetable__list__heading
+            each item in timetableHeading
+              th.p-course__menu__timetable__list__heading__item #{item.text}
+
+          -
+            var timetableBody = [
+              {
+                childItems: [
+                  { text: '13:40 - <br class="u-is-sp">14:40', blank: false},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                  { text: '●', blank: false},
+                  { text: '', blank: true},
+                ],
+              },
+              {
+                childItems: [
+                  { text: '14:50 - <br class="u-is-sp">15:50', blank: false},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                  { text: '●', blank: false},
+                  { text: '', blank: true},
+                ],
+              },
+              {
+                childItems: [
+                  { text: '16:00 - <br class="u-is-sp">17:00', blank: false},
+                  { text: '●', blank: false},
+                  { text: '●', blank: false},
+                  { text: '●', blank: false},
+                  { text: '●', blank: false},
+                  { text: '●', blank: false},
+                  { text: '●', blank: false},
+                  { text: '', blank: true},
+                ],
+              },
+              {
+                childItems: [
+                  { text: '17:10 - <br class="u-is-sp">18:10', blank: false},
+                  { text: '●', blank: false},
+                  { text: '●', blank: false},
+                  { text: '●', blank: false},
+                  { text: '●', blank: false},
+                  { text: '●', blank: false},
+                  { text: '●', blank: false},
+                  { text: '', blank: true},
+                ],
+              },
+              {
+                childItems: [
+                  { text: '18:20 - <br class="u-is-sp">19:20', blank: false},
+                  { text: '●', blank: false},
+                  { text: '●', blank: false},
+                  { text: '●', blank: false},
+                  { text: '●', blank: false},
+                  { text: '●', blank: false},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                ],
+              },
+              {
+                childItems: [
+                  { text: '19:30 - <br class="u-is-sp">20:30', blank: false},
+                  { text: '●', blank: false},
+                  { text: '●', blank: false},
+                  { text: '●', blank: false},
+                  { text: '●', blank: false},
+                  { text: '●', blank: false},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                ],
+              },
+              {
+                childItems: [
+                  { text: '20:40 - <br class="u-is-sp">21:40', blank: false},
+                  { text: '●', blank: false},
+                  { text: '●', blank: false},
+                  { text: '●', blank: false},
+                  { text: '●', blank: false},
+                  { text: '●', blank: false},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                ],
+              },
+            ]
+          each item in timetableBody
+            tr.p-course__menu__timetable__list__body
+              if item.childItems
+                each childItem in item.childItems
+                  if childItem.blank==true
+                    td.p-course__menu__timetable__list__body__item.is-blank #{childItem.text}
+                  else
+                    td.p-course__menu__timetable__list__body__item !{childItem.text}

@@ -1,98 +1,196 @@
 .p-course__menu
   .p-course__menu__title オリジナルコース
-  .p-course__menu__contents.is_original
-    .p-course__menu__contents__unit
-      .p-course__menu__target
+  .p-course__menu__contents.is-original
+    .p-course__menu__contents__desc
+      .p-course__menu__item
         .p-course__menu__label 対象
-        .p-course__menu__text 中学1~3年生
-      .p-course__menu__summary
-        .p-course__menu__label 対象
-        .p-course__menu__text 中学1~3年生
-      .p-course__menu__description
-        .p-course__menu__label 対象
-        .p-course__menu__text 中学1~3年生
+        .p-course__menu__text 中学1〜3年生
+      .p-course__menu__item
+        .p-course__menu__label 科目と授業時間
+        .p-course__menu__text
+          |数学・CCC・英語・理科・社会 
+          br.u-is-sp
+          |／ 1コマ60分
+      .p-course__menu__item
+        .p-course__menu__label コース概要
+        .p-course__menu__text
+          |1クラスの定員を8名に限定し、「生徒と生徒」や「生徒と講師」とのコミュニケーションを大切にしながら授業を進めていきます。講師からの一方的な授業の展開はなく、授業にはサポートの講師も入るので、分からないことがあればすぐに確認をすることのできる環境を整えています。
+          br
+          |月間コマ数のうち、勉強したい教科を選択してもらい、自分好みに授業カリキュラムを組むことが可能です。
 
-    .p-course__menu__contents__unit
-      .p-course__menu__label 料金表
-      .p-course__menu__pricelist
-        -
-          var pricelistHeading = [
-            { text: 'loop heading 1' },
-            { text: 'loop heading 2' },
-            { text: 'loop heading 3' },
-            { text: 'loop heading 4' },
-            { text: 'loop heading 5' },
-          ]
-        ul.p-course__menu__pricelist__heading
-          each item in pricelistHeading
-            li.p-course__menu__pricelist__heading__item #{item.text}
-        -
-          var pricelistBody = [
-            {
-              childItems: [
-                { text: 'loop body 1 1' },
-                { text: 'loop body 1 2' },
-                { text: 'loop body 1 3' },
-                { text: 'loop body 1 4' },
-                { text: 'loop body 1 5' },
-              ],
-            },
-            {
-              childItems: [
-                { text: 'loop body 2 1' },
-                { text: 'loop body 2 2' },
-                { text: 'loop body 2 3' },
-                { text: 'loop body 2 4' },
-                { text: 'loop body 2 5' },
-              ]
-            }
-          ]
-        each item in pricelistBody
-          ul.p-course__menu__pricelist__body
-            if item.childItems
-              each childItem in item.childItems
-                .p-course__menu__pricelist__body__item #{childItem.text}
+    .p-course__menu__pricelist__wrap(data-module="CourseTimetableMore")
+      .p-course__menu__button.u-is-sp(data-course-timetable-more-roll="trigger")
+        .p-course__menu__button__link(data-course-timetable-more-roll="icon") 料金表をみる
 
-  .p-course__menu__timetable
-    .p-course__menu__timetable__button
+      .p-course__menu__pricelist__area(data-course-timetable-more-roll="target")
+        .p-course__menu__contents__table(data-course-timetable-more-roll="content")
+          .p-course__menu__label 料金表
+          .p-course__menu__pricelist__scroll
+            table.p-course__menu__pricelist
+              tbody
+                -
+                  var pricelistHeading = [
+                    { text: '' },
+                    { text: '科目' },
+                    { text: '月間コマ数' },
+                    { text: '月謝' },
+                    { text: '追加1コマ' },
+                  ]
+                tr.p-course__menu__pricelist__heading
+                  each item in pricelistHeading
+                    th
+                      .p-course__menu__pricelist__heading__item #{item.text}
+                -
+                  var pricelistBody = [
+                    {
+                      childItems: [
+                        { text: '中1・2' },
+                        { text: '英・数・<br>CCC+ACC' },
+                        { text: '12コマ' },
+                        { text: '16,500' },
+                        { text: '1,650' },
+                      ],
+                    },
+                    {
+                      childItems: [
+                        { text: '中3' },
+                        { text: '英・数・理・社<br>CCC+ACC' },
+                        { text: '20コマ' },
+                        { text: '26,400' },
+                        { text: '1,760' },
+                      ],
+                    },            {
+                      childItems: [
+                        { text: '中3' },
+                        { text: '英・数・<br>CCC+ACC' },
+                        { text: '12コマ' },
+                        { text: '17,600' },
+                        { text: '1,760' },
+                      ],
+                    }
+                  ]
+                each item in pricelistBody
+                  tr.p-course__menu__pricelist__body
+                    if item.childItems
+                      each childItem in item.childItems
+                        td
+                          .p-course__menu__pricelist__body__item !{childItem.text}
 
-    .p-course__menu__timetable__area
-      .p-course__menu__timetable__list
-        -
-          var timetableHeading = [
-            { text: 'loop timetable heading 1' },
-            { text: 'loop timetable heading 2' },
-            { text: 'loop timetable heading 3' },
-            { text: 'loop timetable heading 4' },
-            { text: 'loop timetable heading 5' },
-          ]
-        ul.p-course__menu__timetable__list__heading
-          each item in timetableHeading
-            li.p-course__menu__timetable__list__heading__item #{item.text}
+  .p-course__menu__timetable(data-module="CourseTimetableMore")
+    .p-course__menu__button(data-course-timetable-more-roll="trigger")
+      .p-course__menu__button__link(data-course-timetable-more-roll="icon") 時間割をみる
 
-        -
-          var timetableBody = [
-            {
-              childItems: [
-                { text: 'loop timetable body 1 1' },
-                { text: 'loop timetable body 1 2' },
-                { text: 'loop timetable body 1 3' },
-                { text: 'loop timetable body 1 4' },
-                { text: 'loop timetable body 1 5' },
-              ],
-            },
-            {
-              childItems: [
-                { text: 'loop timetable body 2 1' },
-                { text: 'loop timetable body 2 2' },
-                { text: 'loop timetable body 2 3' },
-                { text: 'loop timetable body 2 4' },
-                { text: 'loop timetable body 2 5' },
-              ]
-            }
-          ]
-        each item in timetableBody
-          ul.p-course__menu__timetable__list__body
-            if item.childItems
-              each childItem in item.childItems
-                .p-course__menu__timetable__list__body__item #{childItem.text}
+    .p-course__menu__timetable__area(data-course-timetable-more-roll="target")
+      table.p-course__menu__timetable__list(data-course-timetable-more-roll="content")
+        tbody
+
+          -
+            var timetableHeading = [
+              { text: '' },
+              { text: '月' },
+              { text: '火' },
+              { text: '水' },
+              { text: '木' },
+              { text: '金' },
+              { text: '土' },
+              { text: '日' },
+            ]
+          tr.p-course__menu__timetable__list__heading
+            each item in timetableHeading
+              th.p-course__menu__timetable__list__heading__item #{item.text}
+
+          -
+            var timetableBody = [
+              {
+                childItems: [
+                  { text: '13:40 - <br class="u-is-sp">14:40', blank: false},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                ],
+              },
+              {
+                childItems: [
+                  { text: '14:50 - <br class="u-is-sp">15:50', blank: false},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                ],
+              },
+              {
+                childItems: [
+                  { text: '16:00 - <br class="u-is-sp">17:00', blank: false},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                ],
+              },
+              {
+                childItems: [
+                  { text: '17:10 - <br class="u-is-sp">18:10', blank: false},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                ],
+              },
+              {
+                childItems: [
+                  { text: '18:20 - <br class="u-is-sp">19:20', blank: false},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                ],
+              },
+              {
+                childItems: [
+                  { text: '19:30 - <br class="u-is-sp">20:30', blank: false},
+                  { text: '中学1年 英語', blank: false},
+                  { text: '中学3年 英語', blank: false},
+                  { text: '中学1,2年 CCC', blank: false},
+                  { text: '中学2年 英語', blank: false},
+                  { text: '中学3年 社会', blank: false},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                ],
+              },
+              {
+                childItems: [
+                  { text: '20:40 - <br class="u-is-sp">21:40', blank: false},
+                  { text: '中学1年数学', blank: false},
+                  { text: '中学3年数学', blank: false},
+                  { text: '中学1,2年CCC', blank: false},
+                  { text: '中学2年数学', blank: false},
+                  { text: '中学3年理科', blank: false},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                ],
+              },
+            ]
+          each item in timetableBody
+            tr.p-course__menu__timetable__list__body
+              if item.childItems
+                each childItem in item.childItems
+                  if childItem.blank==true
+                    td.p-course__menu__timetable__list__body__item.is-blank #{childItem.text}
+                  else
+                    td.p-course__menu__timetable__list__body__item !{childItem.text}

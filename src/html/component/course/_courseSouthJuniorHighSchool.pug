@@ -1,1 +1,229 @@
-div _courseSouthJuniorHighSchool
+.p-course__menu
+  .p-course__menu__title 南中コース
+  .p-course__menu__contents.is-original
+    .p-course__menu__contents__desc
+      .p-course__menu__item
+        .p-course__menu__label 対象
+        .p-course__menu__text 小学4〜6年生
+      .p-course__menu__item
+        .p-course__menu__label 科目と授業時間
+        .p-course__menu__text
+          |算数・国語・理科・社会 
+          br.u-is-sp
+          |／ 1コマ60分
+      .p-course__menu__item
+        .p-course__menu__label コース概要
+        .p-course__menu__text
+          |生徒と講師の比率を1:2として、一人一人の学習状況や個性にあった授業を展開しています。
+          br
+          |演習→丸付け→演習→丸付け…のような、単調な授業ではなく、1問ごとに生徒から「なぜそうなったのか？」を話してもらいます。
+          br
+          |人に説明をすることにより、より深い理解を得ることができます。
+          br
+          |こちらのコースから、公立中高一貫校に無事合格された場合には、6年生時の受講コマ総数×1,100円を成果報酬として頂きます。				
+
+
+    .p-course__menu__pricelist__wrap(data-module="CourseTimetableMore")
+      .p-course__menu__button.u-is-sp(data-course-timetable-more-roll="trigger")
+        .p-course__menu__button__link(data-course-timetable-more-roll="icon") 料金表をみる
+
+      .p-course__menu__pricelist__area(data-course-timetable-more-roll="target")
+        .p-course__menu__contents__table(data-course-timetable-more-roll="content")
+          .p-course__menu__label 料金表
+          .p-course__menu__pricelist__scroll
+            table.p-course__menu__pricelist
+              tbody
+                -
+                  var pricelistHeading = [
+                    { text: '' },
+                    { text: '月間コマ数' },
+                    { text: '月謝' },
+                    { text: '追加1コマ' },
+                  ]
+                tr.p-course__menu__pricelist__heading
+                  each item in pricelistHeading
+                    th
+                      .p-course__menu__pricelist__heading__item #{item.text}
+                -
+                  var pricelistBody = [
+                    {
+                      childItems: [
+                        { text: '小4' },
+                        { text: '8コマ' },
+                        { text: '19,800' },
+                        { text: '-' },
+                      ],
+                    },
+                    {
+                      childItems: [
+                        { text: '小5' },
+                        { text: '16コマ' },
+                        { text: '39,600' },
+                        { text: '-' },
+                      ],
+                    },            {
+                      childItems: [
+                        { text: '小6' },
+                        { text: '24コマ' },
+                        { text: '52,800' },
+                        { text: '-' },
+                      ],
+                    }
+                  ]
+                each item in pricelistBody
+                  tr.p-course__menu__pricelist__body
+                    if item.childItems
+                      each childItem in item.childItems
+                        td
+                          .p-course__menu__pricelist__body__item !{childItem.text}
+
+            .p-course__menu__remarks__area
+              .p-course__menu__remarks__title ・ 備考
+              table.p-course__menu__remarks
+                tbody
+                  -
+                    var pricelistBody = [
+                      {
+                        childItems: [
+                          { text: '模試代' },
+                          { text: '5,000円／回' },
+                        ],
+                      },
+                      {
+                        childItems: [
+                          { text: '教材費' },
+                          { text: '<dl><dt>4・5年生</dt><dd>：</dd><dd>2,000円</dd><dt>6年生</dt><dd>：</dd><dd>18,000円</dd>' },
+                        ],
+                      },            {
+                        childItems: [
+                          { text: '成果報酬' },
+                          { text: '6年生時の受講コマ総数 × 1,100円' },
+                        ],
+                      }
+                    ]
+                  each item in pricelistBody
+                    tr.p-course__menu__remarks__body
+                      if item.childItems
+                        each childItem in item.childItems
+                          td
+                            .p-course__menu__remarks__body__item !{childItem.text}
+
+
+  .p-course__menu__timetable(data-module="CourseTimetableMore")
+    .p-course__menu__button(data-course-timetable-more-roll="trigger")
+      .p-course__menu__button__link(data-course-timetable-more-roll="icon") 時間割をみる
+
+    .p-course__menu__timetable__area(data-course-timetable-more-roll="target")
+      table.p-course__menu__timetable__list(data-course-timetable-more-roll="content")
+        tbody
+
+          -
+            var timetableHeading = [
+              { text: '' },
+              { text: '月' },
+              { text: '火' },
+              { text: '水' },
+              { text: '木' },
+              { text: '金' },
+              { text: '土' },
+              { text: '日' },
+            ]
+          tr.p-course__menu__timetable__list__heading
+            each item in timetableHeading
+              th.p-course__menu__timetable__list__heading__item #{item.text}
+
+          -
+            var timetableBody = [
+              {
+                childItems: [
+                  { text: '13:40 - <br class="u-is-sp">14:40', blank: false},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                ],
+              },
+              {
+                childItems: [
+                  { text: '14:50 - <br class="u-is-sp">15:50', blank: false},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                ],
+              },
+              {
+                childItems: [
+                  { text: '16:00 - <br class="u-is-sp">17:00', blank: false},
+                  { text: '小学5年', blank: false},
+                  { text: '小学6年', blank: false},
+                  { text: '小学5年', blank: false},
+                  { text: '小学6年', blank: false},
+                  { text: '小学6年', blank: false},
+                  { text: '小学4年', blank: false},
+                  { text: '', blank: true},
+                ],
+              },
+              {
+                childItems: [
+                  { text: '17:10 - <br class="u-is-sp">18:10', blank: false},
+                  { text: '小学5年', blank: false},
+                  { text: '小学6年', blank: false},
+                  { text: '小学5年', blank: false},
+                  { text: '小学6年', blank: false},
+                  { text: '小学6年', blank: false},
+                  { text: '小学4年', blank: false},
+                  { text: '', blank: true},
+                ],
+              },
+              {
+                childItems: [
+                  { text: '18:20 - <br class="u-is-sp">19:20', blank: false},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                ],
+              },
+              {
+                childItems: [
+                  { text: '19:30 - <br class="u-is-sp">20:30', blank: false},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                ],
+              },
+              {
+                childItems: [
+                  { text: '20:40 - <br class="u-is-sp">21:40', blank: false},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                  { text: '', blank: true},
+                ],
+              },
+            ]
+          each item in timetableBody
+            tr.p-course__menu__timetable__list__body
+              if item.childItems
+                each childItem in item.childItems
+                  if childItem.blank==true
+                    td.p-course__menu__timetable__list__body__item.is-blank #{childItem.text}
+                  else
+                    td.p-course__menu__timetable__list__body__item !{childItem.text}

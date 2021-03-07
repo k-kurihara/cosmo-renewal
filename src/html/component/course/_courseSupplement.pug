@@ -1,0 +1,104 @@
+.p-course__supplement
+  .p-course__supplement__holiday
+    .p-course__supplement__holiday__item
+      .p-course__supplement__holiday__title 祝日の取扱いについて
+      .p-course__supplement__holiday__desc
+        |コスモジュクでは、生徒に部活動や家族との時間を大切にしてもらいたいと考えています。
+        br
+        |そのため、
+        span.p-course__supplement__holiday__desc__em 祝日は休塾日
+        |とさせていただいております。
+        br
+        |祝日のため授業が実施されなかった場合は、講習、テスト対策期間などに追加受講をしていただけます。（追加可能コマ数を講習時などにご案内致します）
+
+    .p-course__supplement__holiday__item
+      .p-course__supplement__holiday__title 欠席時の取扱いについて
+      .p-course__supplement__holiday__desc
+        |欠席時につきましては、原則として
+        span.p-course__supplement__holiday__desc__em ３日前までに欠席のご連絡
+        |を頂いております。
+        br
+        |ご連絡を頂いた場合には、講習、テスト対策期間などに追加受講をしていただけます(上記、祝日の取り扱いと同様)。
+        br
+        |ただし、病気、怪我等による当日欠席につきましては、対応いたしかねますので、ご理解をお願い致します。
+
+  .p-course__supplement__remarks
+
+    .p-course__supplement__remarks__column
+      .p-course__supplement__remarks__column__item
+        .p-course__menu__remarks__title ・ 入塾金について
+        table.p-course__menu__remarks
+          tbody
+            -
+              var pricelistBody = [
+                {
+                  childItems: [
+                    { text: '入塾金' },
+                    { text: '22,000円(税込)<br><span class="p-course__menu__remarks__caption">※ご兄弟で入会される場合は２人目以降はいただきません。</span>' },
+                  ],
+                },
+                {
+                  childItems: [
+                    { text: '教材費' },
+                    { text: '4・5年生 ：  2,200円(税込) ／ 6年生：  19,800円(税込)<br><span class="p-course__menu__remarks__caption">※入塾時にお支払いいただきます。</span>' },
+                  ],
+                },
+              ]
+            each item in pricelistBody
+              tr.p-course__menu__remarks__body
+                if item.childItems
+                  each childItem in item.childItems
+                    td
+                      .p-course__menu__remarks__body__item !{childItem.text}
+
+      .p-course__supplement__remarks__column__item
+        .p-course__menu__remarks__title ・ 諸経費について
+        table.p-course__menu__remarks
+          tbody
+            -
+              var pricelistBody = [
+                {
+                  childItems: [
+                    { text: '教室維持費' },
+                    { text: '2,200円／月(税込)' },
+                  ],
+                },
+                {
+                  childItems: [
+                    { text: '模試代' },
+                    { text: '5,500円／回(税込)' },
+                  ],
+                },
+              ]
+            each item in pricelistBody
+              tr.p-course__menu__remarks__body
+                if item.childItems
+                  each childItem in item.childItems
+                    td
+                      .p-course__menu__remarks__body__item !{childItem.text}
+
+    .p-course__supplement__remarks__single
+      .p-course__menu__remarks__title ・ 割引について
+      table.p-course__menu__remarks.is-wide
+        tbody
+          -
+            var pricelistBody = [
+              {
+                childItems: [
+                  { text: '集団授業と個別<br class="u-is-sp">指導を併用の場合' },
+                  { text: '<span class="p-course__menu__remarks__em">集団授業の授業料を割引</span>いたします。<br><span class="p-course__menu__remarks__caption">※個別指導を月4コマ以上受講されている方が対象です。</span>' },
+                ],
+              },
+              {
+                childItems: [
+                  { text: 'ご兄弟で<br class="u-is-sp">入会される場合' },
+                  { text: '<span class="p-course__menu__remarks__em">兄弟全員の授業料を2割引</span>いたします。' },
+                ],
+              },
+            ]
+          each item in pricelistBody
+            tr.p-course__menu__remarks__body
+              if item.childItems
+                each childItem in item.childItems
+                  td
+                    .p-course__menu__remarks__body__item !{childItem.text}

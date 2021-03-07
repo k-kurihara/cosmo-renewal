@@ -1,0 +1,47 @@
+import { TweenMax } from 'gsap'
+
+export default class courseTimetableMore {
+  constructor(elem) {
+    this.elem = elem
+    this.trigger = this.elem.querySelector('[data-course-timetable-more-roll="trigger"]')
+    this.target = this.elem.querySelector('[data-course-timetable-more-roll="target"]')
+    this.content = this.elem.querySelector('[data-course-timetable-more-roll="content"]')
+    this.icon = this.elem.querySelector('[data-course-timetable-more-roll="icon"]')
+    this.flg = false
+    this.init()
+  }
+  init() {
+    this.bindEvents()
+  }
+  bindEvents() {
+    this.trigger.addEventListener('click', () => {
+      this.switchAccordion(this.flg)
+    })
+  }
+  switchAccordion(flg) {
+    const contentHeight = this.content.clientHeight
+
+    if (!flg) {
+      this.trigger.classList.add('is-show')
+      this.target.classList.add('is-show')
+      this.icon.classList.add('is-show')
+      TweenMax.to(this.target, 0.2, {
+        height: `${contentHeight}px`,
+        onComplete: () => {
+          this.flg = true
+          this.elem.classList.add('is-show')
+        },
+      })
+    } else {
+      this.trigger.classList.remove('is-show')
+      this.target.classList.remove('is-show')
+      this.icon.classList.remove('is-show')
+      TweenMax.to(this.target, 0.2, {
+        height: '0px',
+        onComplete: () => {
+          this.flg = false
+        },
+      })
+    }
+  }
+}
