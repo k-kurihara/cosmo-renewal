@@ -1,0 +1,43 @@
+.p-loading
+  width 100%
+  height 100%
+  position fixed
+  top 0
+  left 0
+  z-index 9999
+  overflow hidden
+  &__inner
+    position fixed
+    top 0
+    left 0
+    width 100%
+    height 100%
+    overflow hidden
+    z-index 10000
+  &__background
+    position absolute
+    top 0
+    left 0
+    right 0
+    bottom 0
+    margin auto
+    background #fff
+  &__overlay
+    position absolute
+    top 0
+    left 0
+    width 100%
+    height 100%
+    background #0054a5
+    transform translateX(-100%)
+    overflow hidden
+  &__text
+    position absolute
+    top 50%
+    left 50%
+    transform translate(-50%, -50%)
+    opacity 0
+    +pc()
+      width 312px
+    +sp()
+      width 218px

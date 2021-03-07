@@ -1,3 +1,5 @@
+@import 'loading'
+
 .p-top
   color #2c4a70
   *
@@ -188,20 +190,30 @@
           +sp()
             font-weight bold
             font-size spvw(56)
-            -ms-writing-mode tb-rl
-            writing-mode vertical-rl
-            width calc(80 / 700 * 100%)
+            width 100%
+            text-align center
+            order 2
         &__image
           +pc()
             height pcvw(327)
             text-align center
           +sp()
-            width calc(620 / 700 * 100%)
             display flex
-            align-items flex-end
-            padding-left spvw(90)
-            padding-right spvw(30)
-            min-height: spvw(400)
+            align-items center
+            justify-content center
+            width 100%
+            height spvw(395)
+            order 1
+            .is-001 & img
+              width spvw(342)
+            .is-002 & img
+              width spvw(326)
+            .is-003 & img
+              width spvw(333)
+            .is-004 & img
+              width spvw(334)
+            .is-005 & img
+              width spvw(341)
         &__text
           +pc()
             font-size pcvw(28)
@@ -210,7 +222,50 @@
           +sp()
             font-size spvw(28)
             line-height 1.7
-            margin-top spvw(80)
+            margin-top spvw(54)
+            order 3
+        &__anchor
+          +pc()
+            display inline-block
+            font-size pcvw(28)
+            color #2c4a70
+            font-weight bold
+            letter-spacing 0.04em
+            margin-top pcvw(32)
+            hover_opacity()
+          +sp()
+            display inline-block
+            font-size spvw(28)
+            color #2c4a70
+            font-weight bold
+            letter-spacing 0.04em
+            margin spvw(45) auto 0
+            order 4
+          &__arrow
+            +pc()
+              position relative
+              width pcvw(34)
+              height pcvw(34)
+              display inline-block
+              vertical-align middle
+              margin-right pcvw(18)
+              background-image url('/assets/images/common/ico-arrow-navy.svg')
+              background-repeat no-repeat
+              background-position center
+              background-size pcvw(32)
+              transform translateY(-0.1vw)
+            +sp()
+              position relative
+              width spvw(36)
+              height spvw(36)
+              display inline-block
+              vertical-align middle
+              margin-right spvw(20)
+              background-image url('/assets/images/common/ico-arrow-navy.svg')
+              background-repeat no-repeat
+              background-position center
+              background-size spvw(34)
+              transform translateY(-0.25vw)
 
     &__link
       text-align center
