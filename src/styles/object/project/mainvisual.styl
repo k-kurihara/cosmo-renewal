@@ -2,7 +2,7 @@
   width 100%
   +pc()
     margin-top pcvw(210)
-    padding-bottom pcvw(300)
+    padding-bottom pcvw(100)
   +sp()
     margin-top spvw(140)
 
@@ -43,8 +43,10 @@
     z-index 3
     text-align left
     +pc()
-      top pcvw(610)
-      right pcvw(1535)
+      top pcvw(610) //ファーストビュー調整
+      right pcvw(1535) //ファーストビュー調整
+      // top pcvw(420)
+      // right pcvw(1535)
     +sp()
       top spvw(834)
       left spvw(50)
@@ -61,12 +63,14 @@
       color #2c4a70
       +pc()
         font-size pcvw(32)
+        // text-shadow 1px 2px 3px #fff, -1px -2px 3px #fff // ファーストビュー調整
       +sp()
         font-size spvw(32)
 
     &__copy + &__lead
       +pc()
-        margin-top pcvw(145)
+        margin-top pcvw(145) //ファーストビュー調整
+        // margin-top pcvw(90)
       +sp()
         margin-top spvw(73)
 
@@ -74,7 +78,8 @@
     z-index 4
     +pc()
       position absolute
-      top pcvw(1014)
+      // top pcvw(1014) ファーストビュー調整
+      top pcvw(900)
       right pcvw(160)
       width pcvw(668)
     +sp()
