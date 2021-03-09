@@ -17,12 +17,16 @@
     overflow hidden
     z-index 2
     +pc()
-      width pcvw(2131)
-      height pcvw(1192)
+      // width pcvw(2131) //ファーストビュー調整
+      // height pcvw(1192) //ファーストビュー調整
+      width pcvw(1800)
+      height pcvw(950)
       border-radius pcvw(100) 0 0 pcvw(100)
     +sp()
+      // width spvw(660) //ファーストビュー調整
+      // height spvw(1072) //ファーストビュー調整
       width spvw(660)
-      height spvw(1072)
+      height spvw(900)
       border-radius spvw(100) 0 0 spvw(100)
     video
       position absolute
@@ -35,7 +39,7 @@
       +sp()
         top 50%
         left 50%
-        transform translate(-50%, -50%) scale(1.15)
+        transform translate(-50%, -50%) scale(1.3)
 
 
   &__heading
@@ -43,17 +47,19 @@
     z-index 3
     text-align left
     +pc()
-      top pcvw(610) //ファーストビュー調整
-      right pcvw(1535) //ファーストビュー調整
-      // top pcvw(420)
-      // right pcvw(1535)
+      // top pcvw(610) //ファーストビュー調整
+      // right pcvw(1535) //ファーストビュー調整
+      top pcvw(300)
+      right pcvw(1600)
     +sp()
-      top spvw(834)
+      // top spvw(834) //ファーストビュー調整
+      top spvw(650)
       left spvw(50)
 
     &__copy
       +pc()
-        width pcvw(972)
+        // width pcvw(972) // ファーストビュー調整
+        width pcvw(850)
       +sp()
         width spvw(535)
 
@@ -69,8 +75,8 @@
 
     &__copy + &__lead
       +pc()
-        margin-top pcvw(145) //ファーストビュー調整
-        // margin-top pcvw(90)
+        // margin-top pcvw(145) //ファーストビュー調整
+        margin-top pcvw(80)
       +sp()
         margin-top spvw(73)
 
@@ -79,7 +85,7 @@
     +pc()
       position absolute
       // top pcvw(1014) ファーストビュー調整
-      top pcvw(900)
+      top pcvw(650)
       right pcvw(160)
       width pcvw(668)
     +sp()
