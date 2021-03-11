@@ -117,7 +117,7 @@ block main
               animation: 'fadeUp'
             }
           )
-            .p-flow__checkpoint__inner(
+            .p-flow__checkpoint__inner.u-is-pc(
               data-module="flowAnimation"
               data-options={
                 root: null,
@@ -139,6 +139,42 @@ block main
                     .p-flow__checkpoint__item__text
                       p #{item.text}
               .p-flow__checkpoint__application(data-module-flow-animation-roll=`4`)
+                a.c-button(href="/contact/")
+                  .c-button__text
+                    p 体験授業の申込はこちら
+                  .c-button__arrow
+            .p-flow__checkpoint__inner.u-is-sp
+              .p-flow__checkpoint__heading
+                p 体験時のチェックポイント
+              ul.p-flow__checkpoint__list
+                each item,index in checkpoint
+                  li.p-flow__checkpoint__item(
+                    data-module-flow-animation-roll=`${index+1}`
+                    data-module="scrollAnimation"
+                    data-options={
+                      root: null,
+                      rootMargin: '-10% 0%',
+                      threshold: [0],
+                      animation: 'fadeUp'
+                    }
+                  )
+                    .p-flow__checkpoint__item__image
+                      img.u-is-pc(src=`/assets/images/flow/img_checkpoint${item.num}-pc.png`, alt="")
+                      img.u-is-sp(src=`/assets/images/flow/img_checkpoint${item.num}-sp.png`, alt="")
+                    .p-flow__checkpoint__item__heading
+                      p #{item.heading}
+                    .p-flow__checkpoint__item__text
+                      p #{item.text}
+              .p-flow__checkpoint__application(
+                data-module-flow-animation-roll=`4`
+                data-module="scrollAnimation"
+                data-options={
+                  root: null,
+                  rootMargin: '-5% 0%',
+                  threshold: [0],
+                  animation: 'fadeUp'
+                }
+              )
                 a.c-button(href="/contact/")
                   .c-button__text
                     p 体験授業の申込はこちら
