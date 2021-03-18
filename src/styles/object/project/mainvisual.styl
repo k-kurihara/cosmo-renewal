@@ -98,8 +98,18 @@
 
     &__item
       width 100%
+      background #fff
       a
         outline none
+      img
+        +pc()
+          opacity 1
+          transition opacity 0.25s ease-out
+    &__item:hover
+      img
+        +pc()
+          opacity 0.7
+          transition opacity 0.25s ease-out
 
   /*
   * slick slide style
