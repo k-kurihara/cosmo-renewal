@@ -781,18 +781,53 @@
       background-size cover
       background-position left top
       background-repeat no-repeat
+      z-index 2
       +pc()
-        background-image url('/assets/images/top/pc/cv_ character.png')
+        background-image url('/assets/images/top/pc/cv_character.png')
         width pcvw(797)
         height pcvw(406)
         top pcvw(-160)
         left 0
       +sp()
-        background-image url('/assets/images/top/sp/cv_ character.png')
+        background-image url('/assets/images/top/sp/cv_character.png')
         width spvw(558)
         height spvw(284)
         top spvw(-120)
         left 0
+    &__tori__ashiato
+      z-index 1
+      +pc()
+        background-size cover
+        background-position left top
+        background-repeat no-repeat
+        width pcvw(797)
+        height pcvw(406)
+        position absolute
+        top pcvw(-160)
+        left 0
+        opacity 0
+        &.step1
+          background-image url('/assets/images/top/pc/cv_character_ashiato_1.png')
+        &.step2
+          background-image url('/assets/images/top/pc/cv_character_ashiato_2.png')
+        &.step3
+          background-image url('/assets/images/top/pc/cv_character_ashiato_3.png')
+      +sp()
+        background-size cover
+        background-position left top
+        background-repeat no-repeat
+        width spvw(558)
+        height spvw(284)
+        position absolute
+        top spvw(-120)
+        left 0
+        opacity 0
+        &.step1
+          background-image url('/assets/images/top/sp/cv_character_ashiato_1.png')
+        &.step2
+          background-image url('/assets/images/top/sp/cv_character_ashiato_2.png')
+        &.step3
+          background-image url('/assets/images/top/sp/cv_character_ashiato_3.png')
 
     &__link
       text-align center
