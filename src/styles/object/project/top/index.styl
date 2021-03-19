@@ -232,7 +232,6 @@
             font-weight bold
             letter-spacing 0.04em
             margin-top pcvw(32)
-            hover_opacity()
           +sp()
             display inline-block
             font-size spvw(28)
@@ -253,7 +252,6 @@
               background-repeat no-repeat
               background-position center
               background-size pcvw(32)
-              transform translateY(-0.1vw)
             +sp()
               position relative
               width spvw(36)
@@ -266,6 +264,20 @@
               background-position center
               background-size spvw(34)
               transform translateY(-0.25vw)
+        &__anchor
+          .p-top__course__introduction__list__anchor__arrow
+            +pc()
+              opacity 1
+              transform translate3d(0, -0.05vw, 0)
+              transition transform 0.15s ease-out
+              backface-visibility hidden
+        &__anchor:hover
+          .p-top__course__introduction__list__anchor__arrow
+            +pc()
+              opacity 1
+              transform translate3d(20%, -0.05vw, 0)
+              transition transform 0.15s ease-out
+              backface-visibility hidden
 
     &__link
       text-align center
@@ -545,9 +557,10 @@
     &__link
       font-weight bold
       +pc()
-          text-align center
-          margin-top pcvw(80)
-          font-size pcvw(32)
+        text-align center
+        margin-top pcvw(80)
+        font-size pcvw(32)
+        color red
       +sp()
         display flex
         justify-content center
@@ -561,6 +574,10 @@
           padding-left 27px
         +sp()
           padding-left spvw(60)
+        .p-top__news__link__arrow
+          +pc()
+            transition transform 0.25s ease-out
+            backface-visibility hidden
         &:hover
           .p-topics__article__back__arrow
             &::before
@@ -574,7 +591,6 @@
         display block
         position absolute
         top 50%
-        transform translateY(-50%)
         +pc()
           width 20px
           height 20px
@@ -585,6 +601,17 @@
           height spvw(40)
           border-radius spvw(40)
           left 0
+          transform translateY(-50%)
+        .p-top__news__link a &
+          +pc()
+            transform translate3d(0%, -50%, 0)
+            transition transform 0.25s ease-out
+            backface-visibility hidden
+        .p-top__news__link a:hover &
+          +pc()
+            transform translate3d(30%, -50%, 0)
+            transition transform 0.25s ease-out
+            backface-visibility hidden
         &::before
           content ""
           display block
