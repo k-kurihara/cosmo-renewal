@@ -1,9 +1,33 @@
+<html>
+  <head>
+    <title>[記事名]｜コスモNEWS｜コスモジュク</title>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0"/>
+    <meta name="title" content="[記事名]｜コスモNEWS｜コスモジュク"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <meta property="og:url" content="http://localhost:3000"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="[記事名]｜コスモNEWS｜コスモジュク"/>
+    <meta property="og:description" content=""/>
+    <meta property="og:image" content="http://localhost:3000/assets/images/share/ogp.jpg"/>
+    <meta property="og:site_name" content="[記事名]｜コスモNEWS｜コスモジュク"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="[記事名]｜コスモNEWS｜コスモジュク"/>
+    <meta name="twitter:description" content=""/>
+    <meta name="twitter:image" content="http://localhost:3000/assets/images/share/ogp.jpg"/>
+    <link rel="shortcut icon" href="/assets/images/favicon.ico"/>
+    <link rel="icon" sizes="96x96" href="/assets/images/favicon.png"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/touch-icon.png"/>
+    <link rel="stylesheet" href="/assets/styles/app.css"/>
+  </head>
+  <body>
+
 <?php if (have_posts()) : ?>
     <?php while (have_posts()) : the_post(); 
     /* ループ開始 */ ?>
-        <h3><?php the_title(); ?></h3>
-        <p class="post-date"><?php the_time("Y年m月j日") ?></p>
-        <?php the_content(); ?>
+    <?php the_content(); ?>
 
 
     <main>
@@ -76,24 +100,39 @@
         $blog_image_sp_url = esc_url($blog_image_sp[0]);
       ?>
 
-      <div class="p-topics">
-        <div class="p-topics__keyvisual">
+      <?php
+        $terms = get_the_terms( $post->ID, 'topic_cate');
+        foreach ( $terms as $term ){
+      ?>
+
+      <div class="p-topics is-detail">
+        <?php if( $term->name === 'お知らせ' ){?>
+          <div class="p-topics__keyvisual is-category__info">
+        <?php }elseif( $term->name === '塾長日記' ){?>
+          <div class="p-topics__keyvisual is-category__diary">
+        <?php }elseif( $term->name === 'その他' ){?>
+          <div class="p-topics__keyvisual is-category__other">
+        <?php } ?>
           
           <img class="u-is-pc" src="<?php echo $blog_image_pc_url;?>" alt=""/>
-          <img class="u-is-sp" src="<?php echo $blog_image_sp_url;?>" alt=""/>
-        </div>
-        <div class="p-topics__header__primary">
-          <?php
-            $terms = get_terms( 'topic_cate');
-            foreach ( $terms as $term ){
-          ?>
-            <span class="p-topics__header__primary__label">
-              <?php echo $term->name; ?>
-            </span>
+          <?php if( $blog_image_sp_url ){?>
+            <img class="u-is-sp" src="<?php echo $blog_image_sp_url;?>" alt=""/>
           <?php } ?>
-          <h1 class="p-topics__header__primary__title"><?php echo the_title(); ?></h1>
-          <p class="p-topics__header__primary__date"><?php the_time("Y.m.j") ?></p>
         </div>
+          <?php if( $term->name === 'お知らせ' ){?>
+            <div class="p-topics__header__primary is-category__info">
+          <?php }elseif( $term->name === '塾長日記' ){?>
+            <div class="p-topics__header__primary is-category__diary">
+          <?php }elseif( $term->name === 'その他' ){?>
+            <div class="p-topics__header__primary is-category__other">
+          <?php } ?>
+              <span class="p-topics__header__primary__label">
+                <?php echo $term->name; ?>
+              </span>
+            <h1 class="p-topics__header__primary__title"><?php echo the_title(); ?></h1>
+            <p class="p-topics__header__primary__date"><?php the_time("Y.m.j") ?></p>
+          </div>
+        <?php } ?>
         <div class="p-topics__contents">
 
 
@@ -144,7 +183,11 @@
 
               <?php /*  動画 */ ?>　
               <?php if( $movie ) { ?>
-                <video src=<?php echo esc_url(wp_get_attachment_url($movie));?>></video>
+                <div class="p-topics__movie">
+                  <div class="p-topics__movie__inner" data-module="playMovie"><a class="p-topics__movie__play" href="javascript:void(0)" data-module-playmovie-roll="trigger"><img src="/assets/images/about/img_play001.png" alt="再生ボタン"/></a>
+                    <video src="<?php echo esc_url(wp_get_attachment_url($movie));?>" poster="/assets/images/about/pic_movie-thumb.png" preload="auto" muted="muted" playsinline="playsinline" data-module-playmovie-roll="target"></video>
+                  </div>
+                </div>
               <?php } ?>
 
 
@@ -211,49 +254,81 @@
 
             </section>
 
-
             <?php
             }
           ?>
         <?php /*  投稿ループ　end */ ?>
 
-          <section>
             <div class="p-topics__sns"> 
-              <div class="p-topics__sns__twitter"><a href="#"><img src="/assets/images/topics/detail/twitter.png" alt=""/></a></div>
-              <div class="p-topics__sns__facebook"><a href="#"><img src="/assets/images/topics/detail/facebook.png" alt=""/></a></div>
+              <div class="p-topics__sns__twitter">
+                <a href="http://twitter.com/share?url=<?php echo get_the_permalink(); ?>" target="_blank"><img src="/assets/images/topics/detail/twitter.png" alt=""/></a>
+              </div>
+              <div class="p-topics__sns__facebook">
+                <a href="http://www.facebook.com/share.php?u=<?php echo get_the_permalink(); ?>&amp;t=<?php echo the_title(); ?>" target="_blank"><img src="/assets/images/topics/detail/facebook.png" alt=""/></a>
+              </div>
             </div>
-          </section>
+
         </div>
         <section>
           <div class="p-topics__latest__article">
             <div class="p-topics__latest__article__title">最新記事</div>
+
+
             <ul class="p-topics__latest__article__list">
-              <li class="p-topics__latest__article__list__item"><a href="">
-                  <div class="p-topics__latest__article__list__img"><img src="/assets/images/topics/detail/article_1.png" alt=""/></div>
-                  <div class="p-topics__latest__article__list__desc">
-                    <div class="p-topics__latest__article__list__desc__label">お知らせ</div>
-                    <div class="p-topics__latest__article__list__desc__title">新型コロナウイルスへの対応について</div>
-                    <div class="p-topics__latest__article__list__desc__text">新型コロナウイルスにおける、緊急事態宣言が解除されましたが、東京都では連日100人超えの感染が確認されております。</div>
-                    <div class="p-topics__latest__article__list__desc__date">yyyy.mm.dd</div>
-                  </div></a></li>
-              <li class="p-topics__latest__article__list__item"><a href="">
-                  <div class="p-topics__latest__article__list__img"><img src="/assets/images/topics/detail/article_2.png" alt=""/></div>
-                  <div class="p-topics__latest__article__list__desc">
-                    <div class="p-topics__latest__article__list__desc__label">塾長日記</div>
-                    <div class="p-topics__latest__article__list__desc__title">間違い探し問題</div>
-                    <div class="p-topics__latest__article__list__desc__text">皆様のお手元には届いておりますでしょうか？今回は、間違い探しの正解発表です！と言いたいのですが、まだ届い</div>
-                    <div class="p-topics__latest__article__list__desc__date">yyyy.mm.dd</div>
-                  </div></a></li>
-              <li class="p-topics__latest__article__list__item"><a href="">
-                  <div class="p-topics__latest__article__list__img"><img src="/assets/images/topics/detail/article_3.png" alt=""/></div>
-                  <div class="p-topics__latest__article__list__desc">
-                    <div class="p-topics__latest__article__list__desc__label">その他</div>
-                    <div class="p-topics__latest__article__list__desc__title">【2020年 夏期講習】申込受付中！！</div>
-                    <div class="p-topics__latest__article__list__desc__text">皆様のお手元には届いておりますでしょうか？今回は、間違い探しの正解発表です！と言いたいのですが、まだ届い</div>
-                    <div class="p-topics__latest__article__list__desc__date">yyyy.mm.dd</div>
-                  </div></a></li>
-            </ul>
-            <div class="p-topics__latest__article__back"><a href=""> <span class="p-topics__latest__article__back__arrow"></span>一覧へ戻る</a></div>
+                  <?php query_posts("post_type=topic&posts_per_page=3");//カスタム投稿タイプ名 ?>
+                  <?php if(have_posts()): ?>
+                  <?php while(have_posts()): 
+                    the_post(); 
+                    $blog_lead = SCF::get('blog_lead');
+                    $blog_image_pc = SCF::get('blog_image_pc');
+                    $blog_image_pc = wp_get_attachment_image_src( $blog_image_pc , 'full' );
+                    $blog_image_pc_url = esc_url($blog_image_pc[0]);
+        
+                    $blog_image_sp = SCF::get('blog_image_sp');
+                    $blog_image_sp = wp_get_attachment_image_src( $blog_image_sp , 'full' );
+                    $blog_image_sp_url = esc_url($blog_image_sp[0]);
+                  ?>
+
+                  <?php
+                    $terms = get_the_terms( $post->ID, 'topic_cate');
+                    foreach ( $terms as $term ){
+                  ?>
+
+                    <li class="p-topics__latest__article__list__item">
+                      <a href="<?php the_permalink(); ?>">
+                        <?php if( $term->name === 'お知らせ' ){?>
+                          <div class="p-topics__latest__article__list__img is-category__info">
+                        <?php }elseif( $term->name === '塾長日記' ){?>
+                          <div class="p-topics__latest__article__list__img is-category__diary">
+                        <?php }elseif( $term->name === 'その他' ){?>
+                          <div class="p-topics__latest__article__list__img is-category__other">
+                        <?php } ?>
+
+                          <?php if( $blog_image_pc_url ){?>
+                            <img class="u-is-pc" src="<?php echo $blog_image_pc_url;?>" alt=""/>
+                          <?php } ?>
+
+                          <?php if( $blog_image_sp_url ){?>
+                            <img class="u-is-sp" src="<?php echo $blog_image_sp_url;?>" alt=""/>
+                          <?php } ?>
+
+                        </div>
+                        <div class="p-topics__latest__article__list__desc">
+
+                        <div class="p-topics__latest__article__list__desc__label"><?php echo $term->name; ?></div>
+                        <div class="p-topics__latest__article__list__desc__title"><?php echo the_title(); ?></div>
+                        <div class="p-topics__latest__article__list__desc__text"><?php echo nl2br($blog_lead);?></div>
+                        <div class="p-topics__latest__article__list__desc__date"><?php the_time('Y.m.d'); ?></div>
+                        </div>
+                      </a>
+                    </li>
+                  <?php } ?>
+
+                  <?php endwhile; ?>
+              </ul>
+              <?php endif; wp_reset_query(); ?>
+
+            <div class="p-topics__latest__article__back"><a href="/topic"> <span class="p-topics__latest__article__back__arrow"></span>一覧へ戻る</a></div>
           </div>
         </section>
         <section>
@@ -316,3 +391,6 @@
         <p>表示する記事はありませんでした。</p>
 
 <?php endif; ?>
+
+</body>
+</html>

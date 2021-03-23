@@ -94,10 +94,33 @@
                     <p class="p-heading__jp">コスモニュース</p>
                   </div>
                   <div class="p-topics__heading__sort">
-                    <div class="p-topics__heading__sort__item is-active">すべて</div>
-                    <div class="p-topics__heading__sort__item">お知らせ</div>
+                    <div class="p-topics__heading__sort__item is-active">
+                      <a href="/topic/">
+                        すべて
+                      </a>
+                    </div>
+
+
+                    <?php
+                      $terms = get_terms( 'topic_cate');
+                      foreach ( $terms as $term ) {
+                      $term_link = get_term_link($term->slug, 'topic_cate');
+                    ?>
+                      <div class="p-topics__heading__sort__item is-active">
+                        <a href="<?php echo esc_url( $term_link ); ?>">
+                          <?php echo esc_html($term->name);?>
+                        </a>
+                      </div>
+
+                    <?php } ?>
+
+
+
+                    <!-- <div class="p-topics__heading__sort__item">お知らせ</div>
                     <div class="p-topics__heading__sort__item">塾長日記</div>
-                    <div class="p-topics__heading__sort__item">その他</div>
+                    <div class="p-topics__heading__sort__item">その他</div> -->
+
+
                   </div>
                 </div>
               </h1>
@@ -128,27 +151,41 @@
             $blog_lead = SCF::get('blog_lead');
 
 					?>
-              <li class="c-article__list__item">
-                <a href="<?php echo get_permalink(); ?>">
-                  <div class="c-article__list__img"><img src="<?php echo $blog_image_pc_url;?>" alt=""/></div>
-                  <div class="c-article__list__desc">
 
                   <?php
-                    $terms = get_terms( 'topic_cate');
+                    $terms = get_the_terms( $post->ID, 'topic_cate');
                     foreach ( $terms as $term ){
                   ?>
-                    <div class="c-article__list__desc__label">
-                      <?php echo $term->name; ?>
-                    </div>
-                  <?php } ?>
-                   
-                    <div class="c-article__list__desc__title"><?php the_title(); ?></div>
-                    <div class="c-article__list__desc__text"><?php echo nl2br($blog_lead);?></div>
-                    <div class="c-article__list__desc__date"><?php the_time('Y.n.j'); ?></div>
-                  </div>
-                </a>
-              </li>
 
+                    <li class="c-article__list__item">
+                      <a href="<?php the_permalink(); ?>">
+                        <?php if( $term->name === 'お知らせ' ){?>
+                          <div class="c-article__list__img is-category__info">
+                        <?php }elseif( $term->name === '塾長日記' ){?>
+                          <div class="c-article__list__img is-category__diary">
+                        <?php }elseif( $term->name === 'その他' ){?>
+                          <div class="c-article__list__img is-category__other">
+                        <?php } ?>
+
+                          <?php if( $blog_image_pc_url ){?>
+                            <img class="u-is-pc" src="<?php echo $blog_image_pc_url;?>" alt=""/>
+                          <?php } ?>
+
+                          <?php if( $blog_image_sp_url ){?>
+                            <img class="u-is-sp" src="<?php echo $blog_image_sp_url;?>" alt=""/>
+                          <?php } ?>
+
+                        </div>
+                        <div class="c-article__list__desc">
+
+                        <div class="c-article__list__desc__label"><?php echo $term->name; ?></div>
+                        <div class="c-article__list__desc__title"><?php echo the_title(); ?></div>
+                        <div class="c-article__list__desc__text"><?php echo nl2br($blog_lead);?></div>
+                        <div class="c-article__list__desc__date"><?php the_time('Y.m.d'); ?></div>
+                        </div>
+                      </a>
+                    </li>
+                  <?php } ?>
 
         <?php 
 						endwhile;
@@ -157,112 +194,17 @@
 
             </ul>
           </div>
-          <div class="p-topics__pager">
-            <div class="p-topics__pager__before"></div>
-            <div class="p-topics__pager__pageNum">
-              <div class="p-topics__pager__current">
-                <input type="text" value="1"/>
-              </div>
-              <div class="p-topics__pager__max">5</div>
-            </div>
-            <div class="p-topics__pager__next"></div>
-          </div>
+
+          <?php
+          if( function_exists('pagenation') ){ // 関数が定義されていたらtrueになる
+              pagenation();
+          }?>
+
         </section>
 
 
 
 
-
-
-
-        <section>
-          <div class="p-topics__article">
-            <ul class="c-article__list">
-              <li class="c-article__list__item"><a href="#">
-                  <div class="c-article__list__img"><img src="/assets/images/topics/detail/article_1.png" alt=""/></div>
-                  <div class="c-article__list__desc">
-                    <div class="c-article__list__desc__label">お知らせ</div>
-                    <div class="c-article__list__desc__title">新型コロナウイルスへの対応について</div>
-                    <div class="c-article__list__desc__text">新型コロナウイルスにおける、緊急事態宣言が解除されましたが、東京都では連日100人超えの感染が確認されております。</div>
-                    <div class="c-article__list__desc__date">yyyy.mm.dd</div>
-                  </div></a></li>
-              <li class="c-article__list__item"><a href="#">
-                  <div class="c-article__list__img"><img src="/assets/images/topics/detail/article_2.png" alt=""/></div>
-                  <div class="c-article__list__desc">
-                    <div class="c-article__list__desc__label">塾長日記</div>
-                    <div class="c-article__list__desc__title">間違い探し問題</div>
-                    <div class="c-article__list__desc__text">皆様のお手元には届いておりますでしょうか？今回は、間違い探しの正解発表です！と言いたいのですが、まだ届い</div>
-                    <div class="c-article__list__desc__date">yyyy.mm.dd</div>
-                  </div></a></li>
-              <li class="c-article__list__item"><a href="#">
-                  <div class="c-article__list__img"><img src="/assets/images/topics/detail/article_3.png" alt=""/></div>
-                  <div class="c-article__list__desc">
-                    <div class="c-article__list__desc__label">その他</div>
-                    <div class="c-article__list__desc__title">【2020年 夏期講習】申込受付中！！</div>
-                    <div class="c-article__list__desc__text">皆様のお手元には届いておりますでしょうか？今回は、間違い探しの正解発表です！と言いたいのですが、まだ届い</div>
-                    <div class="c-article__list__desc__date">yyyy.mm.dd</div>
-                  </div></a></li>
-              <li class="c-article__list__item"><a href="#">
-                  <div class="c-article__list__img"><img src="/assets/images/topics/detail/article_1.png" alt=""/></div>
-                  <div class="c-article__list__desc">
-                    <div class="c-article__list__desc__label">お知らせ</div>
-                    <div class="c-article__list__desc__title">新型コロナウイルスへの対応について</div>
-                    <div class="c-article__list__desc__text">新型コロナウイルスにおける、緊急事態宣言が解除されましたが、東京都では連日100人超えの感染が確認されております。</div>
-                    <div class="c-article__list__desc__date">yyyy.mm.dd</div>
-                  </div></a></li>
-              <li class="c-article__list__item"><a href="#">
-                  <div class="c-article__list__img"><img src="/assets/images/topics/detail/article_2.png" alt=""/></div>
-                  <div class="c-article__list__desc">
-                    <div class="c-article__list__desc__label">塾長日記</div>
-                    <div class="c-article__list__desc__title">間違い探し問題</div>
-                    <div class="c-article__list__desc__text">皆様のお手元には届いておりますでしょうか？今回は、間違い探しの正解発表です！と言いたいのですが、まだ届い</div>
-                    <div class="c-article__list__desc__date">yyyy.mm.dd</div>
-                  </div></a></li>
-              <li class="c-article__list__item"><a href="#">
-                  <div class="c-article__list__img"><img src="/assets/images/topics/detail/article_3.png" alt=""/></div>
-                  <div class="c-article__list__desc">
-                    <div class="c-article__list__desc__label">その他</div>
-                    <div class="c-article__list__desc__title">【2020年 夏期講習】申込受付中！！</div>
-                    <div class="c-article__list__desc__text">皆様のお手元には届いておりますでしょうか？今回は、間違い探しの正解発表です！と言いたいのですが、まだ届い</div>
-                    <div class="c-article__list__desc__date">yyyy.mm.dd</div>
-                  </div></a></li>
-              <li class="c-article__list__item"><a href="#">
-                  <div class="c-article__list__img"><img src="/assets/images/topics/detail/article_1.png" alt=""/></div>
-                  <div class="c-article__list__desc">
-                    <div class="c-article__list__desc__label">お知らせ</div>
-                    <div class="c-article__list__desc__title">新型コロナウイルスへの対応について</div>
-                    <div class="c-article__list__desc__text">新型コロナウイルスにおける、緊急事態宣言が解除されましたが、東京都では連日100人超えの感染が確認されております。</div>
-                    <div class="c-article__list__desc__date">yyyy.mm.dd</div>
-                  </div></a></li>
-              <li class="c-article__list__item"><a href="#">
-                  <div class="c-article__list__img"><img src="/assets/images/topics/detail/article_2.png" alt=""/></div>
-                  <div class="c-article__list__desc">
-                    <div class="c-article__list__desc__label">塾長日記</div>
-                    <div class="c-article__list__desc__title">間違い探し問題</div>
-                    <div class="c-article__list__desc__text">皆様のお手元には届いておりますでしょうか？今回は、間違い探しの正解発表です！と言いたいのですが、まだ届い</div>
-                    <div class="c-article__list__desc__date">yyyy.mm.dd</div>
-                  </div></a></li>
-              <li class="c-article__list__item"><a href="#">
-                  <div class="c-article__list__img"><img src="/assets/images/topics/detail/article_3.png" alt=""/></div>
-                  <div class="c-article__list__desc">
-                    <div class="c-article__list__desc__label">その他</div>
-                    <div class="c-article__list__desc__title">【2020年 夏期講習】申込受付中！！</div>
-                    <div class="c-article__list__desc__text">皆様のお手元には届いておりますでしょうか？今回は、間違い探しの正解発表です！と言いたいのですが、まだ届い</div>
-                    <div class="c-article__list__desc__date">yyyy.mm.dd</div>
-                  </div></a></li>
-            </ul>
-          </div>
-          <div class="p-topics__pager">
-            <div class="p-topics__pager__before"></div>
-            <div class="p-topics__pager__pageNum">
-              <div class="p-topics__pager__current">
-                <input type="text" value="1"/>
-              </div>
-              <div class="p-topics__pager__max">5</div>
-            </div>
-            <div class="p-topics__pager__next"></div>
-          </div>
-        </section>
         <section>
           <div class="c-breadcrumb">
             <ul class="c-breadcrumb__list">
