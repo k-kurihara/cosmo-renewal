@@ -3,6 +3,7 @@ import { TweenMax } from 'gsap'
 export default class hamburger {
   constructor(elem) {
     this.elem = elem
+    this.loading = document.getElementsByClassName('p-loading')
     this.body = document.getElementsByTagName('body')[0]
     this.target = document.querySelector('[data-module-hamburger-roll="target"]')
     this.init()
@@ -38,9 +39,18 @@ export default class hamburger {
         overflow: 'hidden',
         pointerEvents: 'none',
       })
-      TweenMax.set(this.body, {
-        overflow: 'auto',
-      })
+
+      const bodyOverflowAuto = () => {
+        TweenMax.set(this.body, {
+          overflow: 'auto',
+        })
+      }
+      const interval = setInterval(() => {
+        if (this.loading.length === 0) {
+          bodyOverflowAuto()
+          clearInterval(interval)
+        }
+      }, 200);
     }
   }
 }

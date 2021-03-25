@@ -1,0 +1,16 @@
+<svg id="ico-arrow-mini.svg" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #2c4a70;
+      }
+
+      .cls-2 {
+        fill: #f1f1f1;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <circle id="楕円形_2" data-name="楕円形 2" class="cls-1" cx="18" cy="18" r="18"/>
+  <path id="arrow" class="cls-2" d="M565.66,7095.92l-7.5-7.5a1.5,1.5,0,1,0-2.12,2.12l4.938,4.94H549.6a1.5,1.5,0,0,0,0,3h11.378l-4.938,4.94a1.5,1.5,0,0,0,2.121,2.12l7.5-7.5a1.5,1.5,0,0,0,.44-1.06A1.516,1.516,0,0,0,565.66,7095.92Z" transform="translate(-540 -7079)"/>
+</svg>

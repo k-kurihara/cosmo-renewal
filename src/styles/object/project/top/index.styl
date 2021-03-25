@@ -1,3 +1,5 @@
+@import 'loading'
+
 .p-top
   color #2c4a70
   *
@@ -188,20 +190,30 @@
           +sp()
             font-weight bold
             font-size spvw(56)
-            -ms-writing-mode tb-rl
-            writing-mode vertical-rl
-            width calc(80 / 700 * 100%)
+            width 100%
+            text-align center
+            order 2
         &__image
           +pc()
             height pcvw(327)
             text-align center
           +sp()
-            width calc(620 / 700 * 100%)
             display flex
-            align-items flex-end
-            padding-left spvw(90)
-            padding-right spvw(30)
-            min-height: spvw(400)
+            align-items center
+            justify-content center
+            width 100%
+            height spvw(395)
+            order 1
+            .is-001 & img
+              width spvw(342)
+            .is-002 & img
+              width spvw(326)
+            .is-003 & img
+              width spvw(333)
+            .is-004 & img
+              width spvw(334)
+            .is-005 & img
+              width spvw(341)
         &__text
           +pc()
             font-size pcvw(28)
@@ -210,7 +222,62 @@
           +sp()
             font-size spvw(28)
             line-height 1.7
-            margin-top spvw(80)
+            margin-top spvw(54)
+            order 3
+        &__anchor
+          +pc()
+            display inline-block
+            font-size pcvw(28)
+            color #2c4a70
+            font-weight bold
+            letter-spacing 0.04em
+            margin-top pcvw(32)
+          +sp()
+            display inline-block
+            font-size spvw(28)
+            color #2c4a70
+            font-weight bold
+            letter-spacing 0.04em
+            margin spvw(45) auto 0
+            order 4
+          &__arrow
+            +pc()
+              position relative
+              width pcvw(34)
+              height pcvw(34)
+              display inline-block
+              vertical-align middle
+              margin-right pcvw(18)
+              background-image url('/assets/images/common/ico-arrow-navy.svg')
+              background-repeat no-repeat
+              background-position center
+              background-size pcvw(32)
+            +sp()
+              position relative
+              width spvw(36)
+              height spvw(36)
+              display inline-block
+              vertical-align middle
+              margin-right spvw(20)
+              background-image url('/assets/images/common/ico-arrow-navy.svg')
+              background-repeat no-repeat
+              background-position center
+              background-size spvw(34)
+              transform translateY(-0.25vw)
+        &__anchor
+          .p-top__course__introduction__list__anchor__arrow
+            +pc()
+              opacity 1
+              transform translate3d(0, -0.05vw, 0)
+              transition transform 0.15s ease-out
+              backface-visibility hidden
+        &__anchor:hover
+          .p-top__course__introduction__list__anchor__arrow
+            +pc()
+              opacity 1
+              transform translate3d(20%, -0.05vw, 0)
+              transition transform 0.15s ease-out
+              backface-visibility hidden
 
     &__link
       text-align center
@@ -466,6 +533,9 @@
         //   +sp()
         //     margin-top 0
         //     margin-left spvw(30)
+        a
+          +pc()
+            hover_opacity()
       &__desc
         +sp()
           padding spvw(35) spvw(30)
@@ -487,9 +557,10 @@
     &__link
       font-weight bold
       +pc()
-          text-align center
-          margin-top pcvw(80)
-          font-size pcvw(32)
+        text-align center
+        margin-top pcvw(80)
+        font-size pcvw(32)
+        color red
       +sp()
         display flex
         justify-content center
@@ -503,6 +574,10 @@
           padding-left 27px
         +sp()
           padding-left spvw(60)
+        .p-top__news__link__arrow
+          +pc()
+            transition transform 0.25s ease-out
+            backface-visibility hidden
         &:hover
           .p-topics__article__back__arrow
             &::before
@@ -516,7 +591,6 @@
         display block
         position absolute
         top 50%
-        transform translateY(-50%)
         +pc()
           width 20px
           height 20px
@@ -527,6 +601,17 @@
           height spvw(40)
           border-radius spvw(40)
           left 0
+          transform translateY(-50%)
+        .p-top__news__link a &
+          +pc()
+            transform translate3d(0%, -50%, 0)
+            transition transform 0.25s ease-out
+            backface-visibility hidden
+        .p-top__news__link a:hover &
+          +pc()
+            transform translate3d(30%, -50%, 0)
+            transition transform 0.25s ease-out
+            backface-visibility hidden
         &::before
           content ""
           display block
@@ -580,7 +665,7 @@
         +pc()
           font-size pcvw(78)
         +sp()
-          font-size spvw(64)
+          font-size spvw(60)
           line-height 1.4
       &__text
         color #fff
@@ -717,25 +802,59 @@
     +sp()
       padding spvw(240) 0
       margin-top spvw(240)
-    &:after
-      content: ""
+    &__tori
       display block
       position absolute
       background-size cover
       background-position left top
       background-repeat no-repeat
+      z-index 2
       +pc()
-        background-image url('/assets/images/top/pc/cv_ character.png')
+        background-image url('/assets/images/top/pc/cv_character.png')
         width pcvw(797)
         height pcvw(406)
         top pcvw(-160)
         left 0
       +sp()
-        background-image url('/assets/images/top/sp/cv_ character.png')
+        background-image url('/assets/images/top/sp/cv_character.png')
         width spvw(558)
         height spvw(284)
         top spvw(-120)
         left 0
+    &__tori__ashiato
+      z-index 1
+      +pc()
+        background-size cover
+        background-position left top
+        background-repeat no-repeat
+        width pcvw(797)
+        height pcvw(406)
+        position absolute
+        top pcvw(-160)
+        left 0
+        opacity 0
+        &.step1
+          background-image url('/assets/images/top/pc/cv_character_ashiato_1.png')
+        &.step2
+          background-image url('/assets/images/top/pc/cv_character_ashiato_2.png')
+        &.step3
+          background-image url('/assets/images/top/pc/cv_character_ashiato_3.png')
+      +sp()
+        background-size cover
+        background-position left top
+        background-repeat no-repeat
+        width spvw(558)
+        height spvw(284)
+        position absolute
+        top spvw(-120)
+        left 0
+        opacity 0
+        &.step1
+          background-image url('/assets/images/top/sp/cv_character_ashiato_1.png')
+        &.step2
+          background-image url('/assets/images/top/sp/cv_character_ashiato_2.png')
+        &.step3
+          background-image url('/assets/images/top/sp/cv_character_ashiato_3.png')
 
     &__link
       text-align center

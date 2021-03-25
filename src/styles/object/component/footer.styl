@@ -97,7 +97,7 @@
         display inline-block
         position absolute
         top 50%
-        transform translateY(-50%)
+        transform translate3d(0, -50%, 0)
         background-image url('/assets/images/common/ico-arrow-mini.svg')
         background-size 100%
         +pc()
@@ -123,7 +123,7 @@
           display inline-block
           position absolute
           top 50%
-          transform translateY(-50%)
+          transform translate3d(0, -50%, 0)
           background-image url('/assets/images/common/ico-arrow-mini.svg')
           background-size 100%
           +pc()
@@ -150,7 +150,7 @@
           display inline-block
           position absolute
           top 50%
-          transform translateY(-50%)
+          transform translate3d(0, -50%, 0)
           background-image url('/assets/images/common/ico-arrow-mini.svg')
           background-size 100%
           +pc()
@@ -196,3 +196,17 @@
         +pc()
           display block
           width 100%
+          hover_opacity()
+  &__hover
+    backface-visibility hidden
+    &::before
+      +pc()
+        transition transform 0.25s ease-out
+        backface-visibility hidden
+  &__hover:hover
+    backface-visibility hidden
+    &::before
+      +pc()
+        transform translate3d(40%, -50%, 0)
+        transition transform 0.25s ease-out
+        backface-visibility hidden

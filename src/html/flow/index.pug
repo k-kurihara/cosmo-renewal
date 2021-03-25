@@ -1,11 +1,11 @@
 extend ../_template
 
 block vars
-  - title = '入塾の流れ・よくある質問｜コスモジュク'
+  - title = '入塾の流れ＆よくある質問｜コスモジュク'
   - description = 'コスモジュクでは入塾までに体験授業や振り返り面談など、安心して入っていただくための制度がございます。体験時にチェックしてほしいポイントやよくあるご質問をご覧ください。'
   - keywords = '塾,個別指導,集団授業,受験,コスモジュク,コスモ,上永谷,港南,日限山,丸山台,舞岡'
-  - img = 'http://localhost:3000/assets/images/share/ogp.jpg'
-  - url = 'http://localhost:3000'
+  - img = 'http://renewal.cosmojuku.com/assets/images/share/ogp.png'
+  - url = 'http://renewal.cosmojuku.com'
   - pageTitleEN = 'FLOW & FAQ'
   - pageTitleJP = '入塾の流れ & よくあるご質問'
 
@@ -117,7 +117,7 @@ block main
               animation: 'fadeUp'
             }
           )
-            .p-flow__checkpoint__inner(
+            .p-flow__checkpoint__inner.u-is-pc(
               data-module="flowAnimation"
               data-options={
                 root: null,
@@ -139,7 +139,43 @@ block main
                     .p-flow__checkpoint__item__text
                       p #{item.text}
               .p-flow__checkpoint__application(data-module-flow-animation-roll=`4`)
-                a.c-button(href="#")
+                a.c-button(href="/contact/")
+                  .c-button__text
+                    p 体験授業の申込はこちら
+                  .c-button__arrow
+            .p-flow__checkpoint__inner.u-is-sp
+              .p-flow__checkpoint__heading
+                p 体験時のチェックポイント
+              ul.p-flow__checkpoint__list
+                each item,index in checkpoint
+                  li.p-flow__checkpoint__item(
+                    data-module-flow-animation-roll=`${index+1}`
+                    data-module="scrollAnimation"
+                    data-options={
+                      root: null,
+                      rootMargin: '-10% 0%',
+                      threshold: [0],
+                      animation: 'fadeUp'
+                    }
+                  )
+                    .p-flow__checkpoint__item__image
+                      img.u-is-pc(src=`/assets/images/flow/img_checkpoint${item.num}-pc.png`, alt="")
+                      img.u-is-sp(src=`/assets/images/flow/img_checkpoint${item.num}-sp.png`, alt="")
+                    .p-flow__checkpoint__item__heading
+                      p #{item.heading}
+                    .p-flow__checkpoint__item__text
+                      p #{item.text}
+              .p-flow__checkpoint__application(
+                data-module-flow-animation-roll=`4`
+                data-module="scrollAnimation"
+                data-options={
+                  root: null,
+                  rootMargin: '-5% 0%',
+                  threshold: [0],
+                  animation: 'fadeUp'
+                }
+              )
+                a.c-button(href="/contact/")
                   .c-button__text
                     p 体験授業の申込はこちら
                   .c-button__arrow
@@ -279,7 +315,7 @@ block main
                   },
                   {
                     question: '授業料はどれくらいですか？',
-                    answer: '授業料は取得する講座によって異なります。また、集団授業と個別指導の併用割引や兄弟割引などもございます。<br>詳しくは<a href="/about/">こちら</a>をご覧ください。'
+                    answer: '授業料は取得する講座によって異なります。また、集団授業と個別指導の併用割引や兄弟割引などもございます。<br>詳しくは<a href="/course/">こちら</a>をご覧ください。'
                   },
                   {
                     question: '授業料の納入方法はどのようになりますか？',

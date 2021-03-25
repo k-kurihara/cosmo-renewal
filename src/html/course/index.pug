@@ -1,37 +1,37 @@
 extend ../_template
 
 block vars
-  - title = '[記事名]｜コスモNEWS｜コスモジュク'
-  - description = ''
-  - keywords = ''
-  - img = 'http://localhost:3000/assets/images/share/ogp.jpg'
-  - url = 'http://localhost:3000'
+  - title = 'コース紹介＆料金案内｜コスモジュク'
+  - description = 'コスモジュクでは生徒一人ひとりに適した学習指導ができるよう、5つのコースをご用意しております。それぞれのコースをかけ合わせることも可能です。ぜひ教室までご相談ください。'
+  - keywords = '塾,個別指導,集団授業,受験,コスモジュク,コスモ,上永谷,日限山,丸山台,舞岡,野庭,別所,上大岡,弘明寺,大久保,芹が谷'
+  - img = 'http://renewal.cosmojuku.com/assets/images/share/ogp.png'
+  - url = 'http://renewal.cosmojuku.com'
   - pageTitleEN = 'COURSE & PRICE'
   - pageTitleJP = 'コース紹介 & 料金案内'
   - currentPage = 'コース紹介 & 料金案内'
 
 block main
   include ../component/_header.pug
-  .p-course
+  .p-course(data-module="anchorlink", data-options={ pageName: 'course' })
     include ../component/_heading.pug
 
     section.c-section
-      .c-section__inner
+      .c-section__inner#original_course
         .c-section__contents
           include ../component/course/_courseOriginal.pug
-    section.c-section
+    section.c-section#tutorial_course
       .c-section__inner
         .c-section__contents
             include ../component/course/_courseTutorial.pug
-    section.c-section
+    section.c-section#south_junior_high_school_course
       .c-section__inner
         .c-section__contents
             include ../component/course/_courseSouthJuniorHighSchool.pug
-    section.c-section
+    section.c-section#university_entrance_exam_course
       .c-section__inner
         .c-section__contents
             include ../component/course/_courseUniversityEntranceExam.pug
-    section.c-section
+    section.c-section#online_course
       .c-section__inner
         .c-section__contents
             include ../component/course/_courseOnline.pug
@@ -41,7 +41,9 @@ block main
         .c-section__contents
             include ../component/course/_courseSupplement.pug
 
-    section
-      include ../component/_breadcrumb.pug
+    section.c-section
+      .c-section__inner
+        .c-section__contents
+          include ../component/_breadcrumb.pug
 
   include ../component/_footer.pug

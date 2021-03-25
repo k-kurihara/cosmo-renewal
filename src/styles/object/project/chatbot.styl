@@ -5,29 +5,38 @@
   z-index: 4
   border-radius: 50%
   opacity 0
-  transition: opacity 0.2s ease-out
   cursor pointer
   pointer-events: none
-  background-image url('/assets/images/top/pc/chat.png')
-  background-size cover
-  background-position left top
+  background-color #0053a9
+  background-image url('/assets/images/top/pc/ico-chat.svg')
+  background-position center
   background-repeat no-repeat
+  border 2px solid #0053a9
   &.is-show
     opacity 1
     pointer-events: auto
+    cursor pointer
   +pc()
-    width: pcvw(148)
-    height: pcvw(148)
-    right: pcvw(40)
-    bottom: pcvw(40)
+    width pcvw(120)
+    height pcvw(120)
+    right pcvw(40)
+    bottom pcvw(40)
+    background-size pcvw(74)
+    transition all 0.2s ease-out
+    &:hover
+      background-color #fff
+      background-image url('/assets/images/top/pc/ico-chat-on.svg')
+      transition all 0.2s ease-out
+      animation bound 1s ease-out
   +sp()
-    width: spvw(100)
-    height: spvw(100)
-    right: 0
+    width spvw(100)
+    height spvw(100)
+    right 0
     left 0
-    bottom: spvw(30)
+    bottom spvw(30)
+    background-size spvw(60)
     margin-right spvw(30)
-    margin-left: auto
+    margin-left auto
 
 .p-chatbot__chat
   position: fixed
@@ -82,8 +91,10 @@
   +pc()
     height: pcvw(1200)
     padding: pcvw(25) pcvw(30)
+    max-height 60vh
   +sp()
     height: spvw(1000)
+    max-height 60vh
     padding: spvw(40) spvw(20)
 .p-chatbot__communication
   display: flex
@@ -133,7 +144,7 @@
   color: rgb(0,83,169)
   background-color: rgb(234,246,254)
   cursor pointer
-.p-chatbot__question--selected 
+.p-chatbot__question--selected
   color: #fff
   background-color: rgb(96,181,225)
 .p-chatbot__avatar
@@ -154,3 +165,16 @@
   background-image url('/assets/images/top/pc/user.png')
 // .p-chatbot__avatar--user
 //     background-color: rgb(10, 10, 10)
+
+
+@keyframes bound
+  from
+    transform scale(1)
+  25%
+    transform scale(1.15)
+  50%
+    transform scale(0.95)
+  75%
+    transform scale(1.05)
+  to
+    transform scale(1)
