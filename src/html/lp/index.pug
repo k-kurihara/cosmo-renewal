@@ -1,0 +1,119 @@
+extend ../_template
+
+block vars
+  - title = '[記事名]｜コスモNEWS｜コスモジュク'
+  - description = ''
+  - keywords = ''
+  - img = 'http://localhost:3000/assets/images/share/ogp.jpg'
+  - url = 'http://localhost:3000'
+
+block main
+  include ../component/_header.pug
+
+  .p-lp
+    .p-lp__contents
+
+      section
+        .p-lp__full__image
+          img(src="/assets/images/topics/detail/column_img_single.png")
+
+
+        .p-lp__step__bg
+          .p-lp__step__bg__title
+            h3 コスモジュクのオンライン授業の特徴
+
+          .p-lp__step__bg__content
+            .p-lp__step__bg__content__item
+              .p-lp__step__bg__content__label POINT1
+              .p-lp__step__bg__content__title 毎回自由に科目を選べる
+              .p-lp__step__bg__content__text
+                |授業開始前（予約時）に数・国・英・理・社の中から、好きな教科をお選びいただけます。
+                br
+                |最近苦手だな…と思う強化をポンポイントで学習することが可能です。
+
+            .p-lp__step__bg__content__item
+              .p-lp__step__bg__content__image
+                img(src="/assets/images/topics/detail/column_img_single.png")
+
+          .p-lp__step__bg__content
+            .p-lp__step__bg__content__item
+              .p-lp__step__bg__content__label POINT2
+              .p-lp__step__bg__content__title 毎回自由に科目を選べる
+              .p-lp__step__bg__content__text
+                |授業開始前（予約時）に数・国・英・理・社の中から、好きな教科をお選びいただけます。
+                br
+                |最近苦手だな…と思う強化をポンポイントで学習することが可能です。
+
+            .p-lp__step__bg__content__item
+              .p-lp__step__bg__content__image
+                img(src="/assets/images/topics/detail/column_img_single.png")
+
+          .p-lp__step__bg__content
+            .p-lp__step__bg__content__item
+              .p-lp__step__bg__content__label POINT3
+              .p-lp__step__bg__content__title 毎回自由に科目を選べる
+              .p-lp__step__bg__content__text
+                |授業開始前（予約時）に数・国・英・理・社の中から、好きな教科をお選びいただけます。
+                br
+                |最近苦手だな…と思う強化をポンポイントで学習することが可能です。
+
+            .p-lp__step__bg__content__item
+              .p-lp__step__bg__content__image
+                img(src="/assets/images/topics/detail/column_img_single.png")
+
+
+
+        .p-lp__step
+          .p-lp__step__title
+            h3 大人コスモの特徴
+
+          .p-lp__step__content
+            .p-lp__step__content__item
+              .p-lp__step__content__label FEATURE1
+              .p-lp__step__content__title 受験コース
+              .p-lp__step__content__point Q.もう一度勉強を初めて、大学に入りたい
+              .p-lp__step__content__point A.受験コースはいかがでしょうか？
+              .p-lp__step__content__text
+                |本コースでは、大学受験や高認（高等学校卒業程度認定試験）を目指した授業を展開致します。個々の目標に向けて一人一人に合ったカリキュラムを作成し、二人三脚で歩んでいきます。経験豊富なスタッフが、一つ一つ丁寧に教えていきますので、一度はやめてしまった勉強も一緒に進めることで、理解を深めることができます。
+
+          .p-lp__step__content
+            .p-lp__step__content__item
+              .p-lp__step__content__label FEATURE2
+              .p-lp__step__content__title 先生コース
+              .p-lp__step__content__point Q.孫に授業を教えたい
+              .p-lp__step__content__point A.経験豊富なスタッフが勉強の教え方についてレクチャーします
+              .p-lp__step__content__text
+                |家庭はとてもいい学習の場面ですよね。その中でお孫さんに学校の勉強も教えたい。そんなご要望にお応えするのが、先生コースです。経験豊富なスタッフが勉強の教え方についてレクチャー致します。もちろん、お孫さんの通われている学校の授業内容についての予習内容も扱いますので、自信をもってお孫さんだけの特別な先生になってください。
+
+
+
+      section
+        include ../component/lp/_headerSecondary.pug
+        include ../component/lp/_text.pug
+
+      section
+        include ../component/lp/_info.pug
+
+      section
+        include ../component/lp/_headerTertiary.pug
+        include ../component/lp/_columnDouble.pug
+
+      section
+        include ../component/lp/_headerQuaternary.pug
+        include ../component/lp/_text.pug
+        include ../component/lp/_columnDoubleImg.pug
+        include ../component/lp/_columnDoubleText.pug
+
+      section
+        include ../component/lp/_movie.pug
+  
+      section
+        include ../component/lp/_sns.pug
+
+    section
+      include ../component/lp/_latestArticle.pug
+
+    section
+      include ../component/lp/_breadcrumb.pug
+
+  include ../component/_footer.pug

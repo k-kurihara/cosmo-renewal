@@ -139,17 +139,6 @@
 					if ( have_posts() ) :
             while ( have_posts() ) : the_post();
 
-            $blog_image_pc = SCF::get('blog_image_pc');
-            $blog_image_pc = wp_get_attachment_image_src( $blog_image_pc , 'full' );
-            $blog_image_pc_url = esc_url($blog_image_pc[0]);
-
-            $blog_image_sp = SCF::get('blog_image_sp');
-            $blog_image_sp = wp_get_attachment_image_src( $blog_image_sp , 'full' );
-            $blog_image_sp_url = esc_url($blog_image_sp[0]);
-
-            
-            $blog_lead = SCF::get('blog_lead');
-
 					?>
 
                   <?php
