@@ -1,2 +1,5 @@
 .p-topics__movie
-  img(src="/assets/images/topics/detail/movie.png", alt="")
+  .p-topics__movie__inner(data-module="playMovie")
+    a.p-topics__movie__play(href="javascript:void(0)" data-module-playmovie-roll="trigger")
+      img(src="/assets/images/about/img_play001.png", alt="再生ボタン")
+    video(src="/assets/images/about/movie.mp4" poster="/assets/images/about/pic_movie-thumb.png" preload="auto" muted playsinline data-module-playmovie-roll="target")

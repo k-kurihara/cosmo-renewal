@@ -31,16 +31,70 @@
         margin-top pcvw(60)
       a
         display block
-      &__img
+    & + &
+      +sp()
+        margin-top spvw(36)
+    &__img
+      overflow hidden
+      background-size contain
+      position relative
+      +pc()
+        width 100%
+        height pcvw(400)
+      +sp()
+        width 100%
+        height spvw(380)
+      
+      &:after
+        position absolute
+        content ""
+        display block
+        background-size cover
+        background-position right
+        background-repeat no-repeat
         +pc()
-          width 100%
-          height pcvw(410)
-        +pc()
-          width 100%
-          height spvw(380)
-      & + &
+          right pcvw(20)
+          bottom 0
+          width pcvw(680)
+          height pcvw(160)
         +sp()
-          margin-top spvw(36)
+          right 0
+          top spvw(-440)
+          width spvw(750)
+          height spvw(440)
+
+      &.is-category__diary
+        background-image url("/assets/images/topics/bg_diary.png")
+        &:after
+          +pc()
+            background-image url("/assets/images/topics/detail/pc/category__diary.png")
+          +sp()
+            background-image url("/assets/images/topics/detail/sp/category__diary.png")
+
+      &.is-category__info
+        background-image url("/assets/images/topics/bg_info.png")
+        &:after
+          +pc()
+            background-image url("/assets/images/topics/detail/pc/category__info.png")
+          +sp()
+            background-image url("/assets/images/topics/detail/sp/category__info.png")
+      &.is-category__other
+        background-image url("/assets/images/topics/bg_other.png")
+        &:after
+          +pc()
+            background-image url("/assets/images/topics/detail/pc/category__other.png")
+          +sp()
+            background-image url("/assets/images/topics/detail/sp/category__other.png")
+
+
+
+      // &__img
+      //   +pc()
+      //     width 100%
+      //     height pcvw(410)
+      //   +pc()
+      //     width 100%
+      //     height spvw(380)
 
     &__desc
       color #2c4a70
