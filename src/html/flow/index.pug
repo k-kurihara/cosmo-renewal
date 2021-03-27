@@ -95,17 +95,19 @@ block main
             }
           )
             .p-flow__enrollment__texts.u-is-sp
-              ul.p-flow__enrollment__texts__list(
-                data-module="flowAnimation"
-                data-options={
-                  root: null,
-                  rootMargin: '-10% 0%',
-                  threshold: [0],
-                  delay: 0.25,
-                }
-              )
+              ul.p-flow__enrollment__texts__list
                 each item, index in flow
-                  li.p-flow__enrollment__texts__item(class=`is-${index+1}` data-module-flow-animation-roll=`${index+1}`)
+                  li.p-flow__enrollment__texts__item(
+                    class=`is-${index+1}`
+                    data-module-flow-animation-roll=`${index+1}`
+                    data-module="scrollAnimation"
+                    data-options={
+                      root: null,
+                      rootMargin: '-10% 0%',
+                      threshold: [0],
+                      animation: 'fadeUp'
+                    }
+                  )
                     p.p-flow__enrollment__texts__item__heading #{item.heading}
                     p.p-flow__enrollment__texts__item__text #{item.text}
           .p-flow__checkpoint(
