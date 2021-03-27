@@ -23,9 +23,12 @@ export default class playMovie {
       }
     })
     this.target.addEventListener('canplay', () => {
-      this.elem.classList.add('is-canplay')
-      this.switchPlayButtonShow(true)
+      if (this.target.paused) {
+        this.elem.classList.add('is-canplay')
+        this.switchPlayButtonShow(true)
+      }
     })
+    this.target.load()
   }
   switchPlayMovie() {
     this.target.play()
