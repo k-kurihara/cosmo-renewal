@@ -114,7 +114,9 @@
           <div class="p-topics__keyvisual is-category__other">
         <?php } ?>
           
-          <img class="u-is-pc" src="<?php echo $blog_image_pc_url;?>" alt=""/>
+          <?php if( $blog_image_pc_url ){?>
+            <img class="u-is-pc" src="<?php echo $blog_image_pc_url;?>" alt=""/>
+          <?php } ?>
           <?php if( $blog_image_sp_url ){?>
             <img class="u-is-sp" src="<?php echo $blog_image_sp_url;?>" alt=""/>
           <?php } ?>

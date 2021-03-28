@@ -14,51 +14,53 @@ block main
     .p-lp__contents
 
       section
+        .p-lp__kv
+          img(src="/assets/images/topics/detail/column_img_single.png")
         .p-lp__full__image
           img(src="/assets/images/topics/detail/column_img_single.png")
 
 
-        .p-lp__step__bg
-          .p-lp__step__bg__title
+        .p-lp__step__blue
+          .p-lp__step__blue__title
             h3 コスモジュクのオンライン授業の特徴
 
-          .p-lp__step__bg__content
-            .p-lp__step__bg__content__item
-              .p-lp__step__bg__content__label POINT1
-              .p-lp__step__bg__content__title 毎回自由に科目を選べる
-              .p-lp__step__bg__content__text
+          .p-lp__step__blue__content
+            .p-lp__step__blue__content__item
+              .p-lp__step__blue__content__label POINT1
+              .p-lp__step__blue__content__title 毎回自由に科目を選べる
+              .p-lp__step__blue__content__text
                 |授業開始前（予約時）に数・国・英・理・社の中から、好きな教科をお選びいただけます。
                 br
                 |最近苦手だな…と思う強化をポンポイントで学習することが可能です。
 
-            .p-lp__step__bg__content__item
-              .p-lp__step__bg__content__image
+            .p-lp__step__blue__content__item
+              .p-lp__step__blue__content__image
                 img(src="/assets/images/topics/detail/column_img_single.png")
 
-          .p-lp__step__bg__content
-            .p-lp__step__bg__content__item
-              .p-lp__step__bg__content__label POINT2
-              .p-lp__step__bg__content__title 毎回自由に科目を選べる
-              .p-lp__step__bg__content__text
+          .p-lp__step__blue__content
+            .p-lp__step__blue__content__item
+              .p-lp__step__blue__content__label POINT2
+              .p-lp__step__blue__content__title 毎回自由に科目を選べる
+              .p-lp__step__blue__content__text
                 |授業開始前（予約時）に数・国・英・理・社の中から、好きな教科をお選びいただけます。
                 br
                 |最近苦手だな…と思う強化をポンポイントで学習することが可能です。
 
-            .p-lp__step__bg__content__item
-              .p-lp__step__bg__content__image
+            .p-lp__step__blue__content__item
+              .p-lp__step__blue__content__image
                 img(src="/assets/images/topics/detail/column_img_single.png")
 
-          .p-lp__step__bg__content
-            .p-lp__step__bg__content__item
-              .p-lp__step__bg__content__label POINT3
-              .p-lp__step__bg__content__title 毎回自由に科目を選べる
-              .p-lp__step__bg__content__text
+          .p-lp__step__blue__content
+            .p-lp__step__blue__content__item
+              .p-lp__step__blue__content__label POINT3
+              .p-lp__step__blue__content__title 毎回自由に科目を選べる
+              .p-lp__step__blue__content__text
                 |授業開始前（予約時）に数・国・英・理・社の中から、好きな教科をお選びいただけます。
                 br
                 |最近苦手だな…と思う強化をポンポイントで学習することが可能です。
 
-            .p-lp__step__bg__content__item
-              .p-lp__step__bg__content__image
+            .p-lp__step__blue__content__item
+              .p-lp__step__blue__content__image
                 img(src="/assets/images/topics/detail/column_img_single.png")
 
 
@@ -71,8 +73,8 @@ block main
             .p-lp__step__content__item
               .p-lp__step__content__label FEATURE1
               .p-lp__step__content__title 受験コース
-              .p-lp__step__content__point Q.もう一度勉強を初めて、大学に入りたい
-              .p-lp__step__content__point A.受験コースはいかがでしょうか？
+              .p-lp__step__content__point Q. もう一度勉強を初めて、大学に入りたい
+              .p-lp__step__content__point A. 受験コースはいかがでしょうか？
               .p-lp__step__content__text
                 |本コースでは、大学受験や高認（高等学校卒業程度認定試験）を目指した授業を展開致します。個々の目標に向けて一人一人に合ったカリキュラムを作成し、二人三脚で歩んでいきます。経験豊富なスタッフが、一つ一つ丁寧に教えていきますので、一度はやめてしまった勉強も一緒に進めることで、理解を深めることができます。
 
@@ -89,31 +91,68 @@ block main
 
       section
         include ../component/lp/_headerSecondary.pug
-        include ../component/lp/_text.pug
-
-      section
-        include ../component/lp/_info.pug
-
-      section
-        include ../component/lp/_headerTertiary.pug
         include ../component/lp/_columnDouble.pug
 
-      section
-        include ../component/lp/_headerQuaternary.pug
+        include ../component/lp/_headerTertiary.pug
         include ../component/lp/_text.pug
-        include ../component/lp/_columnDoubleImg.pug
-        include ../component/lp/_columnDoubleText.pug
 
-      section
-        include ../component/lp/_movie.pug
+        include ../component/lp/_headerTertiary.pug
+        include ../component/lp/_text.pug
+
+        .p-lp__image
+          img(src="/assets/images/topics/detail/column_img_single.png", alt="")
+
+        include ../component/lp/_text.pug
+
+        include ../component/lp/_text.pug
+
+
+
+    //-     include ../component/lp/_columnDoubleImg.pug
+    //-     include ../component/lp/_columnDoubleText.pug
+
+    //-     include ../component/lp/_text.pug
+
+    //-   section
+    //-     include ../component/lp/_info.pug
+
+    //-   section
+    //-     include ../component/lp/_headerTertiary.pug
+
+    //-   section
+    //-     include ../component/lp/_headerQuaternary.pug
+    //-     include ../component/lp/_text.pug
+    //-     include ../component/lp/_columnDoubleImg.pug
+
+    //-   section
+    //-     include ../component/lp/_movie.pug
   
-      section
-        include ../component/lp/_sns.pug
+    //-   section
+    //-     include ../component/lp/_sns.pug
 
-    section
-      include ../component/lp/_latestArticle.pug
+    //- section
+    //-   include ../component/lp/_latestArticle.pug
 
     section
       include ../component/lp/_breadcrumb.pug
+
+  .p-top__cv
+    .p-top__cv__link
+      a.c-button(href="/contact/")
+        .c-button__text
+          p 体験授業・資料請求等はこちら
+        .c-button__arrow
+    .p-top__cv__tori(
+      data-module="scrollAnimation"
+      data-options={
+        root: null,
+        rootMargin: '20% 100%',
+        threshold: [0],
+        animation: 'tori'
+      }
+    )
+    .p-top__cv__tori__ashiato.step1(data-module-roll="tori_no_ashiato_1")
+    .p-top__cv__tori__ashiato.step2(data-module-roll="tori_no_ashiato_2")
+    .p-top__cv__tori__ashiato.step3(data-module-roll="tori_no_ashiato_3")
 
   include ../component/_footer.pug

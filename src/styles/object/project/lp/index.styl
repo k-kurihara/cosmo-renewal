@@ -11,35 +11,263 @@
   *
     box-sizing border-box
 
-  &__full__image
-    +pc()
-      display block
-    +sp()
-      display block
-
-  &__step__bg
-    +pc()
-      display block
-    +sp()
-      display block
-
-  &__step
-    +pc()
-      display block
-    +sp()
-      display block
-
   &__contents
     +pc()
       width pcvw(1760)
       margin 0 auto
       padding-top pcvw(200)
     +sp()
-      padding-top spvw(80)
+      padding-top spvw(135)
       margin 0 spvw(40)
      
     > section:first-child >*:first-child
       margin-top 0
+
+
+  &__kv
+    +pc()
+      width: pcvw(2200);
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    +sp()
+      width: 100vw;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+
+  &__image
+    +pc()
+      margin-top pcvw(150)
+      width 100%
+    +sp()
+      margin-top spvw(110)
+      width 100%
+
+
+  &__full__image
+    +pc()
+      width: pcvw(2200);
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-top pcvw(160)
+    +sp()
+      width: 100vw;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-top spvw(110)
+
+  &__step__blue
+    background-color: #60b5e1;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    +pc()
+      margin-top: pcvw(230);
+      padding: pcvw(280) 0 pcvw(230)
+      display block
+    +sp()
+      margin-top spvw(150)
+      padding: spvw(175) 0 spvw(210)
+
+    &__title
+      color: #fff;
+      text-align: center;
+      line-height: 1.6
+      position relative
+      +pc()
+        font-size: pcvw(72)
+        width pcvw(1760)
+        margin 0 auto
+        padding-bottom: pcvw(40);
+      +sp()
+        width spvw(650)
+        font-size: spvw(44)
+        margin: 0 auto;
+        padding-bottom: spvw(40);
+      &:after
+        content ""
+        display block
+        position absolute
+        bottom 0
+        left 50%
+        transform: translateX(-50%)
+        background-color: #fad06c;
+        +pc()
+          height pcvw(10)
+          width pcvw(120)
+        +sp()
+          height spvw(10)
+          width spvw(120)
+
+
+
+    &__content
+      +pc()
+        display flex
+        width pcvw(1760)
+        margin pcvw(130) auto 0
+      +sp()
+        width spvw(650)
+        margin: spvw(50) auto 0;
+
+      & + &
+        +pc()
+          margin-top: pcvw(80);
+        +sp()
+          margin-top: spvw(90);
+
+      &__item
+        +pc()
+          width: 50%
+        & + &
+          +sp()
+            margin-top: spvw(45);
+
+      &__image
+        +pc()
+          padding-left: pcvw(100)
+        +sp()
+          display block
+
+      &__label
+        display inline-block
+        color: #2c4a70;
+        font-weight: bold;
+        background-color: #fad06c;
+        +pc()
+          padding: pcvw(30);
+          font-size: pcvw(24);
+        +sp()
+          padding: spvw(30);
+          font-size: spvw(24);
+
+      &__title
+        color: #fff;
+        font-weight: bold;
+        +pc()
+          font-size: pcvw(72);
+          margin-top: pcvw(50);
+        +sp()
+          font-size: spvw(44);
+          margin-top: spvw(40);
+
+      &__text
+        color: #fff;
+        // font-weight: bold
+        line-height: 1.6;
+        +pc()
+          font-size: pcvw(36);
+          margin-top: pcvw(60);
+        +sp()
+          font-size: spvw(28);
+          margin-top: spvw(30);
+
+
+
+  &__step
+    background-color: #f6f2ee;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    +pc()
+      padding: pcvw(290) 0 pcvw(230)
+    +sp()
+      padding: spvw(170) 0
+
+
+    &__title
+      text-align: center;
+      color: #0054a5;
+      position relative
+      margin 0 auto
+      +pc()
+        font-size: pcvw(72)
+        width pcvw(1760)
+        padding-bottom: pcvw(50);
+      +sp()
+        font-size: spvw(44)
+        width spvw(650)
+        padding-bottom: spvw(50);
+
+      &:after
+        content ""
+        display block
+        position absolute
+        bottom 0
+        left 50%
+        transform: translateX(-50%)
+        background-color: #fad06c;
+        +pc()
+          height pcvw(10)
+          width pcvw(120)
+        +sp()
+          height spvw(10)
+          width spvw(120)
+
+    &__content
+      +pc()
+        width pcvw(1760)
+        margin pcvw(90) auto 0
+      +sp()
+        width spvw(650)
+        margin spvw(60) auto 0
+      & + &
+        +pc()
+          margin-top: pcvw(90);
+        +sp()
+          margin-top: spvw(65);
+
+      &__label
+        display inline-block
+        color: #2c4a70;
+        font-weight: bold;
+        background-color: #fad06c;
+        +pc()
+          padding: pcvw(30);
+          font-size: pcvw(24);
+        +sp()
+          padding: spvw(30);
+          font-size: spvw(24);
+
+      &__title
+        color: #0054a5;
+        font-weight: bold;
+        +pc()
+          font-size: pcvw(72);
+          margin-top: pcvw(45);
+        +sp()
+          font-size: spvw(44);
+          margin-top: spvw(35);
+
+      &__point
+        color: #2c4a70;
+        font-weight: bold;
+        +pc()
+          font-size: pcvw(36);
+          margin-top: pcvw(70);
+        +sp()
+          font-size: spvw(28);
+          margin-top: spvw(35);
+        & + &
+          +pc()
+            margin-top: pcvw(40);
+          +sp()
+            margin-top: spvw(20);
+
+      &__text
+        +pc()
+          font-size: pcvw(36);
+          margin-top: pcvw(35);
+          line-height: 1.6;
+        +sp()
+          font-size: spvw(28);
+          margin-top: spvw(35);
+          line-height: 1.8;
 
   &__header
     &__primary
@@ -121,6 +349,7 @@
           margin-top spvw(46)
 
     &__secondary
+      color #0054a5
       position relative
       font-weight bold
       +pc()
@@ -143,7 +372,8 @@
         background-color #fad06c
         +pc()
           bottom 0
-          left 0
+          left 50%
+          transform: translateX(-50%)
           height pcvw(10)
           width pcvw(120)
         +sp()
@@ -157,17 +387,23 @@
 
     &__tertiary
       font-weight bold
+      color #0054a5
+      line-height 1.3
       +pc()
-        font-size pcvw(60)
-        margin-top pcvw(200)
-        line-height 1.3
+        font-size pcvw(36)
+        margin-top pcvw(120)
       +sp()
         font-size spvw(44)
-        margin-top spvw(150)
-        line-height 1.3
+        margin-top spvw(100)
+      + .p-lp__text
+        +pc()
+          margin-top pcvw(35)
+        +sp()
+          margin-top spvw(30)
 
     &__quaternary
       font-weight bold
+      color #0054a5
       +pc()
         font-size pcvw(48)
         margin-top pcvw(180)
@@ -185,6 +421,12 @@
       font-size spvw(28)
       margin-top spvw(60)
       line-height 1.6
+    & + .p-lp__header__tertiary
+      +pc()
+        margin-top pcvw(65)
+      +sp()
+        margin-top spvw(60)
+
 
 
   &__info
@@ -248,14 +490,70 @@
       +pc()
         width 50%
         font-size pcvw(36)
+        padding-right pcvw(96)
       +sp()
         font-size spvw(28)
+      
+      & + &
+        +pc()
+          padding-right 0
+          padding-left pcvw(96)
+        +sp()
+          margin-top spvw(80)
 
       &--img
         +pc()
           width 45%
         +sp()
           margin-top spvw(60)
+
+      &--title
+        +pc()
+          width 45%
+        +sp()
+          margin-top spvw(60)
+
+      &--text
+        +pc()
+          width 45%
+        +sp()
+          margin-top spvw(60)
+
+      &__image
+        width 100%
+        
+        & + .p-lp__column__double__item__title, & + .p-lp__column__double__item__text
+          +pc()
+            margin-top pcvw(35)
+          +sp()
+            margin-top spvw(40)
+
+
+      &__title
+        color #0054a5
+        font-weight bold
+        +pc()
+          font-size pcvw(36)
+        +sp()
+          font-size spvw(44)
+        & + .p-lp__column__double__item__image, & + .p-lp__column__double__item__text
+          +pc()
+            margin-top pcvw(30)
+          +sp()
+            margin-top spvw(30)
+        
+
+      &__text
+        +pc()
+          font-size pcvw(32)
+        +sp()
+          font-size spvw(28)
+        & + .p-lp__column__double__item__title, & + .p-lp__column__double__item__text
+          +pc()
+            margin-top pcvw(35)
+          +sp()
+            margin-top spvw(40)
+
 
   &__column__double--img
     +pc()
@@ -287,6 +585,7 @@
         line-height 1.6
       +sp()
         margin-top spvw(20)
+
 
   &__movie
     +pc()
