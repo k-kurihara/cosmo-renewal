@@ -8,7 +8,7 @@
       .p-course__menu__item
         .p-course__menu__label 科目と授業時間
         .p-course__menu__text
-          |英語・数学 
+          |英語・数学
           br.u-is-sp
           |／ 1コマ60分(個別指導) ＋ 30分(映像授業)
       .p-course__menu__item
@@ -22,7 +22,7 @@
           br
           |映像授業だけでは、不安な内容も講師に確認をすることができるので、効率よく授業を進めることが可能です。
           br
-          |また、映像は何度でも視聴することが可能です。					
+          |また、映像は何度でも視聴することが可能です。
 
     .p-course__menu__pricelist__wrap(data-module="CourseTimetableMore")
       .p-course__menu__button.u-is-sp(data-course-timetable-more-roll="trigger")
@@ -32,47 +32,48 @@
         .p-course__menu__contents__table(data-course-timetable-more-roll="content")
           .p-course__menu__label 料金表
           .p-course__menu__pricelist__scroll
-            table.p-course__menu__pricelist
-              tbody
-                -
-                  var pricelistHeading = [
-                    { text: '' },
-                    { text: '内容' },
-                    { text: '口座コマ数' },
-                    { text: '受講料' },
-                    { text: '追加1コマ' },
-                  ]
-                tr.p-course__menu__pricelist__heading
-                  each item in pricelistHeading
-                    th
-                      .p-course__menu__pricelist__heading__item #{item.text}
-                -
-                  var pricelistBody = [
-                    {
-                      childItems: [
-                        { text: '高1〜3' },
-                        { text: '個別指導 +<br>映像授業' },
-                        { text: '12コマ' },
-                        { text: '66,000' },
-                        { text: '3,575' },
-                      ],
-                    },
-                    {
-                      childItems: [
-                        { text: '高1〜3' },
-                        { text: '映像授業のみ' },
-                        { text: '12コマ' },
-                        { text: '26,400' },
-                        { text: '-' },
-                      ],
-                    },
-                  ]
-                each item in pricelistBody
-                  tr.p-course__menu__pricelist__body
-                    if item.childItems
-                      each childItem in item.childItems
-                        td
-                          .p-course__menu__pricelist__body__item !{childItem.text}
+            .p-course__menu__pricelist__scroll__inner(data-module="scrollHint")
+              table.p-course__menu__pricelist
+                tbody
+                  -
+                    var pricelistHeading = [
+                      { text: '' },
+                      { text: '内容' },
+                      { text: '口座コマ数' },
+                      { text: '受講料' },
+                      { text: '追加1コマ' },
+                    ]
+                  tr.p-course__menu__pricelist__heading
+                    each item in pricelistHeading
+                      th
+                        .p-course__menu__pricelist__heading__item #{item.text}
+                  -
+                    var pricelistBody = [
+                      {
+                        childItems: [
+                          { text: '高1〜3' },
+                          { text: '個別指導 +<br>映像授業' },
+                          { text: '12コマ' },
+                          { text: '66,000' },
+                          { text: '3,575' },
+                        ],
+                      },
+                      {
+                        childItems: [
+                          { text: '高1〜3' },
+                          { text: '映像授業のみ' },
+                          { text: '12コマ' },
+                          { text: '26,400' },
+                          { text: '-' },
+                        ],
+                      },
+                    ]
+                  each item in pricelistBody
+                    tr.p-course__menu__pricelist__body
+                      if item.childItems
+                        each childItem in item.childItems
+                          td
+                            .p-course__menu__pricelist__body__item !{childItem.text}
 
   .p-course__menu__timetable(data-module="CourseTimetableMore")
     .p-course__menu__button(data-course-timetable-more-roll="trigger")
