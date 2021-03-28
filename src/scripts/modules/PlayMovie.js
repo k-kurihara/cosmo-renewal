@@ -6,12 +6,11 @@ export default class playMovie {
     this.init()
   }
   init() {
-    this.switchPlayButtonShow(false)
     this.bindEvents()
   }
   bindEvents() {
     this.trigger.addEventListener('click', () => {
-      this.switchPlayMovie()
+      this.switchPlayMovie(true)
     })
     this.target.addEventListener('ended', () => {
       this.switchPlayButtonShow(true)
@@ -22,7 +21,7 @@ export default class playMovie {
         this.switchPlayButtonShow(true)
       }
     })
-    this.target.addEventListener('canplay', () => {
+    this.target.addEventListener('canplaythrough', () => {
       if (this.target.paused) {
         this.elem.classList.add('is-canplay')
         this.switchPlayButtonShow(true)
@@ -30,9 +29,14 @@ export default class playMovie {
     })
     this.target.load()
   }
-  switchPlayMovie() {
-    this.target.play()
-    this.switchPlayButtonShow(false)
+  switchPlayMovie(flg) {
+    if (flg) {
+      this.target.play()
+      this.switchPlayButtonShow(false)
+    } else {
+      this.target.pause()
+      this.switchPlayButtonShow(true)
+    }
   }
   switchPlayButtonShow(flg) {
     if(flg) {
