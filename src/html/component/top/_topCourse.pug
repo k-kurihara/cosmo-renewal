@@ -61,9 +61,28 @@
           span.p-top__course__introduction__list__anchor__arrow
           |コース詳細をみる
 
-  .p-top__course__link
+  .p-top__course__link(
+    data-module="ashiato"
+    data-options={
+      'target': 'ashiato1',
+      'setting': {
+        root: null,
+        rootMargin: '0% 0%',
+        threshold: [0],
+      }
+    })
     a.c-button(href="/course/")
       .c-button__text
         p コースの一覧を見る
       .c-button__arrow
+
+  .p-top__footprints.is-1.u-is-pc(data-module-ashiato-roll="ashiato1")
+    - for (var i = 0; i < 9; i++)
+      .p-top__footprints__ashiato(class=`is-${i}` data-module-ashiato-roll="ashiato1-children")
+        img(src=`/assets/images/top/pc/ashiato-1_${i}.png`, alt="足跡")
+
+  .p-top__footprints.is-1.u-is-sp(data-module-ashiato-roll="ashiato1")
+    - for (var i = 0; i < 9; i++)
+      .p-top__footprints__ashiato(class=`is-${i}` data-module-ashiato-roll="ashiato1-children")
+        img(src=`/assets/images/top/sp/ashiato-1_${i}.png`, alt="足跡")
 

@@ -105,6 +105,7 @@
 
 
   &__course
+    position relative
     +pc()
       width pcvw(2200)
       margin pcvw(300) auto 0
@@ -293,224 +294,6 @@
       margin pcvw(300) auto 0
     +sp()
       margin-top spvw(370)
-    &.is-show
-      .p-top__news__footprints--top span, .p-top__news__footprints--bottom span
-        opacity 1
-    &__footprints
-      &--top, &--bottom
-        span
-          position absolute
-          z-index -1
-          background-size cover
-          background-position left top
-          background-repeat no-repeat
-          opacity 0
-          transition opacity .2s ease-out
-          +pc()
-            background-image url('/assets/images/top/pc/footprints.png')
-            width pcvw(102)
-            height pcvw(51)
-          +sp()
-            background-image url('/assets/images/top/sp/footprints.png')
-            width spvw(83)
-            height spvw(37)
-      &--top
-        span
-          &:nth-child(1)
-            transition-delay .5s
-            +pc()
-              top pcvw(-540)
-              right pcvw(-240)
-              transform rotate(110deg) scale(-1, 1)
-            +sp()
-              top spvw(-320)
-              right spvw(10)
-              transform rotate(110deg) scale(-1, 1)
-          &:nth-child(2)
-            transition-delay .8s
-            +pc()
-              top pcvw(-450)
-              right pcvw(-90)
-              transform rotate(-20deg)
-            +sp()
-              top spvw(-250)
-              right spvw(120)
-              transform rotate(-20deg)
-          &:nth-child(3)
-            transition-delay 1.1s
-            +pc()
-              top pcvw(-330)
-              right pcvw(-75)
-              transform rotate(130deg) scale(-1, 1)
-            +sp()
-              top spvw(-130)
-              right spvw(145)
-              transform rotate(130deg) scale(-1, 1)
-          &:nth-child(4)
-            transition-delay 1.4s
-            +pc()
-              top pcvw(-330)
-              right pcvw(70)
-              transform rotate(-30deg)
-            +sp()
-              top spvw(-130)
-              right spvw(270)
-              transform rotate(-30deg)
-          &:nth-child(5)
-            transition-delay 1.7s
-            +pc()
-              top pcvw(-164)
-              right pcvw(150)
-              transform rotate(150deg) scale(-1, 1)
-            +sp()
-              top spvw(-30)
-              right spvw(320)
-              transform rotate(150deg) scale(-1, 1)
-          &:nth-child(6)
-            transition-delay 2s
-            +pc()
-              top pcvw(-190)
-              right pcvw(310)
-              transform rotate(10deg)
-            +sp()
-              top spvw(-50)
-              right spvw(460)
-              transform rotate(0deg)
-          &:nth-child(7)
-            transition-delay 2.3s
-            +pc()
-              top pcvw(-60)
-              right pcvw(390)
-              transform rotate(140deg) scale(-1, 1)
-            +sp()
-              top spvw(70)
-              right spvw(510)
-              transform rotate(140deg) scale(-1, 1)
-          &:nth-child(8)
-            transition-delay 2.6s
-            +pc()
-              top pcvw(-100)
-              right pcvw(560)
-              transform rotate(0deg)
-            +sp()
-              top spvw(30)
-              right spvw(650)
-              transform rotate(0deg)
-
-      &--bottom
-        span
-          &:nth-child(1)
-            +pc()
-              bottom pcvw(150)
-              left pcvw(-80)
-              transform rotate(260deg)
-              transition-delay 6s
-            +sp()
-              bottom spvw(140)
-              left spvw(-10)
-              transform rotate(260deg)
-              transition-delay 6s
-          &:nth-child(2)
-            +pc()
-              bottom pcvw(90)
-              left pcvw(70)
-              transform rotate(40deg) scale(-1, 1)
-              transition-delay 6.3s
-            +sp()
-              bottom spvw(70)
-              left spvw(110)
-              transform rotate(40deg) scale(-1, 1)
-              transition-delay 6.3s
-          &:nth-child(3)
-            +pc()
-              bottom pcvw(-50)
-              left pcvw(50)
-              transform rotate(230deg)
-              transition-delay 6.6s
-            +sp()
-              bottom spvw(-70)
-              left spvw(130)
-              transform rotate(230deg)
-              transition-delay 6.6s
-          &:nth-child(4)
-            +pc()
-              bottom pcvw(-40)
-              left pcvw(260)
-              transform rotate(20deg) scale(-1, 1)
-              transition-delay 6.9s
-            +sp()
-              bottom spvw(-40)
-              left spvw(250)
-              transform rotate(20deg) scale(-1, 1)
-              transition-delay 6.9s
-          &:nth-child(5)
-            +pc()
-              bottom pcvw(-164)
-              left pcvw(320)
-              transform rotate(210deg)
-              transition-delay 7.2s
-            +sp()
-              bottom spvw(-150)
-              left spvw(300)
-              transform rotate(210deg)
-              transition-delay 7.2s
-          &:nth-child(6)
-            +pc()
-              bottom pcvw(-140)
-              left pcvw(470)
-              transform rotate(0deg) scale(-1, 1)
-              transition-delay 7.5s
-            +sp()
-              bottom spvw(-140)
-              left spvw(440)
-              transform rotate(0deg) scale(-1, 1)
-              transition-delay 7.5s
-          &:nth-child(7)
-            +pc()
-              bottom pcvw(-270)
-              left pcvw(570)
-              transform rotate(210deg)
-              transition-delay 7.8s
-            +sp()
-              bottom spvw(-240)
-              left spvw(500)
-              transform rotate(210deg)
-              transition-delay 7.8s
-          &:nth-child(8)
-            +pc()
-              bottom pcvw(-240)
-              left pcvw(770)
-              transform rotate(0deg) scale(-1, 1)
-              transition-delay 8.1s
-            +sp()
-              bottom spvw(-210)
-              left spvw(645)
-              transform rotate(0deg) scale(-1, 1)
-              transition-delay 8.1s
-          &:nth-child(9)
-            +pc()
-              bottom pcvw(-380)
-              left pcvw(800)
-              transform rotate(220deg)
-              transition-delay 8.4s
-            +sp()
-              display none
-              // bottom spvw(-380)
-              // left spvw(800)
-              // transform rotate(220deg)
-              // transition-delay 8.4s
-          &:nth-child(10)
-            +pc()
-              bottom pcvw(-370)
-              left pcvw(950)
-              transform rotate(-10deg) scale(-1, 1)
-              transition-delay 8.7s
-            +sp()
-              display none
-              // bottom spvw(-370)
-              // left spvw(950)
-              // transform rotate(-10deg) scale(-1, 1)
-              // transition-delay 8.7s
 
     .c-article__list__item + .c-article__list__item
       +sp()
@@ -637,6 +420,7 @@
           transition all .5s ease
 
   &__activity
+    position relative
     +pc()
       margin-top pcvw(400)
     +sp()
@@ -858,4 +642,49 @@
 
     &__link
       text-align center
+
+  &__footprints
+    &.is-1
+      +pc()
+        position absolute
+        bottom pcvw(-299)
+        right pcvw(-234)
+        width pcvw(906)
+        height pcvw(530)
+        z-index -1
+      +sp()
+        position absolute
+        bottom spvw(-477)
+        right spvw(12)
+        width spvw(725)
+        height spvw(424)
+        z-index -1
+    &.is-2
+      +pc()
+        position absolute
+        bottom pcvw(-392)
+        left pcvw(-92)
+        width pcvw(1166)
+        height pcvw(644)
+        z-index -1
+      +sp()
+        position absolute
+        bottom spvw(-241)
+        left spvw(0)
+        width spvw(750)
+        height spvw(515)
+        z-index -1
+    &.is-3
+      +pc()
+        position absolute
+        bottom pcvw(-173)
+        right pcvw(32)
+        width pcvw(907)
+        height pcvw(531)
+        z-index -1
+    &__ashiato
+      position absolute
+      top 0
+      left 0
+      opacity 0
 
