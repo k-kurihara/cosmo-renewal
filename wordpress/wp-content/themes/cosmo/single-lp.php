@@ -111,13 +111,13 @@
 
         test
         <?php /*  KV image */ ?>
-        <?php if( $blog_image_pc_url ){?>
+        <?php if( $lp_key_visual_pc_url ){?>
           <div class="p-lp__kv" class="u-is-pc">
             <img class="u-is-pc" src="<?php echo $lp_key_visual_pc_url;?>" alt=""/>
           </div>
         <?php } ?>
 
-        <?php if( $blog_image_sp_url ){?>
+        <?php if( $lp_key_visual_sp_url ){?>
           <div class="p-lp__kv" class="u-is-sp">
             <img class="u-is-pc" src="<?php echo $lp_key_visual_sp_url;?>" alt=""/>
           </div>
