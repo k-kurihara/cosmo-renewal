@@ -8,11 +8,39 @@ export default class autoPlayMovie {
   }
   init() {
     this.getVideosElem()
+    this.enterElement()
   }
   getVideosElem() {
     this.videosList.forEach(element => {
       if(element.clientHeight !== 0) {
         this.videoPlay(element)
+      }
+    })
+  }
+  enterElement() {
+    const callback = entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+          this.switchVideoPlay(entry, true)
+        } else {
+          this.switchVideoPlay(entry, false)
+        }
+      })
+    }
+    const observer = new IntersectionObserver(callback)
+    const target = this.elem
+    observer.observe(target)
+  }
+  switchVideoPlay(entry, flg) {
+    const video = entry.target.querySelectorAll('video')
+    const videosList = Array.prototype.slice.call(video, 0)
+    videosList.forEach(element => {
+      if(element.clientHeight !== 0) {
+        if(flg) {
+          element.pause()
+        } else {
+          element.play()
+        }
       }
     })
   }
@@ -24,6 +52,6 @@ export default class autoPlayMovie {
       } else {
         elem.pause()
       }
-    }, 500)
+    }, 100)
   }
 }
