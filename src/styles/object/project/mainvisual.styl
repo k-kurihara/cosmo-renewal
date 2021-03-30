@@ -64,13 +64,14 @@
         width spvw(535)
 
     &__lead
-      line-height 2.375
       font-weight bold
       color #2c4a70
       +pc()
+        line-height 2.375
         font-size pcvw(32)
         // text-shadow 1px 2px 3px #fff, -1px -2px 3px #fff // ファーストビュー調整
       +sp()
+        line-height 2
         font-size spvw(32)
 
     &__copy + &__lead

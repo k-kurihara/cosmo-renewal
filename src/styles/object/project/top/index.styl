@@ -92,7 +92,7 @@
         line-height 2.35
       +sp()
         font-size spvw(32)
-        line-height 2.375
+        line-height 2
 
     &__img
       text-align center
@@ -493,9 +493,13 @@
       background-color #fff
       +pc()
         width calc(820 /2466 * 100%)
-        padding pcvw(250) pcvw(120)
+        padding 0 pcvw(120)
+        display flex
+        flex-direction column
+        align-items flex-start
+        justify-content center
       +sp()
-        padding spvw(140) spvw(50)
+        padding 7vw spvw(50)
       &__title
         font-weight bold
         +pc()
@@ -510,6 +514,9 @@
         +sp()
           font-size spvw(36)
           margin-top spvw(60)
+        &.mb-0
+          +sp()
+            margin-top 0
       &__address
         +pc()
           font-size pcvw(28)
@@ -562,7 +569,7 @@
       height 0
       +pc()
         width calc(1646 /2466 * 100%)
-        padding-top pcvw(1000)
+        padding-top 28vw
       +sp()
         padding-top spvw(456)
       iframe
@@ -688,3 +695,6 @@
       left 0
       opacity 0
 
+  .p-top__access__contents + .p-top__access__contents
+    +pc()
+      margin-top 5vw
