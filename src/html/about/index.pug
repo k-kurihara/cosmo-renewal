@@ -8,6 +8,7 @@ block vars
   - url = 'http://cosmojuku.com'
   - pageTitleEN = 'ABOUT'
   - pageTitleJP = 'コスモジュクって<br class="u-is-sp">どんな塾？'
+  - currentPage = 'コスモジュクってどんな塾？'
 
 block main
   include ../component/_header.pug
@@ -367,4 +368,10 @@ block main
                           if (text.head)
                             p.p-about__reassurance__content__main__head #{text.head}
                           p.p-about__reassurance__content__main__text !{text.text.replace(/[\n\r]/g,"<br>")}
+
+    .c-section
+      .c-section__inner
+        .c-section__contents
+          include ../component/_breadcrumb.pug
+
   include ../component/_footer.pug
