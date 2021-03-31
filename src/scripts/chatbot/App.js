@@ -22,6 +22,22 @@ const App = () => {
     [isChatOpen, isScrolled],
   )
 
+  const hamburgerMenutTrigger = document.getElementsByClassName('c-header__hamburger')[0]
+
+  hamburgerMenutTrigger.addEventListener('click', () => {
+    // ハンバーガーメニューのボタンをクリックした際に発火
+    if(hamburgerMenutTrigger.classList.contains('open')) {
+      // ハンバーガーメニューが開いた場合
+      if(isChatOpen === true) {
+        // チャットボットが開いている場合
+        setTimeout(() => {
+          // 500ミリ秒後にチャットボットを閉じる
+          setIsChatOpen(false)
+        }, 500)
+      }
+    }
+  })
+
   return (
     <Fragment>
       <StartButton className={createStartButtonClass} handleToggle={handleToggle} />
