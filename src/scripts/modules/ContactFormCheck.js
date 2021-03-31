@@ -3,13 +3,15 @@ import 'slick-carousel'
 
 export default class contactFormCheck {
   constructor(elem) {
-    this.elem = $(elem)
-    this.targets = this.elem.find('[data-contact-form-check="target"]')
-    this.agree = this.elem.find('[data-contact-form-check-trigger="agree"]')
-    this.submit = this.elem.find('[data-contact-form-check="submit"]')
-    this.submitBtn = this.submit.find('a')
-    console.log('this.submitBtn', this.submitBtn)
-    this.init()
+    setTimeout(()=>{
+      this.elem = $(elem)
+      this.targets = this.elem.find('[data-contact-form-check="target"]')
+      this.agree = this.elem.find('[data-contact-form-check-trigger="agree"]')
+      this.submit = this.elem.find('[data-contact-form-check="submit"]')
+      this.submitBtn = this.submit.find('a')
+      this.submitForm = this.submitBtn.find('[type="submit"]')
+      this.init()
+    }, 1000)
   }
   init() {
     this.elem.on('formChange', ()=>{
@@ -23,18 +25,27 @@ export default class contactFormCheck {
     this.agree.on('change', (e)=>{
       const cur = e.currentTarget
       if(cur.checked){
-        console.log('checked')
         $(cur).addClass('is-success')
         this.elem.trigger('formChange')
       }else {
-        console.log('false')
         $(cur).removeClass('is-success')
         this.elem.trigger('formChange')
       }
     })
+
     this.submitBtn.on('click', (e)=>{
+      console.log('this.submitBtn click')
       const AllSuccess = this.checkInputs()
-      if(!AllSuccess) e.preventDefault()
+      if(AllSuccess){
+        this.submitForm.trigger('click')
+      } else {
+        e.preventDefault()
+      }
+    })
+
+    this.submitForm.on('click', (e)=>{
+      console.log('submitForm click')
+      e.stopPropagation();
     })
   }
 

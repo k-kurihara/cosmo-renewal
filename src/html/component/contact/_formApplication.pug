@@ -6,43 +6,43 @@
       .p-contact__form__error(data-contact-validation-target="name")
       .p-contact__form__label.is-required おなまえ
       .p-contact__form__input
-        input.p-contact__form__input__text(type="text" placeholder="例：コスモ太" data-contact-validation="input")
+        input.p-contact__form__input__text(type="text" placeholder="例：コスモ太")
 
     li.p-contact__form__list__item(data-module="contactValidation" data-contact-form-check="target")
       .p-contact__form__error(data-contact-validation-target="preferredDate")
       .p-contact__form__label.is-required 体験ご希望日
       .p-contact__form__input
-        input.p-contact__form__input__text(type="text" placeholder="例：2021/10/10 15:00、2021/10/11 17:00" data-contact-validation="input")
+        input.p-contact__form__input__text(type="text" placeholder="例：2021/10/10 15:00、2021/10/11 17:00")
 
     li.p-contact__form__list__item(data-module="contactValidation" data-contact-form-check="target")
       .p-contact__form__error(data-contact-validation-target="postalCode")
       .p-contact__form__label.is-required 郵便番号
       .p-contact__form__input
-        input.p-contact__form__input__text.is-small(type="tel" pattern="[\d\-]*" maxlength="8" placeholder="例：123-4567" data-contact-validation="input")
+        input.p-contact__form__input__text.is-small(type="tel" pattern="[\d\-]*" maxlength="8" placeholder="例：123-4567")
 
     li.p-contact__form__list__item(data-module="contactValidation" data-contact-form-check="target")
       .p-contact__form__error(data-contact-validation-target="address")
       .p-contact__form__label.is-required ご住所
       .p-contact__form__input
-        input.p-contact__form__input__text(type="text" placeholder="例：神奈川県横浜市港南区丸山台四丁目9番12号" data-contact-validation="input")
+        input.p-contact__form__input__text(type="text" placeholder="例：神奈川県横浜市港南区丸山台四丁目9番12号")
 
     li.p-contact__form__list__item(data-module="contactValidation" data-contact-form-check="target")
       .p-contact__form__error(data-contact-validation-target="tel")
       .p-contact__form__label.is-required 電話番号
       .p-contact__form__input
-        input.p-contact__form__input__text.is-small(type="tel" pattern="\d{2,4}-\d{3,4}-\d{3,4}" maxlength="12" placeholder="例：123-456-7890" data-contact-validation="input")
+        input.p-contact__form__input__text.is-small(type="tel" pattern="\d{2,4}-\d{3,4}-\d{3,4}" maxlength="12" placeholder="例：123-456-7890")
 
     li.p-contact__form__list__item(data-module="contactValidation" data-contact-form-check="target")
       .p-contact__form__error(data-contact-validation-target="mail")
       .p-contact__form__label.is-required メールアドレス
-      .p-contact__form__input
-        input.p-contact__form__input__text(type="text" placeholder="例：cosmojuku@com" data-contact-validation="input" data-contact-validation-mail-check-target="1")
+      .p-contact__form__input(data-contact-validation-mail-check-target="1")
+        input.p-contact__form__input__text(type="text" placeholder="例：cosmojuku@com")
 
     li.p-contact__form__list__item(data-module="contactValidation" data-contact-form-check="target")
       .p-contact__form__error(data-contact-validation-target="mailCheck")
       .p-contact__form__label.is-required メールアドレス（確認用）
-      .p-contact__form__input
-        input.p-contact__form__input__text(type="text" placeholder="例：cosmojuku@com"  data-contact-validation="input" data-contact-validation-mail-check-trigger="1")
+      .p-contact__form__input(data-contact-validation-mail-check-trigger="1")
+        input.p-contact__form__input__text(type="text" placeholder="例：cosmojuku@com")
 
     li.p-contact__form__list__item
       .p-contact__form__label お問い合わせ内容
@@ -52,7 +52,7 @@
   include ../../component/contact/_formAgree.pug
 
   .p-contact__button__area(data-contact-form-check="submit")
-    a.c-button(href="#")
+    a(href="").c-button
       .c-button__text
         p 入力内容を確認する
       .c-button__arrow

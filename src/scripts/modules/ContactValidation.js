@@ -3,11 +3,13 @@ import 'slick-carousel'
 
 export default class ContactValidation {
   constructor(elem) {
-    this.elem = $(elem)
-    this.input = this.elem.find('[data-contact-validation="input"]')
-    this.target = this.elem.find('[data-contact-validation-target]')
-    this.type = this.target.data('contact-validation-target')
-    this.init()
+    setTimeout(()=>{
+      this.elem = $(elem)
+      this.input = this.elem.find('input')
+      this.target = this.elem.find('[data-contact-validation-target]')
+      this.type = this.target.data('contact-validation-target')
+      this.init()
+    }, 1000)
   }
   init() {
     this.bindEvent()
@@ -145,12 +147,12 @@ export default class ContactValidation {
       this.successInput()
     }
 
-    const targetVal = this.input.data('contact-validation-mail-check-target')
-    const triggerElm = document.querySelectorAll(`[data-contact-validation-mail-check-trigger="${targetVal}"]`)[0]
-    const triggerVal = triggerElm.value
+    const targetVal = this.input.parent().data('contact-validation-mail-check-target')
+    const triggerElm = $(document.querySelectorAll(`[data-contact-validation-mail-check-trigger="${targetVal}"]`)[0]).find('input')
+    const triggerVal = triggerElm.val()
 
     if(triggerVal.length){
-      $(triggerElm).trigger('blur')
+      triggerElm.trigger('blur')
     }
   }
 
@@ -165,8 +167,9 @@ export default class ContactValidation {
 
   mailCheckValidation(target){
     const value = target.value
-    const triggerVal = this.input.data('contact-validation-mail-check-trigger')
-    const targetVal = document.querySelectorAll(`[data-contact-validation-mail-check-target="${triggerVal}"]`)[0].value
+    const triggerVal = this.input.parent().data('contact-validation-mail-check-trigger')
+    const targetVal = $(document.querySelectorAll(`[data-contact-validation-mail-check-target="${triggerVal}"]`)[0]).find('input').val()
+
     if(value !== targetVal){
       this.target.text('入力していただいたメールアドレスが一致しません。')
       this.errorInput()
