@@ -1,5 +1,12 @@
 <?php
 
+// 外観のメニューを表示
+add_action( 'after_setup_theme', 'register_menu' );
+function register_menu() {
+  register_nav_menu( 'primary', __( 'Primary Menu', 'theme-slug' ) );
+}
+
+// ページャー
 function pagenation($pages = '', $range = 2){
     $showitems = ($range * 1)+1;
     global $paged;
@@ -44,5 +51,3 @@ function pagenation($pages = '', $range = 2){
         echo "</div>\n";
     }
 }
-
-?>

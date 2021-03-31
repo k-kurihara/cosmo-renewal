@@ -27,3 +27,10 @@
       .p-contact__form__input
         textarea.p-contact__form__input__textarea(placeholder="お問い合わせ内容をご記入ください。")
 
+  include ../../component/contact/_formAgree.pug
+
+  .p-contact__button__area(data-contact-form-check="submit")
+    a.c-button(href="#")
+      .c-button__text
+        p 入力内容を確認する
+      .c-button__arrow
