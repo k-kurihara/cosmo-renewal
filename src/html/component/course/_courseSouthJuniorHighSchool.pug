@@ -31,51 +31,52 @@
         .p-course__menu__contents__table(data-course-timetable-more-roll="content")
           .p-course__menu__label 料金表
           .p-course__menu__pricelist__scroll
-            table.p-course__menu__pricelist
-              tbody
-                -
-                  var pricelistHeading = [
-                    { text: '' },
-                    { text: '月間コマ数' },
-                    { text: '月謝' },
-                    { text: '追加1コマ' },
-                  ]
-                tr.p-course__menu__pricelist__heading
-                  each item in pricelistHeading
-                    th
-                      .p-course__menu__pricelist__heading__item #{item.text}
-                -
-                  var pricelistBody = [
-                    {
-                      childItems: [
-                        { text: '小4' },
-                        { text: '8コマ' },
-                        { text: '19,800' },
-                        { text: '-' },
-                      ],
-                    },
-                    {
-                      childItems: [
-                        { text: '小5' },
-                        { text: '16コマ' },
-                        { text: '39,600' },
-                        { text: '-' },
-                      ],
-                    },            {
-                      childItems: [
-                        { text: '小6' },
-                        { text: '24コマ' },
-                        { text: '52,800' },
-                        { text: '-' },
-                      ],
-                    }
-                  ]
-                each item in pricelistBody
-                  tr.p-course__menu__pricelist__body
-                    if item.childItems
-                      each childItem in item.childItems
-                        td
-                          .p-course__menu__pricelist__body__item !{childItem.text}
+            .p-course__menu__pricelist__scroll__inner
+              table.p-course__menu__pricelist
+                tbody
+                  -
+                    var pricelistHeading = [
+                      { text: '' },
+                      { text: '月間コマ数' },
+                      { text: '月謝' },
+                      { text: '追加1コマ' },
+                    ]
+                  tr.p-course__menu__pricelist__heading
+                    each item in pricelistHeading
+                      th
+                        .p-course__menu__pricelist__heading__item #{item.text}
+                  -
+                    var pricelistBody = [
+                      {
+                        childItems: [
+                          { text: '小4' },
+                          { text: '8コマ' },
+                          { text: '19,800' },
+                          { text: '-' },
+                        ],
+                      },
+                      {
+                        childItems: [
+                          { text: '小5' },
+                          { text: '16コマ' },
+                          { text: '39,600' },
+                          { text: '-' },
+                        ],
+                      },            {
+                        childItems: [
+                          { text: '小6' },
+                          { text: '24コマ' },
+                          { text: '52,800' },
+                          { text: '-' },
+                        ],
+                      }
+                    ]
+                  each item in pricelistBody
+                    tr.p-course__menu__pricelist__body
+                      if item.childItems
+                        each childItem in item.childItems
+                          td
+                            .p-course__menu__pricelist__body__item !{childItem.text}
 
             .p-course__menu__remarks__area
               .p-course__menu__remarks__title ・ 備考

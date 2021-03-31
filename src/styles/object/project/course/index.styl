@@ -45,6 +45,8 @@ table
       .p-course__menu__contents__table
         +pc()
           width pcvw(1100)
+        +sp()
+          overflow hidden
       &.is-wide
         .p-course__menu__contents__desc
           +pc()
@@ -88,9 +90,6 @@ table
       color #2c4a70
       +pc()
         width 100%
-        margin-top pcvw(35)
-      +sp()
-        margin-top spvw(40)
       &__area
         +sp()
           overflow hidden
@@ -105,7 +104,11 @@ table
       &__scroll
         +sp()
           overflow-x scroll
-          margin-right spvw(-50)
+      &__scroll__inner
+        +pc()
+          margin-top pcvw(35)
+        +sp()
+          margin-top spvw(40)
       th
         border-right 1px solid #e9eef2
         vertical-align middle

@@ -8,12 +8,15 @@
       display flex
       &__item
         position relative
+        color #2c4a70
         +pc()
           margin-left pcvw(30)
           font-size pcvw(24)
         +sp()
           margin-left spvw(25)
           font-size spvw(22)
+        & a:visited
+          color #2c4a70
         &:before
           content "-"
           display block

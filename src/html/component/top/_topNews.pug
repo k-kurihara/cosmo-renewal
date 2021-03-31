@@ -7,26 +7,6 @@
     animation: 'fadeUp'
   }
 )
-  .p-top__news__footprints--top
-    span
-    span
-    span
-    span
-    span
-    span
-    span
-    span
-  .p-top__news__footprints--bottom
-    span
-    span
-    span
-    span
-    span
-    span
-    span
-    span
-    span
-    span
   .p-top__header__title コスモニュース
   .p-top__header__text
     |コスモジュクからのお知らせや、
@@ -96,7 +76,26 @@
             .c-article__list__desc__title 【2020年 夏期講習】申込受付中！！
             .c-article__list__desc__text 皆様のお手元には届いておりますでしょうか？今回は、間違い探しの正解発表です！と言いたいのですが、まだ届い
             .c-article__list__desc__date yyyy.mm.dd
-  .p-top__news__link
-    a(href="/topics/") 
+  .p-top__news__link(
+    data-module="ashiato"
+    data-options={
+      'target': 'ashiato2',
+      'setting': {
+        root: null,
+        rootMargin: '0% 0%',
+        threshold: [0],
+      }
+    })
+    a(href="/topics/")
       span.p-top__news__link__arrow
       |記事一覧をみる
+
+  .p-top__footprints.is-2.u-is-pc(data-module-ashiato-roll="ashiato2")
+    - for (var i = 0; i < 11; i++)
+      .p-top__footprints__ashiato(class=`is-${i}` data-module-ashiato-roll="ashiato2-children")
+        img(src=`/assets/images/top/pc/ashiato-2_${i}.png`, alt="足跡")
+
+  .p-top__footprints.is-2.u-is-sp(data-module-ashiato-roll="ashiato2")
+    - for (var i = 0; i < 10; i++)
+      .p-top__footprints__ashiato(class=`is-${i}` data-module-ashiato-roll="ashiato2-children")
+        img(src=`/assets/images/top/sp/ashiato-2_${i}.png`, alt="足跡")

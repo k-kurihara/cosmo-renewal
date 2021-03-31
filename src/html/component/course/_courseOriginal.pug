@@ -26,55 +26,56 @@
         .p-course__menu__contents__table(data-course-timetable-more-roll="content")
           .p-course__menu__label 料金表
           .p-course__menu__pricelist__scroll
-            table.p-course__menu__pricelist
-              tbody
-                -
-                  var pricelistHeading = [
-                    { text: '' },
-                    { text: '科目' },
-                    { text: '月間コマ数' },
-                    { text: '月謝' },
-                    { text: '追加1コマ' },
-                  ]
-                tr.p-course__menu__pricelist__heading
-                  each item in pricelistHeading
-                    th
-                      .p-course__menu__pricelist__heading__item #{item.text}
-                -
-                  var pricelistBody = [
-                    {
-                      childItems: [
-                        { text: '中1・2' },
-                        { text: '英・数・<br>CCC+ACC' },
-                        { text: '12コマ' },
-                        { text: '16,500' },
-                        { text: '1,650' },
-                      ],
-                    },
-                    {
-                      childItems: [
-                        { text: '中3' },
-                        { text: '英・数・理・社<br>CCC+ACC' },
-                        { text: '20コマ' },
-                        { text: '26,400' },
-                        { text: '1,760' },
-                      ],
-                    },            {
-                      childItems: [
-                        { text: '中3' },
-                        { text: '英・数・<br>CCC+ACC' },
-                        { text: '12コマ' },
-                        { text: '17,600' },
-                        { text: '1,760' },
-                      ],
-                    }
-                  ]
-                each item in pricelistBody
-                  tr.p-course__menu__pricelist__body
-                    if item.childItems
-                      each childItem in item.childItems
-                        td
-                          .p-course__menu__pricelist__body__item !{childItem.text}
+            .p-course__menu__pricelist__scroll__inner(data-module="scrollHint")
+              table.p-course__menu__pricelist
+                tbody
+                  -
+                    var pricelistHeading = [
+                      { text: '' },
+                      { text: '科目' },
+                      { text: '月間コマ数' },
+                      { text: '月謝' },
+                      { text: '追加1コマ' },
+                    ]
+                  tr.p-course__menu__pricelist__heading
+                    each item in pricelistHeading
+                      th
+                        .p-course__menu__pricelist__heading__item #{item.text}
+                  -
+                    var pricelistBody = [
+                      {
+                        childItems: [
+                          { text: '中1・2' },
+                          { text: '英・数・<br>CCC+ACC' },
+                          { text: '12コマ' },
+                          { text: '16,500' },
+                          { text: '1,650' },
+                        ],
+                      },
+                      {
+                        childItems: [
+                          { text: '中3' },
+                          { text: '英・数・理・社<br>CCC+ACC' },
+                          { text: '20コマ' },
+                          { text: '26,400' },
+                          { text: '1,760' },
+                        ],
+                      },            {
+                        childItems: [
+                          { text: '中3' },
+                          { text: '英・数・<br>CCC+ACC' },
+                          { text: '12コマ' },
+                          { text: '17,600' },
+                          { text: '1,760' },
+                        ],
+                      }
+                    ]
+                  each item in pricelistBody
+                    tr.p-course__menu__pricelist__body
+                      if item.childItems
+                        each childItem in item.childItems
+                          td
+                            .p-course__menu__pricelist__body__item !{childItem.text}
 
   .p-course__menu__timetable(data-module="CourseTimetableMore")
     .p-course__menu__button(data-course-timetable-more-roll="trigger")

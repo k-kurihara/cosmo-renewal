@@ -4,10 +4,11 @@ block vars
   - title = '入塾の流れ＆よくある質問｜コスモジュク'
   - description = 'コスモジュクでは入塾までに体験授業や振り返り面談など、安心して入っていただくための制度がございます。体験時にチェックしてほしいポイントやよくあるご質問をご覧ください。'
   - keywords = '塾,個別指導,集団授業,受験,コスモジュク,コスモ,上永谷,港南,日限山,丸山台,舞岡'
-  - img = 'http://renewal.cosmojuku.com/assets/images/share/ogp.png'
-  - url = 'http://renewal.cosmojuku.com'
+  - img = 'http://cosmojuku.com/assets/images/share/ogp.png'
+  - url = 'http://cosmojuku.com'
   - pageTitleEN = 'FLOW & FAQ'
   - pageTitleJP = '入塾の流れ & よくあるご質問'
+  - currentPage = '入塾の流れ & よくあるご質問'
 
 block main
   include ../component/_header.pug
@@ -433,4 +434,9 @@ block main
                           p.p-flow__question__icon
                             img(src="/assets/images/flow/icn-A.png", alt="answer")
                           p.p-flow__question__answer__text !{item.answer}
+
+    .c-section
+      .c-section__inner
+        .c-section__contents
+          include ../component/_breadcrumb.pug
   include ../component/_footer.pug

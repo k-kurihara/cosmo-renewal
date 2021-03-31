@@ -8,7 +8,7 @@
       .p-course__menu__item
         .p-course__menu__label 科目と授業時間
         .p-course__menu__text
-          |数学・国語・英語・理科・社会 
+          |数学・国語・英語・理科・社会
           br.u-is-sp
           |／ 1コマ60分
       .p-course__menu__item
@@ -30,91 +30,92 @@
         .p-course__menu__contents__table(data-course-timetable-more-roll="content")
           .p-course__menu__label 料金表
           .p-course__menu__pricelist__scroll
-            table.p-course__menu__pricelist
-              tbody
-                -
-                  var pricelistHeading1 = [
-                    { text: '月間コマ数' },
-                    { text: '4コマ' },
-                    { text: '8コマ' },
-                    { text: '12コマ' },
-                    { text: '16コマ' },
-                    { text: '20コマ' },
-                    { text: '24コマ' },
-                    { text: '追加1コマ' },
-                  ]
-                tr.p-course__menu__pricelist__heading
-                  each item in pricelistHeading1
-                    th
-                      .p-course__menu__pricelist__heading__item #{item.text}
-                -
-                  var pricelistBody1 = [
-                    {
-                      childItems: [
-                        { text: '小学生' },
-                        { text: '12,870' },
-                        { text: '25,740' },
-                        { text: '38,610' },
-                        { text: '51,480' },
-                        { text: '64,350' },
-                        { text: '77,220' },
-                        { text: '3,218' },
-                      ],
-                    },
-                    {
-                      childItems: [
-                        { text: '中1・2' },
-                        { text: '14,300' },
-                        { text: '28,600' },
-                        { text: '42,900' },
-                        { text: '57,200' },
-                        { text: '71,500' },
-                        { text: '85,800' },
-                        { text: '3,575' },
-                      ],
-                    },
-                    {
-                      childItems: [
-                        { text: '中3' },
-                        { text: '15,730' },
-                        { text: '31,460' },
-                        { text: '47,190' },
-                        { text: '62,920' },
-                        { text: '78,650' },
-                        { text: '94,380' },
-                        { text: '3,933' },
-                      ],
-                    },
-                    {
-                      childItems: [
-                        { text: '高1・2' },
-                        { text: '17,160' },
-                        { text: '34,320' },
-                        { text: '51,480' },
-                        { text: '68,640' },
-                        { text: '85,800' },
-                        { text: '102,960' },
-                        { text: '4,290' },
-                      ],
-                    },
-                    {
-                      childItems: [
-                        { text: '高3' },
-                        { text: '18,590' },
-                        { text: '37,180' },
-                        { text: '55,770' },
-                        { text: '74,360' },
-                        { text: '92,950' },
-                        { text: '111,540' },
-                        { text: '4,648' },
-                      ],
-                    },            ]
-                each item in pricelistBody1
-                  tr.p-course__menu__pricelist__body
-                    if item.childItems
-                      each childItem in item.childItems
-                        td
-                          .p-course__menu__pricelist__body__item !{childItem.text}
+            .p-course__menu__pricelist__scroll__inner(data-module="scrollHint")
+              table.p-course__menu__pricelist
+                tbody
+                  -
+                    var pricelistHeading1 = [
+                      { text: '月間コマ数' },
+                      { text: '4コマ' },
+                      { text: '8コマ' },
+                      { text: '12コマ' },
+                      { text: '16コマ' },
+                      { text: '20コマ' },
+                      { text: '24コマ' },
+                      { text: '追加1コマ' },
+                    ]
+                  tr.p-course__menu__pricelist__heading
+                    each item in pricelistHeading1
+                      th
+                        .p-course__menu__pricelist__heading__item #{item.text}
+                  -
+                    var pricelistBody1 = [
+                      {
+                        childItems: [
+                          { text: '小学生' },
+                          { text: '12,870' },
+                          { text: '25,740' },
+                          { text: '38,610' },
+                          { text: '51,480' },
+                          { text: '64,350' },
+                          { text: '77,220' },
+                          { text: '3,218' },
+                        ],
+                      },
+                      {
+                        childItems: [
+                          { text: '中1・2' },
+                          { text: '14,300' },
+                          { text: '28,600' },
+                          { text: '42,900' },
+                          { text: '57,200' },
+                          { text: '71,500' },
+                          { text: '85,800' },
+                          { text: '3,575' },
+                        ],
+                      },
+                      {
+                        childItems: [
+                          { text: '中3' },
+                          { text: '15,730' },
+                          { text: '31,460' },
+                          { text: '47,190' },
+                          { text: '62,920' },
+                          { text: '78,650' },
+                          { text: '94,380' },
+                          { text: '3,933' },
+                        ],
+                      },
+                      {
+                        childItems: [
+                          { text: '高1・2' },
+                          { text: '17,160' },
+                          { text: '34,320' },
+                          { text: '51,480' },
+                          { text: '68,640' },
+                          { text: '85,800' },
+                          { text: '102,960' },
+                          { text: '4,290' },
+                        ],
+                      },
+                      {
+                        childItems: [
+                          { text: '高3' },
+                          { text: '18,590' },
+                          { text: '37,180' },
+                          { text: '55,770' },
+                          { text: '74,360' },
+                          { text: '92,950' },
+                          { text: '111,540' },
+                          { text: '4,648' },
+                        ],
+                      },            ]
+                  each item in pricelistBody1
+                    tr.p-course__menu__pricelist__body
+                      if item.childItems
+                        each childItem in item.childItems
+                          td
+                            .p-course__menu__pricelist__body__item !{childItem.text}
 
           .p-course__menu__remarks__area
               .p-course__menu__remarks__title ・ 備考
