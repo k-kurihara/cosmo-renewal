@@ -34,30 +34,23 @@ export default class contactFormCheck {
     })
 
     this.submitBtn.on('click', (e)=>{
-      console.log('this.submitBtn click')
       const AllSuccess = this.checkInputs()
-      if(AllSuccess){
-        this.submitForm.trigger('click')
-      } else {
+      e.preventDefault()
+      if(!AllSuccess){
         e.preventDefault()
       }
-    })
-
-    this.submitForm.on('click', (e)=>{
-      console.log('submitForm click')
-      e.stopPropagation();
     })
   }
 
   checkInputs() {
     let AllSuccess = true
+
     this.targets.each((i, targetElem)=>{
       if(!$(targetElem).hasClass('is-success')) {
         AllSuccess = false
         return
       }
     })
-
     return AllSuccess
   }
 }

@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: 問い合わせ-完了（体験入学））
+Template Name: 問い合わせ-完了（お問い合わせ）
 Template Post Type: page
 */
 ?>
@@ -11,7 +11,7 @@ Template Post Type: page
 
 <div class="p-contact-finish">
 
-<?php echo do_shortcode('[mwform_formkey key="218"]'); ?>
+<?php echo do_shortcode('[mwform_formkey key="294"]'); ?>
 
 
 <div class="p-contact-finish__text">お問い合わせいただき、<br class="u-is-sp"/>ありがとうございました。<br/>内容確認後、<br class="u-is-sp"/>担当者より改めてご連絡いたします。</div>

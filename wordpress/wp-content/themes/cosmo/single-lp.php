@@ -490,7 +490,7 @@
 
             <?php /*  通常テキスト */ ?>　
             <?php if( $lp_text ) { ?>
-              <div class="p-lp__text"><?php echo nl2br($full_text);?></div>
+              <div class="p-lp__text"><?php echo nl2br($lp_text);?></div>
             <?php } ?>
 
 

@@ -15,7 +15,84 @@ block main
       section
         include ../component/contact/confirmation/_headerPrimary.pug
         include ../component/contact/confirmation/_contactType.pug
-        include ../component/contact/confirmation/_contentlist.pug
+        //- include ../component/contact/confirmation/_contentlist.pug
+
+
+        <ul class="p-contact__form__list">
+          <li class="p-contact__form__list__item" data-module="contactValidation" data-contact-form-check="target">
+          <div class="p-contact__form__error" data-contact-validation-target="name"></div>
+          <div class="p-contact__form__label is-required">おなまえ</div>
+
+          <div class="p-contact__form__input">11
+          <input type="hidden" name="experience-name" value="11">
+
+                              </div>
+          </li>
+          <li class="p-contact__form__list__item" data-module="contactValidation" data-contact-form-check="target">
+          <div class="p-contact__form__error" data-contact-validation-target="preferredDate"></div>
+          <div class="p-contact__form__label is-required">体験ご希望日</div>
+          <div class="p-contact__form__input">11
+          <input type="hidden" name="experience-preferredDate" value="11">
+
+                              </div>
+          </li>
+          <li class="p-contact__form__list__item" data-module="contactValidation" data-contact-form-check="target">
+          <div class="p-contact__form__error" data-contact-validation-target="postalCode"></div>
+          <div class="p-contact__form__label is-required">郵便番号</div>
+          <div class="p-contact__form__input">
+                                1120013
+          <input type="hidden" name="experience-postalCode" value="1120013">
+
+                              </div>
+          </li>
+          <li class="p-contact__form__list__item" data-module="contactValidation" data-contact-form-check="target">
+          <div class="p-contact__form__error" data-contact-validation-target="address"></div>
+          <div class="p-contact__form__label is-required">ご住所</div>
+          <div class="p-contact__form__input">文京区音羽
+          <input type="hidden" name="experience-address" value="文京区音羽">
+
+                              </div>
+          </li>
+          <li class="p-contact__form__list__item" data-module="contactValidation" data-contact-form-check="target">
+          <div class="p-contact__form__error" data-contact-validation-target="tel"></div>
+          <div class="p-contact__form__label is-required">電話番号</div>
+          <div class="p-contact__form__input">1111111111
+          <input type="hidden" name="experience-tel" value="1111111111">
+
+                              </div>
+          </li>
+          <li class="p-contact__form__list__item" data-module="contactValidation" data-contact-form-check="target">
+          <div class="p-contact__form__error" data-contact-validation-target="mail"></div>
+          <div class="p-contact__form__label is-required">メールアドレス</div>
+          <div class="p-contact__form__input" data-contact-validation-mail-check-target="1">kazu19870421@gmail.com
+          <input type="hidden" name="experience-mail" value="kazu19870421@gmail.com">
+
+                              </div>
+          </li>
+          <li class="p-contact__form__list__item" data-module="contactValidation" data-contact-form-check="target">
+          <div class="p-contact__form__error" data-contact-validation-target="mailCheck"></div>
+          <div class="p-contact__form__label is-required">メールアドレス（確認用）</div>
+          <div class="p-contact__form__input" data-contact-validation-mail-check-trigger="1">kazu19870421@gmail.com
+          <input type="hidden" name="experience-mailCheck" value="kazu19870421@gmail.com">
+
+                              </div>
+          </li>
+          <li class="p-contact__form__list__item">
+          <div class="p-contact__form__label">お問い合わせ内容</div>
+          <div class="p-contact__form__input">
+                                
+          <input type="hidden" name="experience-contents" value="">
+
+                              </div>
+          </li>
+        </ul>
+
+        <div class="p-contact__form__agree">
+        <div class="p-contact__form__agree__link"><a class="p-contact__form__agree__link__text" href="" target="_blank" rel="noopener">個人情報の取り扱いについて</a></div>
+        <div class="p-contact__form__agree__check">
+          <label for="01-A"><input type="checkbox" id="01-A" name="checkbox01" data-contact-form-check="target" data-contact-form-check-trigger="agree">同意する</label>
+        </div>
+        <p></p></div>
 
         .p-contact-confirmation__button__area
           .p-contact-confirmation__button__item
@@ -24,9 +101,9 @@ block main
                 p 送信する
               .c-button__arrow
 
-          .p-contact-confirmation__button__item
-            a.p-contact-confirmation__button(href="#")
-              p 内容を修正する
+          button.p-contact-confirmation__button(type="button")
+            p 内容を修正する
+          //- .p-contact-confirmation__button__item
 
 
   section

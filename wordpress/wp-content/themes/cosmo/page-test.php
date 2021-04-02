@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: 問い合わせ入力
+Template Name: テスト
 Template Post Type: page
 */
 ?>
@@ -90,12 +90,12 @@ Template Post Type: page
               </div>
             </div>
           </section>
-        </div>
-        <div class="c-breadcrumb">
+          <div class="c-breadcrumb">
           <ul class="c-breadcrumb__list">
             <li class="c-breadcrumb__list__item"><a href="/">トップ</a></li>
             <li class="c-breadcrumb__list__item">お問い合わせ</li>
           </ul>
+        </div>
         </div>
       </div>
 

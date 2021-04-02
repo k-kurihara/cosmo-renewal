@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: 問い合わせ-確認（資料請求）
+Template Name: 問い合わせ-確認（お問い合わせ）
 Template Post Type: page
 */
 ?>
@@ -18,11 +18,11 @@ Template Post Type: page
         </div>
         <div class="p-contact-confirmation__contact__type">
           <div class="p-contact-confirmation__contact__type__label">お問い合わせ種別</div>
-          <div class="p-contact-confirmation__contact__type__text">資料請求</div>
+          <div class="p-contact-confirmation__contact__type__text">お問い合わせ</div>
         </div>
 
 
-          <?php echo do_shortcode('[mwform_formkey key="291"]'); ?>
+          <?php echo do_shortcode('[mwform_formkey key="294"]'); ?>
 
         </div>
       </div>
