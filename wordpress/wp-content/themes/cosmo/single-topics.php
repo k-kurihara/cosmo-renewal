@@ -245,23 +245,24 @@
               </ul>
               <?php endif; wp_reset_query(); ?>
 
-            <div class="p-topics__latest__article__back"><a href="/topic"> <span class="p-topics__latest__article__back__arrow"></span>一覧へ戻る</a></div>
+            <div class="p-topics__latest__article__back"><a href="/topics/"> <span class="p-topics__latest__article__back__arrow"></span>一覧へ戻る</a></div>
           </div>
         </section>
         <section>
           <div class="p-topics__breadcrumb">
             <ul class="p-topics__breadcrumb__list">
-              <li class="p-topics__breadcrumb__list__item"><a href="">トップ</a></li>
-              <li class="p-topics__breadcrumb__list__item"><a href="">トピックス</a></li>
+              <li class="p-topics__breadcrumb__list__item"><a href="/">トップ</a></li>
+              <li class="p-topics__breadcrumb__list__item"><a href="/topics/">トピックス</a></li>
+              <li class="p-topics__breadcrumb__list__item"><?php echo the_title(); ?></li>
             </ul>
           </div>
         </section>
       </div>
 
-    <link rel="stylesheet" href="/assets/styles/app.css"/>
+    <!-- <link rel="stylesheet" href="/assets/styles/app.css"/>
 
     <script src="/assets/scripts/app.js"></script>
-
+ -->
 
 
     <?php endwhile; ?>

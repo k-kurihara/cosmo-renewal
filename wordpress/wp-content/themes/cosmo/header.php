@@ -18,9 +18,9 @@
     <meta name="twitter:description" content=""/>
     <meta name="twitter:image" content="http://renewal.cosmojuku.com/assets/images/share/ogp.png"/>
     <meta name="format-detection" content="telephone=no"/>
-    <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.ico"/>
+    <link rel="shortcut icon" href="<?php echo esc_url( home_url( '/') ); ?>/assets/images/favicon.ico"/>
     <link rel="icon" sizes="96x96" href="/assets/images/favicon.png"/>
-    <link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_template_directory_uri(); ?>/assets/images/touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="<?php echo esc_url( home_url( '/') ); ?>/assets/images/touch-icon.png"/>
     <link rel="stylesheet" href="/assets/styles/app.css"/>
     <link rel="preconnect" href="https://fonts.gstatic.com"/>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&amp;display=swap" rel="stylesheet"/>
