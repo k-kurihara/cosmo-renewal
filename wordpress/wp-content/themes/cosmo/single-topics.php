@@ -4,6 +4,7 @@
     /* ループ開始 */ ?>
     <?php the_content(); ?>
 
+    <div class="p-topics is-detail">
 
       <?php
         $blog_image_pc = SCF::get('blog_image_pc');
@@ -16,11 +17,10 @@
       ?>
 
       <?php
-        $terms = get_the_terms( $post->ID, 'topic_cate');
+        $terms = get_the_terms( $post->ID, 'topics_cate');
         foreach ( $terms as $term ){
       ?>
 
-      <div class="p-topics is-detail">
         <?php if( $term->name === 'お知らせ' ){?>
           <div class="p-topics__keyvisual is-category__info">
         <?php }elseif( $term->name === '塾長日記' ){?>
@@ -62,7 +62,11 @@
               $title_text = $field_value['title_text']; // 見出しテキスト
               $full_text = $field_value['full_text']; // 通常テキスト（全幅）
               $full_image = $field_value['full_image']; // 通常画像（全幅）
-              $movie = $field_value['movie']; // 通常画像（全幅）
+              $movie = $field_value['movie']; // 動画
+              $movie_image = $field_value['movie_image']; // 動画サムネイル
+              $movie_image = wp_get_attachment_image_src( $movie_image , 'full' );
+              $movie_image_url = esc_url($movie_image[0]);
+      
               $column_2_type = $field_value['column_2_type']; // 2カラム種類
               $column_2_text_1 = $field_value['column_2_text_1']; // 2カラム　左テキスト
               $column_2_text_2 = $field_value['column_2_text_2']; // 2カラム　右テキスト
@@ -102,7 +106,7 @@
               <?php if( $movie ) { ?>
                 <div class="p-topics__movie">
                   <div class="p-topics__movie__inner" data-module="playMovie"><a class="p-topics__movie__play" href="javascript:void(0)" data-module-playmovie-roll="trigger"><img src="/assets/images/about/img_play001.png" alt="再生ボタン"/></a>
-                    <video src="<?php echo esc_url(wp_get_attachment_url($movie));?>" poster="/assets/images/about/pic_movie-thumb.png" preload="auto" muted="muted" playsinline="playsinline" data-module-playmovie-roll="target"></video>
+                    <video src="<?php echo esc_url(wp_get_attachment_url($movie));?>" poster="<?php echo $movie_image_url;?>" preload="auto" muted="muted" playsinline="playsinline" data-module-playmovie-roll="target"></video>
                   </div>
                 </div>
               <?php } ?>
@@ -191,8 +195,8 @@
             <div class="p-topics__latest__article__title">最新記事</div>
 
 
-            <ul class="p-topics__latest__article__list">
-                  <?php query_posts("post_type=topic&posts_per_page=3");//カスタム投稿タイプ名 ?>
+              <ul class="p-topics__latest__article__list">
+                  <?php query_posts("post_type=topics&posts_per_page=3");//カスタム投稿タイプ名 ?>
                   <?php if(have_posts()): ?>
                   <?php while(have_posts()): 
                     the_post(); 
@@ -206,20 +210,28 @@
                     $blog_image_sp_url = esc_url($blog_image_sp[0]);
                   ?>
 
-                  <?php
-                    $terms = get_the_terms( $post->ID, 'topic_cate');
-                    foreach ( $terms as $term ){
-                  ?>
-
-                    <li class="p-topics__latest__article__list__item">
+                    <li class="c-article__list__item">
                       <a href="<?php the_permalink(); ?>">
-                        <?php if( $term->name === 'お知らせ' ){?>
-                          <div class="p-topics__latest__article__list__img is-category__info">
-                        <?php }elseif( $term->name === '塾長日記' ){?>
-                          <div class="p-topics__latest__article__list__img is-category__diary">
-                        <?php }elseif( $term->name === 'その他' ){?>
-                          <div class="p-topics__latest__article__list__img is-category__other">
-                        <?php } ?>
+
+                        <?php
+                          $terms = get_the_terms( $post->ID, 'topics_cate');
+                        ?>
+                          <?php if( $terms ) : ?>
+                            <?php
+                              foreach ( $terms as $term ){
+                            ?>
+                              <?php if( $term->name === 'お知らせ' ){?>
+                                <div class="c-article__list__img is-category__info">
+                              <?php }elseif( $term->name === '塾長日記' ){?>
+                                <div class="c-article__list__img is-category__diary">
+                              <?php }elseif( $term->name === 'その他' ){?>
+                                <div class="c-article__list__img is-category__other">
+                              <?php } ?>
+
+                            <?php } ?>
+                          <?php else : ?>
+                            <div class="c-article__list__img is-category__other">
+                          <?php endif; ?>
 
                           <?php if( $blog_image_pc_url ){?>
                             <img class="u-is-pc" src="<?php echo $blog_image_pc_url;?>" alt=""/>
@@ -230,16 +242,25 @@
                           <?php } ?>
 
                         </div>
-                        <div class="p-topics__latest__article__list__desc">
+                        <div class="c-article__list__desc">
 
-                        <div class="p-topics__latest__article__list__desc__label"><?php echo $term->name; ?></div>
-                        <div class="p-topics__latest__article__list__desc__title"><?php echo the_title(); ?></div>
-                        <div class="p-topics__latest__article__list__desc__text"><?php echo nl2br($blog_lead);?></div>
-                        <div class="p-topics__latest__article__list__desc__date"><?php the_time('Y.m.d'); ?></div>
+                        <div class="c-article__list__desc__label">
+                          <?php if( $terms ) : ?>
+                            <?php
+                              foreach ( $terms as $term ){
+                            ?>
+                              <?php echo $term->name; ?>
+                            <?php } ?>
+                          <?php else : ?>
+                            その他
+                          <?php endif; ?>
+                        </div>
+                        <div class="c-article__list__desc__title"><?php echo the_title(); ?></div>
+                        <div class="c-article__list__desc__text"><?php echo nl2br($blog_lead);?></div>
+                        <div class="c-article__list__desc__date"><?php the_time('Y.m.d'); ?></div>
                         </div>
                       </a>
                     </li>
-                  <?php } ?>
 
                   <?php endwhile; ?>
               </ul>

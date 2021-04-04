@@ -161,7 +161,7 @@ Template Post Type: page
                       <a href="<?php the_permalink(); ?>">
 
                         <?php
-                          $terms = get_the_terms( $post->ID, 'topic_cate');
+                          $terms = get_the_terms( $post->ID, 'topics_cate');
                         ?>
                           <?php if( $terms ) : ?>
                             <?php

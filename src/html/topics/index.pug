@@ -94,8 +94,8 @@ block main
           each item, index in topicList
             li.c-article__list__item
               a(href=`${item.link}`)
-                .c-article__list__img
-                  img(src=`/assets/images/topics/detail/article_${item.image}.png`, alt="")
+                .c-article__list__img.is-category__other
+                  img(src=`/assets/images/topics/detail/aricle_${item.image}.png`, alt="")
                 .c-article__list__desc
                   .c-article__list__desc__label #{item.label}
                   .c-article__list__desc__title #{item.title}

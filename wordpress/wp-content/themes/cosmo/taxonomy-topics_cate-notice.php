@@ -10,7 +10,7 @@
                 <p class="p-heading__jp">コスモニュース</p>
               </div>
               <div class="p-topics__heading__sort">
-                <div class="p-topics__heading__sort__item is-active">
+                <div class="p-topics__heading__sort__item">
                   <a href="/topics/">
                     すべて
                   </a>
@@ -21,18 +21,21 @@
                   foreach ( $terms as $term ) {
                   $term_link = get_term_link($term->slug, 'topics_cate');
                 ?>
-                  <div class="p-topics__heading__sort__item">
-                    <a href="<?php echo esc_url( $term_link ); ?>">
-                      <?php echo esc_html($term->name);?>
-                    </a>
-                  </div>
+                  <?php if( $term->name === 'お知らせ' ) : ?>
+                    <div class="p-topics__heading__sort__item is-active">
+                      <a href="<?php echo esc_url( $term_link ); ?>">
+                        <?php echo esc_html($term->name);?>
+                      </a>
+                    </div>
+                  <?php else : ?>
+                    <div class="p-topics__heading__sort__item">
+                      <a href="<?php echo esc_url( $term_link ); ?>">
+                        <?php echo esc_html($term->name);?>
+                      </a>
+                    </div>
+                  <?php endif; ?>
 
                 <?php } ?>
-
-                <!-- <div class="p-topics__heading__sort__item">お知らせ</div>
-                <div class="p-topics__heading__sort__item">塾長日記</div>
-                <div class="p-topics__heading__sort__item">その他</div> -->
-
 
               </div>
             </div>

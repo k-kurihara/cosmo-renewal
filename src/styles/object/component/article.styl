@@ -20,6 +20,11 @@
       margin-top pcvw(100)
     +sp()
       margin spvw(60) spvw(50) 0
+    &:after
+      +pc()
+        display block
+        content ""
+        width 31.5% 
     &__item
       background-color #fff
       +pc()
@@ -27,13 +32,15 @@
         box-shadow 0px 0px pcvw(20) #d2d2d2
       +sp()
         box-shadow 0px 0px spvw(20) #d2d2d2
+
       &:nth-child(n+4)
-        margin-top pcvw(60)
+        +pc()
+          margin-top pcvw(60)
+      & + &
+        +sp()
+          margin-top spvw(36)
       a
         display block
-    & + &
-      +sp()
-        margin-top spvw(36)
     &__img
       overflow hidden
       background-size contain
@@ -56,12 +63,12 @@
           right pcvw(20)
           bottom 0
           width pcvw(680)
-          height pcvw(160)
+          height pcvw(400)
         +sp()
           right 0
-          top spvw(-440)
-          width spvw(750)
-          height spvw(440)
+          bottom 0
+          width spvw(650)
+          height spvw(400)
 
       &.is-category__diary
         background-image url("/assets/images/topics/bg_diary.png")
@@ -85,16 +92,6 @@
             background-image url("/assets/images/topics/detail/pc/category__other.png")
           +sp()
             background-image url("/assets/images/topics/detail/sp/category__other.png")
-
-
-
-      // &__img
-      //   +pc()
-      //     width 100%
-      //     height pcvw(410)
-      //   +pc()
-      //     width 100%
-      //     height spvw(380)
 
     &__desc
       color #2c4a70
