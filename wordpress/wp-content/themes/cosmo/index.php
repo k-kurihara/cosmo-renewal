@@ -11,18 +11,18 @@ Template Post Type: page
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0"/>
     <meta name="title" content="気づき、じっくり考え、人に伝える｜コスモジュク"/>
-    <meta name="description" content=""/>
-    <meta name="keywords" content=""/>
-    <meta property="og:url" content="http://renewal.cosmojuku.com"/>
+    <meta name="description" content="コスモジュクは港南区・南区の学習塾です。中学受験・南中受検・高校受験・大学受験すべてに対応しています。集団・個別指導どちらも備え、個人に合わせた指導をご提供いたします。"/>
+    <meta name="keywords" content="塾,個別指導,集団授業,受験,コスモジュク,コスモ,上永谷,日限山,丸山台,舞岡,野庭,別所,上大岡,弘明寺,大久保,芹が谷"/>
+    <meta property="og:url" content="http://cosmojuku.com"/>
     <meta property="og:type" content="website"/>
     <meta property="og:title" content="気づき、じっくり考え、人に伝える｜コスモジュク"/>
-    <meta property="og:description" content=""/>
-    <meta property="og:image" content="http://renewal.cosmojuku.com/assets/images/share/ogp.png"/>
+    <meta property="og:description" content="コスモジュクは港南区・南区の学習塾です。中学受験・南中受検・高校受験・大学受験すべてに対応しています。集団・個別指導どちらも備え、個人に合わせた指導をご提供いたします。"/>
+    <meta property="og:image" content="http://cosmojuku.com/assets/images/share/ogp.png"/>
     <meta property="og:site_name" content="コスモジュク"/>
     <meta name="twitter:card" content="summary_large_image"/>
     <meta name="twitter:title" content="気づき、じっくり考え、人に伝える｜コスモジュク"/>
-    <meta name="twitter:description" content=""/>
-    <meta name="twitter:image" content="http://renewal.cosmojuku.com/assets/images/share/ogp.png"/>
+    <meta name="twitter:description" content="コスモジュクは港南区・南区の学習塾です。中学受験・南中受検・高校受験・大学受験すべてに対応しています。集団・個別指導どちらも備え、個人に合わせた指導をご提供いたします。"/>
+    <meta name="twitter:image" content="http://cosmojuku.com/assets/images/share/ogp.png"/>
     <meta name="format-detection" content="telephone=no"/>
     <link rel="shortcut icon" href="<?php echo esc_url( home_url( '/') ); ?>/assets/images/favicon.ico"/>
     <link rel="icon" sizes="96x96" href="/assets/images/favicon.png"/>
@@ -42,6 +42,14 @@ Template Post Type: page
   </head>
   <body>
     <main>
+      <div class="p-loading" data-module="loading">
+        <div class="p-loading__inner" data-module-loading-roll="inner">
+          <div class="p-loading__background" data-module-loading-roll="background"></div>
+          <div class="p-loading__overlay" data-module-loading-roll="overlay">
+            <div class="p-loading__text" data-module-loading-roll="text"><img src="/assets/images/top/loading/txt-loading.png" alt="コスモジュク"/></div>
+          </div>
+        </div>
+      </div>
       <div class="c-header">
         <div class="c-header__inner"><a class="c-header__logo" href="/"><img src="/assets/images/common/logo.png" alt="ロゴ"/></a>
           <div class="c-header__links u-is-pc">

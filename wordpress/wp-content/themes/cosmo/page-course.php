@@ -4,6 +4,44 @@ Template Name: コース紹介＆料金案内
 Template Post Type: page
 */
 ?>
+<html>
+  <head>
+    <title>コース紹介＆料金案内｜コスモジュク</title>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0"/>
+    <meta name="title" content="コース紹介＆料金案内｜コスモジュク"/>
+    <meta name="description" content="コスモジュクでは生徒一人ひとりに適した学習指導ができるよう、5つのコースをご用意しております。それぞれのコースをかけ合わせることも可能です。ぜひ教室までご相談ください。"/>
+    <meta name="keywords" content="塾,個別指導,集団授業,受験,コスモジュク,コスモ,上永谷,日限山,丸山台,舞岡,野庭,別所,上大岡,弘明寺,大久保,芹が谷"/>
+    <meta property="og:url" content="http://cosmojuku.com"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="コース紹介＆料金案内｜コスモジュク"/>
+    <meta property="og:description" content="コスモジュクでは生徒一人ひとりに適した学習指導ができるよう、5つのコースをご用意しております。それぞれのコースをかけ合わせることも可能です。ぜひ教室までご相談ください。"/>
+    <meta property="og:image" content="http://cosmojuku.com/assets/images/share/ogp.png"/>
+    <meta property="og:site_name" content="コスモジュク"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="コース紹介＆料金案内｜コスモジュク"/>
+    <meta name="twitter:description" content="コスモジュクでは生徒一人ひとりに適した学習指導ができるよう、5つのコースをご用意しております。それぞれのコースをかけ合わせることも可能です。ぜひ教室までご相談ください。"/>
+    <meta name="twitter:image" content="http://cosmojuku.com/assets/images/share/ogp.png"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <link rel="shortcut icon" href="https://cosmojuku.com//assets/images/favicon.ico"/>
+    <link rel="icon" sizes="96x96" href="/assets/images/favicon.png"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="https://cosmojuku.com//assets/images/touch-icon.png"/>
+    <link rel="stylesheet" href="/assets/styles/app.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com"/>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&amp;display=swap" rel="stylesheet"/>
+    <!-- Global site tag (gtag.js) - Google Analytics-->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-121793051-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-121793051-1');
+    </script>
+    <?php wp_head(); ?>
+  </head>
+  <body>
+    <main>
 <?php get_header(); ?>
 
 
@@ -31,11 +69,11 @@ Template Post Type: page
                 </div>
                 <div class="p-course__menu__item">
                   <div class="p-course__menu__label">科目と授業時間</div>
-                  <div class="p-course__menu__text">数学・CCC・英語・理科・社会<br class="u-is-sp"/>／ 1コマ60分</div>
+                  <div class="p-course__menu__text">英語・数学・国語・理科・社会／1コマ60分<br class="u-is-sp"/>／ 1コマ60分</div>
                 </div>
                 <div class="p-course__menu__item">
                   <div class="p-course__menu__label">コース概要</div>
-                  <div class="p-course__menu__text">1クラスの定員を8名に限定し、「生徒と生徒」や「生徒と講師」とのコミュニケーションを大切にしながら授業を進めていきます。講師からの一方的な授業の展開はなく、授業にはサポートの講師も入るので、分からないことがあればすぐに確認をすることのできる環境を整えています。<br/>月間コマ数のうち、勉強したい教科を選択してもらい、自分好みに授業カリキュラムを組むことが可能です。</div>
+                  <div class="p-course__menu__text">１クラスの定員を８名までに限定した少人数集団のコースです。講師からの一方的な授業展開はなく、「生徒と生徒」や「生徒と講師」とのコミュニケーションを大切にしながら授業を進めていきます。授業にはサポート講師も入るので、分からないことがあればすぐに確認をすることのできる環境を整えています。月間コマ数のうち、勉強したい教科を選択してもらい、自分好みに授業カリキュラムを組むことが可能です。</div>
                 </div>
               </div>
               <div class="p-course__menu__pricelist__wrap" data-module="CourseTimetableMore">
@@ -236,11 +274,11 @@ Template Post Type: page
                 </div>
                 <div class="p-course__menu__item">
                   <div class="p-course__menu__label">科目と授業時間</div>
-                  <div class="p-course__menu__text">数学・国語・英語・理科・社会<br class="u-is-sp"/>／ 1コマ60分</div>
+                  <div class="p-course__menu__text">英語・数学(算数)・国語・理科・社会<br class="u-is-sp"/>／1コマ60分</div>
                 </div>
                 <div class="p-course__menu__item">
                   <div class="p-course__menu__label">コース概要</div>
-                  <div class="p-course__menu__text">生徒と講師の比率を1:2として、一人一人の学習状況や個性にあった授業を展開しています。<br/>演習→丸付け→演習→丸付け…のような、単調な授業ではなく、1問ごとに生徒から「なぜそうなったのか？」を話してもらいます。<br/>人に説明をすることにより、より深い理解を得ることができます。<br/>定期テストの前や講習会等では通常の授業で受講をさせていない科目でも1コマから追加が可能です。</div>
+                  <div class="p-course__menu__text">生徒と講師の比率を２：１とした個別指導コースです。一人ひとりの学習状況や個性にあった授業を進めていきます。演習→丸付け→演習→丸付け…のような、単調な授業ではなく、１問ごとに生徒から「なぜそうなったのか？」を説明してもらうことで、より深く理解することができます。テスト対策や講習時に、普段受講をしていない科目も１コマから追加可能です。</div>
                 </div>
               </div>
               <div class="p-course__menu__pricelist__wrap" data-module="CourseTimetableMore">
@@ -400,22 +438,22 @@ Template Post Type: page
                                 <div class="p-course__menu__pricelist__heading__item">月間コマ数</div>
                               </th>
                               <th>
-                                <div class="p-course__menu__pricelist__heading__item">4コマ</div>
-                              </th>
-                              <th>
-                                <div class="p-course__menu__pricelist__heading__item">8コマ</div>
+                                <div class="p-course__menu__pricelist__heading__item">6コマ</div>
                               </th>
                               <th>
                                 <div class="p-course__menu__pricelist__heading__item">12コマ</div>
                               </th>
                               <th>
-                                <div class="p-course__menu__pricelist__heading__item">16コマ</div>
-                              </th>
-                              <th>
-                                <div class="p-course__menu__pricelist__heading__item">20コマ</div>
+                                <div class="p-course__menu__pricelist__heading__item">18コマ</div>
                               </th>
                               <th>
                                 <div class="p-course__menu__pricelist__heading__item">24コマ</div>
+                              </th>
+                              <th>
+                                <div class="p-course__menu__pricelist__heading__item">30コマ</div>
+                              </th>
+                              <th>
+                                <div class="p-course__menu__pricelist__heading__item">36コマ</div>
                               </th>
                               <th>
                                 <div class="p-course__menu__pricelist__heading__item">追加1コマ</div>
@@ -596,7 +634,7 @@ Template Post Type: page
                 </div>
                 <div class="p-course__menu__item">
                   <div class="p-course__menu__label">コース概要</div>
-                  <div class="p-course__menu__text">生徒と講師の比率を1:2として、一人一人の学習状況や個性にあった授業を展開しています。<br/>演習→丸付け→演習→丸付け…のような、単調な授業ではなく、1問ごとに生徒から「なぜそうなったのか？」を話してもらいます。<br/>人に説明をすることにより、より深い理解を得ることができます。<br/>こちらのコースから、公立中高一貫校に無事合格された場合には、6年生時の受講コマ総数×1,100円を成果報酬として頂きます。</div>
+                  <div class="p-course__menu__text">横浜市立南高等学校附属中学校の合格に特化した専門コースです。一般的な私立中学の受験（学力検査）では、知識の量を問う問題が多く出題されるのに対して、南中の受検（適性検査）では、多くのヒントが問題文の中で示され、それらを組み合わせることで答えを導く、「情報処理能力」が試されています。南中の受検に求められる「情報処理能力」を高めるために、「読解力」「思考力」「表現力」の３つの力が必要であると考え、それに応じたカリキュラムを用意しております。</div>
                 </div>
               </div>
               <div class="p-course__menu__pricelist__wrap" data-module="CourseTimetableMore">
@@ -660,7 +698,7 @@ Template Post Type: page
                                 <div class="p-course__menu__pricelist__body__item">24コマ</div>
                               </td>
                               <td>
-                                <div class="p-course__menu__pricelist__body__item">52,800</div>
+                                <div class="p-course__menu__pricelist__body__item">59,400</div>
                               </td>
                               <td>
                                 <div class="p-course__menu__pricelist__body__item">-</div>
@@ -689,7 +727,7 @@ Template Post Type: page
                                 <div class="p-course__menu__remarks__body__item">教材費</div>
                               </td>
                               <td>
-                                <div class="p-course__menu__remarks__body__item"><dl><dt>4・5年生</dt><dd>：</dd><dd>2,200円</dd><dt>6年生</dt><dd>：</dd><dd>19,800円</dd></div>
+                                <div class="p-course__menu__remarks__body__item"><dl><dt>4・5年生</dt><dd>：</dd><dd>13,200円</dd><dt>6年生</dt><dd>：</dd><dd>19,800円</dd></div>
                               </td>
                             </tr>
                             <tr class="p-course__menu__remarks__body">
@@ -1007,7 +1045,7 @@ Template Post Type: page
                 </div>
                 <div class="p-course__menu__item">
                   <div class="p-course__menu__label">科目と授業時間</div>
-                  <div class="p-course__menu__text">数学・国語・英語・理科・社会<br class="u-is-sp"/>／ 1コマ60分</div>
+                  <div class="p-course__menu__text">英語・数学(算数)・国語・理科・社会<br class="u-is-sp"/>／1コマ60分</div>
                 </div>
                 <div class="p-course__menu__item">
                   <div class="p-course__menu__label">コース概要</div>
@@ -1335,7 +1373,7 @@ Template Post Type: page
                           <div class="p-course__menu__remarks__body__item">教材費</div>
                         </td>
                         <td>
-                          <div class="p-course__menu__remarks__body__item">4・5年生 ：  2,200円(税込) ／ 6年生：  19,800円(税込)<br><span class="p-course__menu__remarks__caption">※入塾時にお支払いいただきます。</span></div>
+                          <div class="p-course__menu__remarks__body__item">4・5年生 ：  13,200円(税込) ／ 6年生：  19,800円(税込)<br><span class="p-course__menu__remarks__caption">※入塾時にお支払いいただきます。</span></div>
                         </td>
                       </tr>
                     </tbody>
@@ -1374,7 +1412,7 @@ Template Post Type: page
                         <div class="p-course__menu__remarks__body__item">集団授業と個別<br class="u-is-sp">指導を併用の場合</div>
                       </td>
                       <td>
-                        <div class="p-course__menu__remarks__body__item"><span class="p-course__menu__remarks__em">集団授業の授業料を割引</span>いたします。<br><span class="p-course__menu__remarks__caption">※個別指導を月4コマ以上受講されている方が対象です。</span></div>
+                        <div class="p-course__menu__remarks__body__item">中学1年生：5,500円<br>中学2,3年生：5,500～8,800円<br><span class="p-course__menu__remarks__em">集団授業の授業料を割引</span>いたします。<br><span class="p-course__menu__remarks__caption">※個別指導を月4コマ以上受講されている方が対象です。</span></div>
                       </td>
                     </tr>
                     <tr class="p-course__menu__remarks__body">

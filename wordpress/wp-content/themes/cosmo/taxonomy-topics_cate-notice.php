@@ -1,3 +1,41 @@
+<html>
+  <head>
+    <title>コスモニュース｜コスモジュク</title>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0"/>
+    <meta name="title" content="コスモニュース｜コスモジュク"/>
+    <meta name="description" content="コスモジュクからのお知らせや、塾長・田野井のちょっと笑える日記を公開中"/>
+    <meta name="keywords" content="塾,個別指導,集団授業,受験,コスモジュク,コスモ,上永谷,日限山,丸山台,舞岡,野庭,別所,上大岡,弘明寺,大久保,芹が谷"/>
+    <meta property="og:url" content="http://cosmojuku.com"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="コスモニュース｜コスモジュク"/>
+    <meta property="og:description" content="コスモジュクからのお知らせや、塾長・田野井のちょっと笑える日記を公開中"/>
+    <meta property="og:image" content="http://cosmojuku.com/assets/images/share/ogp.png"/>
+    <meta property="og:site_name" content="コスモジュク"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="コスモニュース｜コスモジュク"/>
+    <meta name="twitter:description" content="コスモジュクからのお知らせや、塾長・田野井のちょっと笑える日記を公開中"/>
+    <meta name="twitter:image" content="http://cosmojuku.com/assets/images/share/ogp.png"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <link rel="shortcut icon" href="https://cosmojuku.com/assets/images/favicon.ico"/>
+    <link rel="icon" sizes="96x96" href="/assets/images/favicon.png"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="https://cosmojuku.com/assets/images/touch-icon.png"/>
+    <link rel="stylesheet" href="/assets/styles/app.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com"/>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&amp;display=swap" rel="stylesheet"/>
+    <!-- Global site tag (gtag.js) - Google Analytics-->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-121793051-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-121793051-1');
+    </script>
+    <?php wp_head(); ?>
+  </head>
+  <body>
+    <main>
 <?php get_header(); ?>
   <div class="p-topics">
     <div class="c-section">
