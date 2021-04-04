@@ -1,8 +1,6 @@
 AuthUserFile /home/users/1/main.jp-1275aa7ac311aa8a/web/renewal/.htpasswd
 AuthGroupFile /dev/null
-AuthName "test"
-AuthType Basic
-require valid-user
+AuthName "cosmo"
 
 # BEGIN WordPress
 # "BEGIN WordPress" から "END WordPress" までのディレクティブ (行) は
