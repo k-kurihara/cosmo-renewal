@@ -56,13 +56,13 @@
             line-height 1.4
         &__position__JP
           +pc()
-            width pcvw(190) 
+            width pcvw(190)
           +sp()
             display inline-block
             margin-right spvw(30)
         &__position__EN
           +pc()
-            width pcvw(100) 
+            width pcvw(100)
           +sp()
             display inline-block
             margin-right spvw(30)
@@ -77,6 +77,11 @@
             margin-top pcvw(70)
           +sp()
             margin-top spvw(50)
+        &__content + &__content
+          +pc()
+            margin-top pcvw(20)
+          +sp()
+            margin-top spvw(20)
         &__title
           font-weight bold
           +pc()
