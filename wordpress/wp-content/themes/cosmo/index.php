@@ -120,7 +120,7 @@ Template Post Type: page
             </div>
             <div class="c-mainvisual__heading">
               <div class="c-mainvisual__heading__copy"><img src="/assets/images/top/mainvisual/txt-main.svg" alt=""/></div>
-              <div class="c-mainvisual__heading__lead">今日の「出来た」が未来を作る。<br/>何年経っても価値の続く教育を。<br/>日限山・丸山台・野庭・南舞岡で<br class="u-is-sp"/>塾をお探しならコスモジュク</div>
+              <div class="c-mainvisual__heading__lead">今日の「出来た」が未来を作る。<br/>何年経っても価値の続く教育を。</div>
             </div>
             <div class="c-mainvisual__slide">
               <ul class="c-mainvisual__slide__list" data-module="slick" data-options="{&quot;hasTrigger&quot;:false,&quot;dots&quot;:true,&quot;dotsClass&quot;:&quot;small-window-dots&quot;}">
