@@ -1,17 +1,57 @@
-.p-contact__line__contact
-  .p-contact__line__contact__desc
-    .p-contact__line__contact__title
-      span.p-contact__line__contact__title__name LINE
-      |でカンタンお問い合わせも！
-    .p-contact__line__contact__text
-      |「友だち追加」ボタンのクリック、もしくは「QRコード」を読み取り。
-      br
-      |その後、LINEアプリが起動しますので、「追加」ボタンをクリック！
-      br
-      |友だち追加メッセージが届いたら、お気軽にメッセージをお送りください。
-    .p-contact__line__contact__button
-      a(href="https://line.me/R/ti/p/%40oga7119c" target="_blank" rel="noopener")
-        img(src="/assets/images/contact/pc/line_contact_button.png", alt="")
-  .p-contact__line__contact__reader
-    .p-contact__line__contact__reader__img
-      img(src="/assets/images/contact/pc/line_contact_reader.png", alt="")
+
+.p-contact__line
+  .p-contact__line__button
+    .p-contact__line__button__item.is-higirimaruyamadai.is-active(
+      data-module="tabSwitch"
+      data-options={
+        target: "higirimaruyamadai",
+        other: ['besshokoumyouji']
+      }
+    )
+      a(href="javascript:void(0)")
+        |日限丸山台
+    .p-contact__line__button__item.is-besshokoumyouji(
+      data-module="tabSwitch"
+      data-options={
+        target: "besshokoumyouji",
+        other: ['higirimaruyamadai']
+      }
+    )
+      a(href="javascript:void(0)")
+        |別所弘明寺
+  .p-contact__line__tab.is-active(data-module-tabSwitch-target="higirimaruyamadai")
+    .p-contact__line__contact
+      .p-contact__line__contact__desc
+        .p-contact__line__contact__title
+          span.p-contact__line__contact__title__name LINE
+          |でカンタンお問い合わせも！
+        .p-contact__line__contact__text
+          |「友だち追加」ボタンのクリック、もしくは「QRコード」を読み取り。
+          br
+          |その後、LINEアプリが起動しますので、「追加」ボタンをクリック！
+          br
+          |友だち追加メッセージが届いたら、お気軽にメッセージをお送りください。
+        .p-contact__line__contact__button
+          a(href="https://line.me/R/ti/p/%40oga7119c" target="_blank" rel="noopener")
+            img(src="/assets/images/contact/pc/line_contact_button.png", alt="")
+      .p-contact__line__contact__reader
+        .p-contact__line__contact__reader__img
+          img(src="/assets/images/contact/pc/line_contact_reader.png", alt="")
+  .p-contact__line__tab(data-module-tabSwitch-target="besshokoumyouji")
+    .p-contact__line__contact
+      .p-contact__line__contact__desc
+        .p-contact__line__contact__title
+          span.p-contact__line__contact__title__name LINE
+          |でカンタンお問い合わせも！
+        .p-contact__line__contact__text
+          |「友だち追加」ボタンのクリック、もしくは「QRコード」を読み取り。
+          br
+          |その後、LINEアプリが起動しますので、「追加」ボタンをクリック！
+          br
+          |友だち追加メッセージが届いたら、お気軽にメッセージをお送りください。
+        .p-contact__line__contact__button
+          a(href="https://line.me/R/ti/p/%40oga7119c" target="_blank" rel="noopener")
+            img(src="/assets/images/contact/pc/line_contact_button.png", alt="")
+      .p-contact__line__contact__reader
+        .p-contact__line__contact__reader__img
+          img(src="/assets/images/contact/pc/line_contact_reader.png", alt="")
