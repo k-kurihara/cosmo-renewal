@@ -256,7 +256,7 @@ Template Post Type: page
               <div class="c-breadcrumb">
                 <ul class="c-breadcrumb__list">
                   <li class="c-breadcrumb__list__item"><a href="/">トップ</a></li>
-                  <li class="c-breadcrumb__list__item">コスモジュクってどんな塾？</li>
+                  <li class="c-breadcrumb__list__item">コスモジュクとは</li>
                 </ul>
               </div>
             </div>
