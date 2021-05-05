@@ -50,16 +50,64 @@
           font-size 3.6vw
           margin-top spvw(100)
 
+  &__line
+    +pc()
+      margin-top pcvw(70)
+    +sp()
+      margin-top spvw(80)
+  &__line__button
+    display flex
+    align-items flex-end
+    +sp()
+      width 100%
+  &__line__button__item
+    &.is-higirimaruyamadai
+      background #0153A8
+    &.is-besshokoumyouji
+      background #52A7FB
+    a
+      color #fff
+      font-weight bold
+      transition none
+      +pc()
+        display block
+        padding pcvw(22) pcvw(75)
+        font-size pcvw(30)
+        letter-spacing 0.02em
+      +sp()
+        display block
+        padding spvw(20) spvw(45)
+        font-size spvw(22)
+        letter-spacing 0.02em
+  &__line__button__item.is-active
+    a
+      color #fff
+      font-weight bold
+      transition none
+      +pc()
+        padding pcvw(28) pcvw(80)
+        font-size pcvw(32)
+      +sp()
+        padding spvw(26) spvw(50)
+        font-size spvw(24)
+  &__line__button__item + &__line__button__item
+    +pc()
+      margin-left pcvw(5)
+    +sp()
+      margin-left spvw(5)
+  &__line__tab
+    width 100%
+    display none
+    &.is-active
+      display block
   &__line__contact
     background-color #fff
     +pc()
       display flex
       width 100%
-      margin-top pcvw(70)
     +sp()
       width 100vw
       margin-left spvw(-50)
-      margin-top spvw(80)
       padding spvw(90)
     &__desc
       +pc()
