@@ -60,15 +60,34 @@ Template Post Type: page
             <div class="p-contact__header__primary__text">当塾に関するご相談、教室見学や体験申込、資料のご請求など、何でもお気軽にお問い合わせください。<br/>内容を確認後、担当者より改めてご連絡いたします。</div>
           </section>
           <section>
-            <div class="p-contact__line__contact">
-              <div class="p-contact__line__contact__desc">
-                <div class="p-contact__line__contact__title"><span class="p-contact__line__contact__title__name">LINE</span>でカンタンお問い合わせも！</div>
-                <div class="p-contact__line__contact__text">
-                   「友だち追加」ボタンのクリック、もしくは「QRコード」を読み取り。<br/>その後、LINEアプリが起動しますので、「追加」ボタンをクリック！<br/>友だち追加メッセージが届いたら、お気軽にメッセージをお送りください。</div>
-                <div class="p-contact__line__contact__button"><a href="https://lin.ee/csbb9if"> <img src="/assets/images/contact/pc/line_contact_button.png" alt=""/></a></div>
+            <div class="p-contact__line">
+              <div class="p-contact__line__button">
+                <div class="p-contact__line__button__item is-higirimaruyamadai is-active" data-module="tabSwitch" data-options="{target:higirimaruyamadai,other:[besshokoumyouji]}"><a href="javascript:void(0)">日限丸山台</a></div>
+                <div class="p-contact__line__button__item is-besshokoumyouji" data-module="tabSwitch" data-options="{target:besshokoumyouji,other:[higirimaruyamadai]}"><a href="javascript:void(0)">別所弘明寺</a></div>
               </div>
-              <div class="p-contact__line__contact__reader">
-                <div class="p-contact__line__contact__reader__img"><img src="/assets/images/contact/pc/line_contact_reader.png" alt=""/></div>
+              <div class="p-contact__line__tab is-active" data-module-tabSwitch-target="higirimaruyamadai">
+                <div class="p-contact__line__contact">
+                  <div class="p-contact__line__contact__desc">
+                    <div class="p-contact__line__contact__title"><span class="p-contact__line__contact__title__name">LINE</span>でカンタンお問い合わせも！</div>
+                    <div class="p-contact__line__contact__text">「友だち追加」ボタンのクリック、もしくは「QRコード」を読み取り。<br/>その後、LINEアプリが起動しますので、「追加」ボタンをクリック！<br/>友だち追加メッセージが届いたら、お気軽にメッセージをお送りください。</div>
+                    <div class="p-contact__line__contact__button"><a href="https://lin.ee/csbb9if" target="_blank" rel="noopener"><img src="/assets/images/contact/pc/line_contact_button.png" alt=""/></a></div>
+                  </div>
+                  <div class="p-contact__line__contact__reader">
+                    <div class="p-contact__line__contact__reader__img"><img src="/assets/images/contact/pc/line_contact_reader.png" alt="QRコード"/></div>
+                  </div>
+                </div>
+              </div>
+              <div class="p-contact__line__tab" data-module-tabSwitch-target="besshokoumyouji">
+                <div class="p-contact__line__contact">
+                  <div class="p-contact__line__contact__desc">
+                    <div class="p-contact__line__contact__title"><span class="p-contact__line__contact__title__name">LINE</span>でカンタンお問い合わせも！</div>
+                    <div class="p-contact__line__contact__text">「友だち追加」ボタンのクリック、もしくは「QRコード」を読み取り。<br/>その後、LINEアプリが起動しますので、「追加」ボタンをクリック！<br/>友だち追加メッセージが届いたら、お気軽にメッセージをお送りください。</div>
+                    <div class="p-contact__line__contact__button"><a href="https://lin.ee/sAu6xwG" target="_blank" rel="noopener"><img src="/assets/images/contact/pc/line_contact_button.png" alt=""/></a></div>
+                  </div>
+                  <div class="p-contact__line__contact__reader">
+                    <div class="p-contact__line__contact__reader__img"><img src="/assets/images/contact/pc/line_contact_reader_bessho.png" alt="QRコード"/></div>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
