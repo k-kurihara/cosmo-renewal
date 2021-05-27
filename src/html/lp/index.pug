@@ -6,135 +6,211 @@ block vars
   - keywords = ''
   - img = 'http://localhost:3000/assets/images/share/ogp.jpg'
   - url = 'http://localhost:3000'
+  - currentPage = '[記事名]｜コスモNEWS｜コスモジュク'
 
 block main
   include ../component/_header.pug
 
   .p-lp
-    .p-lp__contents
-
-      section
+    //- メインビジュアル
+    section.c-section
+      .c-section__inner
         .p-lp__kv
-          img(src="/assets/images/topics/detail/column_img_single.png")
-        .p-lp__full__image
-          img(src="/assets/images/topics/detail/column_img_single.png")
+          img(src="https://placehold.jp/2200x1200.png", alt="メインビジュアル")
 
+      .c-section__inner
+        .c-section__contents
+          .p-lp__lead
+            .p-lp__lead__inner
+              p.p-lp__lead__text
+                |こんなお子さまにぴったり！
+                br
+                |コスモのオンライン授業
+              .p-lp__lead__contents
+                ul.p-lp__lead__points
+                  li.p-lp__lead__points__item
+                    .p-lp__lead__points__item__image
+                      img(src="/assets/images/lp/illust_01.png", alt="イラスト")
+                    .p-lp__lead__points__item__text
+                      p.p-lp__lead__points__item__text__heading
+                        |通いやすさ
+                      p.p-lp__lead__points__item__text__lead
+                        |塾にひとりで通わせるのは不安…
+                  li.p-lp__lead__points__item
+                    .p-lp__lead__points__item__image
+                      img(src="/assets/images/lp/illust_02.png", alt="イラスト")
+                    .p-lp__lead__points__item__text
+                      p.p-lp__lead__points__item__text__heading
+                        |家に居ながら勉強させたい
+                      p.p-lp__lead__points__item__text__lead
+                        |ひとりでお留守番してる間に授業を受けさせたい…
+                  li.p-lp__lead__points__item
+                    .p-lp__lead__points__item__image
+                      img(src="/assets/images/lp/illust_03.png", alt="イラスト")
+                    .p-lp__lead__points__item__text
+                      p.p-lp__lead__points__item__text__heading
+                        |話しやすい
+                        br
+                        |先生がいい
+                      p.p-lp__lead__points__item__text__lead
+                        |人見知りで塾内の知らない人と話すのが苦手…
 
-        .p-lp__step__blue
-          .p-lp__step__blue__title
+    //- ブルー敷エリア
+    section.c-section
+      .c-section__inner
+        .p-lp__blueback
+          .p-lp__blueback__title.p-lp__title
             h3 コスモジュクのオンライン授業の特徴
 
-          .p-lp__step__blue__content
-            .p-lp__step__blue__content__item
-              .p-lp__step__blue__content__label POINT1
-              .p-lp__step__blue__content__title 毎回自由に科目を選べる
-              .p-lp__step__blue__content__text
+          .p-lp__blueback__content
+            .p-lp__blueback__content__item
+              .p-lp__blueback__content__label.p-lp__label
+                p
+                  |POINT1
+              p.p-lp__blueback__content__title
+                |毎回自由に科目を選べる！
+              p.p-lp__blueback__content__text
                 |授業開始前（予約時）に数・国・英・理・社の中から、好きな教科をお選びいただけます。
                 br
                 |最近苦手だな…と思う強化をポンポイントで学習することが可能です。
+            .p-lp__blueback__content__item
+              .p-lp__blueback__content__image
+                img(src="https://placehold.jp/784x587.png", alt="サムネイル")
 
-            .p-lp__step__blue__content__item
-              .p-lp__step__blue__content__image
-                img(src="/assets/images/topics/detail/column_img_single.png")
-
-          .p-lp__step__blue__content
-            .p-lp__step__blue__content__item
-              .p-lp__step__blue__content__label POINT2
-              .p-lp__step__blue__content__title 毎回自由に科目を選べる
-              .p-lp__step__blue__content__text
+          .p-lp__blueback__content
+            .p-lp__blueback__content__item
+              .p-lp__blueback__content__label.p-lp__label
+                p
+                  |POINT2
+              p.p-lp__blueback__content__title
+                |毎回自由に科目を選べる！
+              p.p-lp__blueback__content__text
                 |授業開始前（予約時）に数・国・英・理・社の中から、好きな教科をお選びいただけます。
                 br
                 |最近苦手だな…と思う強化をポンポイントで学習することが可能です。
+            .p-lp__blueback__content__item
+              .p-lp__blueback__content__image
+                img(src="https://placehold.jp/784x587.png", alt="サムネイル")
 
-            .p-lp__step__blue__content__item
-              .p-lp__step__blue__content__image
-                img(src="/assets/images/topics/detail/column_img_single.png")
-
-          .p-lp__step__blue__content
-            .p-lp__step__blue__content__item
-              .p-lp__step__blue__content__label POINT3
-              .p-lp__step__blue__content__title 毎回自由に科目を選べる
-              .p-lp__step__blue__content__text
+          .p-lp__blueback__content
+            .p-lp__blueback__content__item
+              .p-lp__blueback__content__label.p-lp__label
+                p
+                  |POINT3
+              p.p-lp__blueback__content__title
+                |毎回自由に科目を選べる！
+                br
+                |毎回自由に科目を選べる！
+              p.p-lp__blueback__content__text
                 |授業開始前（予約時）に数・国・英・理・社の中から、好きな教科をお選びいただけます。
                 br
                 |最近苦手だな…と思う強化をポンポイントで学習することが可能です。
+            .p-lp__blueback__content__item
+              .p-lp__blueback__content__image
+                img(src="https://placehold.jp/784x587.png", alt="サムネイル")
 
-            .p-lp__step__blue__content__item
-              .p-lp__step__blue__content__image
-                img(src="/assets/images/topics/detail/column_img_single.png")
-
-
-
-        .p-lp__step
-          .p-lp__step__title
+    //- グレー敷エリア
+    section.c-section
+      .c-section__inner
+        .p-lp__grayback
+          .p-lp__grayback__title.p-lp__title
             h3 大人コスモの特徴
 
-          .p-lp__step__content
-            .p-lp__step__content__item
-              .p-lp__step__content__label FEATURE1
-              .p-lp__step__content__title 受験コース
-              .p-lp__step__content__point Q. もう一度勉強を初めて、大学に入りたい
-              .p-lp__step__content__point A. 受験コースはいかがでしょうか？
-              .p-lp__step__content__text
-                |本コースでは、大学受験や高認（高等学校卒業程度認定試験）を目指した授業を展開致します。個々の目標に向けて一人一人に合ったカリキュラムを作成し、二人三脚で歩んでいきます。経験豊富なスタッフが、一つ一つ丁寧に教えていきますので、一度はやめてしまった勉強も一緒に進めることで、理解を深めることができます。
+          .p-lp__grayback__content
+            .p-lp__grayback__content__item
+              .p-lp__grayback__content__label.p-lp__label
+                p
+                  |FEATURE1
+              .p-lp__grayback__content__title
+                p
+                  |受験コース
+              .p-lp__grayback__content__point
+                p
+                  |Q. もう一度勉強を初めて、大学に入りたい
+              .p-lp__grayback__content__point
+                p
+                  |A. 受験コースはいかがでしょうか？
+              .p-lp__grayback__content__text
+                p
+                  |本コースでは、大学受験や高認（高等学校卒業程度認定試験）を目指した授業を展開致します。個々の目標に向けて一人一人に合ったカリキュラムを作成し、二人三脚で歩んでいきます。経験豊富なスタッフが、一つ一つ丁寧に教えていきますので、一度はやめてしまった勉強も一緒に進めることで、理解を深めることができます。
 
-          .p-lp__step__content
-            .p-lp__step__content__item
-              .p-lp__step__content__label FEATURE2
-              .p-lp__step__content__title 先生コース
-              .p-lp__step__content__point Q.孫に授業を教えたい
-              .p-lp__step__content__point A.経験豊富なスタッフが勉強の教え方についてレクチャーします
-              .p-lp__step__content__text
-                |家庭はとてもいい学習の場面ですよね。その中でお孫さんに学校の勉強も教えたい。そんなご要望にお応えするのが、先生コースです。経験豊富なスタッフが勉強の教え方についてレクチャー致します。もちろん、お孫さんの通われている学校の授業内容についての予習内容も扱いますので、自信をもってお孫さんだけの特別な先生になってください。
+          .p-lp__grayback__content
+            .p-lp__grayback__content__item
+              .p-lp__grayback__content__label.p-lp__label
+                p
+                  |FEATURE2
+              .p-lp__grayback__content__title
+                p
+                  |先生コース
+              .p-lp__grayback__content__point
+                p
+                  |Q.孫に授業を教えたい
+              .p-lp__grayback__content__point
+                p
+                  |A.経験豊富なスタッフが勉強の教え方についてレクチャーします
+              .p-lp__grayback__content__text
+                p
+                  |家庭はとてもいい学習の場面ですよね。その中でお孫さんに学校の勉強も教えたい。そんなご要望にお応えするのが、先生コースです。経験豊富なスタッフが勉強の教え方についてレクチャー致します。もちろん、お孫さんの通われている学校の授業内容についての予習内容も扱いますので、自信をもってお孫さんだけの特別な先生になってください。
+
+    //- 汎用記事エリア
+    section.c-section
+      .c-section__inner
+        .c-section__contents
+          .p-lp__article
+            .p-lp__article__title.p-lp__title
+              h3 大見出しが入ります
+            .p-lp__article__column__double
+              .p-lp__article__column__double__item
+                .p-lp__article__column__double__item__image
+                  img(src="https://placehold.jp/784x461.png", alt="サムネイル")
+                p.p-lp__article__column__double__item__title
+                  |中見出しが入ります。中見出しが入ります。
+                p.p-lp__article__column__double__item__text
+                  |テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+
+              .p-lp__article__column__double__item
+                .p-lp__article__column__double__item__image
+                  img(src="https://placehold.jp/784x461.png", alt="サムネイル")
+                p.p-lp__article__column__double__item__title
+                  |中見出しが入ります。中見出しが入ります。
+                p.p-lp__article__column__double__item__text
+                  |テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
 
 
+            .p-lp__article__column__single
+              .p-lp__article__column__single__item
+                p.p-lp__article__column__single__item__title
+                  |中見出しはこのサイズ。
+                p.p-lp__article__column__single__item__text
+                  |テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
 
-      section
-        include ../component/lp/_headerSecondary.pug
-        include ../component/lp/_columnDouble.pug
+            .p-lp__article__column__single
+              .p-lp__article__column__single__item
+                p.p-lp__article__column__single__item__title
+                  |中見出しはこのサイズ。
+                p.p-lp__article__column__single__item__text
+                  |テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
 
-        include ../component/lp/_headerTertiary.pug
-        include ../component/lp/_text.pug
+            .p-lp__article__column__single
+              .p-lp__article__column__single__item
+                .p-lp__article__column__single__item__image
+                  img(src="https://placehold.jp/784x461.png", alt="サムネイル")
 
-        include ../component/lp/_headerTertiary.pug
-        include ../component/lp/_text.pug
+            .p-lp__article__column__single
+              .p-lp__article__column__single__item
+                p.p-lp__article__column__single__item__text
+                  |テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
 
-        .p-lp__image
-          img(src="/assets/images/topics/detail/column_img_single.png", alt="")
+            .p-lp__article__column__single
+              .p-lp__article__column__single__item
+                p.p-lp__article__column__single__item__text
+                  |テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
 
-        include ../component/lp/_text.pug
-
-        include ../component/lp/_text.pug
-
-
-
-    //-     include ../component/lp/_columnDoubleImg.pug
-    //-     include ../component/lp/_columnDoubleText.pug
-
-    //-     include ../component/lp/_text.pug
-
-    //-   section
-    //-     include ../component/lp/_info.pug
-
-    //-   section
-    //-     include ../component/lp/_headerTertiary.pug
-
-    //-   section
-    //-     include ../component/lp/_headerQuaternary.pug
-    //-     include ../component/lp/_text.pug
-    //-     include ../component/lp/_columnDoubleImg.pug
-
-    //-   section
-    //-     include ../component/lp/_movie.pug
-  
-    //-   section
-    //-     include ../component/lp/_sns.pug
-
-    //- section
-    //-   include ../component/lp/_latestArticle.pug
-
-    section
-      include ../component/lp/_breadcrumb.pug
+    //- パンくず
+    section.c-section
+      .c-section__inner
+        .c-section__contents
+          include ../component/_breadcrumb.pug
 
   .p-top__cv
     .p-top__cv__link
