@@ -112,7 +112,6 @@ Template Post Type: page
                         <li class="p-teachers__teachers__item__background__item">個別指導塾 2年</li>
                         <li class="p-teachers__teachers__item__background__item">コスモジュク 3年</li>
                         <li class="p-teachers__teachers__item__background__item">バスケット指導 4年</li>
-                        <li class="p-teachers__teachers__item__background__item">中学高校一種教員免許(保健体育・保健)</li>
                       </ul>
                     </div>
                     <div class="p-teachers__teachers__item__favorite">
@@ -169,7 +168,7 @@ Template Post Type: page
                   <div class="p-teachers__teachers__item__columun">
                     <div class="p-teachers__teachers__item__favorite">
                       <p class="p-teachers__teachers__item__heading">得意科目</p>
-                      <p class="p-teachers__teachers__item__favorite__text">国語・数学・理科・社会</p>
+                      <p class="p-teachers__teachers__item__favorite__text">数学・国語・理科・社会</p>
                     </div>
                   </div>
                   <div class="p-teachers__teachers__item__columun">
@@ -195,7 +194,7 @@ Template Post Type: page
                   <div class="p-teachers__teachers__item__columun">
                     <div class="p-teachers__teachers__item__favorite">
                       <p class="p-teachers__teachers__item__heading">得意科目</p>
-                      <p class="p-teachers__teachers__item__favorite__text">英語・国語・数学</p>
+                      <p class="p-teachers__teachers__item__favorite__text">英語・数学・国語</p>
                     </div>
                   </div>
                   <div class="p-teachers__teachers__item__columun">
