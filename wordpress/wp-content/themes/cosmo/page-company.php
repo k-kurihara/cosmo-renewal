@@ -103,9 +103,17 @@ Template Post Type: page
                 <dd class="p-company__information__table__desc">
                   <div class="p-company__information__table__office">
                     <div class="p-company__information__table__office__title">コスモジュク</div>
-                    <div class="p-company__information__table__office__label">日限丸山台スクール</div>
-                    <div class="p-company__information__table__office__address">〒233-0013<br/>神奈川県横浜市港南区丸山台四丁目9番12号 吉川ビル104
-                      <p class="p-company__information__table__office__tel">TEL:045-298-5026</p>
+                    <div class="p-company__information__table__office__content">
+                      <div class="p-company__information__table__office__label">日限丸山台スクール</div>
+                      <div class="p-company__information__table__office__address">〒233-0013<br/>神奈川県横浜市港南区丸山台四丁目9番12号 吉川ビル104
+                        <p class="p-company__information__table__office__tel">TEL:045-298-5026</p>
+                      </div>
+                    </div>
+                    <div class="p-company__information__table__office__content">
+                      <div class="p-company__information__table__office__label">別所弘明寺スクール</div>
+                      <div class="p-company__information__table__office__address">〒232-0064<br/>横浜市南区別所3-3-20
+                        <p class="p-company__information__table__office__tel">TEL:045-299-0603</p>
+                      </div>
                     </div>
                   </div>
                   <div class="p-company__information__table__office">
