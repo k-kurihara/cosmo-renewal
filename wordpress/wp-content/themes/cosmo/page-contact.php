@@ -82,10 +82,10 @@ Template Post Type: page
                   <div class="p-contact__line__contact__desc">
                     <div class="p-contact__line__contact__title"><span class="p-contact__line__contact__title__name">LINE</span>でカンタンお問い合わせも！</div>
                     <div class="p-contact__line__contact__text">「友だち追加」ボタンのクリック、もしくは「QRコード」を読み取り。<br/>その後、LINEアプリが起動しますので、「追加」ボタンをクリック！<br/>友だち追加メッセージが届いたら、お気軽にメッセージをお送りください。</div>
-                    <div class="p-contact__line__contact__button"><a href="https://line.me/R/ti/p/%40oga7119c" target="_blank" rel="noopener"><img src="/assets/images/contact/pc/line_contact_button.png" alt=""/></a></div>
+                    <div class="p-contact__line__contact__button"><a href="https://lin.ee/sAu6xwG" target="_blank" rel="noopener"><img src="/assets/images/contact/pc/line_contact_button.png" alt=""/></a></div>
                   </div>
                   <div class="p-contact__line__contact__reader">
-                    <div class="p-contact__line__contact__reader__img"><img src="/assets/images/contact/pc/line_contact_reader.png" alt=""/></div>
+                    <div class="p-contact__line__contact__reader__img"><img src="/assets/images/contact/pc/line_contact_reader_bessho.png" alt=""/></div>
                   </div>
                 </div>
               </div>
