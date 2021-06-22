@@ -883,7 +883,7 @@ Template Post Type: page
                                 <div class="p-course__menu__pricelist__heading__item">内容</div>
                               </th>
                               <th>
-                                <div class="p-course__menu__pricelist__heading__item">口座コマ数</div>
+                                <div class="p-course__menu__pricelist__heading__item">講座コマ数</div>
                               </th>
                               <th>
                                 <div class="p-course__menu__pricelist__heading__item">受講料</div>
