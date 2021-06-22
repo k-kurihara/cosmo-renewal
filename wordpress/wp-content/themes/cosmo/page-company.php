@@ -116,13 +116,6 @@ Template Post Type: page
                       </div>
                     </div>
                   </div>
-                  <div class="p-company__information__table__office">
-                    <div class="p-company__information__table__office__title">ミライズコベツ</div>
-                    <div class="p-company__information__table__office__label">西小山教室</div>
-                    <div class="p-company__information__table__office__address">〒142-0062<br/>東京都品川区小山6-5-6 2F
-                      <p class="p-company__information__table__office__tel">TEL:03-5751-8985</p>
-                    </div>
-                  </div>
                 </dd>
               </div>
             </dl>
